@@ -2,14 +2,14 @@
 using namespace std;
 
 int main(){
-    int tam_praia, n, tc = 1;
+    int tam_praia, n, t = 1;
 
     while(1){
         cin >> tam_praia >> n;
 
         if (tam_praia == 0 && n == 0) break;
 
-        printf("Teste %i\n", tc++);
+        printf("Teste %i\n", t++);
 
         vector <pair <int, int>> s (n);
         for (int i = 0; i < n; i++)

@@ -5,9 +5,6 @@ typedef long long ll;
 typedef unsigned long long ull;
 
 int main(){
-    ios::sync_with_stdio(0);
-    cin.tie(0);
-
     int n;
     cin >> n;
 
@@ -19,10 +16,7 @@ int main(){
 
     sort(v, v+n);
 
-    if (carlos == v[n-1])
-        printf("S\n");
-    else
-        printf("N\n");
+    printf("%c\n", carlos == v[n-1] ? 'S' : 'N');
 
     return 0;
 }

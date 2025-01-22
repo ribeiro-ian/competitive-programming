@@ -11,14 +11,13 @@ void ehQuad(int soma, int somaQuad){
 int main(){
     int n; cin >> n;
 
-    int matriz[n][n], soma;
+    int matriz[n][n], soma, somaQuad = 0;
 
     for (int i = 0; i < n; i++)
         for (int j = 0; j < n; j++)
             cin >> matriz[i][j];
 
     // Soma do Quadrado Magico
-    int somaQuad = 0;
     for (int i = 0; i < n; i++)
         somaQuad += matriz[0][i]; // linha 1
 
@@ -57,7 +56,6 @@ int main(){
             if (i + j == n-1) soma += matriz[i][j];
         
     ehQuad(soma, somaQuad);
-        
 
     printf("%i\n", somaQuad);
 
