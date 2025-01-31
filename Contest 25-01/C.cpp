@@ -30,7 +30,6 @@ int main(){
 
         printf("%c\n", all_of(bancos.begin()+1, bancos.end(), cmp) ? 'S' : 'N');
     }
-    
 
     return 0;
 }
