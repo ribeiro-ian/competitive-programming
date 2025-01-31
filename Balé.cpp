@@ -3,6 +3,9 @@ using namespace std;
 
 typedef unsigned long long ull;
 
+int value;
+bool func(int a){return a < value;}
+
 // a mais habilidosa e a que frequenta a academia há mais tempo
 // menor i = mais tempo na academia
 // hab[i] = nivel de habilidade
@@ -16,7 +19,7 @@ int main(){
        cin >> hab[i];
 
 
-    printf("%li\n", cnt);
+    printf("%llu\n", cnt);
 
     return 0;
 }

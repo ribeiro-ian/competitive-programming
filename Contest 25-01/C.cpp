@@ -12,8 +12,7 @@ int main(){
 
     int n, b, d, c, v;
     
-    while (1)
-    {
+    while (1){
         cin >> b >> n;
         if (b == 0 && n == 0) break;
 
@@ -30,7 +29,6 @@ int main(){
 
         printf("%c\n", all_of(bancos.begin()+1, bancos.end(), cmp) ? 'S' : 'N');
     }
-    
 
     return 0;
 }
