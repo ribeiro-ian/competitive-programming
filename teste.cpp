@@ -1,14 +1,18 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-typedef long long ll;
-typedef unsigned long long ull;
-
 int main(){
-    ios::sync_with_stdio(0);
-    cin.tie(0);
-
-    cout << (15 >> 3) << endl;
+    int n = 7;
+    printf("%i\n", n*n);
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            printf("%i %i\n", i+1, j+1);
+        }
+        
+    }
+        
 
     return 0;
 }
