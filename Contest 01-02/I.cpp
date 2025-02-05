@@ -11,7 +11,6 @@ char alternar(char c){
 }
 
 int main(){
-
     int tc;
     cin >> tc;
     ull c;
@@ -20,14 +19,25 @@ int main(){
 
     while (tc--){
         cin >> p >> c;
+        string ans;
 
-        for (int i = 0, k = 2; i < p.size(); i++, k *= 2){
-            if (c % k == 0)
-                printf("%c", p[i]);
+        if (c % 2 == 1)
+            ans += alternar(p[0]);
+        else
+            ans += p[0];
+
+        for (int i = 1; i < p.size(); i++){
+            c /= 2;
+            if (ans[i-1] == 'X')
+                ans += alternar(p[i]);
+
+            else if (c % 2 == 1 && c > 0)
+                ans += alternar(p[i]);
+            
             else
-                printf("%c", alternar(p[i]));
+                ans += p[i];
         }
-        printf("\n");
+        printf("%s\n", ans.c_str());
     }
 
     return 0;

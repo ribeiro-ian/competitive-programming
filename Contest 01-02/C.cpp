@@ -1,13 +1,12 @@
+// EXEMPLO
 #include <bits/stdc++.h>
 using namespace std;
 
 typedef long long ll;
 typedef unsigned long long ull;
 
-
 int main(){
     int x1, y1, x2, y2;
-
 
     while (1){
         cin >> x1 >> y1 >> x2 >> y2;
