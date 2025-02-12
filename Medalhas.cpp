@@ -2,36 +2,21 @@
 using namespace std;
 
 int main(){
-    int a, b, c;
-    cin >> a >> b >> c;
+    int tempos[3], temposOrdenado[3];
 
-    if (a < b && a < c){
-        printf("1\n");
-
-        if (b < c)
-            printf("2\n3");
-        else
-            printf("3\n2");
+    for (int i = 0; i < 3; i++){
+        cin >> tempos[i];
+        temposOrdenado[i] = tempos[i];
     }
-
-    else if (b < a && b < c){
-        printf("2\n");
-
-        if (a < c)
-            printf("1\n3");
-        else
-            printf("3\n1");
+    
+    sort(temposOrdenado, temposOrdenado+3);
+    for (int i = 0; i < 3; i++){
+        for (int j = 0; j < 3; j++)
+            if (tempos[j] == temposOrdenado[i]){
+                cout << j+1 << endl;
+                break;
+            }
     }
-
-    else if (c < a && c < b){
-        printf("3\n");
-
-        if (a < b)
-            printf("1\n2");
-        else
-            printf("2\n1");
-    }
-    printf("\n");
-
+    
     return 0;
 }

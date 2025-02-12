@@ -2,13 +2,9 @@
 using namespace std;
 
 typedef long long ll;
-typedef unsigned long long ull;
 
 int main(){
-    ios::sync_with_stdio(0);
-    cin.tie(0);
-
-    int n, q, x, y;
+    int n, q, l, r;
     cin >> n >> q;
 
     vector <ll> v (n), pref(n+1); 
@@ -19,10 +15,11 @@ int main(){
         pref[i] = pref[i-1] + v[i-1];
     
     for (int i = 0; i < q; i++){
-        cin >> x >> y;
+        cin >> l >> r;
 
-        cout << pref[y] - pref[x-1] << endl;
+        cout << pref[r] - pref[l-1] << endl;
     }
     
     return 0;
 }
+

@@ -27,18 +27,10 @@ int main(){
         pref[v[i]][i]++;
     }
 
-    // cerr << "indices:"; for (int i = 0; i <= n; i++) fprintf(stderr, "%2d ", i); cerr << "\nvetor: \t"; for (auto &i : v) fprintf(stderr, "%2d ", i); cerr << "\n";
-
-    // for (int i = 0; i < MAX; i++){ fprintf(stderr, " %i: \t", i); for (auto &&a : pref[i]) if (a) fprintf(stderr, "%2d ", a); else fprintf(stderr, " - "); cerr << "\n";}
-
     for (int i = 1; i <= m; i++)
         cin >> pos[i];
-    
-    cerr << "\npos: "; for (auto &i : pos) fprintf(stderr, "%d ", i); cerr << "\n";
 
-    cerr << "indices:  "; for (int i = 0; i < MAX; i++) fprintf(stderr, "%d ", i); cerr << "\n";
-
-    for (int i = 0; i+1 <= m; i++){
+    for (int i = 0; i < m; i++){
         int atual = pos[i], prox = pos[i+1];
 
         for (int j = 0; j < MAX; j++){
@@ -50,8 +42,6 @@ int main(){
               if (v[prox] == j) ans[j]++;
             }
         }
-
-        fprintf(stderr, "%2d -> %2d: ", atual, prox); for (auto &i : ans) cerr << i << " "; cerr << endl;
     }
 
     for (auto &i : ans)

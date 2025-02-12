@@ -12,13 +12,10 @@ map<string,int> valor{
 };
 
 int menorValor(vector <int> v){
-
     for (int i = 0; i < v.size(); i++){
         if (v[i] == *min_element(v.begin(),v.end()))
             return i;
     }
-    
-
 }
 
 int main(){
@@ -65,7 +62,6 @@ int main(){
     }
 
     printf("%i %i\n", *max_element(cnt.begin(), cnt.end()), *max_element(sum.begin(), sum.end()));
-
 
     return 0;
 }
