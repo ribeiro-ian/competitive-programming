@@ -37,25 +37,19 @@ int main(){
         total += v;
     }
 
-    int target = total/m;
+    int target = total / m;
+    int remainder = total % m;
 
-    int idx=0;
-    for (int i = 0; i < n; i++){
-        int v = cartas.front();
-
-        if (sum[idx] + v > target && idx < m){
-            idx++;
+    for (int i = 0; i < m; i++) {
+        while (!cartas.empty() && sum[i] < target + (i < remainder ? 1 : 0)) {
+            sum[i] += cartas.front();
+            cnt[i]++;
+            cartas.pop();
         }
-        if (idx >= m) break;
-
-        sum[idx] += v;
-        cnt[idx]++;
-        cartas.pop();
     }
 
-    while(!cartas.empty()){
-        idx = menorValor(sum);
-
+    while (!cartas.empty()) {
+        int idx = min_element(sum.begin(), sum.end()) - sum.begin();
         sum[idx] += cartas.front();
         cnt[idx]++;
         cartas.pop();
