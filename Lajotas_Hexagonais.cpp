@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
- 
+
+
 int main() {
     int n;
     const int MAX = 40+1;
