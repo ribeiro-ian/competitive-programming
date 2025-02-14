@@ -23,10 +23,13 @@ int dfs(int x){
 int f(int x){
     int total = 0;
 
-    if (adj[x].size()==0) return empregados[x] = 1;
+    if (adj[x].size()==0){
+        empregados[x] = 0;
+        return 1;
+    }
 
-    for (int i = 0; i < adj[x].size(); i++)
-        total += f(adj[x][i]);
+    for (auto &i : adj[x])
+        total += f(i);
 
     return empregados[x] = total;
 }
@@ -51,17 +54,21 @@ int main(){
         for (auto &v : adj)
             sort(v.begin(), v.end(), cmp);
 
-        // for(int i = 0; i <= n; i++){
-        //     if (!adj[i].size()) continue;
-
-        //     fprintf(stderr, "%i: ", i);
-
-        //     for (auto v: adj[i]){
-        //         fprintf(stderr, "%i ", v);
-        //     }
-        //     fprintf(stderr, "\n");
-        // }
-
+        fprintf(stderr, "0: ");
+        for(int i = 0; i <= adj[0].size(); i++){
+            
+            fprintf(stderr, "%i ", adj[0][i]);
+        }
+        fprintf(stderr, " | tam: %i\n", empregados[0]);
+        
+        for (auto i: adj[0]){
+            fprintf(stderr, "%i: ", i);
+            for (auto v: adj[i]){
+                fprintf(stderr, "%i ", v);
+            }
+            fprintf(stderr, " | tam: %i\n", empregados[i]);
+        }
+        
         // printf("e[1] = %i\n", empregados[1]);
 
         printf("%i\n", dfs(0));        
