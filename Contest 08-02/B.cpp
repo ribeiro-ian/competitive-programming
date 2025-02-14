@@ -1,27 +1,27 @@
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
-
-int f(int n){
-    if (n==1) return 1;
-    return n*f(n-1);
-}
-
-int main(){
-
+ 
+int main() {
     int n;
-    while (1){
-        cin >> n;
-        if (n == 0) break;
+    const int MAX = 40+1;
 
-        int ans = 1;
+    vector <int> pref(MAX);
+    
+    pref[0] = 0;
+    pref[1] = 1;
+    pref[2] = 2;
 
-        for (int i = 2; i < n; i++)
-            ans += f(n)/(f(i)*f(n-i))
+    for (int i = 3; i < MAX; i++){
+        pref[i] = pref[i-1] + pref[i-2];
     }
+    
+    while(1){
+        cin >> n;
+        
+        if (!n) break;
 
+        printf("%i\n", pref[n]);
+    }
 
     return 0;
 }

@@ -5,8 +5,6 @@ typedef long long ll;
 typedef unsigned long long ull;
 
 int main(){
-
-
     string str;
     vector <string> palavras;
 
@@ -19,7 +17,7 @@ int main(){
 
         if (p.size() < 4)
             printf("%s", p.c_str());
-        else if (p.substr(0, 2) == p.substr(2,2) && p.size() >= 4)
+        else if (p.substr(0, 2) == p.substr(2,2))
             printf("%s", p.substr(2).c_str());
         else
             printf("%s", p.c_str());

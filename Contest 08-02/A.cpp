@@ -5,20 +5,21 @@ typedef long long ll;
 typedef unsigned long long ull;
 
 int main(){
+    const int MAX = 100+1;
+    vector <int> prefix_sum (MAX);
+    
+    for (int i = 1; i < MAX; i++) // O(1)
+        prefix_sum[i] = prefix_sum[i-1] + i*i; 
+    
     int n;
 
-    // Complexidade O (k * n), k = num de entradas
-    while(1){ 
+    // Complexidade O(MAX+k), k = num de entradas
+    while(1){
         cin >> n;
 
-        if (n == 0) break;
+        if (!n) break;
 
-        ull ans = 1;
-
-        for (int i = 1; i < n; i++) // O(n)
-            ans += (n-i+1) * (n-i+1);
-        
-        printf("%llu\n", ans);
+        printf("%i\n", prefix_sum[n]);
     }
 
     return 0;
