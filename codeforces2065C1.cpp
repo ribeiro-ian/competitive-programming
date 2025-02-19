@@ -5,37 +5,40 @@ typedef long long ll;
 typedef unsigned long long ull;
 
 int tc, n, m;
+
 int solve(){
-    vector <int> a(n), b(m);
-
-    for (int i = 0; i < n; i++)
-        cin >> a[i];
-    for (int i = 0; i < m; i++)
-        cin >> b[i];
+    cin >> n >> m;
     
-    for (int i = 1; i < n-1; i++){
-        if (a[i-1] > a[i]){
-            if (b[0] - a[i] < a[i-1])
-                return 0;
-            else
-                a[i] = b[0] - a[i]; 
-        }
-        if (a[i] > a[i+1]){
-            if (b[0] - a[i] > a[i+1])
-                return 0;
-            else
-                a[i] = b[0] - a[i]; 
-        }
-    }
+    vector <int> a(n+1), b(m+1);
 
+    a[0] = INT_MIN;
+    for (int i = 1; i <= n; i++)
+        cin >> a[i];
+    a.push_back(INT_MAX);
+
+    for (int i = 0; i < m; i++)
+    cin >> b[i];
+    
+    int v = b[0];
+    for (int i = 1; i <= n; i++){
+        int prev = a[i-1], &cur = a[i], next = a[i+1];
+
+        if (prev < cur && cur < next)
+            continue;
+
+        if (cur < prev || cur > next)
+            cur = v - cur;
+        
+        if (cur < prev || cur > next)
+            return 0;
+    }
+    
     return 1;
 }
-    
+
 int main(){
     cin >> tc;
     while (tc--){
-        cin >> n >> m;
-
         printf("%s\n", solve() == 1 ? "YES" : "NO");
     }
 

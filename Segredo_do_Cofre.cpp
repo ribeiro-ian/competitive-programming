@@ -8,45 +8,44 @@ int main(){
     cin.tie(0);
 
     int n, m;
-    cin >> n >> m;
-
-    vector <int> v(n+1, 0), pos(m+1,0), ans(MAX, 0);
-    vector <vector <int>> pref(MAX);
+    scanf("%i %i", &n, &m);
     
-    for (int i = 0; i < MAX; i++)
-        pref[i].resize(n+1, 0);
-
+    vector <int> v(n+1, 0), pos(m,0), ans(MAX, 0);
+    vector <vector <int>> pref(MAX ,vector <int> (n+1,0));
+    
     for (int i = 1; i <= n; i++)
-        cin >> v[i];
-
+        scanf("%i", &v[i]);
+        
     for (int i = 1; i <= n; i++){
 
         for (int j = 0; j < MAX; j++)
             pref[j][i] = pref[j][i-1];
-
+        
         pref[v[i]][i]++;
     }
+        
+    for (int i = 0; i < m; i++)
+        scanf("%i", &pos[i]);
 
-    for (int i = 1; i <= m; i++)
-        cin >> pos[i];
 
-    for (int i = 0; i < m; i++){
+    ans[v[1]]++;
+    for (int i = 0; i < m-1; i++){ // O(M-1)
         int atual = pos[i], prox = pos[i+1];
 
-        for (int j = 0; j < MAX; j++){
+        for (int j = 0; j < MAX; j++){ // O(10)
             ans[j] += abs(pref[j][atual] - pref[j][prox]);
 
             if (atual > prox){
-              if (v[atual] == j) ans[j]--;
+                if (v[atual] == j) ans[j]--;
 
-              if (v[prox] == j) ans[j]++;
+                if (v[prox] == j) ans[j]++;
             }
         }
     }
 
     for (auto &i : ans)
-        cout << i << " ";
-    cout << endl;
+        printf("%i ", i);
+    printf("\n");
     
     return 0;
 }

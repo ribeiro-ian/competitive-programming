@@ -18,7 +18,6 @@ int main(){
             cin >> r[i];
 
             prefR[i+1] = prefR[i] + r[i];
-
         }
         
         cin >> m;
@@ -30,7 +29,8 @@ int main(){
             prefB[i+1] = prefB[i] + b[i];
         }
 
-        cout << *max_element(prefR.begin(), prefR.end()) + *max_element(prefB.begin(), prefB.end()) << endl;
+        cout << *max_element(prefR.begin(), prefR.end())
+        + *max_element(prefB.begin(), prefB.end()) << endl;
     }
 
     return 0;
