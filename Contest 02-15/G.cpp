@@ -21,7 +21,7 @@ int main(){
         for (int i = 0; i < n; i++)
             scanf("%i", &v[i]);
             
-            sort(v.begin(), v.end());
+        sort(v.begin(), v.end());
             
         for (int i = 0; i < n-1; i++)
             printf("%i ", v[i]);
