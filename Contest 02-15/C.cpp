@@ -1,3 +1,8 @@
+/*
+    Bee 1214 - Acima da Média
+    https://judge.beecrowd.com/pt/problems/view/1214
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 

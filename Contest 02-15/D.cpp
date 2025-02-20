@@ -1,3 +1,8 @@
+/*
+    Bee 1260 - Espécies de Madeira
+    https://judge.beecrowd.com/pt/problems/view/1260
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 

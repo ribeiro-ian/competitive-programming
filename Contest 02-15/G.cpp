@@ -1,3 +1,8 @@
+/*
+    Bee 1566 - Altura
+    https://judge.beecrowd.com/pt/problems/view/1566
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 

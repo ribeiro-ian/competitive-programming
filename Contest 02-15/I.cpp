@@ -1,3 +1,8 @@
+/*
+    Bee 2067 - Jogo do Quadrado
+    https://judge.beecrowd.com/pt/problems/view/2067
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 
