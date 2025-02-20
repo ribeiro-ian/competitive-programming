@@ -34,8 +34,6 @@ int main(){
         
         printf("%i\n", cnt);
     }
-    
-        
 
     return 0;
 }
