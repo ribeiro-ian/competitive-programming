@@ -10,19 +10,18 @@ typedef long long ll;
 typedef unsigned long long ull;
 
 int main(){
-    
     int tc, n, c, f;
-    cin >> tc;
+    scanf("%i", &tc);
     
     while (tc--)
     {
-        cin >> n >> c >> f;
+        scanf("%i %i %i", &n, &c, &f);
         
         vector <int> p(n), cam(c, 0);
-
+        
         int total = 0;
         for (int i = 0; i < n; i++){
-            cin >> p[i];
+            scanf("%i", &p[i]);
             total += p[i];
         }
 
