@@ -1,66 +1,71 @@
-#include <bits/stdc++.h>
+/*
+    Beecrowd 2065 - Fila do Supermercado
+    https://judge.beecrowd.com/pt/problems/view/2065
+*/
 
+#include <bits/stdc++.h>
 using namespace std;
 
-int main() {
-    int n, m;
-    cin >> n >> m;
+typedef long long ll;
+typedef unsigned long long ull;
+typedef pair <int, int> pii;
 
-    queue<int> clients;
-    map<int, int> cashiers;
-    map<int, int> active;
-    set<int> inactive;
-    int total = 0;
+int main(){
+    // ios_base::sync_with_stdio(0);
+    // cin.tie(nullptr);
 
-    for(int i = 0; i < n; i++) {
-        cin >> cashiers[i];
-        inactive.insert(i);
+    int n, m, var;
+    queue <int> clients;
+    priority_queue <int, vector<int>, greater<>> free;
+    vector <pii> active;
+    map <int, int> time;
+    
+    scanf("%i %i", &n, &m);
+
+    for (int i = 0; i < n; i++)
+    {
+        scanf("%i", &var);
+        free.push(i+1);
+        time[i+1] = var;
+    }
+    
+    for (int i = 0; i < m; i++)
+    {
+        scanf("%i", &var);
+        clients.push(var);
     }
 
-    while(m--) {
-        int c;
-        cin >> c;
+    int ans = 0;
+    while (!clients.empty() || !active.empty()){
+        int fastest = INT_MAX;
 
-        clients.push(c);
-    }
-
-    while(!clients.empty() || !active.empty()) {
-        int fastestWorker = INT32_MAX;
-        set<int>::iterator hpc = inactive.begin();
-
-        while(!inactive.empty() && !clients.empty()) {
-            active[*hpc] = clients.front() * cashiers[*hpc];
-
-            inactive.erase(hpc);
-            hpc = inactive.begin();
+        while (!free.empty() && !clients.empty()){
+            int id = free.top(),
+                qtt = clients.front();
+                
+            active.push_back(make_pair(id, time[id]*qtt));
+                
+            free.pop();
             clients.pop();
         }
+        
+        for(auto &w : active) 
+            fastest = min(w.second, fastest);
+        ans += fastest;
 
-        for(auto rest : active) {
-            if (rest.second < fastestWorker) {
-                fastestWorker = rest.second;
-            }
+        vector <pii> new_active;
+        for (auto &w : active){
+            w.second -= fastest;
+            
+            if (w.second <= 0)
+                free.push(w.first);
+            else
+                new_active.push_back(w);
         }
-
-        total += fastestWorker;
-        vector<map<int, int>::iterator> done;
-
-        for(map<int, int>::iterator it = active.begin(); it != active.end(); it++) {
-            (*it).second -= fastestWorker;
-
-            if((*it).second == 0) {
-                inactive.insert((*it).first);
-                done.push_back(it);
-            }
-        }
-
-        for(int i = 0; i < done.size(); i++) {
-            map<int, int>::iterator it = done[i];
-            active.erase((*it).first);
-        }
+        active = new_active;
     }
 
-    cout << total << '\n';
+    printf("%i\n", ans);
 
     return 0;
 }

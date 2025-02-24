@@ -19,7 +19,7 @@ int main(){
         if (!n) break;
 
         int tmp=n*n;
-        string ans;
+        string ans ="";
         
         while (tmp!=0){
             ans = alien[tmp%4]+ans;
