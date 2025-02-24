@@ -25,10 +25,9 @@ int main(){
         }
         
         int cnt = 0;
-        for (auto t : tickets)
-        {
+        for (auto t : tickets
             if (t.second > 1) cnt++;
-        }
+        
 
         printf("%i\n", cnt);
     }
