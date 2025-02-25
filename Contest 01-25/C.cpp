@@ -1,3 +1,8 @@
+/*
+    Beecrowd 1105 - Sub-prime
+    https://judge.beecrowd.com/pt/problems/view/1105
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 

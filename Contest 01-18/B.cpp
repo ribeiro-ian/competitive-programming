@@ -1,3 +1,8 @@
+/*
+    Beecrowd 1235 - De Dentro para Fora
+    https://judge.beecrowd.com/pt/problems/view/1235
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 

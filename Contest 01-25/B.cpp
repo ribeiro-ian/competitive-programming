@@ -1,3 +1,8 @@
+/*
+    Beecrowd 1088 - Bolhas e Baldes
+    https://judge.beecrowd.com/pt/problems/view/1088
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 

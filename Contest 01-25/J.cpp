@@ -1,3 +1,8 @@
+/*
+    Beecrowd 2415 - Consecutivos
+    https://judge.beecrowd.com/pt/problems/view/2415
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 

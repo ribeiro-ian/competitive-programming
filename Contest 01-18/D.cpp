@@ -1,3 +1,8 @@
+/*
+    Beecrowd 2390 - Escada Rolante
+    https://judge.beecrowd.com/pt/problems/view/2390
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 
