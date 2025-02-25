@@ -1,3 +1,8 @@
+/*
+    Beecrowd 1323 - Feynman
+    https://judge.beecrowd.com/pt/problems/view/1323
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 

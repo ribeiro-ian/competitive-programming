@@ -11,9 +11,6 @@ typedef unsigned long long ull;
 typedef pair <int, int> pii;
 
 int main(){
-    // ios_base::sync_with_stdio(0);
-    // cin.tie(nullptr);
-
     int n, m, var;
     queue <int> clients;
     priority_queue <int, vector<int>, greater<>> free;

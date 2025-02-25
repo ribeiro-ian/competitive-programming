@@ -1,3 +1,8 @@
+/*
+    Beecrowd 1418 - Outra Crise
+    https://judge.beecrowd.com/pt/problems/view/1418
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 

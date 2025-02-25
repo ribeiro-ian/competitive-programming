@@ -1,3 +1,8 @@
+/*
+    Beecrowd 1430 - Composição de Jingles
+    https://judge.beecrowd.com/pt/problems/view/1430
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 

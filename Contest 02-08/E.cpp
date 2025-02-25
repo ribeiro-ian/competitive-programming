@@ -1,3 +1,8 @@
+/*
+    Beecrowd 1467 - Zerinho ou Um
+    https://judge.beecrowd.com/pt/problems/view/1467
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 
