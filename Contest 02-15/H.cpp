@@ -62,6 +62,5 @@ int main(){
         printf("%lli $%lli\n", ans, ans*f*c);
     }
     
-
     return 0;
 }
