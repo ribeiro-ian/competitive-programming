@@ -22,6 +22,7 @@ vector <int> cards;
 
 pii func(int m){
     int cnt = 1, sum = 0, size = 0, biggest = 0;
+    
     for (int i = 0; i < cards.size(); i++, size++)
     {
         sum += cards[i];

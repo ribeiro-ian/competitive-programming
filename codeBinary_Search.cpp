@@ -14,7 +14,7 @@
     bool bs(ll x){
         ll l = 0, r = n-1;
      
-        while (l < r){
+        while (l <= r){
             ll m = (l+r)/2;
      
             if (v[m] == x)

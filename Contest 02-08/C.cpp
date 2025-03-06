@@ -38,6 +38,7 @@ int f(int x){
 
     return empregados[x] = total;
 }
+
 bool cmp(int a, int b){return empregados[a] < empregados[b];}
 
 int main(){
@@ -47,7 +48,7 @@ int main(){
         
         if (!n) break;
 
-        adj.assign(n+1, vector <int> (0));
+        adj.assign(n+1, vector <int>);
         empregados.assign(n+1, 0);
 
         for(int i = 0; i < n; i++){
