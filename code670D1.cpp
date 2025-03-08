@@ -9,20 +9,19 @@ using namespace std;
 typedef long long ll;
 typedef unsigned long long ull;
 
-ll n, k, a[1123], b[1123];
+ll n, k, a[1123], have[1123];
 
 bool isValid(ll x){
+    ll res = 0;
 
-    ll res = INT_MAX;
-    for (int i = 0; i < n; i++){
-        res = min(b[i]/a[i], res);
-    }
+    for (int i = 0; i < n; i++)
+        res += max(a[i] * x - have[i], 0LL);
     
-    return x >= res;
+    return res <= k;
 }
 
 ll bs(){
-    ll l = 0, r = *max_element(b, b+n)+k, m, ans = -1;
+    ll l = 0, r = *max_element(have, have+n)+k, m, ans = -1;
 
     while (l <= r){
         m = l + (r-l)/2;
@@ -48,7 +47,7 @@ int main(){
         scanf("%lli", &a[i]);
         
     for (int i = 0; i < n; i++)
-        scanf("%lli", &b[i]);
+        scanf("%lli", &have[i]);
 
     printf("%lli\n", bs());
 
