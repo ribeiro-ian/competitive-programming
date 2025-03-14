@@ -30,8 +30,7 @@ int main(){
             
             if (est.size() >= k)
                 flag = false;
-            else
-            {
+            else{
                 if (est.empty())
                     est.push(make_pair(x,y));
                 else if (y > est.top().second)
