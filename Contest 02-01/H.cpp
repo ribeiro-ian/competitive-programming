@@ -1,3 +1,8 @@
+/*
+    Beecrowd 2835 - Tri-du
+    https://judge.beecrowd.com/pt/problems/view/2835
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 

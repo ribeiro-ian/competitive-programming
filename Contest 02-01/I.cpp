@@ -1,3 +1,8 @@
+/*
+    Beecrowd 2292 - Painel LED
+    https://judge.beecrowd.com/pt/problems/view/2292
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -5,10 +10,6 @@ typedef unsigned long long ull;
 
 char alternar(char c){
     return c == 'X' ? 'O' : 'X';
-    // if (c == 'X')
-    //     return 'O';
-    // else
-    //     return 'X';
 }
 
 int main(){
@@ -24,10 +25,6 @@ int main(){
         string ans;
 
         ans += c % 2 == 1 ? alternar(p[0]) : p[0];
-        // if (c % 2 == 1)
-        //     ans += alternar(p[0]);
-        // else
-        //     ans += p[0];
 
         for (int i = 1; i < p.size(); i++){
             if (ans[i-1] == 'X')
@@ -36,11 +33,8 @@ int main(){
             c /= 2; // c = trocas
 
             ans += c % 2 == 1 ? alternar(p[i]) : p[i];
-            // if (c % 2 == 1)
-            //     ans += alternar(p[i]);
-            // else
-            //     ans += p[i];
         }
+
         printf("%s\n", ans.c_str());
     }
 

@@ -1,3 +1,8 @@
+/*
+    Beecrowd 1367 - Ajude!
+    https://judge.beecrowd.com/pt/problems/view/1367
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 

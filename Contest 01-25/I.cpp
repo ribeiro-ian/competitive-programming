@@ -1,3 +1,8 @@
+/*
+    Beecrowd 2410 - Frequencia na Aula
+    https://judge.beecrowd.com/pt/problems/view/2410
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 

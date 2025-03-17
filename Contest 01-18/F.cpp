@@ -1,3 +1,8 @@
+/*
+    Beecrowd 3055 - Nota Esquecida
+    https://judge.beecrowd.com/pt/problems/view/3055
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 

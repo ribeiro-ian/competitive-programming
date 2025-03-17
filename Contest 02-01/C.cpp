@@ -1,4 +1,8 @@
-// EXEMPLO
+/*
+    Beecrowd 1087 - Dama
+    https://judge.beecrowd.com/pt/problems/view/1087
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 

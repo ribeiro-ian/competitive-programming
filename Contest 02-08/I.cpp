@@ -1,3 +1,8 @@
+/*
+    Beecrowd 2815 - Digitador Gago
+    https://judge.beecrowd.com/pt/problems/view/2815
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 

@@ -1,3 +1,8 @@
+/*
+    Beecrowd 2327 - Quadrados
+    https://judge.beecrowd.com/pt/problems/view/2327
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 

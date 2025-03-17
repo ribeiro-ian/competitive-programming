@@ -1,3 +1,8 @@
+/*
+    Beecrowd 2234 - Cachorros-Quentes
+    https://judge.beecrowd.com/pt/problems/view/2234
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 

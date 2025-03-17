@@ -1,3 +1,8 @@
+/*
+    Beecrowd 1221 - Primo Rápido
+    https://judge.beecrowd.com/pt/problems/view/1221
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 

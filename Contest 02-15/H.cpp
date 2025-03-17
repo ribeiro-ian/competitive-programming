@@ -7,47 +7,60 @@
 using namespace std;
 
 typedef long long ll;
-typedef unsigned long long ull;
+
+ll tc, n, c, f, total;
+vector <ll> p(101), cam(11);
+
+ll func(ll m){
+    ll cnt = 1, sum = 0;
+
+    for (int i = 0; i < n; i++)
+    {
+        sum += p[i];
+        
+        if (sum > m){
+            sum = p[i];
+            cnt++;
+        }
+    }
+
+    return cnt;
+}
+
+ll bs(){
+    ll l = *max_element(p.begin(), p.end()),
+        r = total;
+    ll ans = 0;
+
+    while (l <= r){
+        ll m = (l+r)/2;
+
+        if (func(m) <= c){
+            ans = m;
+            r = m - 1;
+        }
+        else
+            l = m + 1;
+    }
+    return ans;
+}
 
 int main(){
-    int tc, n, c, f;
-    scanf("%i", &tc);
+    scanf("%lli", &tc);
     
     while (tc--)
     {
-        scanf("%i %i %i", &n, &c, &f);
-        
-        vector <int> p(n), cam(c, 0);
-        
-        int total = 0;
+        scanf("%lli %lli %lli", &n, &c, &f);
+
+        total = 0;
         for (int i = 0; i < n; i++){
-            scanf("%i", &p[i]);
+            scanf("%lli", &p[i]);
             total += p[i];
         }
 
-        int media = total / c;
-        
-        int i, j;
-        for (i = 0, j = 0; i < n; i++){
-            if (cam[j] + p[i] > media){
-                j++;
-            }
-            if (j>=c){
-                j--;
-                break;
-            }
-            cam[j] += p[i];
-        }
-
-        while (i < n){
-            cam[j] += p[i];
-            i++;
-        }
-
-        int maior = *max_element(cam.begin(), cam.end());
-        printf("%i $%i\n", maior, maior*f*c);
+        ll ans = bs();
+        printf("%lli $%lli\n", ans, ans*f*c);
     }
     
-
     return 0;
 }

@@ -1,3 +1,8 @@
+/*
+    Beecrowd 2579 - Nagol
+    https://judge.beecrowd.com/pt/problems/view/2579
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 
