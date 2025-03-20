@@ -10,70 +10,52 @@ typedef long long ll;
 typedef unsigned long long ull;
 
 vector <vector <int>> adj;
-vector <int> visited;
+vector <bool> visited;
 
-void dfs(int vi, int x){
-    visited[vi] = x;
+void dfs(int no){
+    visited[no] = true;
     
-    for (auto a : adj[vi]){
-        if (!visited[a]){
-            dfs(a, x);
-        }
+    for (auto v : adj[no]){
+        if (!visited[v]) 
+            dfs(v);
     }
 }
 
 int main(){
     int tc, caso = 0;
-    int n, m, x, y;
+    int n, m, a, b;
     
     scanf("%i", &tc);
 
     while (tc--){
-
         scanf("%i %i", &n, &m);
         
         adj.resize(n+1);
         visited.assign(n+1, false);
+
         for (int i = 0; i < m; i++){
-            scanf("%i %i", &x, &y);
+            scanf("%i %i", &a, &b);
             
-            adj[x].push_back(y);
-            adj[y].push_back(x);
+            adj[a].push_back(b);
+            adj[b].push_back(a);
         }
         
-        for (int i = 1; i <= n; i++)
-            dfs(i, i);
-        
-        printf("Caso #%i: ", ++caso);
-
-        if (m == 0){
-            int ans = n -1;
-            if (ans)
-                printf("ainda falta(m) %i estrada(s)\n", ans);
-            else
-                printf("a promessa foi cumprida\n");
-        }
-        else{
-            int qtdZero = count(visited.begin()+1, visited.end(), 0);
-            set <int> s;
-
-            for (int i = 1; i <= n; i++)
-            {
-                if (visited[i])
-                    s.insert(visited[i]);
+        int cnt = -1;
+        for (int i = 1; i <= n; i++){
+            if (!visited[i]) {
+                dfs(i);
+                cnt++;
             }
-
-            int ans = s.size() - 1 + qtdZero;
-            if (ans)
-                printf("ainda falta(m) %i estrada(s)\n", ans);
-            else
-                printf("a promessa foi cumprida\n");
-
         }
+
+        printf("Caso #%i: ", ++caso);
+        if (cnt)
+            printf("ainda falta(m) %i estrada(s)\n", cnt);
+        else
+            printf("a promessa foi cumprida\n");
 
         adj.clear();
     }
-    
 
     return 0;
 }
