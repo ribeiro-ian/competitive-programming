@@ -10,26 +10,27 @@ typedef long long ll;
 typedef unsigned long long ull;
 
 int main() {
-    int tc, n, k;
+    ll tc, n, k;
 
-    scanf("%i", &tc);
+    scanf("%lli", &tc);
     while (tc--) {
-        scanf("%i%i", &n, &k);
-        int b[n];
+        scanf("%lli%lli", &n, &k);
+        ll b[n];
 
         for (int i = 0; i < n; i++) {
-            scanf("%i", &b[i]);
+            scanf("%lli", &b[i]);
         }
         
         sort(b,b+n);
-        int sum = 0;
-        while (k--){
-            sum += b[n-k-1-1];
+
+        ll sum = b[n-1];
+        while (k) {
+            sum += b[n-1 - k];
+            k--;
         }
 
-        printf("%i\n", abs(sum-b[0]));
+        printf("%lli\n", sum);
     }
 
     return 0;
 }
-
