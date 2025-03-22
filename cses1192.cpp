@@ -8,65 +8,54 @@ using namespace std;
 
 typedef long long ll;
 typedef unsigned long long ull;
-typedef pair <int, int> pii;
 
+const int MAX = 1e3+5;
+int grid[MAX][MAX];
 int n, m;
-const int MAX = 11234;
-char matriz[MAX][MAX];
 
-void bfs(int i, int j) {
-    queue <pii> fila;
+void dfs(int lin, int col){
+    grid[lin][col] = 1;
 
-    matriz[i][j] = '1';
-    fila.push(make_pair(i,j));
+    int vertical[] = {lin+1, lin-1};
+    int horizontal[] = {col+1, col-1};
 
-    while (!fila.empty()) {
-        int lin = fila.front().first,
-            col = fila.front().second;
-        fila.pop();
-
-        matriz[lin][col] = '1';
-
-        if (matriz[lin+1][col] == '.' && lin+1 < n)
-            fila.push(make_pair(lin+1,col));
-        if (matriz[lin-1][col] == '.' && lin-1 >= 0)
-            fila.push(make_pair(lin-1,col));
-        if (matriz[lin][col+1] == '.' && col+1 < m)
-            fila.push(make_pair(lin,col+1));
-        if (matriz[lin][col-1] == '.' && col-1 >= 0)
-            fila.push(make_pair(lin,col-1));
+    for (auto d : vertical) {
+        if (grid[d][col] == 0 && d >= 0 && d < n) {
+            dfs(d,col);
+        }
+    }
+    for (auto d : horizontal) {
+        if (grid[lin][d] == 0 && d >= 0 && d < m) {
+            dfs(lin,d);
+        }
     }
 }
 
-
 int main() {
-
+    string line;
     scanf("%i%i", &n, &m);
-    
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < m; j++) {
-            scanf("%c", &matriz[i][j]);
+
+    for (int i = 0, j = 0; i < n; i++) {
+        cin >> line;
+        for (auto &c : line) {
+            if (c == '.') grid[i][j] = 0;
+            else grid[i][j] = -1;
+            j++;
         }
+        j = 0;
     }
-    
+
     int cnt = 0;
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < m; j++) {
-            if (matriz[i][j] == '.'){
-                bfs(i,j);
+            if (grid[i][j] == 0){
+                dfs(i,j);
                 cnt++;
             }
         }
     }
-    
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < m; j++) {
-            printf("%c ", matriz[i][j]);
-        }
-        printf("\n");
-    }
 
     printf("%i\n", cnt);
-    
+
     return 0;
 }
