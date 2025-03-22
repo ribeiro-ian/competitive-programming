@@ -13,21 +13,25 @@ bool solve(string str) {
 
     string aux = "";
     for (int i = 0; i < str.size(); i++) {
-        if (str[i] = '1' || str[i] != '4')
+        if (str[i] != '1' && str[i] != '4')
             return false;
 
         aux += str[i];
 
-        if (aux == "144") aux.clear();
-        
+        cerr << aux << endl;
+        if (str[i] == '1') aux = "1";
+        else if (aux == "4") return false;
+        else if (aux == "14") continue;
+        else if (aux == "144") aux.clear();
+        else return false;
     }
+    return true;
 }
 
 int main() {
     string str;
+
     cin >> str;
-
-
 
     printf("%s\n", solve(str) ? "YES" : "NO");
 
