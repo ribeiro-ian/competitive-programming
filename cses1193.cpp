@@ -12,37 +12,39 @@ typedef pair<int,int> pii;
 
 int n, m;
 const int MAX = 1123;
-int matriz[MAX][MAX];
+int grid[MAX][MAX];
 
-void bfs(int i, int j) {
+int bfs(int i, int j) {
     queue <pii> q;
 
     int cnt = 1;
+    grid[i][j] = cnt;
     q.push({i, j});
 
     while (!q.empty()) {
         int lin, col;
         tie(lin,col) = q.front();
         q.pop();
-
-        matriz[lin][col] = cnt;
-
+        
+        
         int vertical[] = {lin-1,lin+1};
         int horizontal[] = {col-1,col+1};
-
+        
         for (auto &d : vertical) {
-            if (matriz[d][col] == 0 && d >= 0 && d <= n) {
+            if (grid[d][col] == 0 && d >= 0 && d <= n) {
                 q.push({d, col});
-                printf("push <%i,%i>\n", d, col);
+                grid[d][col] = cnt;
             }
         }
-
+        
         for (auto &d : horizontal) {
-            if (matriz[lin][d] == 0 && d >=0 && d <= m) {
+            if (grid[lin][d] == 0 && d >=0 && d <= m) {
                 q.push({lin, d});
-                printf("push <%i,%i>\n", lin, d);
+                grid[lin][d] = cnt;
             }
         }
+        
+        cnt++;
     }
 
 }
@@ -51,7 +53,7 @@ void gridPrint() {
     printf("\n");
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < m; j++) {
-            printf("%2i ", matriz[i][j]);
+            printf("%2i ", grid[i][j]);
         }
         printf("\n");
     }
@@ -72,9 +74,9 @@ int main() {
         
         for (auto &c : line) {
             if (c == '#')
-                matriz[i][j] = -1;
+                grid[i][j] = -1;
             else
-                matriz[i][j] = 0;
+                grid[i][j] = 0;
 
             if (c=='A')
                 start = {i,j};
