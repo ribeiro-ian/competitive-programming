@@ -1,3 +1,9 @@
+/*
+    Neps 468 - Soma (OBI 2019)
+    https://neps.academy/br/exercise/468
+*/
+
+
 #include <bits/stdc++.h>
 using namespace std;
 
