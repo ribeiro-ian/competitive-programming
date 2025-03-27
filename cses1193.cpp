@@ -13,12 +13,13 @@ typedef pair<int,int> pii;
 int n, m;
 const int MAX = 1123;
 int grid[MAX][MAX];
+int vertical[] = {1, -1, 0, 0};
+int horizontal[] = {0, 0, 1, -1};
 
-int bfs(int i, int j) {
+void bfs(int i, int j) {
     queue <pii> q;
 
-    int cnt = 1;
-    grid[i][j] = cnt;
+    grid[i][j] = 1;
     q.push({i, j});
 
     while (!q.empty()) {
@@ -26,27 +27,16 @@ int bfs(int i, int j) {
         tie(lin,col) = q.front();
         q.pop();
         
-        
-        int vertical[] = {lin-1,lin+1};
-        int horizontal[] = {col-1,col+1};
-        
-        for (auto &d : vertical) {
-            if (grid[d][col] == 0 && d >= 0 && d <= n) {
-                q.push({d, col});
-                grid[d][col] = cnt;
-            }
-        }
-        
-        for (auto &d : horizontal) {
-            if (grid[lin][d] == 0 && d >=0 && d <= m) {
-                q.push({lin, d});
-                grid[lin][d] = cnt;
-            }
-        }
-        
-        cnt++;
-    }
+        for (int i = 0; i < 4; i++) {
+            int x = vertical[i] + lin,
+                y = horizontal[i] + col;
 
+            if (grid[x][y] == 0 && x >= 0 && x < n && y >= 0 && y < m) {
+                q.push({x,y});
+                grid[x][y] = grid[lin][col]+1;
+            }
+        }
+    }
 }
 
 void gridPrint() {
@@ -64,7 +54,6 @@ int main() {
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
 #endif
-
     string line;
     scanf("%i%i", &n, &m);
 
@@ -90,6 +79,51 @@ int main() {
     gridPrint();
     bfs(start.first, start.second);        
     gridPrint();        
+
+    int ans = grid[end.first][end.second];
+    if (ans <= 0) {
+        printf("NO\n");
+        return 0;
+    }
+
+    printf("YES\n");
+    printf("%i\n", ans-1);
+
+    
+    
+    stack <char> path;
+    int v = ans, lin, col;
+    tie(lin,col) = end;
+
+    while (v > 1) {
+        printf("<%i,%i>\n", lin+1, col+1);
+        for (int i = 0; i < 4; i++) {
+            int x = vertical[i] + lin,
+                y = horizontal[i] + col;
+
+            if (grid[x][y] == v-1 && x >= 0 && x < n && y >= 0 && y < m) {
+                if (x) {
+                    path.push( x == 1 ? 'U' : 'D');
+                }
+                if (y) {
+                    path.push( y == 1 ? 'R' : 'L' );
+                }
+
+                lin = x;
+                col = y;
+                break;
+            }
+        }
+        v--;
+    }
+
+    while (!path.empty()) {
+        printf("%c", path.top());
+        path.pop();
+    }
+    printf("\n");
+    
+        
 
     return 0;
 }
