@@ -15,6 +15,5 @@ int main() {
     
     printf("%s\n", (w%2==0 && w > 2) ? "YES" : "NO");
 
-
     return 0;
 }

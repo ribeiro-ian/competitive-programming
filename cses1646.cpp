@@ -1,9 +1,14 @@
+/*
+    CSES 1646 - Static Range Sum Queries
+    https://cses.fi/problemset/task/1646
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 
 typedef long long ll;
 
-int main(){
+int main() {
     int n, q, l, r;
     cin >> n >> q;
 
@@ -16,7 +21,6 @@ int main(){
     
     for (int i = 0; i < q; i++){
         cin >> l >> r;
-
         cout << pref[r] - pref[l-1] << endl;
     }
     
