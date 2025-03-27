@@ -1,3 +1,8 @@
+/*
+    Beecrowd 1393 - Lajotas Hexagonais
+    https://judge.beecrowd.com/pt/problems/view/13930
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -15,7 +20,7 @@ int main() {
         pref[i] = pref[i-1] + pref[i-2];
     }
     
-    while(1){
+    while (1) {
         cin >> n;
         
         if (!n) break;

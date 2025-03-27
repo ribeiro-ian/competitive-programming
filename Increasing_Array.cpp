@@ -22,7 +22,6 @@ int main(){
     }
 
     printf("%lli\n", cnt);
-    
 
     return 0;
 }
