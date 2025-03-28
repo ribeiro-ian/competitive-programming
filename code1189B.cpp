@@ -13,6 +13,7 @@ int main() {
     ll n;
     scanf("%lli", &n);
     ll v[n+2];
+    
     for (int i = 1; i <= n; i++) {
         scanf("%lli", &v[i]);
     }
