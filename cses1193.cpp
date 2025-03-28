@@ -6,15 +6,13 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-typedef long long ll;
-typedef unsigned long long ull;
 typedef pair<int,int> pii;
 
-int n, m;
 const int MAX = 1123;
 int grid[MAX][MAX];
-int vertical[] = {1, -1, 0, 0};
-int horizontal[] = {0, 0, 1, -1};
+int vertical[] = {1, -1, 0, 0},
+    horizontal[] = {0, 0, 1, -1};
+int n, m;
 
 void bfs(int i, int j) {
     queue <pii> q;
@@ -36,16 +34,6 @@ void bfs(int i, int j) {
                 grid[x][y] = grid[lin][col]+1;
             }
         }
-    }
-}
-
-void gridPrint() {
-    printf("\n");
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < m; j++) {
-            printf("%2i ", grid[i][j]);
-        }
-        printf("\n");
     }
 }
 
@@ -76,9 +64,7 @@ int main() {
         j = 0;
     }
     
-    gridPrint();
     bfs(start.first, start.second);        
-    gridPrint();        
 
     int ans = grid[end.first][end.second];
     if (ans <= 0) {
@@ -89,24 +75,23 @@ int main() {
     printf("YES\n");
     printf("%i\n", ans-1);
 
-    
-    
     stack <char> path;
-    int v = ans, lin, col;
+    int lin, col;
     tie(lin,col) = end;
 
-    while (v > 1) {
-        printf("<%i,%i>\n", lin+1, col+1);
+    while (ans > 1) {
         for (int i = 0; i < 4; i++) {
-            int x = vertical[i] + lin,
-                y = horizontal[i] + col;
+            int v = vertical[i],
+                h = horizontal[i];
+            int x = lin + v,
+                y = col + h;
 
-            if (grid[x][y] == v-1 && x >= 0 && x < n && y >= 0 && y < m) {
-                if (x) {
-                    path.push( x == 1 ? 'U' : 'D');
+            if (grid[x][y] == ans-1 && x >= 0 && x < n && y >= 0 && y < m) {
+                if (v) {
+                    path.push( v == 1 ? 'U' : 'D' );
                 }
-                if (y) {
-                    path.push( y == 1 ? 'R' : 'L' );
+                if (h) {
+                    path.push( h == 1 ? 'L' : 'R' );
                 }
 
                 lin = x;
@@ -114,7 +99,7 @@ int main() {
                 break;
             }
         }
-        v--;
+        ans--;
     }
 
     while (!path.empty()) {
@@ -122,8 +107,6 @@ int main() {
         path.pop();
     }
     printf("\n");
-    
-        
 
     return 0;
 }

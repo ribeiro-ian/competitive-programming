@@ -10,11 +10,11 @@ typedef long long ll;
 typedef unsigned long long ull;
 
 int main() {
-    int n;
-    scanf("%i", &n);
-    int v[n+2];
+    ll n;
+    scanf("%lli", &n);
+    ll v[n+2];
     for (int i = 1; i <= n; i++) {
-        scanf("%i", &v[i]);
+        scanf("%lli", &v[i]);
     }
     
     sort(v+1,v+n+1);
