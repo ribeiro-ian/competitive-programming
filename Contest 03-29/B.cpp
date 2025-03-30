@@ -1,3 +1,8 @@
+/*
+    Codeforces 1469B - Red and Blue
+    https://codeforces.com/problemset/problem/1469/B
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 

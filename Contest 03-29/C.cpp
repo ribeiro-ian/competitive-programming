@@ -1,3 +1,8 @@
+/*
+    Codeforces 59A - Words
+    https://codeforces.com/problemset/problem/59/A
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 

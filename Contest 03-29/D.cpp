@@ -1,3 +1,8 @@
+/*
+    Codeforces 327A -  Counting Kangaroos is Fun
+    https://codeforces.com/problemset/problem/372/A
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -17,7 +22,7 @@ int main() {
     sort(s,s+n);
     
     int ans = 0;
-    for (int i = 0; i < n;  i++) {
+    for (int i = 0; i < n; i++) {
         printf("%i ", s[i]);
 
 
