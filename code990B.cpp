@@ -18,7 +18,7 @@ int main() {
         scanf("%i", &a[i]); 
     }
 
-    sort(a, a+n);
+    sort(a, a+n, greater<int>());
     
     int cnt = 0;
     for (int i = 0; i < n; i++) {
@@ -26,8 +26,9 @@ int main() {
 
         while (a[i] > a[j] && a[i] <= a[j] + k && j < n) {
             cnt++;
-            i++, j++;
+            j++;
         }
+        i = j-1;
     }
     
     printf("%i\n", n - cnt);
