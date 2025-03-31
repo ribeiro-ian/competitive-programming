@@ -10,26 +10,24 @@ typedef long long ll;
 typedef unsigned long long ull;
 
 int main() {
-    const int MAX = 1e5+1;
-    int n;
-    scanf("%i", &n);
-
-    int s[n], cnt[MAX];
-    for (int i = 0; i < n; i++) {
+    int n; scanf("%i", &n);
+    
+    int s[n];
+    for (int i = 0; i < n; i++)
         scanf("%i", &s[i]);
-    }
 
     sort(s,s+n);
     
-    int ans = 0;
-    for (int i = 0; i < n; i++) {
-        printf("%i ", s[i]);
-
-
-        if (s[i] * 2 > *max_element(s, s+n)) break;
+    int cnt = n, l = 0, r = n/2;
+    while (l < n/2 && r < n) {
+        if (s[l] * 2 <= s[r]) {
+            cnt--;
+            l++;
+        }
+        r++;
     }
-    printf("\n");
-
+    
+    printf("%i\n", cnt);
 
     return 0;
 }

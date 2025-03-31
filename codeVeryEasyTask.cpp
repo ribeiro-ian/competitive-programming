@@ -11,14 +11,14 @@ typedef unsigned long long ull;
 
 ll x, y, n;
 
-bool isValid(ll t){
+bool isValid(ll t) {
     if (t < min(x,y)) return false;
 
     t -= min(x,y); // - time of first copy
     return t/x + t/y >= n-1; // -1 = first copy
 }
 
-ll bs(){
+ll bs() {
     // bs on time
     ll l = 0, ans = -1, m,
         r = max(x,y)*n;
@@ -26,7 +26,7 @@ ll bs(){
     while (l <= r){
         m = l+(r-l)/2;
 
-        if (isValid(m)){
+        if (isValid(m)) {
             ans = m;
             r = m - 1;
         }
