@@ -1,3 +1,8 @@
+/*
+    Codeforces 2091D - Place of the Olympiad
+    https://codeforces.com/contest/2091/problem/D
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -31,7 +36,7 @@ ll bs() {
 }
 
 int main() {
-    // ios_base::sync_with_stdio(0); cin.tie(0);
+    ios_base::sync_with_stdio(0); cin.tie(0);
     cin >> tc;
 
     while (tc--) {
