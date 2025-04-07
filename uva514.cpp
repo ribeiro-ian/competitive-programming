@@ -10,27 +10,34 @@ typedef long long ll;
 typedef unsigned long long ull;
 
 int main() {
+    ios_base::sync_with_stdio(0); cin.tie(0);
     int n, x;
 
-    bool first = true;
-    while(scanf("%i", &n), n) {
-        if (!first) printf("\n");
-        first = false;
-
-        int prev;
+    while(cin >> n, n) {
         
-        while (scanf("%i", &prev), prev) {
-            bool flag = true;
+        while (1) {
+            stack <int> in;
+            queue <int> out;
 
-            for (int i = 1; i < n; i++) {
-                scanf("%i", &x);
+            for (int i = 1; i <= n; i++) {
+                cin >> x;
+                if (!x) break;
                 
-                if (abs(prev-x) != 1) flag = false;
-                prev = x;
-            }
+                out.push(x);                
+                in.push(i);
 
-            printf("%s\n", flag ? "Yes" : "No");
+                while (!in.empty() && in.top() == out.front()) {
+                    in.pop(), out.pop();
+                }
+
+            }
+            
+            if (!x) break;
+            
+            
+            cout << (in.empty() ? "Yes" : "No") << '\n';
         }
+        cout << '\n';
     }
 
     return 0;
