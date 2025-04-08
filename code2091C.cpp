@@ -21,7 +21,7 @@ int main() {
         set <int> s;
         
         for (int i = 1; i <= n; i++) {
-            int v = i*2 % n + 1;
+            int v = (i*2 % n) + 1;
             ans.push_back(v);
             s.insert(v);
         }
