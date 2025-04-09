@@ -1,6 +1,6 @@
 /*
-    Neps 60 - Sanduíche
-    https://neps.academy/br/exercise/60
+    CSES 1643 - Maximum Subarray Sum
+    https://cses.fi/problemset/task/1643
 */
 
 #include <bits/stdc++.h>
@@ -15,21 +15,22 @@ int main() {
 
     cin >> n >> d;
 
-    int v[2*n];
+    int pref[n+1], v[n];
     for (int i = 0; i < n; i++) {
         cin >> v[i];
-        v[n+i] = v[i];
+        pref[i+1] = pref[i] + v[i];
     }
 
     int cnt = 0;
-    for (int l = 0, r = 0, sum = 0; l < n; l++) {
-        while (r-l+1 <= n && sum + v[r] <= d) {
-            sum += v[r];
+    ll sum = 0, ans = 0;
+    for (int l = 0, r = 0; l <= n; l++) {
+        while (r < n && sum + pref[r] <= d) {
+            sum += pref[r];
             r++;
         }
 
-        if (sum == d) cnt++;
-        sum -= v[l];
+        ans = max(ans, (ll) r-l+1);
+        sum -= pref[l];
     }
 
     cout << cnt << '\n';

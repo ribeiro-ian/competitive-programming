@@ -25,10 +25,10 @@ int main() {
         }
 
         ans = max(ans, r - i);
-        sum -= a[i]; // remove o primeiro em vez de recomeçar a soma
+        sum -= a[i];
     }
  
-    printf("%i\n", ans);
+    cout << ans << '\n';
 
     return 0;
 }

@@ -10,22 +10,28 @@ typedef long long ll;
 typedef unsigned long long ull;
 
 int main() {
-    ll n, x;
-    scanf("%lli %lli", &n, &x);
+    ios_base::sync_with_stdio(0); cin.tie(0);
+    int n, d;
 
-    vector <ll> v(n), pref(n+1, 0);
-    for (int i = 0; i < n; i++) {
-        scanf("%lli", &v[i]);
-        pref[i+1] = pref[i] + v[i];
+    cin >> n >> d;
+
+    int v[n];
+    for (int i = 0; i < n; i++) 
+        cin >> v[i];
+
+    int cnt = 0;
+    ll sum = 0;
+    for (int l = 0, r = 0; l < n; l++) {
+        while (r < n && sum + v[r] <= d) {
+            sum += v[r];
+            r++;
+        }
+
+        if (sum == d) cnt++;
+        sum -= v[l];
     }
-    
-    map <ll,ll> freq;
-    ll cnt = 0;
-    for (int i = 0; i <= n; i++) {
-        freq[pref[i]]++;
-        cnt += freq[pref[i]-x];
-    }
-    printf("%lli\n", cnt);
+
+    cout << cnt << '\n';
 
     return 0;
 }
