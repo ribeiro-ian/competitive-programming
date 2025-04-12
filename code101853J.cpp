@@ -16,25 +16,22 @@ int main() {
     cin >> tc;
     while (tc--) {
         cin >> n;
-
+        
         ll a[n];
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < n; i++) 
             cin >> a[i];
-        }
+
+        sort(a,a+n);
 
         ll ans = 0;
-        for (int l = 0; l < n-1; l++) {
-            ll next = l+1;
-            if (abs(a[next] - a[l]) > 1) continue;
-
-            ll r = next;
-            while (abs(a[r] - a[l]) <= 1 && abs(a[r]-a[r-1]) <= 1) {
+        for (ll l = 0, r = 0; l < n; l++) {
+            while (r < n && abs(a[r] - a[l]) <= 1) {
+                ans = max(ans, r-l+1);
                 r++;
             }
-            ans = max(ans, r-l);
         }
 
-        cout << max(ans, 1LL) << '\n';
+        cout << ans << '\n';
     }
 
     return 0;
