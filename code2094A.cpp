@@ -1,3 +1,8 @@
+/*
+    Codeforces 2094A - Trippi Troppi
+    https://codeforces.com/contest/2094/problem/A
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 

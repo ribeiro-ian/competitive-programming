@@ -11,19 +11,16 @@ typedef unsigned long long ull;
 
 ll n, q, v[112345], x;
 
-ll bs(ll x)
-{
+ll bs(ll x) {
     ll l = 0, r = n-1, m;
 
-    while (l <= r){
+    while (l <= r) {
         m = l + (r-l)/2;
 
-        if (v[m] <= x)
-        {
+        if (v[m] <= x) {
             l = m + 1;
         }
-        else
-        {
+        else {
             r = m - 1;
         }
     }
@@ -37,12 +34,10 @@ int main(){
     
     for (int i = 0; i < n; i++)
         scanf("%lli", &v[i]);
-    
     sort(v, v+n);
 
     scanf("%lli", &q);
-    while (q--)
-    {
+    while (q--) {
         scanf("%lli", &x);
 
         printf("%lli\n", bs(x));

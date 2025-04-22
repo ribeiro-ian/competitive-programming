@@ -1,3 +1,8 @@
+/*
+    Codeforces 2094C - Brr Brrr Patapim
+    https://codeforces.com/contest/2094/problem/C
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 
