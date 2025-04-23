@@ -1,0 +1,7 @@
+# Ignore compiled executable
+a.out
+
+# Ignore input/output files
+in.txt
+out.txt
+sol.txt
