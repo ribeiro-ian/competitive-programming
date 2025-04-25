@@ -13,7 +13,6 @@ const int MAX = 1e5;
 int tc, n, k, v[MAX];
 
 int f(int x){
-
     int cnt = 1, prev = v[0];
 
     for (int i = 1; i < n; i++){ 

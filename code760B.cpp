@@ -4,52 +4,38 @@ using namespace std;
 typedef long long ll;
 typedef unsigned long long ull;
 
-int n, m, k; 
+ll n, m, k; 
 
-bool valid(int x) {
-    int cnt = n+x-1, idx = k-1;
-    if (cnt > m) return false;
-
-    vector <int> a(n, 1);
-    a[idx] += x-1;
-
-    int r = idx+1;
-    while (r < n) {
-        int diff = abs(a[r-1]-a[r]);
-        if (diff <= 1) break;
-
-        diff--;
-        cnt += diff;
-        a[r] += diff;
+bool valid(ll x) {
+    ll cnt = x, r = k+1, l = k-1, value = x-1;
+    while (r <= n) {
+        cnt += value;
+        value = max(1LL, value-1);
         r++;
     }
 
-    int l = idx-1;
-    while (l >= 0) {
-        int diff = abs(a[l+1]-a[l]);
-        if (diff <= 1) break;
-
-        diff--;
-        cnt += diff;
-        a[l] += diff;
+    value = x-1;
+    while (l >= 1) {
+        cnt += value;
+        value = max(1LL, value-1);
         l--;
     }
-
-    return cnt <= n;
+    cerr << "x: " << x << "; cnt: " << cnt << "\n";
+    return cnt <= m;
 }
 
-int bs() {
-    int l = 1, r = m, ans = 1, mid;
+ll bs() {
+    ll l = 1, r = m, ans = -1, mid;
 
     while (l <= r) {
         mid = l+(r-l)/2;
 
-        if (valid(m)) {
-            ans = m;
-            l = m + 1;
+        if (valid(mid)) {
+            ans = mid;
+            l = mid + 1;
         }
         else {
-            r = m - 1;
+            r = mid - 1;
         }
     }
 

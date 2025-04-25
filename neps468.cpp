@@ -3,7 +3,6 @@
     https://neps.academy/br/exercise/468
 */
 
-
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -29,6 +28,7 @@ int main(){
         cnt += pref_cnt[pref[i] - k];
         pref_cnt[pref[i]] += 1;
     } 
+
     for (auto p : pref_cnt)
         fprintf(stderr, "%lli %lli\n", p.first, p.second);
     fprintf(stderr, "\n");
