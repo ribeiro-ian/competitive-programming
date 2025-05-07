@@ -6,28 +6,12 @@ typedef unsigned long long ull;
 
 int main() {
     ios_base::sync_with_stdio(0); cin.tie(0);
-    int n, t;
-    cin >> n >> t;
+    int n = 1e5;
 
-    int a[n], ans = 0;
-    for (int i = 0; i < n; i++)
-        cin >> a[i];
-
-    for (int i = 0; i < n; i++) {
-        ll sum = 0;
-        for (int j = i; j < n; j++) {
-            sum += a[j];
-
-            if (sum <= t) {
-                ans = max(ans, j-i+1);
-            } 
-            else
-                break;
-        }
+    cout << n << "\n";
+    for (int i = 0; i < n/2; i++) {
+        cout << i*2 << " " << i*2 << " " << (n-i)*2 << " " << (n-i)*2 << "\n";
     }
-    cout << ans << endl;
-
-    return 0;
 }
 
 /*

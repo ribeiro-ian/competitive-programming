@@ -15,7 +15,7 @@ bool isValid(ll t) {
     if (t < min(x,y)) return false;
 
     t -= min(x,y); // - time of first copy
-    return t/x + t/y >= n-1; // -1 = first copy
+    return t/x + t/y >= n-1;
 }
 
 ll bs() {

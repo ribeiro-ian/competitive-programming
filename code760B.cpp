@@ -1,3 +1,8 @@
+/*
+    Codeforces 760B - Frodo and pillows
+    https://codeforces.com/problemset/problem/760/B
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -6,21 +11,23 @@ typedef unsigned long long ull;
 
 ll n, m, k; 
 
-bool valid(ll x) {
-    ll cnt = x, r = k+1, l = k-1, value = x-1;
-    while (r <= n) {
-        cnt += value;
-        value = max(1LL, value-1);
-        r++;
-    }
+ll f(ll len, ll x) {
+    x--;
+    ll first = max(1LL, x-len+1), last = x, ret = 0;
 
-    value = x-1;
-    while (l >= 1) {
-        cnt += value;
-        value = max(1LL, value-1);
-        l--;
+    if (len > x) {
+        ret += len-x;
     }
-    cerr << "x: " << x << "; cnt: " << cnt << "\n";
+    ret += (first + last) * (last - first + 1)/2;
+
+    return ret;
+}
+
+bool isValid(ll x) {
+    ll l = k-1, r = n-k;
+
+    ll cnt = x + f(l, x) + f(r, x);
+
     return cnt <= m;
 }
 
@@ -30,7 +37,7 @@ ll bs() {
     while (l <= r) {
         mid = l+(r-l)/2;
 
-        if (valid(mid)) {
+        if (isValid(mid)) {
             ans = mid;
             l = mid + 1;
         }
