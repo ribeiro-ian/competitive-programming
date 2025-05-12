@@ -12,28 +12,28 @@ typedef unsigned long long ull;
 int main() {
     ll n;
     scanf("%lli", &n);
-    ll v[n+2];
+    ll v[n];
     
-    for (int i = 1; i <= n; i++) {
-        scanf("%lli", &v[i]);
+    for (int i = 0; i < n; i++) 
+        cin >> v[i];
+        
+    sort(v,v+n);
+    
+    if (v[n-1] >= v[n-2] + v[n-3]) {
+        cout << "NO\n";
     }
-    
-    sort(v+1,v+n+1);
+    else {
+        cout << "YES\n";
 
-    v[0] = v[n];
-    v[n+1] = v[1];
-    
-    for (int i = 1; i <= n; i++) {
-        if (v[i] >= v[i-1] + v[i+1]) {
-            printf("NO\n");
-            return 0;
+        for (int i = n-1; i >= 0; i-=2) {
+            cout << v[i] << " ";
+        }
+        
+        for (int i = n%2; i < n; i+=2) {
+            cout << v[i] << " ";
         }
     }
-    
-    printf("YES\n");
-    for (int i = 1; i <= n; i++) {
-        printf("%i ", v[i]);
-    }
+ 
     printf("\n");
 
     return 0;

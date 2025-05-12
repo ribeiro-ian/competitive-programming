@@ -10,28 +10,25 @@ typedef long long ll;
 typedef unsigned long long ull;
 
 int main() {
+    ios_base::sync_with_stdio(0); cin.tie(0);
+
     int n, k;
-    scanf("%i %i", &n, &k);
+    cin >> n >> k;
 
     int a[n];
-    for (int i = 0; i < n; i++) {
-        scanf("%i", &a[i]); 
-    }
-
-    sort(a, a+n, greater<int>());
+    for (int i = 0; i < n; i++) 
+        cin >> a[i];
+    sort(a, a+n);
     
-    int cnt = 0;
+    int cnt = n;
     for (int i = 0; i < n; i++) {
-        int j = i + 1;
+        int aux = upper_bound(a,a+n, a[i]) - a;
 
-        while (a[i] > a[j] && a[i] <= a[j] + k && j < n) {
-            cnt++;
-            j++;
-        }
-        i = j-1;
+        if (aux < n && a[aux] - a[i] <= k) 
+            cnt--;
     }
     
-    printf("%i\n", n - cnt);
+    cout << cnt << "\n";
 
     return 0;
 }

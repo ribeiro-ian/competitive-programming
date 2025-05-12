@@ -16,19 +16,19 @@ bool isValid(ll x){
 }
 
 ll bs(){
-    ll l = 0, r = 1, m, ans = -1;
+    ll l = 0, r = 1, mid, ans = -1;
 
     while (!isValid(r)) r *= 2;
 
     while (l <= r){
-        m = l+(r-l)/2;
+        mid = l+(r-l)/2;
 
-        if (isValid(m)){
-            ans = m;
-            r = m - 1;
+        if (isValid(mid)){
+            ans = mid;
+            r = mid - 1;
         }
         else
-            l = m + 1;
+            l = mid + 1;
     }
 
     return ans;
@@ -36,9 +36,9 @@ ll bs(){
 
 int main(){
 
-    scanf("%lli %lli %lli", &w, &h, &n);
+    cin >> w >> h >> n;
 
-    printf("%lli\n", bs());
+    cout << bs() << "\n";
 
     return 0;
 }
