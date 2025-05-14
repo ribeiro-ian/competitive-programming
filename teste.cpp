@@ -6,12 +6,19 @@ typedef unsigned long long ull;
 
 int main() {
     ios_base::sync_with_stdio(0); cin.tie(0);
-    int n = 1e5;
 
-    cout << n << "\n";
-    for (int i = 0; i < n/2; i++) {
-        cout << i*2 << " " << i*2 << " " << (n-i)*2 << " " << (n-i)*2 << "\n";
+    double x, t, a;
+    int tc = 7;
+    
+    double ans = 0, res = 0;
+    while (tc--) {
+        cin >> x >> t >> a;
+
+        ans = sqrt( 2 * a * x );
+        res += ans;
     }
+    printf("%.3f\n", res/7);
+
 }
 
 /*
