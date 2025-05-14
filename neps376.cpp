@@ -8,6 +8,7 @@ using namespace std;
 
 typedef long long ll;
 typedef unsigned long long ull;
+<<<<<<< HEAD
 typedef pair<ll,ll> pii;
 
 vector <vector<pii>> adj;
@@ -67,21 +68,36 @@ void caminho_direto(ll s) {
         }
     }
 }
+=======
+typedef pair<int,int> pii;
+
+vector <vector<pii>> adj;
+vector <bool> visitado;
+int n, m;
+>>>>>>> f81c632 (update)
 
 int main() {
     ios_base::sync_with_stdio(0); cin.tie(0);
 
     cin >> n >> m;
+<<<<<<< HEAD
     adj.assign(n+1, vector<pii>());
 
     while (m--) {
         ll a, b, c;
         cin >> a >> b >> c;
 
+=======
+
+    while (m--) {
+        int a, b, c;
+        cin >> a >> b >> c;
+>>>>>>> f81c632 (update)
         adj[a].push_back({b,c});
         adj[b].push_back({a,c});
     }
 
+<<<<<<< HEAD
     menor_caminho(1);
     caminho_direto(1);
 
@@ -92,5 +108,9 @@ int main() {
     }
 
     
+=======
+    
+
+>>>>>>> f81c632 (update)
     return 0;
 }

@@ -10,42 +10,35 @@ typedef long long ll;
 typedef unsigned long long ull;
 
 int main() {
-#ifndef ONLINE_JUDGE
-    freopen64("input.txt", "r", stdin);
-    freopen64("output.txt", "w", stdout);
-#endif
     int c, s, set = 1, x;
 
-    while (scanf("%i %i", &c, &s) != EOF) {
-        int v[s];
+    while (cin >> c >> s) {
+        int n = 2*c;
+        int v[n] = {0};
         double avg = 0, imbalance = 0;
 
         for (int i = 0; i < s; i++) {
-            scanf("%i", &v[i]);
+            cin >> v[i];
             avg += v[i];
         }
         avg /= c;
 
-        sort(v,v+s);
+        sort(v,v+n);
 
         printf("Set #%i\n", set++);
 
-        int i;
-        for (i = 0; i < s/2; i++) {
-            int pair = v[s-i-1- (s % 2 == 1 ? 1 : 0)];
-            int chamber = v[i] + pair;
-
-            printf(" %i: %i %i\n", i, v[i], pair);
+        for (int i = 0; i < c; i++) {
+            int chamber = v[i] + v[n-1-i];
+            
+            cout << " " << i << ":";
+            if (v[i]) cout << " " << v[i];
+            if (v[n-1-i]) cout << " " << v[n-1-i];
+            cout << "\n";
 
             imbalance += abs(chamber-avg);
         }
-        if (s%2) {
-            printf(" %i: %i\n", i, v[s-1]);
-            imbalance += abs(v[s-1]-avg);
-        }
 
         printf("IMBALANCE = %.5f\n\n", imbalance);
-
     }
 
     return 0;
