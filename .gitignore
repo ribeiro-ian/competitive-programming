@@ -1,5 +1,6 @@
 # Ignore compiled executable
 a.out
+teste.cpp
 
 # Ignore input/output files
 # in.txt

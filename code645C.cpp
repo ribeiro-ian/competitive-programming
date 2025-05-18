@@ -10,29 +10,15 @@ typedef long long ll;
 typedef unsigned long long ull;
 
 int n, k;
-<<<<<<< HEAD
 vector <int> zeros;
 string s;
 
 int bs(int ini, int fim) {
     int l = ini, r = fim, mid;
-=======
-string str;
-
-bool isValid(ll x) {
-    
-
-    return ;
-}
-
-ll bs() {
-    ll = 0, r = n, mid, ans = -1;
->>>>>>> f81c632 (update)
 
     while (l <= r) {
         mid = l+(r-l)/2;
 
-<<<<<<< HEAD
         if (zeros[mid]-zeros[ini] < zeros[fim]-zeros[mid]) {
             l = mid + 1;
         }
@@ -44,21 +30,11 @@ ll bs() {
     cerr << "ans: " <<  max(zeros[mid]-zeros[ini], zeros[fim]-zeros[mid]) << endl;
     
     return min(max(zeros[mid]-zeros[ini], zeros[fim]-zeros[mid]), max(zeros[mid+1]-zeros[ini], zeros[fim]-zeros[mid+1]));
-=======
-        if (isValid(mid)) {
-
-        }
-        else {
-
-        }
-    }
->>>>>>> f81c632 (update)
 }
 
 int main() {
     ios_base::sync_with_stdio(0); cin.tie(0);
 
-<<<<<<< HEAD
     cin >> n >> k;
     cin >> s;
 
@@ -81,11 +57,6 @@ int main() {
     }
 
     cout << ans << "\n";
-=======
-    cin >> n >> k >> str;
-
-    cout << bs() << "\n";
->>>>>>> f81c632 (update)
 
     return 0;
 }
