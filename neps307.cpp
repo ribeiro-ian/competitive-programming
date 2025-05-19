@@ -27,7 +27,6 @@ void floyd_warshall() {
                 dist[i][j] = min(dist[i][j], dist[i][k] + dist[k][j]);
 }
 
-
 int main() {
     ios_base::sync_with_stdio(0); cin.tie(0);
 
