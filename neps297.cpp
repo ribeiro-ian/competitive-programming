@@ -17,7 +17,7 @@ int n, m, s, t, b;
 
 void dijkstra(int ini) {
     dist.assign(n+2, INT_MAX);
-    priority_queue <pii, vector<pii>, greater<pii>> fila;
+    priority_queue <pii> fila;
 
     fila.push({0, ini});
     dist[ini] = 0;
@@ -34,7 +34,7 @@ void dijkstra(int ini) {
 
             if (dist[atual] + peso < dist[v]) {
                 dist[v] = dist[atual] + peso;
-                fila.push({dist[v], v});
+                fila.push({-dist[v], v});
             }
         }
     }
