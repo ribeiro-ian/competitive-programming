@@ -1,6 +1,76 @@
-1
-1
-1
-2
-3
-6
+rodada 1 - plantae
+jogador 1 = plantae
+
+gimnospermas
+angiospermas
+plantae
+
+rodada 2 - gimnospermas
+jogador 2 = eliminado
+
+gimnospermas
+angiospermas
+plantae
+
+rodada 3 - angiospermas
+jogador 3 = angiospermas
+
+angiospermas
+plantae
+angiospermas
+
+rodada 4 - pteridofitas
+jogador 4 = eliminado
+
+angiospermas
+plantae
+rodada 1 - plantae
+jogador 1 = plantae
+
+gimnospermas
+angiospermas
+plantae
+
+rodada 2 - gimnospermas
+jogador 2 = eliminado
+
+gimnospermas
+angiospermas
+plantae
+
+rodada 3 - angiospermas
+jogador 3 = angiospermas
+
+angiospermas
+plantae
+angiospermas
+
+rodada 4 - pteridofitas
+jogador 4 = eliminado
+
+angiospermas
+plantae
+angiospermas
+
+rodada 5 - briofitas
+jogador 1 = eliminado
+
+angiospermas
+plantae
+angiospermas
+
+rodada 6 
+jogador 3 = WIN
+briofitas
+angiospermas
+
+rodada 5 - briofitas
+jogador 1 = eliminado
+
+angiospermas
+plantae
+angiospermas
+
+rodada 6 
+jogador 3 = WIN
+briofitas
