@@ -1,5 +1,5 @@
 /*
-    Maratona Mineira 2022F - Caindo de Paraquedas
+    Maratona    Mineira 2022F - Caindo de Paraquedas
     https://codeforces.com/group/YgJmumGtHD/contest/103794/problem/F
 */
 

@@ -1,5 +1,5 @@
 /*
-    Codeforces 183 - Ilhas
+    OBI 2018 - Primeira Fase - Ilhas
     https://neps.academy/br/exercise/183
 */
 

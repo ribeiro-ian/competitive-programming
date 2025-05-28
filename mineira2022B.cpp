@@ -3,7 +3,6 @@
     https://codeforces.com/group/YgJmumGtHD/contest/103794/problem/B
 */
 
-
 #include <bits/stdc++.h>
 using namespace std;
 
