@@ -12,16 +12,13 @@ const int J = 4, C = 3;
 
 int jog[J][C];
 map <string, int> pontos;
-map <int, string> cartas;
 
 void definirPontos() {
     vector <string> v = {"4P","7C","AE","7O","3","2","A","K","J","Q","7","6","5","4"};
     reverse(v.begin(), v.end());
     for (int i=0;i<v.size();++i) {
         pontos[v[i]] = i+1;
-        cartas[i+1] = v[i];
     }
-    cartas[0] = "-";
 }
 
 void printCartas() {
@@ -39,7 +36,7 @@ void rodada(int idx) {
     maior = maior1 = jog[0][C-idx];
     jog[0][C-idx] = 0;
     
-    for (int j = 1; j<J;++j) {
+    for (int j = 1; j < J; ++j) {
         int idx = -1;
         int *arr = jog[j];
 
@@ -115,7 +112,7 @@ int main() {
         sort(jog[i], jog[i]+C);
     }
 
-    for (int i=0;i<3;++i) {
+    for (int i = 0; i < 3; ++i) {
         rodada(i+1);
     }
     cout << "\n";
