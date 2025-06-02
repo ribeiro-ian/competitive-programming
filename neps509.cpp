@@ -10,19 +10,16 @@ typedef long long ll;
 typedef unsigned long long ull;
 
 int v, m;
-
 vector <int> moedas;
 
-int coin_change(int soma) {
+bool coin_change(int soma) {
     int n = moedas.size();   
-    
-    // dp[i] guarda a quantidade de maneiras de se obter o valor i
-    vector<int> dp(soma + 1);
+    vector<bool> dp(soma + 1, false);
 
-    dp[0] = 1; // Caso base.
+    dp[0] = true; // Caso base.
     for (int i = 0; i < n; ++i) {
-        for (int j = moedas[i]; j <= soma; ++j) {
-            dp[j] += dp[j -  moedas[i]];
+        for (int j = soma; j >= moedas[i]; --j) {
+            if (dp[j-moedas[i]]) dp[j] = true;
         }
     }
 
