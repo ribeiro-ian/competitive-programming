@@ -26,36 +26,35 @@ int main() {
     ans.assign(n+1, 0);
     ans[1] = 1;
 
-    priority_queue <pii> q;
-    // first = tamanho do intervlao
+    priority_queue <pair <int, pii>> q;
+    // first = tamanho do intervalo
     // second = meio do invervalo;
 
     if (n >= 2) {
         ans[n] = 2;
-        q.push({tamanho(1,n), meio(1,n)});
+        q.push({tamanho(1,n), {-1, -n}});
     }
 
-    for (int num = 3; num <= n; ++num) {
+    int j = 0;
+    for (int num = 3; num <= n; ++num, ++j) {
         int tam = q.top().first,
-            m = q.top().second;
-        
+            l = -q.top().second.first,
+            r = -q.top().second.second;
+        int m = meio(l,r);
+            
         ans[m] = num;
         if (num == n) continue;
 
-        int l = m - tam/2,
-            r = m + tam/2;
         if (tam % 2 == 0) l++;
         
-        if (!ans[meio(l,m)])
-            q.push(make_pair( tamanho(l,m), meio(l,m) ));
-        if (!ans[meio(m,r)])
-            q.push(make_pair( tamanho(m,r), meio(m,r) ));
+        // cerr << "tam = " << tam << "; meio = " << m << "; l = " << l << "; r = " << r << "\n";
+        // for (int i = 1; i <= n; ++i) {if (ans[i]) cerr << ans[i] << ' '; else cerr << "- ";} cerr << '\n';
         
+        if (!ans[meio(l,m)])
+            q.push( make_pair( tamanho(l,m), make_pair(-l,-m) ));
+        if (!ans[meio(m,r)])
+            q.push( make_pair( tamanho(m,r), make_pair(-m,-r) ));
         q.pop();
-        for (int i = 1; i <= n; ++i) {
-            cerr << ans[i] << ' ';
-        }
-        cerr << '\n';
     }
     
     for (int i = 1; i <= n; ++i) {
