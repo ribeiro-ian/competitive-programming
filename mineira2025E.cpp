@@ -19,8 +19,7 @@ int main() {
     for (ll i = 0; i < n; ++i) {
         cin >> a >> b;
 
-        if (a != b)
-            mapa[{min(a,b), max(a,b)}] += 1;
+        if (a != b) mapa[{min(a,b), max(a,b)}] += 1;
     }
 
     ll resto = 0, ans = 0;
