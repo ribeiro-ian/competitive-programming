@@ -12,8 +12,21 @@ typedef unsigned long long ull;
 int main() {
     ios_base::sync_with_stdio(0); cin.tie(0);
 
-    int n; cin >> n;
+    const int N = 16;
+    ll n; cin >> n;
 
+    ll num = 1;
+    cout << b.to_string().substr(N-n,N) << '\n';
+
+    if (n <= 1) return 0;
+    while (num < (ll) pow(2,n)) {
+        bitset <N> b (num);
+
+        cerr << num << ": ";
+        cout << b.to_string().substr(N-n,N) << '\n';
+
+        num++;
+    }
 
     return 0;
 }
