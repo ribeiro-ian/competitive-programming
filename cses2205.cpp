@@ -9,24 +9,34 @@ using namespace std;
 typedef long long ll;
 typedef unsigned long long ull;
 
+vector <string> ans;
+map <string, bool> done;
+
+void search(int n, string str) {
+    if (ans.size() == (int) pow(2,n)) {
+        return;
+    }
+
+    cout << str << '\n';
+    done[str] = true;
+
+    for (int i = n-1; i >= 0; --i) {
+        str[i] = (str[i] == '0' ? '1' : '0');
+
+        if (!done[str])
+            search(n, str);
+
+        str[i] = (str[i] == '0' ? '1' : '0');
+    }
+}
+
 int main() {
     ios_base::sync_with_stdio(0); cin.tie(0);
 
-    const int N = 16;
-    ll n; cin >> n;
+    int n; cin >> n;
+    string str(n, '0');
 
-    ll num = 1;
-    cout << b.to_string().substr(N-n,N) << '\n';
-
-    if (n <= 1) return 0;
-    while (num < (ll) pow(2,n)) {
-        bitset <N> b (num);
-
-        cerr << num << ": ";
-        cout << b.to_string().substr(N-n,N) << '\n';
-
-        num++;
-    }
+    search(n, str);
 
     return 0;
 }
