@@ -8,17 +8,22 @@ using namespace std;
 
 typedef long long ll;
 typedef unsigned long long ull;
+typedef pair<int,int> pii;
 
-int ans, n;
-vector <stack <int>> s(4);
+int n;
+vector <pii> ans;
 
 void search() {
-    if (s[3].size() == n) {
-
+    if ( == n) {
+        return;
     }
-    else {
-        for (int i = 1; i <= n; ++i) {
-            if ()
+    for (int i = 1; i <= 3; ++i) {
+        for (int j = 1; j <= 3; ++j) {
+            ans.push_back( make_pair(i,j) );
+
+            search();
+
+            ans.pop_back();
         }
     }
 }
@@ -26,7 +31,6 @@ void search() {
 int main() {
     ios_base::sync_with_stdio(0); cin.tie(0);
 
-    ans = 1e9;
     cin >> n;
 
     return 0;
