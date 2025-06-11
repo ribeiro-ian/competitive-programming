@@ -12,18 +12,18 @@ typedef unsigned long long ull;
 int main() {
     ios_base::sync_with_stdio(0); cin.tie(0);
 
-    ull n; cin >> n;
+    ll n; cin >> n;
  
-    ull total = n*(1+n)/2;
+    ll total = n*(1+n)/2;
     if (total % 2 == 1){
         cout << "NO\n";
         return 0;
     }
  
     cout << "YES\n";
-    vector <ull> v1, v2;
+    vector <ll> v1, v2;
     
-    ull target = total / 2, sum = 0;
+    ll target = total / 2, sum = 0;
     for (int i = n; i >= 1; i--){
         if (sum + i <= target){
             v1.push_back(i);

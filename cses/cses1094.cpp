@@ -18,16 +18,16 @@ int main() {
     for (int i = 0; i < n; i++)
         cin >> v[i];
  
-    ll cnt = 0;
+    ll ans = 0;
     for (int i = 1; i < n; i++) {
         if (v[i] < v[i-1]) {
             ll aux = abs(v[i] - v[i-1]);
-            cnt += aux;
+            ans += aux;
             v[i] += aux;
         }
     }
 
-    cout << cnt << '\n';
+    cout << ans << '\n';
 
     return 0;
 }

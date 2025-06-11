@@ -14,17 +14,17 @@ int main() {
 
     int n; cin >> n;
  
-    if (n <= 3 && n > 1){
+    if (n <= 3 && n > 1) {
         cout << "NO SOLUTION\n";
         return 0;
     }
 
-    for (int i = n-1; i >= 1; i-=2) {
+    for (int i = n-1; i >= 1; i -= 2) 
         cout << i << ' ';
-    }
-    for (int i = n; i >= 1; i-=2) {
+    
+    for (int i = n; i >= 1; i -= 2) 
         cout << i << ' ';
-    }
+    
     cout << '\n';
 
     return 0;
