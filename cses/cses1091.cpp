@@ -10,40 +10,38 @@ typedef long long ll;
 typedef unsigned long long ull;
 
 ll n, k, t;
-vector <ll> v(212345);
-vector <bool> visited(212345);
 
-ll bs(ll x){
+ll bs(vector <ll> &v, ll x) {
     ll l = 0, r = n-1, m;
 
-    if (x < v[l]) return -1;
-
-    while (l<=r){
-        m = (l+r)/2;
-
-        if (v[m] > x)
+    while (l <= r) {
+        m = l+(r-l)/2;
+        if (v[m] > x) {
             r = m - 1;
-        else
+        }
+        else {
             l = m + 1;
+        }
     }
 
-    return l-1;
+    return r;
 }
 
-int main(){
+int main() {
+    ios_base::sync_with_stdio(0); cin.tie(0);
 
-    scanf("%lli %lli", &n, &k);
+    cin >> n >> k;
+    vector <ll> v(n);    
+
+    for (auto &i : v) cin >> i;
     
-    for (int i = 0; i < n; i++)
-        scanf("%lli", &v[i]);
-        
-    while (k--){
-        sort(v.begin(), v.end());
-        scanf("%lli", &t);
-
-        ll ans = bs(t);
-        printf("%lli\n", v[ans]);
-        v[ans] = INT_MAX;
+    sort(v.begin(), v.end());
+    for (auto &i : v) cerr << i << ' ' ; cerr << '\n';
+    while (k--) {
+        cin >> t;
+        ll ans = bs(v, t);
+        cout << (ans != -1 ? v[ans] : ans) << '\n';
+        if (ans >= 0) v.erase(v.begin() + ans);
     }
 
     return 0;
