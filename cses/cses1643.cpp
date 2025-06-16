@@ -11,29 +11,18 @@ typedef unsigned long long ull;
 
 int main() {
     ios_base::sync_with_stdio(0); cin.tie(0);
-    int n, d;
+    
+    int n; cin >> n;
 
-    cin >> n >> d;
-
-    int pref[n+1], v[n];
+    vector <ll> pref(n+1);
     for (int i = 0; i < n; i++) {
-        cin >> v[i];
-        pref[i+1] = pref[i] + v[i];
+        ll x; cin >> x;
+        pref[i+1] = pref[i] + x;
     }
+    
+    
 
-    int cnt = 0;
-    ll sum = 0, ans = 0;
-    for (int l = 0, r = 0; l <= n; l++) {
-        while (r < n && sum + pref[r] <= d) {
-            sum += pref[r];
-            r++;
-        }
-
-        ans = max(ans, (ll) r-l+1);
-        sum -= pref[l];
-    }
-
-    cout << cnt << '\n';
+    cout << ans << '\n';
 
     return 0;
 }
