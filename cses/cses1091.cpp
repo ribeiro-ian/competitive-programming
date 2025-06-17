@@ -36,7 +36,7 @@ int main() {
     for (auto &i : v) cin >> i;
     
     sort(v.begin(), v.end());
-    for (auto &i : v) cerr << i << ' ' ; cerr << '\n';
+    for (auto &i : v) cerr << i << ' '; cerr << '\n';
     while (k--) {
         cin >> t;
         ll ans = bs(v, t);

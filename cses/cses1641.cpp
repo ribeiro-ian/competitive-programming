@@ -8,11 +8,11 @@ using namespace std;
 
 typedef long long ll;
 typedef unsigned long long ull;
-typedef pair<int,int> pii;
+typedef pair<ll,ll> pii;
 
 int main() {
     ios_base::sync_with_stdio(0); cin.tie(0);
-    int n, x;
+    ll n, x;
     cin >> n >> x;
 
     pii a[n];
@@ -26,10 +26,10 @@ int main() {
         int l = i+1, r = n-1;
  
         while (l < r) {
-            int sum = a[i].first + a[l].first + a[r].first;
+            ll sum = a[i].first + a[l].first + a[r].first;
 
             if (sum == x) {
-                cout << a[i].second << " " << a[l].second << " " << a[r].second << "\n";
+                cout << a[i].second << " " << a[l].second << " " << a[r].second << '\n';
                 return 0;
             }
             else if (sum > x) {
