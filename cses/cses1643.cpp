@@ -14,14 +14,17 @@ int main() {
     
     int n; cin >> n;
 
-    vector <ll> pref(n+1);
-    for (int i = 0; i < n; i++) {
-        ll x; cin >> x;
-        pref[i+1] = pref[i] + x;
+    vector <ll> v(n), dp(n, 0);
+    for (int i = 0; i < n; ++i) {
+        cin >> v[i];
     }
-    
-    
 
+    ll ans; ans = dp[0] = v[0];
+    for (int i = 1; i < n; ++i) {
+        dp[i] = max(dp[i-1] + v[i], v[i]);
+        ans = max(ans, dp[i]);
+    }
+        
     cout << ans << '\n';
 
     return 0;

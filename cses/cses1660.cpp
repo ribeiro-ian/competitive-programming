@@ -11,16 +11,13 @@ typedef unsigned long long ull;
 
 int main() {
     ios_base::sync_with_stdio(0); cin.tie(0);
-    int n, d;
 
-    cin >> n >> d;
+    int n, d; cin >> n >> d;
 
-    int v[n];
-    for (int i = 0; i < n; i++) 
-        cin >> v[i];
+    ll v[n];
+    for (int i = 0; i < n; i++) cin >> v[i];
 
-    int cnt = 0;
-    ll sum = 0;
+    ll cnt = 0, sum = 0;
     for (int l = 0, r = 0; l < n; l++) {
         while (r < n && sum + v[r] <= d) {
             sum += v[r];
