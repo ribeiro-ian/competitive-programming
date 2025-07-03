@@ -9,40 +9,30 @@ using namespace std;
 typedef long long ll;
 typedef unsigned long long ull;
 
-ll n, k, t;
-
-ll bs(vector <ll> &v, ll x) {
-    ll l = 0, r = n-1, m;
-
-    while (l <= r) {
-        m = l+(r-l)/2;
-        if (v[m] > x) {
-            r = m - 1;
-        }
-        else {
-            l = m + 1;
-        }
-    }
-
-    return r;
-}
+ll n, k, x;
 
 int main() {
     ios_base::sync_with_stdio(0); cin.tie(0);
 
     cin >> n >> k;
-    vector <ll> v(n);    
-
-    for (auto &i : v) cin >> i;
-    
-    sort(v.begin(), v.end());
-    for (auto &i : v) cerr << i << ' '; cerr << '\n';
-    while (k--) {
-        cin >> t;
-        ll ans = bs(v, t);
-        cout << (ans != -1 ? v[ans] : ans) << '\n';
-        if (ans >= 0) v.erase(v.begin() + ans);
+    multiset <ll> v;
+    for (int i = 0; i < n; ++i) {
+        cin >> x;
+        v.insert(x);
     }
+    for (int i = 0; i < k; ++i) {
+        cin >> x;
+
+        auto it = v.upper_bound(x);
+
+		if (it == v.begin()) {
+			cout << -1 << "\n";
+		}
+        else {
+			cout << *(--it) << "\n";
+			v.erase(it);
+		}
+	}
 
     return 0;
 }
