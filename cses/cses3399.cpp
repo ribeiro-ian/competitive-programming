@@ -9,44 +9,57 @@ using namespace std;
 typedef long long ll;
 typedef unsigned long long ull;
 
-int n, a, b;
-vector <int> p1, p2;
+int n, a, b, e;
+vector <bool> chosen;
+vector<int> permutation;
 
-bool isValid() {
-    int cnt1, cnt2;
-    cnt1 = cnt2 = 0;
-
-    for (int i = 0; i < p1.size(); ++i) {
-        if (p1[i] > p2[i]) cnt1++;
-        if (p2[i] > p1[i]) cnt2++;
+// a = 1, 2, 3, ..., n
+void search(int v, int cntA, int cntB, int cntE) {
+    if (permutation.size() == n) {
+        for (int i = 1; i <= n; ++i) 
+            cerr << i << ' ';
+        cerr << '\n';
+        for (auto i : permutation) 
+            cerr << i << ' ';
+        cerr << "\n";
+        return;
     }
+    else {
+        for (int i = 1; i <= n; ++i) {
+            if (chosen[i]) continue;
+            if (cntA >= a && v > i) continue;
+            if (cntB >= b && v < i) continue;
+            if (cntE >= e && i == v) continue;
 
-    return cnt1 == a && cnt2 == b;
+            if (v > i) cntA++;
+            else if (v < i) cntB++;
+            else cntE++;
+            
+            chosen[i] = true;
+            permutation.push_back(i);
+            search(v+1, cntA, cntB, cntE);
+            
+            if (v > i) cntA--;
+            else if (v < i) cntB--;
+            else cntE--;
+            
+            chosen[i] = false;
+            permutation.pop_back();
+        }
+    }
 }
 
-bool solve() {
+void solve() {
     cin >> n >> a >> b;
-    
-    p1.resize(n), p2.resize(n);
-    for (int i = 0; i < n; ++i) p1[i] = p2[i] = i+1;
-    
-    if (a + b == 0) return true;
-    if (a + b > n) return false;
-    
-    do {
-        do {
-            if (isValid()) {
-                return true;
-            }
-        }
-        while (next_permutation(p2.begin(), p2.end()));
-        
-        for (int i = 0; i < n; ++i) p2[i] = i+1;
+    e = n - a - b;
+    if (a+b > n or (n%2==1 and (n==a or n==b))) {
+        cout << "NO\n";
+        return;
     }
-    while (next_permutation(p1.begin(), p1.end()));
-
-
-    return false;
+    
+    chosen.assign(n+1, false);
+    search(1, 0, 0, 0);
+    
 }
 
 int main() {
@@ -54,15 +67,7 @@ int main() {
 
     int t; cin >> t;
     while (t--) {
-        if (solve()) {
-            cout << "YES\n";
-            for (auto &i : p1)
-                cout << i << ' '; cout << '\n';
-            for (auto &i : p2)
-                cout << i << ' '; cout << '\n';
-        }
-        else
-            cout << "NO\n";
+        solve();
     }
 
     return 0;
