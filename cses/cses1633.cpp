@@ -24,6 +24,7 @@ int main() {
             dp[i] = (dp[i] + (dp[i - j])) % MOD;
         }
     }
+    
     cout << dp[n] << "\n";
 
     return 0;

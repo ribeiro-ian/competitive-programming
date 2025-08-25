@@ -8,9 +8,9 @@ using namespace std;
 
 typedef long long ll;
 typedef unsigned long long ull;
-typedef pair<ll,ll> pii;
-
+typedef pair<int,int> pii;
 const ll INF = 1e18;
+
 vector <vector <pii>> adj;
 vector <ll> dist;
 ll n, m;
