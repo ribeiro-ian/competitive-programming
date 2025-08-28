@@ -20,7 +20,7 @@ bool valid(int i, int j, char ch) {
         int lin = i + x,
             col = j + y;
         
-        if (lin >= 0 && lin < n && col >=0 && col < m) {
+        if (lin >= 0 && lin < n && col >= 0 && col < m) {
             if (ans[lin][col] == ch) return false;
         }
     }
@@ -35,6 +35,7 @@ int main() {
 
     grid.assign(n, vector<char> (m, '-'));
     ans.assign(n, vector<char> (m, '-'));
+
     for (int i = 0; i < n; ++i)
         for (int j = 0; j < m; ++j)
             cin >> grid[i][j];

@@ -8,7 +8,6 @@ using namespace std;
 
 typedef long long ll;
 typedef unsigned long long ull;
-typedef pair<ll,ll> pll;
 
 int main() {
     ios_base::sync_with_stdio(0); cin.tie(0);
@@ -19,26 +18,16 @@ int main() {
 
     for (auto &i : prices) cin >> i;
     for (auto &i : pages) cin >> i;
-
-    vector <pll> dp(n);
-    ll ans = 0;
+    
+    vector <ll> dp(x + 1, 0);
     for (int i = 0; i < n; i++) {
-        dp[i] = {0, 0};
-        
-        for (int j = 0; j < i; j++) {
-            if (dp[j].first + prices[i] <= x && dp[j].second + pages[i] > dp[i].second) {
-                dp[i] = { dp[j].first + prices[i], dp[j].second + pages[i]};
-            }
-            if (prices[j] + prices[i] <= x && pages[j] + pages[i] > dp[i].second) {
-                dp[i] = { prices[j] + prices[i], pages[j] + pages[i]};
-            }
+        for (int c = x; c > 0; c--) {
+            if (prices[i] > c) continue;
+            dp[c] = max(dp[c], pages[i] + dp[c - prices[i]]);
         }
-        
-        ans = max(ans, dp[i].second);
     }
 
-    cout << ans << '\n';
-    
-    
+    cout << dp[x] << '\n';
+
     return 0;
 }

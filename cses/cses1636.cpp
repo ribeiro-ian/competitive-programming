@@ -19,13 +19,12 @@ int main() {
     vector <ll> coins(n);
     for (auto &i : coins) cin >> i;
 
-    sort(coins.begin(), coins.end());
     vector <ll> dp(x + 1, 0);
 
     dp[0] = 1;
-    for (ll val = 1; val <= x; ++val) {
-        for (auto &coin : coins) {
-
+    for (auto &coin : coins) {
+        for (ll val = coin; val <= x; ++val) {
+            dp[val] = (dp[val] + dp[val - coin]) % MOD;
         }
     }
     
