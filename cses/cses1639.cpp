@@ -1,6 +1,6 @@
-https://vjudge.net/group/oktopluspc?r=mZmLmPsj3DymQhUXvnv6/*
-    CSES 1746 - Array Description
-    https://cses.fi/problemset/task/1746
+/*
+    CSES 1639 - Edit Distance
+    https://cses.fi/problemset/task/1639
 */
 
 #include <bits/stdc++.h>
@@ -12,7 +12,8 @@ typedef unsigned long long ull;
 int main() {
     ios_base::sync_with_stdio(0); cin.tie(0);
 
-    //code
+    string str, ans;
+    cin >> str >> ans;
 
     return 0;
 }
