@@ -12,20 +12,26 @@ typedef unsigned long long ull;
 int main() {
     ios_base::sync_with_stdio(0); cin.tie(0);
 
-    ll n, W; cin >> n >> W;
+    ll n, W, total = 1; cin >> n >> W;
     vector <ll> w(n), v(n);
 
-    for (int i = 0; i < n; ++i) cin >> w[i] >> v[i];
+    for (int i = 0; i < n; ++i) cin >> w[i] >> v[i], total += v[i];
 
-    vector <ll> dp(W+1);
-
+    vector <ll> dp(total, INT_MAX);
+    dp[0] = 0; // valor 0 não custa peso algum
     for (int i = 0; i < n; ++i) {
-        for (int j = W; j >= w[i]; --j) {
-            dp[j] = max(dp[j], dp[j - w[i]] + v[i]);
+        for (int j = total; j >= v[i]; --j) {
+            // para cada valor j, guarda o menor peso para esse valor
+            dp[j] = min(dp[j], dp[j - v[i]] + w[i]);
         }
     }
 
-    cout << dp[W] << '\n';
+    // pegar o maior valor para um peso <= W
+    ll ans = 0;
+    for (ll i = 0; i < total; ++i)
+        if (dp[i] <= W) ans = i;
+
+    cout << ans << '\n';
 
     return 0;
 }
