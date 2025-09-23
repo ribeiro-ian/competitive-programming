@@ -9,53 +9,36 @@ using namespace std;
 typedef long long ll;
 typedef unsigned long long ull;
 
-const int MAX = 1e3+5;
-int grid[MAX][MAX];
 int n, m;
+pair <int,int> pos[] = {{1,0}, {-1,0}, {0,1}, {0,-1}};
+char grid[1001][1001];
 
-void dfs(int lin, int col){
-    grid[lin][col] = 1;
+void dfs(int i, int j) {
+    if (grid[i][j] != '.') return;
+    grid[i][j] = '#';
 
-    int vertical[] = {lin+1, lin-1};
-    int horizontal[] = {col+1, col-1};
-
-    for (auto d : vertical) {
-        if (grid[d][col] == 0 && d >= 0 && d < n) {
-            dfs(d,col);
-        }
-    }
-    for (auto d : horizontal) {
-        if (grid[lin][d] == 0 && d >= 0 && d < m) {
-            dfs(lin,d);
-        }
+    for (auto &[x, y] : pos) {
+        int lin = i + x, col = j + y;
+        if (lin >= 0 && lin < n && col >= 0 && col < m)
+            dfs(lin, col);
     }
 }
 
 int main() {
-    string line;
-    scanf("%i%i", &n, &m);
+    ios_base::sync_with_stdio(0); cin.tie(0);
 
-    for (int i = 0, j = 0; i < n; i++) {
-        cin >> line;
-        for (auto &c : line) {
-            if (c == '.') grid[i][j] = 0;
-            else grid[i][j] = -1;
-            j++;
-        }
-        j = 0;
-    }
+    cin >> n >> m;
+    for (int i = 0; i < n; ++i) 
+        for (int j = 0; j < m; ++j) 
+            cin >> grid[i][j];
 
     int cnt = 0;
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < m; j++) {
-            if (grid[i][j] == 0){
-                dfs(i,j);
-                cnt++;
-            }
-        }
-    }
-
-    printf("%i\n", cnt);
-
+    for (int i = 0; i < n; ++i) 
+        for (int j = 0; j < m; ++j) 
+            if (grid[i][j] == '.')
+                dfs(i,j), cnt++;
+    
+    cout << cnt << '\n';
+    
     return 0;
 }

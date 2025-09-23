@@ -1,5 +1,5 @@
 /*
-    Neps 65 - Mina
+    OBI 2015 Segunda Fase - Mina
     https://neps.academy/br/exercise/65
 */
 
@@ -10,37 +10,47 @@ typedef long long ll;
 typedef unsigned long long ull;
 typedef pair <int, int> pii;
 
-vector <vector<int>> grid;
+const int INF = 1e9;
+int grid[101][101], dist[101][101], n;
+pii pos[] = {{1,0}, {-1,0}, {0,1}, {0,-1}};
 
-void dijkstra() {
-
-    priority_queue <int, vector<int>, greater<int>> q;
-    q.push();
-
+void bfs(int i, int j) {
+    queue <pii> q;
+    q.push({i,j});
+    dist[i][j] = 0;
+    
     while (!q.empty()) {
-        int curr = q.top();
+        int lin, col;
+        tie(lin, col) = q.front();
         q.pop();
 
-        if (grid[i][j]) continue;
-
-        for ()
+        for (auto [v, h] : pos) {
+            int x = lin+v,
+                y = col+h;
+            
+            if (x >= 0 && x < n && y >= 0 && y < n) {
+                if (dist[lin][col] + grid[x][y] < dist[x][y]) {
+                    q.push({x,y});
+                    dist[x][y] = dist[lin][col] + grid[x][y];
+                }
+            }
+        }
     }
 }
 
 int main() {
     ios_base::sync_with_stdio(0); cin.tie(0);
-    int n;
+    
     cin >> n;
-
-    grid.assign(n+1, vector <int> (n+1, 0));
-    for (int i = 1; i <= n; i++) {
-        for (int j = 1; j <= n; j++) {
+    for (int i = 0; i < n; ++i) {
+        for (int j = 0; j < n; ++j) {
             cin >> grid[i][j];
+            dist[i][j] = INF;
         }
     }
-
-
-    
+        
+    bfs(0,0);
+    cout << dist[n-1][n-1] << '\n';
 
     return 0;
 }

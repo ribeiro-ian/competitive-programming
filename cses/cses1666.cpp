@@ -10,47 +10,46 @@ typedef long long ll;
 typedef unsigned long long ull;
 
 vector <vector <int>> adj;
-vector <int> visited;
-int cnt;
+vector <bool> visited;
 
 void dfs(int no){
-    visited[no] = cnt;
-
-    for (auto &v : adj[no]) {
-        if (visited[v] == -1)
+    visited[no] = true;
+    for (auto &v : adj[no]) 
+        if (!visited[v])
             dfs(v);
-    }
 }
 
 int main() {
-    int n, m, a, b;
-    scanf("%i%i", &n, &m);
+    ios_base::sync_with_stdio(0); cin.tie(0);
+
+    int n, m;
+    cin >> n >> m;
 
     adj.resize(n+1);
-    visited.assign(n+1, -1);
+    visited.assign(n+1, false);
 
-    for (int i = 0; i < m; i++) {
-        scanf("%i%i", &a, &b);
+    while (m--) {
+        int a, b;
+        cin >> a >> b;
         
         adj[a].push_back(b);
         adj[b].push_back(a);
     }
     
-    cnt = 0;
-
+    int cnt = 0;
     vector <int> ans;
+
     for (int i = 1; i <= n; i++) {
-        if (visited[i] == -1) {
+        if (!visited[i]) {
             dfs(i);
             cnt++;
             ans.push_back(i);
         }
     }
-    printf("%i\n", cnt-1);
+    cout << cnt-1 << '\n';
 
-    for (int i = 0; i < ans.size()-1; i++) {
-        printf("%i %i\n", ans[i], ans[i+1]);
-    }
+    for (int i = 0; i < ans.size()-1; i++) 
+        cout << ans[i] << ' ' << ans[i+1] << '\n';
 
     return 0;
 }

@@ -21,32 +21,34 @@ void bfs(int no) {
         int curr = q.front();
         q.pop();
 
-        for (auto &v : adj[curr]) 
+        for (auto &v : adj[curr]) {
             if (!visited[v]) {
                 visited[v] = curr;
                 q.push(v);
             }
+        }
     }
 }
 
 int main() {
+    ios_base::sync_with_stdio(0); cin.tie(0);
+
     int n, m, a, b;
-    scanf("%i %i", &n, &m);
+    cin >> n >> m;
     
     adj.assign(n+1, vector <int>());
     visited.assign(n+1, 0);
 
-    for (int i = 0; i < m; i++) {
-        scanf("%i %i", &a, &b);
+    while (m--) {
+        cin >> a >> b;
         
         adj[a].push_back(b);
         adj[b].push_back(a);
     }
-
     bfs(1);
-   
+        
     if (!visited[n]) {
-        printf("IMPOSSIBLE\n");
+        cout << "IMPOSSIBLE\n";
         return 0;
     }
     
@@ -60,13 +62,12 @@ int main() {
         cnt++;
     }
 
-    printf("%i\n", cnt);
-    
+    cout << cnt << '\n';
     while (!ans.empty()) {
-        printf("%i ", ans.top());
+        cout << ans.top() << ' ';
         ans.pop();
     }
-    printf("\n");
+    cout << '\n';
 
     return 0;
 }

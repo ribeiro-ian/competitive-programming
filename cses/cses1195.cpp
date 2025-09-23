@@ -10,9 +10,9 @@ typedef long long ll;
 typedef unsigned long long ull;
 typedef pair<ll,ll> pll;
 
-vector <vector <pll>> adjA, adjB;
 const ll INF = 1e18;
 ll n, m;
+vector <vector <pll>> adjA, adjB;
 
 vector<ll> dijkstra(ll no, vector <vector<pll>> &adj) {
     vector <bool> visited(n+1, false);
@@ -63,7 +63,7 @@ int main() {
     for (auto [a,b,w] : no)
         ans = min(ans, distA[a] + distB[b] + w/2);
 
-    cout << ans << "\n";
+    cout << ans << '\n';
 
     return 0;
 }

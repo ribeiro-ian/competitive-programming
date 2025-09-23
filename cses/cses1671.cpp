@@ -8,10 +8,10 @@ using namespace std;
 
 typedef long long ll;
 typedef unsigned long long ull;
-typedef pair<int,int> pii;
+typedef pair<ll,ll> pll;
 const ll INF = 1e18;
 
-vector <vector <pii>> adj;
+vector <vector <pll>> adj;
 vector <ll> dist;
 ll n, m;
 
@@ -19,7 +19,7 @@ void dijsktra(ll s) {
     vector <bool> visited(n+1, false);
     dist.assign(n+1, INF);
 
-    priority_queue <pii> q;
+    priority_queue <pll> q;
     dist[s] = 0;
     q.push({0, s});
 
@@ -43,7 +43,7 @@ int main() {
     ios_base::sync_with_stdio(0); cin.tie(0);
 
     cin >> n >> m;
-    adj.assign(n+1, vector <pii> ());
+    adj.assign(n+1, vector <pll>());
 
     while (m--) {
         ll a, b, c;
@@ -54,9 +54,8 @@ int main() {
 
     dijsktra(1);
 
-    for (int i = 1; i <= n; ++i) {
+    for (int i = 1; i <= n; ++i) 
         cout << dist[i] << ' ';
-    }
     cout << '\n';
 
     return 0;

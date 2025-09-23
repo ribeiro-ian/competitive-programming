@@ -8,11 +8,9 @@ using namespace std;
 
 typedef pair<int,int> pii;
 
-const int MAX = 1123;
-int grid[MAX][MAX];
-int vertical[] = {1, -1, 0, 0},
-    horizontal[] = {0, 0, 1, -1};
-int n, m;
+const int MAX = 1000+1;
+int grid[MAX][MAX], n, m;
+pii pos[] = {{1,0}, {-1,0}, {0,1}, {0,-1}};
 
 void bfs(int i, int j) {
     queue <pii> q;
@@ -26,10 +24,10 @@ void bfs(int i, int j) {
         q.pop();
         
         for (int i = 0; i < 4; i++) {
-            int x = vertical[i] + lin,
-                y = horizontal[i] + col;
+            int x = lin + pos[i].first,
+                y = col + pos[i].second;
 
-            if (grid[x][y] == 0 && x >= 0 && x < n && y >= 0 && y < m) {
+            if (x >= 0 && x < n && y >= 0 && y < m && grid[x][y] == 0) {
                 q.push({x,y});
                 grid[x][y] = grid[lin][col]+1;
             }
@@ -38,42 +36,37 @@ void bfs(int i, int j) {
 }
 
 int main() {
-#ifndef ONLINE_JUDGE
-    freopen("input.txt", "r", stdin);
-    freopen("output.txt", "w", stdout);
-#endif
-    string line;
-    scanf("%i%i", &n, &m);
+    ios_base::sync_with_stdio(0); cin.tie(0);
 
-    pii start, end;
-    for (int i = 0, j = 0; i < n; i++) {
-        cin >> line;
-        
+    cin >> n >> m;
+    pii st, end;
+
+    for (int i = 0, j = 0; i < n; i++, j=0) {
+        string line; cin >> line;
         for (auto &c : line) {
+            grid[i][j] = 0;
+
             if (c == '#')
                 grid[i][j] = -1;
-            else
-                grid[i][j] = 0;
 
-            if (c=='A')
-                start = {i,j};
-            else if (c=='B')
+            if (c == 'A')
+                st = {i,j};
+            else if (c == 'B')
                 end = {i,j};
             j++;
         }
-        j = 0;
     }
     
-    bfs(start.first, start.second);        
+    bfs(st.first, st.second);        
 
     int ans = grid[end.first][end.second];
     if (ans <= 0) {
-        printf("NO\n");
+        cout << "NO\n";
         return 0;
     }
 
-    printf("YES\n");
-    printf("%i\n", ans-1);
+    cout << "YES\n";
+    cout << ans - 1 << '\n';
 
     stack <char> path;
     int lin, col;
@@ -81,18 +74,17 @@ int main() {
 
     while (ans > 1) {
         for (int i = 0; i < 4; i++) {
-            int v = vertical[i],
-                h = horizontal[i];
+            int v, h;
+            tie(v,h) = pos[i];
+
             int x = lin + v,
                 y = col + h;
 
-            if (grid[x][y] == ans-1 && x >= 0 && x < n && y >= 0 && y < m) {
-                if (v) {
+            if (x >= 0 && x < n && y >= 0 && y < m && grid[x][y] == ans-1) {
+                if (v) 
                     path.push( v == 1 ? 'U' : 'D' );
-                }
-                if (h) {
+                if (h) 
                     path.push( h == 1 ? 'L' : 'R' );
-                }
 
                 lin = x;
                 col = y;
@@ -103,10 +95,10 @@ int main() {
     }
 
     while (!path.empty()) {
-        printf("%c", path.top());
+        cout << path.top();
         path.pop();
     }
-    printf("\n");
+    cout << '\n';
 
     return 0;
 }

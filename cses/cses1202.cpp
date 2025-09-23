@@ -10,11 +10,11 @@ typedef long long ll;
 typedef unsigned long long ull;
 typedef pair<ll,ll> pll;
 
-vector <vector <pll>> adj;
 const ll INF = 1e18, mod = 1e9+7;
+vector <vector <pll>> adj;
 vector <ll> dist, weight;
+ll cnt, min_f, max_f;
 ll n, m;
-ll cnt, minimum, maximum;
 
 void dijkstra(ll no) {
     vector <bool> visited(n+1, false);
@@ -38,18 +38,18 @@ void dijkstra(ll no) {
                 dist[v] = dist[curr] + w;
                 
                 cnt = 1;
-                weight[v] = minimum = maximum = weight[curr] + 1;
+                weight[v] = min_f = max_f = weight[curr] + 1;
             }
             else if (dist[curr] + w == dist[v]) {
                 q.push({-dist[v], v});
                 cnt++;
-                minimum = min(minimum, weight[curr]+1);
-                maximum = max(maximum, weight[curr]+1);
+                min_f = min(min_f, weight[curr]+1);
+                max_f = max(max_f, weight[curr]+1);
             }
         }
     }
-    minimum = min(minimum, weight[n]);
-    maximum = max(maximum, weight[n]);
+    min_f = min(min_f, weight[n]);
+    max_f = max(max_f, weight[n]);
 }
 
 int main() {
@@ -61,18 +61,17 @@ int main() {
     ll a, b, c;
     while (m--) {
         cin >> a >> b >> c;
-
         adj[a].push_back({b,c});
     }
 
-    cnt = 0, minimum = INF, maximum = 0;
+    cnt = 0, min_f = INF, max_f = 0;
     dijkstra(1);
     
-    cout << dist[n] << " " << cnt <<
-    " " << minimum << " " << maximum << "\n";
+    cout << dist[n] << ' ' << cnt <<
+    ' ' << min_f << ' ' << max_f << "\n";
 
-    for (int i = 1; i<=n; ++i)
-        cerr << dist[i] << " "; cerr << "\n";
+    // for (int i = 1; i<=n; ++i)
+    //     cerr << dist[i] << " "; cerr << "\n";
 
     return 0;
 }
