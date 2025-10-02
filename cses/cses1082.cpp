@@ -8,28 +8,36 @@ using namespace std;
 
 typedef long long ll;
 typedef unsigned long long ull;
-constexpr ll mod = 1e9+7;
+constexpr ll MOD = 1e9+7;
 
-ll sum(ll n) {
-    ll s = 0;
 
-    for (ll i = 1; i*i <= n; ++i) {
-        if (n%i != 0) continue;
-
-        if (n/i == i) s = (s + i) % mod;
-        else s = (s + (i + n/i) % mod) % mod;
-    }
-    return s;
-}
 
 int main() {
     ios_base::sync_with_stdio(0); cin.tie(0);
 
-    ll n, ans = 0; cin >> n;
-    for (ll i = 1; i <= n; ++i) {
-        ans = (ans + sum(i)) % mod;
+
+    5
+    1 = 1
+    2 = 1 + 2
+    3 = 1 + 3
+    4 = 1 + 2 + 4
+    5 = 1 + 5
+    6 = 1 + 2 + 3 + 6
+    7 = 1 + 7
+    8 = 1 + 2 + 4 + 8
+    9 = 1 + 3 + 9
+    10 = 1 + 2 + 5 + 10
+
+    int ans = n;
+    for (int i = 2; i*i < n; ++i) {
+        int aux = i;
+        while (aux <= n) {
+            ans = (ans - 1 + n/aux) % mod;
+            aux += i;
+        }
     }
-    cout << ans << '\n';
+
+    n*(n+1)/2;
 
     return 0;
 }
