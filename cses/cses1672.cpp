@@ -9,7 +9,7 @@ using namespace std;
 typedef long long ll;
 typedef unsigned long long ull;
  
-const INF = 1e18;
+const ll INF = 1e18;
 vector <vector <ll>> d, w;
 ll n, m, q, a, b, c;
  

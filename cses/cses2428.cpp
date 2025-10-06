@@ -16,28 +16,20 @@ int main() {
     cin >> n >> k;
     vector <ll> v(n);
     for (auto &i : v) cin >> i;
-    multiset <ll> ms;
-    set <ll> s;
 
+    unordered_map<ll,ll> freq;
     ll cnt = 0;
-    for (ll l = 0, r = 0; l < n; l++) {
-        while (r < n) {
-            if ((ll) s.size() > k) 
-                break;
-            if ((ll) s.size() <= k) cnt++;
-            s.insert(v[r]);
-            ms.insert(v[r]);
-            r++;
+    for (ll l = 0, r = 0; r < n; ++r) {
+        freq[v[r]]++;
+        while (freq.size() > k) {
+            freq[v[l]]--;
+            if (!freq[v[l]]) freq.erase(v[l]);
+            l++;
         }
-        
-        ms.erase(ms.find(v[l]));
-        if (!ms.count(v[l])) s.erase(v[l]);
-
-        if ((ll) s.size() <= k) cnt++;
+        cnt += r-l+1;
     }
 
     cout << cnt << '\n';
-
-
+    
     return 0;
 }
