@@ -8,25 +8,39 @@ using namespace std;
 
 typedef long long ll;
 typedef unsigned long long ull;
+const ll M = 1e9+7;
+
+int n, m;
+vector <int> dp;
+vector <vector<bool>> graph;
+
+void dfs(int mask, int ant) {
+
+
+    for (int i = 1; i < n; ++i) {
+        if (mask & (1 << i)) continue;
+        
+        if (graph[ant][i]) {
+            dfs(mask | (1 << i), i);
+        }
+    }
+}
 
 int main() {
     ios_base::sync_with_stdio(0); cin.tie(0);
 
-    int n, m;
     cin >> n >> m;
-    bool adj[n+1][n+1];
+
+    graph.assign(n, vector<bool>(n, false));
     while (m--) {
         int a, b;
         cin >> a >> b;
-        adj[a][b] = true;
+        graph[--a][--b] = true;
     }
 
-    int dp[1 << n][n+1];
-    memset(dp, 0, sizeof(dp));
+    dfs(1, 1);
 
-    for (int mask = 1; mask < (1 << n); ++mask) {
-        
-    }
+    cout << dp[(1 << n ) - 1] << endl;
 
     return 0;
 }
