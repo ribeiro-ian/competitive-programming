@@ -11,30 +11,25 @@ typedef unsigned long long ull;
  
 const ll INF = 1e18;
 
+vector <vector <ll>> graph;
 vector <vector<ll>> adj;
 vector <ll> loop;
 vector <bool> visited;
-
-bool flag = false;
-vector <vector <ll>> graph;
 ll n, m;
  
-ll bellmanFord(int src) {
+ll bellmanFord(int src = 1) {
 	vector<ll> dist(n+1, -INF);
 	dist[src] = 0;
   
 	for (int i = 0; i < n; i++) {
 		for (auto &edge : graph) {
-			ll u = edge[0];
-			ll v = edge[1];
-			ll w = edge[2];
+			ll u = edge[0], v = edge[1], w = edge[2];
+
 			if (dist[u] != -INF && dist[u] + w > dist[v]) {
                 dist[v] = dist[u] + w;
 
-                if (i == n-1) {
-                    loop.push_back(u);
+                if (i == n-1) 
                     loop.push_back(v);
-                }
             }
 		}
 	}
@@ -42,14 +37,18 @@ ll bellmanFord(int src) {
     return dist[n];
 }
 
-void dfs(int i) {
+bool dfs(int i) {
     visited[i] = true;
-    if (i==n) flag = true;
+    if (i == n) return true;
 
     for (auto &v : adj[i]) {
-        if (!visited[v])
-            dfs(v);
+        if (!visited[v]) {
+            bool flag = dfs(v); 
+            if (flag) return flag;
+        }
     }
+
+    return false;
 }
 
 int main() {
@@ -64,16 +63,19 @@ int main() {
         adj[a].push_back(b);
     }
  
-    ll ans = bellmanFord(1);
+    ll ans = bellmanFord();
 
     visited.assign(n+1, false);
     for (auto &i : loop) {
         if (!visited[i]) {
-            dfs(i);
+            if (dfs(i)) {
+                cout << -1 << '\n';
+                return 0;
+            }
         }
     }
 
-    cout << (flag ? -1 : ans) << endl;
+    cout << ans << '\n';
 
     return 0;
 }
