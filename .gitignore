@@ -1,8 +1,8 @@
 # Ignore compiled executable
-**/a.out
-**/teste.cpp
+**/*.out
 
 # Ignore input/output files
-**/in.txt
-**/out.txt
-**/sol.txt
+**/in*.txt
+**/out*.txt
+**/sol*.txt
+**/teste.cpp
