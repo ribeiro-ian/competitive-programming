@@ -7,71 +7,66 @@
 using namespace std;
 
 typedef long long ll;
-typedef unsigned long long ull;
 typedef pair<ll,ll> pll;
 
-const ll INF = 1e18, mod = 1e9+7;
-vector <vector <pll>> adj;
-vector <ll> dist, weight;
-ll cnt, min_f, max_f;
+const ll N = 1e5+1, INF = 1e18, M = 1e9+7;
+vector <pll> graph[N];
+vector <ll> dist(N, INF), ways(N), mini(N,INF), maxi(N, 0);
 ll n, m;
 
-void dijkstra(ll no) {
-    vector <bool> visited(n+1, false);
-    dist.assign(n+1, INF);
-    weight.assign(n+1, 0);
+void self_add(ll &x, ll y = 1) { x = (x+y) % M; }
+
+void dijkstra(ll no = 1) {
+    vector<bool> visited(n+1, false);
+
     priority_queue <pll> q;
-    
     q.push({0, no});
-    dist[no] = 0;
+    
+    dist[no] = mini[no] = maxi[no] = 0;
+    ways[no] = 1;
 
     while (!q.empty()) {
-        ll curr = q.top().second;
+        auto u = q.top().second;
         q.pop();
 
-        if (visited[curr]) continue;
-        visited[curr] = true;
+        if (visited[u]) continue;
+        visited[u] = true;
 
-        for (auto [v, w] : adj[curr]) {
-            if (dist[curr] + w < dist[v]) {
-                q.push({-dist[v], v});
-                dist[v] = dist[curr] + w;
+        for (auto &[v, w] : graph[u]) {
+            ll d = dist[u] + w;
+            
+            if (d < dist[v]) {
+                mini[v] = mini[u]+1;
+                maxi[v] = maxi[u]+1;
+
+                ways[v] = ways[u]; // reset
                 
-                cnt = 1;
-                weight[v] = min_f = max_f = weight[curr] + 1;
+                dist[v] = d; // update distance
+                
+                q.push({-d, v});
             }
-            else if (dist[curr] + w == dist[v]) {
-                q.push({-dist[v], v});
-                cnt++;
-                min_f = min(min_f, weight[curr]+1);
-                max_f = max(max_f, weight[curr]+1);
+            else if (d == dist[v]) {
+                mini[v] = min(mini[v], mini[u]+1); // get min depth
+                maxi[v] = max(maxi[v], maxi[u]+1); // get max depth
+                self_add(ways[v], ways[u]);
             }
         }
     }
-    min_f = min(min_f, weight[n]);
-    max_f = max(max_f, weight[n]);
 }
 
 int main() {
     ios_base::sync_with_stdio(0); cin.tie(0);
 
     cin >> n >> m;
-    adj.assign(n+1, vector<pll>());
-
-    ll a, b, c;
     while (m--) {
+        ll a, b, c;
         cin >> a >> b >> c;
-        adj[a].push_back({b,c});
+        graph[a].push_back({b,c});
     }
 
-    cnt = 0, min_f = INF, max_f = 0;
-    dijkstra(1);
-    
-    cout << dist[n] << ' ' << cnt <<
-    ' ' << min_f << ' ' << max_f << "\n";
-
-    // for (int i = 1; i<=n; ++i)
-    //     cerr << dist[i] << " "; cerr << "\n";
+    dijkstra();
+    cout << dist[n] << " " << ways[n] <<  " "
+    << mini[n] << " " << maxi[n] << '\n';
 
     return 0;
 }

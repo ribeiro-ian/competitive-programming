@@ -23,13 +23,12 @@ int main() {
 
     ll n; cin >> n;
     vector <project> v(n);
-    for (auto &i : v) cin >> i.in >> i.out >> i.money;
-
+    for (int i = 0; i < n; ++i) cin >> v[i].in >> v[i].out >> v[i].money;
     sort(v.begin(), v.end(), cmp);
 
     vector <ll> dp(n);
     for (int i = 0; i < n; ++i) {
-        
+                    
     }
 
 
