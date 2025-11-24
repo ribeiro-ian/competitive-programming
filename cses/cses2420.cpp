@@ -1,8 +1,3 @@
-/*
-    CSES 1111 - Longest Palindrome
-    https://cses.fi/problemset/task/1111
-*/
-
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -48,6 +43,12 @@ int getLongest(int mid, bool isOdd) {
     // map original index to transformed string index
     int pos = 2 * mid + 2 + !isOdd;
     return p[pos];
+}
+
+bool check(int l, int r) {
+    int len = r-l+1;
+    int mid = l + (r-l)/2;
+    return len <= getLongest(mid, len % 2);
 }
 
 int main() {
