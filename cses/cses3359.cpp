@@ -8,39 +8,43 @@ using namespace std;
 
 typedef long long ll;
 typedef unsigned long long ull;
-typedef pair<int,int> pii;
 
 int main() {
-    ios_base::sync_with_stdio(0); cin.tie(0);
+    // ios_base::sync_with_stdio(0); cin.tie(0);
 
     int n; cin >> n;
-    char grid[n][n];
-    for (int i = 0; i < n; ++i) 
-        for (int j = 0; j < n; ++j) 
+    char grid[n+1][n+1];
+
+    for (int i = 1; i <= n; ++i)
+        for (int j = 1; j <= n; ++j)
             cin >> grid[i][j];
-    
-    vector <vector <pii>> dp (n, vector <pii> (n, {0,0}));
-    
-    dp[0][0] = {0,0};
-    for (int i = 0; i < n; ++i) {
-        for (int j = 0; j < n; ++j) {
-            char c = 'Z';
-            pii prev = {n,n};
+        
+    int sz[n+1][n+1];
 
-            if (i-1 >= 0 && grid[i-1][j] <= c) {
-                c = grid[i-1][j];
-                prev = {i-1, j};
-            }
-            if (j-1 >= 0 && grid[i][j-1] <= c) {
-                c = grid[i][j-1];
-                prev = {i, j-1};
-            }
+    string dp[n+1][n+1];
+    for (int i = 0; i <= n; ++i) 
+        for (int j = 0; j <= n; ++j) {
+            dp[i][j].push_back('Z'+1);
+            sz[i][j] = 'Z'+1;
+        }
 
-            dp[i][j] = prev;
+    sz[1][1] = grid[1][1];
+    dp[1][1] = grid[1][1]; 
+    for (int i = 1; i <= n; ++i) {
+        for (int j = 1; j <= n; ++j) {
+            if (i==1 && j == 1) continue;
+
+            if (sz[i-1][j] < sz[i][j]) 
+                dp[i][j] = dp[i-1][j];
+            else
+                dp[i][j] = dp[i][j-1];
+
+            sz[i][j] += min(grid[i-1][j], grid[i][j-1]);
+            dp[i][j] += grid[i][j];
         }
     }
-    string ans = 0;
-    cout << ans << '\n';
+    
+    cout << dp[n][n] << "\n";
 
     return 0;
 }

@@ -2,50 +2,65 @@
     CSES 1749 - List Removals
     https://cses.fi/problemset/task/1749
 */
-
+ 
 #include <bits/stdc++.h>
 using namespace std;
-using ll = long long;
+ 
+const int N = 2e5+1;
+vector<int> tree(4*N), v(N);
+int n;
 
-const ll N = 2e5+1;
-vector<ll> segtree(2 * N);
-ll n;
+void build() {
+    for (int i = 0; i < n; ++i)
+        tree[i+n] = (v[i]!=0);
+
+    for (int i = n-1; i >= 1; --i) 
+        tree[i] = tree[2*i] + tree[2*i+1];
+}
 
 void update(int i) {
-    for (segtree[i += n]++; i > 1; i /= 2)
-        segtree[i / 2]++;
+    tree[i += n] = 0;
+    for (i /= 2; i >= 1; i /= 2)
+        tree[i] = tree[2*i] + tree[2*i+1];
 }
 
-ll query(int l, int r) {  // sum on interval [l, r]
-    ll res = 0;
+int find(int idx) {
+    int i = 1;
 
-    for (l += n, r += n+1; l < r; l /= 2, r /= 2) {
-        if (l & 1) res += segtree[l++];
-        if (r & 1) res += segtree[--r];
+    while (i < n) {
+        if (tree[2*i] >= idx)
+            i = 2*i;
+        else {
+            idx -= tree[2*i];
+            i = 2*i + 1;
+        }
     }
-    return res;
+
+    return i - n;
 }
+
 int main() {
     ios_base::sync_with_stdio(0); cin.tie(0);
-
+ 
     cin >> n;
-    vector<int> v(n), taken(n, 0);
-
     for (int i = 0; i < n; ++i)
         cin >> v[i];
-    
-    for (int i = 0; i < n; ++i) {
-        int idx; cin >> idx;
-        idx--;
 
-        while (taken[idx])
-            idx += query(0, idx);
+    while (n & (n-1))
+        n++;
+    build();
+
+    for (int i = 0; i < n; ++i) {
+        if (!v[i]) break;
+        int idx;
+        cin >> idx;
+        
+        idx = find(idx);
+        cout << v[idx] << ' ';
         
         update(idx);
-        taken[idx] = true;
-        cout << v[idx] << " ";
     }
     cout << '\n';
-
+ 
     return 0;
 }

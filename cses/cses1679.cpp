@@ -9,48 +9,54 @@ using namespace std;
 typedef long long ll;
 typedef unsigned long long ull;
 
+const int MAXN = 1e5+1;
 int n, m;
-map<int, vector<int>> depth;
-vector <vector<int>> graph;
-vector<bool> visited;
+vector <vector<int>> graph(MAXN);
+vector<bool> visited(MAXN, false), processing(MAXN, false);
+vector<int> ans;
+bool hasCycle = false;
 
-void dfs(int i, int d) {
+void dfs(int i) {
     visited[i] = true;
-    depth[d].push_back(i);
+    processing[i] = true;
 
-    for (auto &v : graph[i]) {
+    for (int v : graph[i]) {
         if (!visited[v]) {
-            dfs(v, d+1);
+            dfs(v);
+        }
+        else if (processing[v]) {
+            hasCycle = true;
+            return;
         }
     }
+    processing[i] = false;
+
+    ans.push_back(i);
 }
 
 int main() {
     ios_base::sync_with_stdio(0); cin.tie(0);
 
     cin >> n >> m;
-    graph.resize(n+1);
-    visited.assign(n+1, false);
-    vector <bool> start(n+1, true);
 
     while (m--) {
         int a, b;
         cin >> a >> b;
-
         graph[a].push_back(b);
-        start[b] = false;
     }
 
-    for (int i = 1; i <= n; ++i) {
-        if (!start[i]) continue;
-        dfs(i, 0);        
-    }
+    for (int i = 1; i <= n; ++i) 
+        if (!visited[i]) 
+            dfs(i);
 
-    for (auto &[id, v] : depth) {
-        for (auto &i : v)
-            cout << i << ' ';
+    if (hasCycle) 
+        cout << "IMPOSSIBLE\n";
+    else {
+        reverse(ans.begin(), ans.end());
+        for (auto &i : ans) 
+           cout << i << ' ';
+        cout << endl;
     }
-    cout << endl;
 
     return 0;
 }

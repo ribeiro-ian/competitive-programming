@@ -8,27 +8,25 @@ using namespace std;
 
 typedef long long ll;
 typedef unsigned long long ull;
-constexpr ll mod = 1e9+7;
-
-ll sum(ll n) {
-    ll s = 0;
-
-    for (ll i = 1; i*i <= n; ++i) {
-        if (n%i != 0) continue;
-
-        if (n/i == i) s = (s + i) % mod;
-        else s = (s + (i + n/i) % mod) % mod;
-    }
-    return s;
-}
+constexpr ll M = 1e9+7;
 
 int main() {
     ios_base::sync_with_stdio(0); cin.tie(0);
 
-    ll n, ans = 0; cin >> n;
-    for (ll i = 1; i <= n; ++i) {
-        ans = (ans + sum(i)) % mod;
+    ll n; cin >> n;
+    ll ans = 1;
+
+    vector <ll> num(sqrt(n), 1);
+    for (ll i = 2; i*i < n; ++i) {
+        if (i != num[i]) {
+            ll j = i;
+            while (j < num.size()) {
+                num[j] *= j/i + 1;
+                j += i; 
+            }
+        }
     }
+
     cout << ans << '\n';
 
     return 0;
