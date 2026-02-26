@@ -16,9 +16,8 @@ int main() {
     cin >> n >> q; 
  
     for (int k = 0; k < K; k++) succ[1][k] = -1;
-    for (int i = 2; i <= n;++ i) {
+    for (int i = 2; i <= n;++ i)
         cin >> succ[i][0];
-    }
  
     // pre process
     for (int k = 1; k < K; ++k) {
@@ -33,7 +32,7 @@ int main() {
         cin >> x >> k;
  
         for (int i = 0; i < K; ++i) {
-            if (k & (1<<i)) {
+            if (k & (1 << i)) {
                 x = succ[x][i];
                 if (x == -1) break;
             }
