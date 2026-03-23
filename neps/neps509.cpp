@@ -1,5 +1,5 @@
 /*
-    OBI 2013 - Segunda Fase - Troco
+    OBI 2013 - Fase 2 - Troco
     https://neps.academy/br/exercise/509
 */
 

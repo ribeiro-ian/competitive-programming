@@ -1,5 +1,5 @@
 /*
-    OBI 2015 - Segunda Fase - Código
+    OBI 2015 - Fase 2 - Código
     https://neps.academy/br/exercise/47
 */
 

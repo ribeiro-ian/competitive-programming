@@ -1,5 +1,5 @@
 /*
-    OBI 2016 - Segunda Fase  - Jardim de Infância
+    OBI 2016 - Fase 2  - Jardim de Infância
     https://neps.academy/br/exercise/9
 */
 

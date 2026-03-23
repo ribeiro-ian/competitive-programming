@@ -1,5 +1,5 @@
 /*
-    OBI 2015 Segunda Fase - Mina
+    OBI 2015 - Fase 2 - Mina
     https://neps.academy/br/exercise/65
 */
 

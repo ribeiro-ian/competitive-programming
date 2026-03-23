@@ -1,3 +1,8 @@
+/*
+    OBI 2013 - Fase 2 - Famílias de Troia
+    https://neps.academy/br/exercise/512
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 

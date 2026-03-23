@@ -1,5 +1,5 @@
 /*
-    OBI 2018 - Primeira Fase - Ilhas
+    OBI 2018 - Fase 1 - Ilhas
     https://neps.academy/br/exercise/183
 */
 

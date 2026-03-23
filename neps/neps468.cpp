@@ -1,5 +1,5 @@
 /*
-    Neps 468 - Soma (OBI 2019)
+    OBI 2019 - Fase 1 - Soma
     https://neps.academy/br/exercise/468
 */
 

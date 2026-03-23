@@ -1,5 +1,5 @@
 /*
-    OBI 2017 - Terceira Fase - Arranha-céu
+    OBI 2017 - Fase 3 - Arranha-céu
     https://neps.academy/br/exercise/43
 */
 

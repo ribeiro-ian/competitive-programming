@@ -1,5 +1,5 @@
 /*
-    OBI 2017 - Primeira Fase - Segredo do Cofre
+    OBI 2017 - Fase 1 - Segredo do Cofre
     https://neps.academy/br/exercise/16
 */
 

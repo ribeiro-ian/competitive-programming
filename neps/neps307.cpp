@@ -1,5 +1,5 @@
 /*
-    OBI 2008 Primeira Fase - Lanche na Empresa
+    OBI 2008 - Fase 1 - Lanche na Empresa
     https://neps.academy/br/exercise/307
 */
 
