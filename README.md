@@ -1,0 +1,38 @@
+# Competitive Programming
+
+Repositório com minhas soluções de programação competitiva em **C++**. Inclui problemas de diversas plataformas online, maratonas regionais/nacionais brasileiras, além de exercícios para o projeto de programação competitiva Oktoplus, do CEFET-MG Campus Leopoldina.
+
+---
+
+## 📁 Estrutura
+
+### Plataformas Online
+
+| Pasta | Plataforma |
+|---|---|
+| [`atcoder/`](./atcoder) | [AtCoder](https://atcoder.jp/) |
+| [`beecrowd/`](./beecrowd) | [Beecrowd](https://www.beecrowd.com.br/) |
+| [`codeforces/`](./codeforces) | [Codeforces](https://codeforces.com/) |
+| [`cses/`](./cses) | [CSES Problem Set](https://cses.fi/problemset/) |
+| [`neps/`](./neps) | [NEPS Academy](https://neps.academy/) |
+| [`oktoplus/`](./oktoplus) | [Oktoplus](https://www.instagram.com/okto.prog) |
+| [`spoj/`](./spoj) | [SPOJ](https://www.spoj.com/) |
+| [`uva/`](./uva) | [UVa Online Judge](https://onlinejudge.org/) |
+
+### Maratonas
+
+| Pasta | Competição |
+|---|---|
+| [`Fase Zero 2025/`](./Fase%20Zero%202025) | Fase Zero ICPC 2025 |
+| [`Maratona Gaucha 2025/`](./Maratona%20Gaucha%202025) | Maratona Gaúcha 2025 |
+| [`Maratona Mineira 2022/`](./Maratona%20Mineira%202022) | Maratona Mineira 2022 |
+| [`Maratona Mineira 2023/`](./Maratona%20Mineira%202023) | Maratona Mineira 2023 |
+| [`Maratona Mineira 2024/`](./Maratona%20Mineira%202024) | Maratona Mineira 2024 |
+| [`Maratona Mineira 2025/`](./Maratona%20Mineira%202025) | Maratona Mineira 2025 |
+| [`Maratona SBC 2025/`](./Maratona%20SBC%202025) | Maratona SBC 2025 |
+
+---
+
+## Linguagem
+
+Todas as soluções estão escritas em **C++**.
