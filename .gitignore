@@ -1,6 +1,6 @@
 # Ignore compiled executable
 **/*.out
-.vscode
+**/.vscode
 
 # Ignore input/output files
 **/in*.txt
