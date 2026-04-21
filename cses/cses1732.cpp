@@ -5,20 +5,20 @@
 
 #include <bits/stdc++.h>
 using namespace std;
+using ll = long long;
 
-vector<int> z(string s) {
-    int n = s.size();
-    vector<int> z(n);
-    int x = 0, y = 0;
-    
+vector<int> prefix_function(string& s) {
+    int n = (int)s.length();
+    vector<int> pi(n);
     for (int i = 1; i < n; i++) {
-        z[i] = max(0,min(z[i-x],y-i+1));
-
-        while (i+z[i] < n && s[z[i]] == s[i+z[i]]) {
-            x = i; y = i+z[i]; z[i]++;
-        }
+        int j = pi[i-1];
+        while (j > 0 && s[i] != s[j])
+            j = pi[j-1];
+        if (s[i] == s[j])
+            j++;
+        pi[i] = j;
     }
-    return z;
+    return pi;
 }
 
 int main() {
@@ -26,14 +26,10 @@ int main() {
 
     string s;
     cin >> s;
-
-    auto zarr = z(s);
-    int n = zarr.size();
-    for (int i = n-1; i >= 0; --i) {
-        if (zarr[i] + i == n) 
-            cout << zarr[i] << ' ';
-    }
-    cout << '\n';
+    auto p = prefix_function(s);
+    for (auto& i : p)
+        cout << i << ' ';
+    cout << endl;
 
     return 0;
 }
