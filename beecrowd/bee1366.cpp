@@ -1,0 +1,28 @@
+/*
+    Beecrowd 1366 - Jogo de Varetas
+    https://judge.beecrowd.com/pt/problems/view/1366
+*/
+
+#include <bits/stdc++.h>
+using namespace std;
+using ll = long long;
+
+int n;
+void solve() {
+    int lados = 0;
+    while(n--) {
+        int _, x;
+        cin >> _ >> x;
+        lados += x/2;
+    }
+    cout << lados/2 << '\n';
+}
+
+int main() {
+    ios_base::sync_with_stdio(0); cin.tie(0);
+
+    while(cin >> n, n)
+        solve();
+
+    return 0;
+}
