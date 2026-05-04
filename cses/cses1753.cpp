@@ -6,40 +6,38 @@
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-const ll N = 1e6+1, M = 1e9+7, P = 31;
+
+vector<int> z_function(string s) {
+    int n = s.size();
+    vector<int> z(n);
+    int l = 0, r = 0;
+    for(int i = 1; i < n; i++) {
+        if(i < r) {
+            z[i] = min(r - i, z[i - l]);
+        }
+        while(i + z[i] < n && s[z[i]] == s[i + z[i]]) {
+            z[i]++;
+        }
+        if(i + z[i] > r) {
+            l = i;
+            r = i + z[i];
+        }
+    }
+    return z;
+}
 
 int main() {
     ios_base::sync_with_stdio(0); cin.tie(0);
 
-    string s, t;
-    cin >> s >> t;
-    
-    ll n = s.size(), m = t.size();
-    if (m > n || (m == n && s != t)) {
-        cout << 0 << '\n';
-        return 0;
-    }
-    
-    vector<ll> h(n+1, 0);
-    vector<ll> p(n+1, 1);
+    string s, p;
+    cin >> s >> p;
 
-    for (int i = 1; i <= n; ++i) 
-        p[i] = (p[i-1] * P) % M;    
+    auto z = z_function(p+'$'+s);
     
-    for (int i = 1; i <= n; ++i)
-        h[i] = (h[i-1] * P + (s[i-1]-'a'+1)) % M;
-    
-    ll ht = 0, ans = 0;
-    for (int i = 0; i < m; ++i) 
-        ht = (ht * P + (t[i]-'a'+1)) % M;
-
-    for (int i = 0; i <= n-m; ++i) {
-        ll hs = (h[i+m] - (h[i] * p[m]) % M + M) % M;
-        
-        ans += (hs == ht);
-    }
-
-    cout << ans << '\n';
+    int cnt = 0;
+    for (int i = p.size() + 1; i < z.size(); ++i) 
+        if (z[i] == p.size()) cnt++;
+    cout << cnt << '\n';
 
     return 0;
 }
