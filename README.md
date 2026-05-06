@@ -1,6 +1,6 @@
 # Competitive Programming
-![Last Commit](https://img.shields.io/github/last-commit/ribeiro-ian/dotfiles)
-![Repo Size](https://img.shields.io/github/repo-size/ribeiro-ian/dotfiles)
+![Last Commit](https://img.shields.io/github/last-commit/ribeiro-ian/competitive-programming)
+![Repo Size](https://img.shields.io/github/repo-size/ribeiro-ian/competitive-programming)
 ![MIT License](https://img.shields.io/badge/License-MIT-blue)
 
 Repositório com minhas soluções de programação competitiva em **C++**. Inclui problemas de diversas plataformas online, maratonas regionais/nacionais brasileiras, além de exercícios para o projeto de programação competitiva Oktoplus, do CEFET-MG Campus Leopoldina.
