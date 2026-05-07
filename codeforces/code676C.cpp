@@ -5,34 +5,30 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
+using ll = long long;
 
 int n, k;
-string str;
+string s;
+int change(char c) {
+    int cnt = 0, ans = 0;
 
-int solve(char c) {
-    int ans = 0;
-    for (int l = 0, r = 0, cnt = 0; l < n; l++) {
-        while (r < n && cnt <= k) {
-            if (str[r] == c) cnt++;
-            if (cnt <= k) ans = max(ans, r-l+1);
+    for (int l = 0, r = 0; l < n; l++) {
+        while (r < n && cnt + (s[r]==c) <= k) {
+            cnt += (c == s[r]);
+            ans = max(ans, r-l);
             r++;
         }
-            
-        if (str[l] == c) cnt--;
+        cnt -= (c == s[l]);
+        ans = max(ans, r-l);
     }
-
     return ans;
 }
 
 int main() {
     ios_base::sync_with_stdio(0); cin.tie(0);
 
-    cin >> n >> k >> str;
-    cout << max(solve('a'), solve('b')) << "\n";
-    cerr << solve('a') << "  " << solve('b') << "\n";
+    cin >> n >> k >> s;
+    cout << max(change('a'), change('b')) << '\n';
 
     return 0;
 }

@@ -1,6 +1,6 @@
 /*
     UVA 410 - Station Balance
-    https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=351
+    https://vjudge.net/problem/UVA-410
 */
 
 #include <bits/stdc++.h>
