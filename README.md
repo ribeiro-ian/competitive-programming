@@ -3,13 +3,11 @@
 ![Repo Size](https://img.shields.io/github/repo-size/ribeiro-ian/competitive-programming)
 ![MIT License](https://img.shields.io/badge/License-MIT-blue)
 
-Repositório com minhas soluções de programação competitiva em **C++**. Inclui problemas de diversas plataformas online, maratonas regionais/nacionais brasileiras, além de exercícios para o projeto de programação competitiva Oktoplus, do CEFET-MG Campus Leopoldina.
+Repository with my competitive programming solutions in **C++**. Includes problems from various online platforms, Brazilian regional/national contests, as well as exercises for the Oktoplus competitive programming project at CEFET-MG Campus Leopoldina.
 
----
+## 📁 Structure
 
-## 📁 Estrutura
-
-### Plataformas Online
+### Online Judges
 
 | Pasta | Plataforma |
 |---|---|
@@ -22,7 +20,7 @@ Repositório com minhas soluções de programação competitiva em **C++**. Incl
 | [`spoj/`](./spoj) | [SPOJ](https://www.spoj.com/) |
 | [`uva/`](./uva) | [UVa Online Judge](https://onlinejudge.org/) |
 
-### Maratonas
+### ICPC
 
 | Pasta | Competição |
 |---|---|
@@ -33,8 +31,6 @@ Repositório com minhas soluções de programação competitiva em **C++**. Incl
 | [`Maratona Mineira 2024/`](./Maratona%20Mineira%202024) | Maratona Mineira 2024 |
 | [`Maratona Mineira 2025/`](./Maratona%20Mineira%202025) | Maratona Mineira 2025 |
 | [`Maratona SBC 2025/`](./Maratona%20SBC%202025) | Maratona SBC 2025 |
-
----
 
 ## Linguagem
 
