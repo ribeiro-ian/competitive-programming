@@ -32,6 +32,6 @@ Repository with my competitive programming solutions in **C++**. Includes proble
 | [`Maratona Mineira 2025/`](./Maratona%20Mineira%202025) | Maratona Mineira 2025 |
 | [`Maratona SBC 2025/`](./Maratona%20SBC%202025) | Maratona SBC 2025 |
 
-## Linguagem
+## Language
 
-Todas as soluções estão escritas em **C++**.
+All solutions are written in **C++**.
