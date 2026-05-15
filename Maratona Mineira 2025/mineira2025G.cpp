@@ -13,17 +13,27 @@ vector<pair<ll,ll>> pe[N], carro[N];
 vector<ll> peDe1(N), peParaN(N), dist(N);
 ll ans = INF;
 
+<<<<<<< Updated upstream
 void dijkstraPe(int s, vector<ll>& d){
+=======
+void dijkstra(int s, vector<ll>& d){
+>>>>>>> Stashed changes
     d.assign(n+1, INF);
     priority_queue<pair<ll,ll>> pq;
     d[s] = 0;
     pq.push({0, s});
 
     while(!pq.empty()){
+<<<<<<< Updated upstream
         auto [du, u] = pq.top();
         pq.pop();
         if(-du > d[u]) continue;
         
+=======
+        auto [_, u] = pq.top();
+        pq.pop();
+
+>>>>>>> Stashed changes
         for(auto& [v,w] : pe[u]){
             if(d[u]+w < d[v]){
                 d[v] = d[u]+w;
@@ -37,6 +47,7 @@ void dijkstraCarro(){
     dist.assign(n+1, INF);
     priority_queue<pair<ll,ll>> pq;
     for(int i = 1; i <= n; ++i){
+<<<<<<< Updated upstream
         if(peDe1[i] != INF){
             dist[i] = peDe1[i]; // considera primeiro que percoreu até o nó i a pé
             pq.push({-dist[i], i}); 
@@ -51,11 +62,26 @@ void dijkstraCarro(){
         if(peParaN[u] != INF)
             ans = min(ans, dist[u]+peParaN[u]);
 
+=======
+        dist[i] = peDe1[i];
+        pq.push({-dist[i], i});
+    }
+
+    while(!pq.empty()){
+        auto [_, u] = pq.top();
+        pq.pop();
+
+>>>>>>> Stashed changes
         for(auto& [v,w] : carro[u]){
             if(dist[u]+w < dist[v]){
                 dist[v] = dist[u]+w;
                 pq.push({-dist[v], v});
             }
+<<<<<<< Updated upstream
+=======
+            if(peParaN[v] != INF)
+                ans = min(ans, dist[v]+peParaN[v]);
+>>>>>>> Stashed changes
         }
     }
 }
@@ -75,8 +101,13 @@ int main(){
         pe[b].push_back({a,w});
     }
 
+<<<<<<< Updated upstream
     dijkstraPe(1, peDe1); // menor caminho a pe
     dijkstraPe(n, peParaN); // menor caminho a pe reverso
+=======
+    dijkstra(1, peDe1);
+    dijkstra(n, peParaN);
+>>>>>>> Stashed changes
     ans = peParaN[1];
     dijkstraCarro();
     cout << ans << '\n';
