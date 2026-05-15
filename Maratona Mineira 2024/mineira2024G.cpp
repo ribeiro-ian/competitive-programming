@@ -12,31 +12,30 @@ int main() {
     int n, m, k;
     cin >> n >> m >> k;
 
-    vector<vector<pair<int,int>>> graph(n+1);
+    vector<vector<pair<int,int>>> adj(n + 1); // adj[u] = {v, w}
     for (int i = 0; i < m; i++) {
-        int u, v, w;
-        cin >> u >> v >> w;
-        graph[u].push_back({v, w});
+        int u, v, w; cin >> u >> v >> w;
+        adj[u].push_back({v, w});
     }
 
     // dist[node][cost] = min voos para chegar em node gastando exatamente cost
     const int INF = 1e9;
-    vector<vector<int>> dist(n+1, vector<int>(k+1, INF));
+    vector<vector<int>> dist(n + 1, vector<int>(k + 1, INF));
 
-    // {no, custo_acumulado}
+    // fila: {node, custo_acumulado}
     queue<pair<int,int>> q;
     dist[1][0] = 0;
     q.push({1, 0});
 
     while (!q.empty()) {
-        auto [u, custo] = q.front(); q.pop();
+        auto [u, c] = q.front(); q.pop();
 
-        for (auto& [v, w] : graph[u]) {
-            int novo_custo = custo + w;
-            if (novo_custo > k) continue;
-            if (dist[v][novo_custo] > dist[u][custo] + 1) {
-                dist[v][novo_custo] = dist[u][custo] + 1;
-                q.push({v, novo_custo});
+        for (auto [v, w] : adj[u]) {
+            int nc = c + w;
+            if (nc > k) continue;
+            if (dist[v][nc] > dist[u][c] + 1) {
+                dist[v][nc] = dist[u][c] + 1;
+                q.push({v, nc});
             }
         }
     }
@@ -46,5 +45,6 @@ int main() {
         ans = min(ans, dist[n][c]);
 
     cout << (ans == INF ? -1 : ans) << '\n';
+    
     return 0;
 }

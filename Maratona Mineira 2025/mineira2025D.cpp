@@ -1,5 +1,5 @@
 /*
-    Mbratona Mineira 2025D - Dados
+    Mbratona Mineira 2025 - D - Dados
     https://codeforces.com/group/YgJmumGtHD/contest/105936/problem/D
 */
 

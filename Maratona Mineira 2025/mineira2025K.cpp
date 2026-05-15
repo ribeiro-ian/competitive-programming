@@ -1,5 +1,5 @@
 /*
-    Mbratona Mineira 2025K - Kubitschek
+    Mbratona Mineira 2025 - K - Kubitschek
     https://codeforces.com/group/YgJmumGtHD/contest/105936/problem/K
 */
 

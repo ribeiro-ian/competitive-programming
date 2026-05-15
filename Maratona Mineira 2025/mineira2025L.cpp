@@ -1,5 +1,5 @@
 /*
-    Mbratona Mineira 2025L - Lucro
+    Mbratona Mineira 2025 - L - Lucro
     https://codeforces.com/group/YgJmumGtHD/contest/105936/problem/L
 */
 
