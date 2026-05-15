@@ -1,67 +1,50 @@
 /*
-    Maratona Mineira 2025 - E - Emparelhamento
-    https://codeforces.com/group/YgJmumGtHD/contest/105936/problem/E
+    Maratona Mineira 2024 - G - Passaporte
+    https://codeforces.com/group/YgJmumGtHD/contest/528947/problem/G
 */
 
 #include <bits/stdc++.h>
 using namespace std;
-using ll = long long;
-<<<<<<< Updated upstream
-using ull = unsigned long long;
 
-vector <vector <ll>> adj;
-vector <bool> visited;
-=======
-
-const ll N = 2e5+1;
-vector <ll> adj[N];
-vector <bool> visited(N, false);
->>>>>>> Stashed changes
-ll cnt;
-
-void dfs(ll u){
-    visited[u] = true;
-    cnt++;
-    
-<<<<<<< Updated upstream
-    for(auto &v : adj[u]){
-        if(!visited[v])
-=======
-    for (auto &v : adj[u])
-        if (!visited[v])
->>>>>>> Stashed changes
-            dfs(v);
-}
-
-int main(){
+int main() {
     ios_base::sync_with_stdio(0); cin.tie(0);
 
-<<<<<<< Updated upstream
-    ll n, a, b; cin >> n;
-    adj.resize(n+1);
-    visited.assign(n+1, false);
+    int n, m, k;
+    cin >> n >> m >> k;
 
-    for(ll i = 0; i < n; ++i){
-=======
-    ll n, a, b;
-    cin >> n;
-    for (ll i = 0; i < n; ++i) {
->>>>>>> Stashed changes
-        cin >> a >> b;
-
-        adj[a].push_back(b);
-        adj[b].push_back(a);
+    vector<vector<pair<int,int>>> adj(n + 1); // adj[u] = {v, w}
+    for (int i = 0; i < m; i++) {
+        int u, v, w; cin >> u >> v >> w;
+        adj[u].push_back({v, w});
     }
 
-    ll ans = 0;
-    for(int i = 1; i <= n; ++i){
-        if(!visited[i]){
-            cnt = 0;
-            dfs(i);
-            ans += cnt - 1;
+    // dist[node][cost] = min voos para chegar em node gastando exatamente cost
+    const int INF = 1e9;
+    vector<vector<int>> dist(n + 1, vector<int>(k + 1, INF));
+
+    // fila: {node, custo_acumulado}
+    queue<pair<int,int>> q;
+    dist[1][0] = 0;
+    q.push({1, 0});
+
+    while (!q.empty()) {
+        auto [u, c] = q.front(); q.pop();
+
+        for (auto [v, w] : adj[u]) {
+            int nc = c + w;
+            if (nc > k) continue;
+            if (dist[v][nc] > dist[u][c] + 1) {
+                dist[v][nc] = dist[u][c] + 1;
+                q.push({v, nc});
+            }
         }
     }
-    cout << ans << '\n';
 
+    int ans = INF;
+    for (int c = 0; c <= k; c++)
+        ans = min(ans, dist[n][c]);
+
+    cout << (ans == INF ? -1 : ans) << '\n';
+    
     return 0;
 }

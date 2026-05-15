@@ -22,7 +22,9 @@ void solve(){
     for(auto& i : freq) qtt.insert(i);
 
     auto second = qtt.rbegin();
+    // 2 5 10 <-
     second++;
+    // 2 5 <- 10
     
     for(int i = 1; i < freq.size(); ++i)
         if(freq[i] == *second)

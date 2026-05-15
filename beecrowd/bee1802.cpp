@@ -1,5 +1,5 @@
 /*
-    Bee 1802 - Catálogo de Livros
+    Beecrowd 1802 - Catálogo de Livros
     https://judge.beecrowd.com/pt/problems/view/1802
 */
 
@@ -14,7 +14,7 @@ int main(){
         int n; cin >> n;
         v.resize(n);
         for(auto& i : v) cin >> i;
-    };
+    };  
     
     vector<ll> p, m, f, q, b;
     read(p); read(m); read(f); read(q); read(b);
