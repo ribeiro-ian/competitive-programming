@@ -5,16 +5,15 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
+using ll = long long;
+using ull = unsigned long long;
 
 int main(){
     int n;
     cin >> n;
 
     int v[n];
-    for (int i = 0; i < n; i++)
+    for(int i = 0; i < n; i++)
         cin >> v[i];
 
     int carlos = v[0];

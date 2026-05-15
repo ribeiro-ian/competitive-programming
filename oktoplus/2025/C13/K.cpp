@@ -5,15 +5,14 @@
 
 #include <bits/stdc++.h>
 using namespace std;
+using ll = long long;
+using ull = unsigned long long;
 
-typedef long long ll;
-typedef unsigned long long ull;
-
-void solve() {
+void solve(){
     int n; cin >> n;
     vector <ll> v(n);
     
-    for (int i = 0; i < n-1; ++i) {
+    for(int i = 0; i < n-1; ++i){
         cin >> v[i];
     }
     v[n-1] = v[n-2] % ((ll) 1e9+7);
@@ -21,21 +20,21 @@ void solve() {
     vector <ll> a(n);
     a[0] = v[0] + 1;
     
-    for (int i = 0; i < n-1; ++i) {
+    for(int i = 0; i < n-1; ++i){
         a[i+1] =  v[i] + a[i] * v[i+1];
-        if (a[i+1] > v[i]) a[i+1] = v[i];
+        if(a[i+1] > v[i]) a[i+1] = v[i];
         cerr << a[i+1] % a[i] << ' ';
     }
     cerr << 
-    for (auto &i : a) 
+    for(auto &i : a) 
         cout << i << ' '; cout << '\n';
 }
 
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
 
     int tc; cin >> tc;
-    while (tc--) solve();
+    while(tc--) solve();
 
     return 0;
 }

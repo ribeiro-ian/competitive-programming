@@ -5,11 +5,10 @@
 
 #include <bits/stdc++.h>
 using namespace std;
+using ll = long long;
+using ull = unsigned long long;
 
-typedef long long ll;
-typedef unsigned long long ull;
-
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
 
     ll n, k;
@@ -20,12 +19,12 @@ int main() {
     memo[0] = 1;
 
     ll x, cnt = 0;
-    for (int i = 0; i < n; ++i) {
+    for(int i = 0; i < n; ++i){
         cin >> x;
         pref[i+1] = pref[i] + x;
     }
     
-    for (int i = 1; i <= n; ++i) {
+    for(int i = 1; i <= n; ++i){
         cnt += memo[pref[i] - k];
         memo[pref[i]] += 1;
     }

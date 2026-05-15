@@ -5,14 +5,13 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
+using ll = long long;
+using ull = unsigned long long;
 
 int main(){
     int v, t;
 
-    while (cin >> v >> t){
+    while(cin >> v >> t){
         printf("%i\n", 2 * v * t);
     }
 

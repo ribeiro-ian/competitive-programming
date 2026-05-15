@@ -5,9 +5,8 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
+using ll = long long;
+using ull = unsigned long long;
 
 int main(){
 
@@ -20,19 +19,19 @@ int main(){
     vector <pair <int, int>> working;
     queue <int> clients;
 
-    for (int i = 0; i < n; i++){
+    for(int i = 0; i < n; i++){
         scanf("%i", &x);
 
         time[i+1] = x;
         free.push(i+1);
     }
-    for (int i = 0; i < m; i++){
+    for(int i = 0; i < m; i++){
         scanf("%i", &x);
         clients.push(x);
     }
 
-    while (!clients.empty() || !working.empty()){
-        while (!free.empty() && !clients.empty()){
+    while(!clients.empty() || !working.empty()){
+        while(!free.empty() && !clients.empty()){
             int id = free.top(), client = clients.front();
             
             working.push_back(make_pair(id, time[id] * client));
@@ -42,16 +41,16 @@ int main(){
         }
         
         int fastest = INT_MAX;
-        for (auto w : working)
+        for(auto w : working)
             fastest = min(fastest, w.second);
         
         ans += fastest;
         vector <pair <int, int>> new_working;
-        for (auto &w : working)
+        for(auto &w : working)
         {
             w.second -= fastest;
 
-            if (w.second <= 0){       
+            if(w.second <= 0){       
                 free.push(w.first);
             }
             else{

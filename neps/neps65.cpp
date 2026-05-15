@@ -5,31 +5,30 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
+using ll = long long;
+using ull = unsigned long long;
 typedef pair <int, int> pii;
 
 const int INF = 1e9;
 int grid[101][101], dist[101][101], n;
 pii pos[] = {{1,0}, {-1,0}, {0,1}, {0,-1}};
 
-void bfs(int i, int j) {
+void bfs(int i, int j){
     queue <pii> q;
     q.push({i,j});
     dist[i][j] = 0;
     
-    while (!q.empty()) {
+    while(!q.empty()){
         int lin, col;
         tie(lin, col) = q.front();
         q.pop();
 
-        for (auto [v, h] : pos) {
+        for(auto [v, h] : pos){
             int x = lin+v,
                 y = col+h;
             
-            if (x >= 0 && x < n && y >= 0 && y < n) {
-                if (dist[lin][col] + grid[x][y] < dist[x][y]) {
+            if(x >= 0 && x < n && y >= 0 && y < n){
+                if(dist[lin][col] + grid[x][y] < dist[x][y]){
                     q.push({x,y});
                     dist[x][y] = dist[lin][col] + grid[x][y];
                 }
@@ -38,12 +37,12 @@ void bfs(int i, int j) {
     }
 }
 
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
     
     cin >> n;
-    for (int i = 0; i < n; ++i) {
-        for (int j = 0; j < n; ++j) {
+    for(int i = 0; i < n; ++i){
+        for(int j = 0; j < n; ++j){
             cin >> grid[i][j];
             dist[i][j] = INF;
         }

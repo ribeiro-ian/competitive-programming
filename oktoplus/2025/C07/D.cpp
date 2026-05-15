@@ -5,21 +5,20 @@
 
 #include <bits/stdc++.h>
 using namespace std;
+using ll = long long;
+using ull = unsigned long long;
 
-typedef long long ll;
-typedef unsigned long long ull;
-
-int main() {
+int main(){
     int tc, n;
     string str;
 
     scanf("%i", &tc);
-    while (tc--) {
+    while(tc--){
         scanf("%i", &n);
         cin >> str;
 
         set <int> s;
-        for (auto c : str) {
+        for(auto c : str){
             s.insert(c);
         }
 

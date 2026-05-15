@@ -20,14 +20,14 @@ int main(){
     ull c;
     string p;
 
-    while (tc--){
+    while(tc--){
         cin >> p >> c;
         string ans;
 
         ans += c % 2 == 1 ? alternar(p[0]) : p[0];
 
-        for (int i = 1; i < p.size(); i++){
-            if (ans[i-1] == 'X')
+        for(int i = 1; i < p.size(); i++){
+            if(ans[i-1] == 'X')
                 c++; // se o valor anterior trocou para X, vai ocorrer uma troca a mais
 
             c /= 2; // c = trocas

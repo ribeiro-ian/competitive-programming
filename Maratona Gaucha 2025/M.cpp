@@ -1,12 +1,11 @@
 #include <bits/stdc++.h>
 using namespace std;
+using ll = long long;
+using ull = unsigned long long;
 
-typedef long long ll;
-typedef unsigned long long ull;
-
-bool isPalindrome(ll l, ll r, string &str) {
-    while (l < r) {
-        if (str[l] != str[r]) {
+bool isPalindrome(ll l, ll r, string &str){
+    while(l < r){
+        if(str[l] != str[r]){
             return false;
         }
         l++;
@@ -15,7 +14,7 @@ bool isPalindrome(ll l, ll r, string &str) {
     return true;
 }
 
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
 
     string str;
@@ -25,9 +24,9 @@ int main() {
 
     ll l = 0, r = (ll) str.size()-1, aux = 0;
 
-    while (l < r) {
-        if (str[l] == str[r]) {
-            if (isPalindrome(l,r, str)) {
+    while(l < r){
+        if(str[l] == str[r]){
+            if(isPalindrome(l,r, str)){
                 aux = r-l+1;
                 break;
             }
@@ -36,7 +35,7 @@ int main() {
     }
     
     ll ans = n-aux;
-    if (aux == 0) ans--;
+    if(aux == 0) ans--;
     
     cout << 4 4 1 2ans << '\n';
             

@@ -5,24 +5,23 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
+using ll = long long;
+using ull = unsigned long long;
 
 int main(){
 
-    while (1){
+    while(1){
         int a, d;
         scanf("%i %i", &a, &d);
 
-        if (a+d==0) break;
+        if(a+d==0) break;
 
         int atacantes[a], defensores[d];
 
-        for (int i = 0; i < a; i++)
+        for(int i = 0; i < a; i++)
             scanf("%i", &atacantes[i]);
 
-        for (int i = 0; i < d; i++)
+        for(int i = 0; i < d; i++)
             scanf("%i", &defensores[i]);
         
         sort(defensores, defensores+d);

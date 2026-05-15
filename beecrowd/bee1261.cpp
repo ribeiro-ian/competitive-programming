@@ -8,27 +8,27 @@ using namespace std;
 using ll = long long;
 
 int m, n;
-void solve() {
+void solve(){
     map<string, ll> mp;
-    while (m--) {
+    while(m--){
         string s; ll x;
         cin >> s >> x;
         mp[s] = x;
     }
 
     string word;
-    while (n--) {
+    while(n--){
         ll sum = 0;
-        while (cin >> word, word != ".") 
+        while(cin >> word, word != ".") 
             sum += mp[word];
         cout << sum << '\n';
     }
 }
 
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
 
-    while (cin >> m >> n) solve();
+    while(cin >> m >> n) solve();
 
     return 0;
 }

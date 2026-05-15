@@ -5,16 +5,15 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
+using ll = long long;
+using ull = unsigned long long;
 typedef pair<ll,ll> pll;
 
 const ll INF = 1e18;
 ll n, m;
 vector <vector <pll>> adjA, adjB;
 
-vector<ll> dijkstra(ll no, vector <vector<pll>> &adj) {
+vector<ll> dijkstra(ll no, vector <vector<pll>> &adj){
     vector <bool> visited(n+1, false);
     vector <ll> dist (n+1, INF);
     priority_queue <pll> q;
@@ -22,15 +21,15 @@ vector<ll> dijkstra(ll no, vector <vector<pll>> &adj) {
     q.push({0, no});
     dist[no] = 0;
 
-    while (!q.empty()) {
+    while(!q.empty()){
         ll curr = q.top().second;
         q.pop();
 
-        if (visited[curr]) continue;
+        if(visited[curr]) continue;
         visited[curr] = true;
 
-        for (auto [v, w] : adj[curr]) {
-            if (dist[curr] + w < dist[v]) {
+        for(auto [v, w] : adj[curr]){
+            if(dist[curr] + w < dist[v]){
                 dist[v] = dist[curr] + w;
                 q.push({-dist[v], v});
             }
@@ -40,7 +39,7 @@ vector<ll> dijkstra(ll no, vector <vector<pll>> &adj) {
     return dist;
 }
 
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
 
     cin >> n >> m;
@@ -49,7 +48,7 @@ int main() {
 
     ll a, b, c;
     vector <tuple <ll,ll,ll>> no;
-    while (m--) {
+    while(m--){
         cin >> a >> b >> c;
         
         no.push_back({a,b,c});
@@ -60,7 +59,7 @@ int main() {
     vector <ll> distB = dijkstra(n, adjB);
 
     ll ans = INF;
-    for (auto [a,b,w] : no)
+    for(auto [a,b,w] : no)
         ans = min(ans, distA[a] + distB[b] + w/2);
 
     cout << ans << '\n';

@@ -5,26 +5,25 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
+using ll = long long;
+using ull = unsigned long long;
 
 vector <vector<int>> graph;
 vector <bool> visited;
 int n, ans = 0;
 
-bool dfs(int i, int p) {
+bool dfs(int i, int p){
     visited[i] = true;
-    if (graph[i].size() == 1)
+    if(graph[i].size() == 1)
         return true;
     
     bool flag = false;
-    for (auto &v : graph[i]) {
-        if (v==p) continue;
+    for(auto &v : graph[i]){
+        if(v==p) continue;
 
-        if (!visited[v]) {
-            if (dfs(v, i)) {
-                if (!flag) {
+        if(!visited[v]){
+            if(dfs(v, i)){
+                if(!flag){
                     // cerr << "( " << i << ", " << v << " )\n";
                     flag = true;
                     ans++;
@@ -36,13 +35,13 @@ bool dfs(int i, int p) {
     return false;
 }
 
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
 
     cin >> n;
     graph.resize(n+1);
     visited.assign(n+1,false);
-    for (int a, b, i = 0; i < n-1; ++i) {
+    for(int a, b, i = 0; i < n-1; ++i){
         cin >> a >> b;
         graph[a].push_back(b);
         graph[b].push_back(a);

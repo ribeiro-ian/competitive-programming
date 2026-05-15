@@ -5,9 +5,8 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
+using ll = long long;
+using ull = unsigned long long;
 
 int main(){
     int n, m, q, x;
@@ -17,10 +16,10 @@ int main(){
     int grid[n][m];
     int pref[n+1][m+1];
 
-    for (int i = 0; i < n; i++)
-        for (int j = 0; j < m; j++){
+    for(int i = 0; i < n; i++)
+        for(int j = 0; j < m; j++){
             scanf("%i %i", &grid[i][j]);
-            if (grid[i][j] == 0) pref[i+1][j+1] = 0;
+            if(grid[i][j] == 0) pref[i+1][j+1] = 0;
             else pref[i+1][j+1] =
         }
 

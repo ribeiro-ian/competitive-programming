@@ -5,19 +5,18 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
+using ll = long long;
+using ull = unsigned long long;
 
 int main(){
     int tc;
     cin >> tc;
-    while (tc--){
+    while(tc--){
         int n;
         cin >> n;
         vector <int> v(n), v_ord(n);
         
-        for (int i = 0; i < n; i++){
+        for(int i = 0; i < n; i++){
             cin >> v[i];
             v_ord[i] = v[i];
         }
@@ -25,8 +24,8 @@ int main(){
         reverse(v_ord.begin(), v_ord.end());
 
         int cnt = 0;
-        for (int i = 0; i < n; i++){
-            if (v[i] == v_ord[i])
+        for(int i = 0; i < n; i++){
+            if(v[i] == v_ord[i])
                 cnt++;
         }
         printf("%i\n", cnt);

@@ -7,12 +7,12 @@
 using namespace std;
 using ll = long long;
 
-int count(string s) {
+int count(string s){
     int sum = 0;
-    for (auto&c : s)
+    for(auto&c : s)
         sum += c-'0';
 
-    if (sum >= 10)
+    if(sum >= 10)
         return count(to_string(sum));
     return sum;
 }
@@ -21,15 +21,15 @@ int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
 
     string a, b;
-    while (cin >> a >> b) {
-        if (a=="0" && b=="0") break;
+    while(cin >> a >> b){
+        if(a=="0" && b=="0") break;
 
         int resA = count(a),
             resB = count(b);
 
-        if (resA == resB)
+        if(resA == resB)
             cout << "0\n";
-        else if (resA > resB)
+        else if(resA > resB)
             cout << "1\n";
         else
             cout << "2\n";

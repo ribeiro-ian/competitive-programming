@@ -5,11 +5,10 @@
 
 #include <bits/stdc++.h>
 using namespace std;
+using ll = long long;
+using ull = unsigned long long;
 
-typedef long long ll;
-typedef unsigned long long ull;
-
-int main() {
+int main(){
     int m, n;
     scanf("%i %i", &n, &m);
 

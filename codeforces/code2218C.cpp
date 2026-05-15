@@ -7,20 +7,20 @@
 using namespace std;
 using ll = long long;
 
-void solve() {
+void solve(){
     int n; cin >> n;
 
-    for (int i = 1; i <= 3*n; ++i) {
+    for(int i = 1; i <= 3*n; ++i){
         cout << i << " \n"[i==3*n];
-        if (i % n==0 && i!=3*n) cout << "| ";
+        if(i % n==0 && i!=3*n) cout << "| ";
     }
 }
 
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
 
     int tc; cin >> tc;
-    while (tc--) solve();
+    while(tc--) solve();
 
     return 0;
 }

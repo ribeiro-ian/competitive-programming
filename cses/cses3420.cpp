@@ -5,22 +5,21 @@
 
 #include <bits/stdc++.h>
 using namespace std;
+using ll = long long;
+using ull = unsigned long long;
 
-typedef long long ll;
-typedef unsigned long long ull;
-
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
 
     ll n; cin >> n;
     vector <ll> v(n);
-    for (auto &i : v) cin >> i;
+    for(auto &i : v) cin >> i;
     set <ll> s;
 
     ll cnt = 0;
-    for (int l = 0, r = 0; l < n;) {
-        while (r < n) {
-            if (s.count(v[r])) 
+    for(int l = 0, r = 0; l < n;){
+        while(r < n){
+            if(s.count(v[r])) 
                 break;
             
             s.insert(v[r]);

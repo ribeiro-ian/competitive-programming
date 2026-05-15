@@ -5,30 +5,29 @@
 
 #include <bits/stdc++.h>
 using namespace std;
+using ll = long long;
+using ull = unsigned long long;
 
-typedef long long ll;
-typedef unsigned long long ull;
-
-int main() {
+int main(){
     int n, m, x; 
 
     scanf("%i%i",&n, &m);
 
     int odd_chests, even_chests, odd_keys, even_keys;
     odd_chests = even_chests = odd_keys = even_keys = 0;
-    for (int i = 0; i < n; i++) {
+    for(int i = 0; i < n; i++){
         scanf("%i", &x);
 
-        if (x % 2)
+        if(x % 2)
             odd_chests++;
         else
             even_chests++;
     }
 
-    for (int i = 0; i < m; i++) {
+    for(int i = 0; i < m; i++){
         scanf("%i", &x);
 
-        if (x % 2)
+        if(x % 2)
             odd_keys++;
         else
             even_keys++;

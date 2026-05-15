@@ -5,9 +5,8 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
+using ll = long long;
+using ull = unsigned long long;
 typedef pair<int,int> pii;
 
 map<string,int> value{
@@ -23,11 +22,11 @@ vector <int> cards;
 pii func(int m){
     int cnt = 1, sum = 0, size = 0, biggest = 0;
     
-    for (int i = 0; i < cards.size(); i++, size++)
+    for(int i = 0; i < cards.size(); i++, size++)
     {
         sum += cards[i];
         
-        if (sum > m){
+        if(sum > m){
             biggest = max(biggest, size);
             size = 0;
             sum = cards[i];
@@ -43,11 +42,11 @@ pii bs(){
         r = total;
     pii ans = {0,0};
 
-    while (l <= r){
+    while(l <= r){
         int m = (l+r)/2;
 
         pii ret = func(m);
-        if (ret.first <= k){
+        if(ret.first <= k){
             ans = make_pair(ret.second, m);
             r = m - 1;
         }
@@ -65,7 +64,7 @@ int main(){
 
     string card;
     total = 0;
-    for (int i = 0; i < n; i++){
+    for(int i = 0; i < n; i++){
         cin >> card;
 
         int v = isalpha(card[0]) ? value[card] : stoi(card);

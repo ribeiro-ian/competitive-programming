@@ -5,21 +5,20 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
+using ll = long long;
+using ull = unsigned long long;
 
 int n;
 vector <int> p;
 
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
 
     cin >> n;
 
     p.assign(n,0);
     double sum = 0;
-    for (auto &i : p){
+    for(auto &i : p){
         cin >> i;
         sum += i;
     }

@@ -5,23 +5,22 @@
 
 #include <bits/stdc++.h>
 using namespace std;
+using ll = long long;
+using ull = unsigned long long;
 
-typedef long long ll;
-typedef unsigned long long ull;
-
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
     
     ll n; cin >> n;
     ll d[n];
 
-    for (auto &e : d)
+    for(auto &e : d)
         cin >> e;
     
     ll l=0, r=n-1, ans=0;
     ll sum1=d[l], sum3=d[r];
-    while (l < r) {
-        if (sum1 == sum3 && l < r) {
+    while(l < r){
+        if(sum1 == sum3 && l < r){
             ans = max(ans, sum1);
 
             l++;
@@ -29,7 +28,7 @@ int main() {
             r--;
             sum3+=d[r];
         }
-        else if (sum1 < sum3) {
+        else if(sum1 < sum3){
             l++;
             sum1+=d[l];
         }

@@ -13,7 +13,7 @@ int main(){
     ll N; cin >> N;
     ll E = (N + 1) * (N + 2) / 2;
 
-    if (N % 2) E -= N/2;
+    if(N % 2) E -= N/2;
 
     cout << E << '\n';
 

@@ -5,23 +5,22 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
+using ll = long long;
+using ull = unsigned long long;
 map <int, int> cnt;
 
-int mdc(int a, int b) {
-   if (b == 0) return a;
+int mdc(int a, int b){
+   if(b == 0) return a;
    return mdc(b, a%b);
 }
 
 
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
 
     int n; cin >> n;
     vector <ll> v(n);
-    for (auto &i : v) {
+    for(auto &i : v){
         cin >> i;
     }
     

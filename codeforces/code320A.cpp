@@ -5,30 +5,29 @@
 
 #include <bits/stdc++.h>
 using namespace std;
+using ll = long long;
+using ull = unsigned long long;
 
-typedef long long ll;
-typedef unsigned long long ull;
-
-bool solve(string str) {
+bool solve(string str){
 
     string aux = "";
-    for (int i = 0; i < str.size(); i++) {
-        if (str[i] != '1' && str[i] != '4')
+    for(int i = 0; i < str.size(); i++){
+        if(str[i] != '1' && str[i] != '4')
             return false;
 
         aux += str[i];
 
         cerr << aux << endl;
-        if (str[i] == '1') aux = "1";
-        else if (aux == "4") return false;
-        else if (aux == "14") continue;
-        else if (aux == "144") aux.clear();
+        if(str[i] == '1') aux = "1";
+        else if(aux == "4") return false;
+        else if(aux == "14") continue;
+        else if(aux == "144") aux.clear();
         else return false;
     }
     return true;
 }
 
-int main() {
+int main(){
     string str;
 
     cin >> str;

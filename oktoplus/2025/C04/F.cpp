@@ -5,23 +5,22 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
+using ll = long long;
+using ull = unsigned long long;
 
 int main(){
     int n;
 
     string alien = "ABCD";
-    while (1){
+    while(1){
         scanf("%i", &n);
 
-        if (!n) break;
+        if(!n) break;
 
         int tmp=n*n;
         string ans ="";
         
-        while (tmp!=0){
+        while(tmp!=0){
             ans = alien[tmp%4]+ans;
             tmp /= 4;
         }

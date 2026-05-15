@@ -5,29 +5,28 @@
 
 #include <bits/stdc++.h>
 using namespace std;
+using ll = long long;
+using ull = unsigned long long;
 
-typedef long long ll;
-typedef unsigned long long ull;
-
-bool isPalindrome(string &s, int l, int r) {
-    while (l <= r) {
-        if (s[l] != s[r]) return false;
+bool isPalindrome(string &s, int l, int r){
+    while(l <= r){
+        if(s[l] != s[r]) return false;
         l++, r--;
     }
     return true;
 }
 
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
 
     int n, m;
     cin >> n >> m;
     string s; cin >> s;
 
-    while (m--) {
+    while(m--){
         int op; cin >> op;
 
-        if (op == 1) {
+        if(op == 1){
             int k; char c;
             cin >> k >> c;
             s[k-1] = c;

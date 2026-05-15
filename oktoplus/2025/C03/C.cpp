@@ -5,9 +5,8 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
+using ll = long long;
+using ull = unsigned long long;
 
 int n, t, x;
 vector <vector<int>> adj;
@@ -17,9 +16,9 @@ int dfs(int x){
     int total = 0;
 
     // trabalhador
-    if (adj[x].size()==0) return 1;
+    if(adj[x].size()==0) return 1;
 
-    for (int i = 0; i < ceil(adj[x].size() * t/100.0); i++)
+    for(int i = 0; i < ceil(adj[x].size() * t/100.0); i++)
         total += dfs(adj[x][i]);
 
     return total;
@@ -28,12 +27,12 @@ int dfs(int x){
 int f(int x){
     int total = 0;
 
-    if (adj[x].size()==0){
+    if(adj[x].size()==0){
         empregados[x] = 0;
         return 1;
     }
 
-    for (auto &i : adj[x])
+    for(auto &i : adj[x])
         total += f(i);
 
     return empregados[x] = total;
@@ -43,10 +42,10 @@ bool cmp(int a, int b){return empregados[a] < empregados[b];}
 
 int main(){
 
-    while (1){
+    while(1){
         cin >> n >> t;
         
-        if (!n) break;
+        if(!n) break;
 
         adj.assign(n+1, vector <int>);
         empregados.assign(n+1, 0);
@@ -57,7 +56,7 @@ int main(){
         }
         
         f(0);
-        for (auto &v : adj)
+        for(auto &v : adj)
             sort(v.begin(), v.end(), cmp);
 
         fprintf(stderr, "0: ");
@@ -67,9 +66,9 @@ int main(){
         }
         fprintf(stderr, " | tam: %i\n", empregados[0]);
         
-        for (auto i: adj[0]){
+        for(auto i: adj[0]){
             fprintf(stderr, "%i: ", i);
-            for (auto v: adj[i]){
+            for(auto v: adj[i]){
                 fprintf(stderr, "%i ", v);
             }
             fprintf(stderr, " | tam: %i\n", empregados[i]);

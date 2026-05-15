@@ -1,24 +1,23 @@
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
+using ll = long long;
+using ull = unsigned long long;
 
 ll n, k;
 vector <ll> v;
 
-bool isValid(ll x) {
+bool isValid(ll x){
     //s = n*(n+1)/2;
     
 }
 
-ll bs() {
+ll bs(){
     ll l = 1, r = *max_element(v.begin(),v.end())+k, m, ans = 1;
 
-    while (l <= r) {
+    while(l <= r){
         m = l + (r-l)/2;
 
-        if (isValid(m)) {
+        if(isValid(m)){
             l = m+1;
             ans = m;
         }
@@ -30,12 +29,12 @@ ll bs() {
     return ans;
 }
 
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
 
     cin >> n >> k;
     v.resize(n);
-    for (auto &i : v) cin >> i;
+    for(auto &i : v) cin >> i;
 
     cout << bs() << '\n';
 

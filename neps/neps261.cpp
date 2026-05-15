@@ -5,9 +5,8 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
+using ll = long long;
+using ull = unsigned long long;
 
 int n, k, x;
 vector <int> v(112345), p(112345);
@@ -15,10 +14,10 @@ vector <int> v(112345), p(112345);
 int bs(int x){
     int l = 0, r = n-1, m, ans = -1;
 
-    while (l <= r){
+    while(l <= r){
         int m = l+(r-l)/2;
 
-        if (v[m] <= x){
+        if(v[m] <= x){
             ans = p[m];
             l = m+1;
         }
@@ -33,14 +32,14 @@ int main(){
 
     cin >> n >> k;
     
-    for (int i = 1; i < n; i++)
+    for(int i = 1; i < n; i++)
         cin >> v[i];
     v[0] = 1;
     
-    for (int i = 0; i < n; i++)
+    for(int i = 0; i < n; i++)
         cin >> p[i];
         
-    while (k--){
+    while(k--){
         cin >> x;
         cout << bs(x) << " ";
     }

@@ -5,9 +5,8 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
+using ll = long long;
+using ull = unsigned long long;
 
 int main(){
 
@@ -16,17 +15,17 @@ int main(){
     while(1){
         scanf("%i %i", &n, &m);
 
-        if (n+m == 0) break;
+        if(n+m == 0) break;
         
         vector <int> v(n+1,0);
-        for (int i = 0; i < m; i++){
+        for(int i = 0; i < m; i++){
             scanf("%i", &x);
             v[x]++;
         }
         
         int cnt = 0;
-        for (int i = 1; i <= n; i++){
-            if (v[i] > 1)
+        for(int i = 1; i <= n; i++){
+            if(v[i] > 1)
                 cnt++;
         }
         

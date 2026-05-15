@@ -5,9 +5,8 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
+using ll = long long;
+using ull = unsigned long long;
 typedef pair <int, int> pii;
 
 int n, m, s, d;
@@ -16,7 +15,7 @@ vector <vector <int>> adj;
 vector <int> previous, dist;
 vector <bool> visited;
 
-int dijkstra(int s) {
+int dijkstra(int s){
     dist.assign(n, INF);
     previous.assign(n, -1);
     visited.assign(n, false);
@@ -26,16 +25,16 @@ int dijkstra(int s) {
     dist[s] = 0;
     q.push({0, s});
     
-    while (!q.empty()) {
+    while(!q.empty()){
         int curr = q.top().second;
         q.pop();
 
-        if (visited[curr]) continue;
+        if(visited[curr]) continue;
         visited[curr] = true;
         
-        for (int v = 0; v < n; v++) {
+        for(int v = 0; v < n; v++){
             int w = adj[curr][v];
-            if (w && dist[curr] + w < dist[v]) {
+            if(w && dist[curr] + w < dist[v]){
                 previous[v] = curr;
                 dist[v] = dist[curr] + w;
                 q.push({-dist[v], v});
@@ -46,10 +45,10 @@ int dijkstra(int s) {
     return dist[d];
 }
 
-void removeEdges(int no) {
-    if (previous[no] == -1) return;
+void removeEdges(int no){
+    if(previous[no] == -1) return;
 
-    while(no != previous[no]) {
+    while(no != previous[no]){
         fprintf(stderr, "removido %i -> %i\n", previous[no], no);
         adj[previous[no]][no] = 0;
         no = previous[no];
@@ -57,16 +56,16 @@ void removeEdges(int no) {
     adj[previous[no]][no] = 0;
 }
 
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
 
-    while (cin >> n >> m, n) {
+    while(cin >> n >> m, n){
         adj.assign(n, vector<int>(n, 0));
         
         cin >> s >> d;
         
         int u, v, p;
-        while (m--) {
+        while(m--){
             cin >> u >> v >> p;
             adj[u][v] = p;
         }
@@ -75,14 +74,14 @@ int main() {
         menor = ans = dijkstra(s);
         
         // remover nós que formam menor caminho
-        while (ans == menor) {
+        while(ans == menor){
             cerr << "previous:\n";
-            for (auto &i : previous)
+            for(auto &i : previous)
                 cerr << i << " "; cerr << "\n";
             removeEdges(d);
             ans = dijkstra(s);
             
-            if (ans == INF || previous[d] == -1) {
+            if(ans == INF || previous[d] == -1){
                 ans = -1;
                 break;
             }

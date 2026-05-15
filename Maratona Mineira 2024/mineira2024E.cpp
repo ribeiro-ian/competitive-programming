@@ -1,56 +1,44 @@
+/*
+    Maratona Mineira 2024 - E - Motorista de ônibus
+    https://codeforces.com/group/YgJmumGtHD/contest/528947/problem/E
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
-
-#define mp make_pair
-#define pb push_back
-#define F first
-#define S second
-#define all(x) x.begin(), x.end()
-#define srt(x) sort(all(x));
-#define endl "\n"
-#define vi vector<int>
-#define vll vector<ll>
-#define f0r(x) for(int i = 0; i < x; i++)
-
-typedef long long ll;
-typedef long double ld;
-
-
+using ll = long long;
 
 int main(){
+    ios_base::sync_with_stdio(0); cin.tie(0);
 
-    int n; cin >> n;   
+    ll n; cin >> n;
+    vector<pair<ll,ll>> v(n);
+    for(auto& i : v) cin >> i.first >> i.second;
+    sort(v.begin(), v.end());
 
-    vector<pair<ll, ll>> vet(n);
-    map<ll, pair<ll, ll>> mapa;
+    vector<ll> ruas(n);
+    for(int i = 0; i < n; ++i) ruas[i] = v[i].first;
 
-    f0r(n){
-        cin >> vet[i].F >> vet[i].S; 
-        if(mapa.find(vet[i].F) != mapa.end()){
-            mapa[vet[i].F].F = min(mapa[vet[i].F].F, vet[i].S);
-            mapa[vet[i].F].S = max(mapa[vet[i].F].S, vet[i].S);
+    int i = 0;
+    ll ans = 0, aux = 0, meio = -1;
+    while(i < n){
+        auto [rua, pos] = v[i];
+
+        if(rua != aux){
+            aux = rua;
+            int primeiro = i;
+    
+            auto it = upper_bound(ruas.begin(), ruas.end(), rua);
+            it--;
+            int ultimo = it-ruas.begin();
+            // cerr << primeiro << " " << ultimo << '\n';
+            meio = primeiro+(ultimo-primeiro)/2;
+            // cerr << v[meio].second << '\n';
         }
-        else {
-            mapa[vet[i].F].F = vet[i].S;
-            mapa[vet[i].F].S = vet[i].S;
-        }
-    }
 
-    map<ll, ll> media;
-    for(auto &m : mapa){
-        cerr << m.F << " : ";
-        cerr << m.S.F << " ";
-        cerr << m.S.S << " ";
-        media[m.F] = (m.S.F + m.S.S)/2;
+        ans += abs(pos - v[meio].second);
+        i++;
     }
-    cerr << endl;
-
-    ll ans = 0;
-    f0r(n){
-        ans += abs(vet[i].S - media[vet[i].F]);
-    }
-
-    cout << ans << endl;
+    cout << ans << '\n';
 
     return 0;
 }

@@ -5,22 +5,21 @@
  
 #include <bits/stdc++.h>
 using namespace std;
+ using ll = long long;
+using ull = unsigned long long;
  
-typedef long long ll;
-typedef unsigned long long ull;
- 
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
     
     int n; cin >> n;
  
     vector <ll> v(n), dp(n, 0);
-    for (int i = 0; i < n; ++i) {
+    for(int i = 0; i < n; ++i){
         cin >> v[i];
     }
  
     ll ans; ans = dp[0] = v[0];
-    for (int i = 1; i < n; ++i) {
+    for(int i = 1; i < n; ++i){
         dp[i] = max(dp[i-1] + v[i], v[i]);
         ans = max(ans, dp[i]);
     }

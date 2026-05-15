@@ -2,7 +2,7 @@
 using namespace std;
 using ll = long long;
 
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
 
     int n, l;
@@ -35,7 +35,7 @@ int main() {
     }
 
     // O(L)
-    while (!ligacoes.empty()){
+    while(!ligacoes.empty()){
         if(!vendedores.empty()){
             int id = vendedores.front();
             
@@ -51,7 +51,7 @@ int main() {
             for(int i = 1; i <= n; i++)
                 menorTempo = min(menorTempo, tempo[i]);
 
-            for(int i = 1; i <= n; i++) {
+            for(int i = 1; i <= n; i++){
                 tempo[i] -= menorTempo;
                 if(tempo[i] == 0) // vendedor esta livre
                     vendedores.push(i);

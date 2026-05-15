@@ -17,21 +17,21 @@ struct Turtle {
 // min(dx, dy) é o caminho percorrido na diagonal
 // (abs(dx-dy)+1)/2 é o caminho restonte que
 // Rafael anda 2 por seg na horizontal ou vertical
-ll tempoRafael(ll x, ll y, ll px, ll py) {
+ll tempoRafael(ll x, ll y, ll px, ll py){
     ll dx = abs(px - x), dy = abs(py - y);
     return min(dx, dy) + (abs(dx - dy)+1)/2;
 }
 
-ll bs(ll x, ll y, ll tx, ll ty, char dir) {
+ll bs(ll x, ll y, ll tx, ll ty, char dir){
     ll l = 0, r = 1e18, ans = -1;
 
-    while(l <= r) {
+    while(l <= r){
         // mid = tempo
         ll mid = l + (r-l)/2;
         ll px = tx + (dir=='D' ? mid : 0),
            py = ty + (dir=='C' ? mid : 0);
         
-        if (tempoRafael(x, y, px, py) <= mid) {
+        if(tempoRafael(x, y, px, py) <= mid){
             ans = mid;
             r = mid-1;
         }
@@ -41,10 +41,10 @@ ll bs(ll x, ll y, ll tx, ll ty, char dir) {
     return ans;
 }
 
-void solve() {
+void solve(){
     Turtle t[3];
 
-    for (auto& i : t)
+    for(auto& i : t)
         cin >> i.x >> i.y >> i.dir;
 
     // testa todas possibilidades de ordem
@@ -54,7 +54,7 @@ void solve() {
     do {
         ll rx = x, ry = y, tempo = 0;
         
-        for (auto i : perm) {
+        for(auto i : perm){
             auto tx = t[i].x, ty = t[i].y;
             auto dir = t[i].dir;
 
@@ -71,15 +71,15 @@ void solve() {
         }
 
         ans = min(ans, tempo);
-    } while (next_permutation(perm, perm+3));
+    } while(next_permutation(perm, perm+3));
 
     cout << ans << '\n';
 }
 
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
 
-    while (cin >> x >> y, x && y)
+    while(cin >> x >> y, x && y)
         solve();
     
     return 0;

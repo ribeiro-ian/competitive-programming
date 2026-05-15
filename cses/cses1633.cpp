@@ -5,22 +5,21 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
+using ll = long long;
+using ull = unsigned long long;
 
 ll const MAXN = 1e6+1, MOD = 1e9+7;
 
 ll dp[MAXN];
 
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
 
     ll n; cin >> n;
     dp[0] = 1;
 
-    for (int i = 1; i <= n; i++) {
-        for (int j = 1; j <= 6 && j <= i; j++) {
+    for(int i = 1; i <= n; i++){
+        for(int j = 1; j <= 6 && j <= i; j++){
             dp[i] = (dp[i] + (dp[i - j])) % MOD;
         }
     }

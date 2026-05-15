@@ -9,11 +9,11 @@ using ll = long long;
 
 int n, k;
 string s;
-int change(char c) {
+int change(char c){
     int cnt = 0, ans = 0;
 
-    for (int l = 0, r = 0; l < n; l++) {
-        while (r < n && cnt + (s[r]==c) <= k) {
+    for(int l = 0, r = 0; l < n; l++){
+        while(r < n && cnt + (s[r]==c) <= k){
             cnt += (c == s[r]);
             ans = max(ans, r-l);
             r++;
@@ -24,7 +24,7 @@ int change(char c) {
     return ans;
 }
 
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
 
     cin >> n >> k >> s;

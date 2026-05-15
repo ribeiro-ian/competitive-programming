@@ -5,9 +5,8 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
+using ll = long long;
+using ull = unsigned long long;
 
 int main(){
     int n, tempo = 0;
@@ -16,10 +15,10 @@ int main(){
     vector <int> v(n);
     cin >> v[0];
 
-    for (int i = 1; i < n; i++){
+    for(int i = 1; i < n; i++){
         cin >> v[i];
 
-        if (v[i] - 10 > v[i-1])
+        if(v[i] - 10 > v[i-1])
             tempo += 10;
         
         else 

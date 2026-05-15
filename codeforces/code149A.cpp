@@ -7,19 +7,19 @@
 using namespace std;
 using ll = long long;
 
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
 
     int n = 12, k;
     cin >> k;
 
     vector<int> month(n);
-    for (int i = 0; i < n; ++i) 
+    for(int i = 0; i < n; ++i) 
         cin >> month[i];
     sort(month.rbegin(), month.rend());
 
     int sum = 0, i = 0;
-    while (i < n && sum < k) 
+    while(i < n && sum < k) 
         sum += month[i++];
     cout << (sum >= k ? i : -1) << endl;
 

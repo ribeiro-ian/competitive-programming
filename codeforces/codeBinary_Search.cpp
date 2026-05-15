@@ -14,12 +14,12 @@
     bool bs(ll x){
         ll l = 0, r = n-1;
      
-        while (l <= r){
+        while(l <= r){
             ll m = (l+r)/2;
      
-            if (v[m] == x)
+            if(v[m] == x)
                 return 1;
-            else if (v[m] > x)
+            else if(v[m] > x)
                 r = m - 1;
             else
                 l = m + 1;
@@ -31,10 +31,10 @@
     int main(){
      
         scanf("%lli %lli", &n, &k);
-        for (int i = 0; i < n; i++)
+        for(int i = 0; i < n; i++)
             scanf("%lli", &v[i]);
      
-        while (k--){
+        while(k--){
             scanf("%lli", &x);
      
             printf("%s\n", bs(x) ? "YES" : "NO");

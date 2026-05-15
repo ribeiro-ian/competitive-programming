@@ -7,13 +7,13 @@
 using namespace std;
 using ll = long long;
 
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
 
     string s, v;
     cin >> s;
-    for (auto& c : s) 
-        if (c=='a'|| c=='e' || c=='i' || c=='o' || c=='u')
+    for(auto& c : s) 
+        if(c=='a'|| c=='e' || c=='i' || c=='o' || c=='u')
             v.push_back(c);
     string r = v;
     reverse(r.begin(), r.end());

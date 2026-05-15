@@ -5,15 +5,14 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
+using ll = long long;
+using ull = unsigned long long;
 
 int main(){
     const int MAX = 100+1;
     vector <int> prefix_sum (MAX);
     
-    for (int i = 1; i < MAX; i++) // O(1)
+    for(int i = 1; i < MAX; i++) // O(1)
         prefix_sum[i] = prefix_sum[i-1] + i*i; 
     
     int n;
@@ -22,7 +21,7 @@ int main(){
     while(1){
         cin >> n;
 
-        if (!n) break;
+        if(!n) break;
 
         printf("%i\n", prefix_sum[n]);
     }

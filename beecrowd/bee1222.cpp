@@ -5,23 +5,22 @@
 
 #include <bits/stdc++.h>
 using namespace std;
+using ll = long long;
+using ull = unsigned long long;
 
-typedef long long ll;
-typedef unsigned long long ull;
-
-int main() {
+int main(){
     int n, l, c;
     string word;
 
-    while (scanf("%i%i%i", &n, &l, &c) != EOF) {
+    while(scanf("%i%i%i", &n, &l, &c) != EOF){
 
         int line = 0, cnt = 0;
 
-        for (int i = 0; i < n; i++) {
+        for(int i = 0; i < n; i++){
             cin >> word;
             
             cnt += word.size();
-            if (cnt > c){
+            if(cnt > c){
                 cnt = word.size();
                 line++;
             }

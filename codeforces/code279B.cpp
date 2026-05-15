@@ -5,21 +5,20 @@
 
 #include <bits/stdc++.h>
 using namespace std;
+using ll = long long;
+using ull = unsigned long long;
 
-typedef long long ll;
-typedef unsigned long long ull;
-
-int main() {
+int main(){
     ll n, t;
     scanf("%lli %lli", &n, &t);
 
     ll a[n];
-    for (int i = 0; i < n; i++) 
+    for(int i = 0; i < n; i++) 
         scanf("%lli", &a[i]);
 
     int ans = 0; ll sum = 0;
-    for (int i = 0, r = 0; i < n; i++) {
-        while (r < n && sum + a[r] <= t) {
+    for(int i = 0, r = 0; i < n; i++){
+        while(r < n && sum + a[r] <= t){
             sum += a[r];
             r++;
         }

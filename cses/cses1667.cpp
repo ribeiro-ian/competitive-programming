@@ -5,24 +5,23 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
+using ll = long long;
+using ull = unsigned long long;
 
 vector <vector <int>> adj;
 vector <int> visited;
 
-void bfs(int no) {
+void bfs(int no){
     queue <int> q;
     visited[no] = no;
     q.push(no);
     
-    while (!q.empty()) {
+    while(!q.empty()){
         int curr = q.front();
         q.pop();
 
-        for (auto &v : adj[curr]) {
-            if (!visited[v]) {
+        for(auto &v : adj[curr]){
+            if(!visited[v]){
                 visited[v] = curr;
                 q.push(v);
             }
@@ -30,7 +29,7 @@ void bfs(int no) {
     }
 }
 
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
 
     int n, m, a, b;
@@ -39,7 +38,7 @@ int main() {
     adj.assign(n+1, vector <int>());
     visited.assign(n+1, 0);
 
-    while (m--) {
+    while(m--){
         cin >> a >> b;
         
         adj[a].push_back(b);
@@ -47,7 +46,7 @@ int main() {
     }
     bfs(1);
         
-    if (!visited[n]) {
+    if(!visited[n]){
         cout << "IMPOSSIBLE\n";
         return 0;
     }
@@ -56,14 +55,14 @@ int main() {
     stack <int> ans;
     ans.push(n);
 
-    while (visited[i] != i) {
+    while(visited[i] != i){
         ans.push(visited[i]);
         i = visited[i];
         cnt++;
     }
 
     cout << cnt << '\n';
-    while (!ans.empty()) {
+    while(!ans.empty()){
         cout << ans.top() << ' ';
         ans.pop();
     }

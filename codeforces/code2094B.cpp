@@ -5,26 +5,25 @@
 
 #include <bits/stdc++.h>
 using namespace std;
+using ll = long long;
+using ull = unsigned long long;
 
-typedef long long ll;
-typedef unsigned long long ull;
-
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
 
     int tc, n, m, l, r;
     cin >> tc;
 
-    while (tc--) {
+    while(tc--){
         cin >> n >> m >> l >> r;
 
         int start=0, end=0, cnt = 0;
-        while (cnt < m){
-            if (start > l) {
+        while(cnt < m){
+            if(start > l){
                 start--;
                 cnt++;
             }
-            if (end < r && cnt < m) {
+            if(end < r && cnt < m){
                 end++;
                 cnt++;
             }

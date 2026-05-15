@@ -6,7 +6,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
 
     int hi, mi, hf, mf;
@@ -14,13 +14,13 @@ int main() {
 
     int ti = hi*60+mi, tf = hf*60+mf, res = 0;
 
-    if (ti == tf) {
+    if(ti == tf){
         res = 24*60;
     }
     else {
         res = tf-ti;
 
-        if (res < 0)
+        if(res < 0)
             res += 24*60;
     }
 

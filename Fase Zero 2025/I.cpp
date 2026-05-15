@@ -1,10 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
+using ll = long long;
+using ull = unsigned long long;
 
-typedef long long ll;
-typedef unsigned long long ull;
-
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
 
     int n, t, l, u;
@@ -13,8 +12,8 @@ int main() {
     vector <vector <int>> sensor;
     sensor.assign(n, vector <int> (t));
 
-    for (int i = 0; i < n; ++i) {
-        for (int j = 0; j < t; ++j) {
+    for(int i = 0; i < n; ++i){
+        for(int j = 0; j < t; ++j){
             cin >> sensor[i][j];
         }
     }

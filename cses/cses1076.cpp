@@ -10,13 +10,13 @@ using ll = long long;
 ll n, k;
 multiset<ll> low, high;
 
-void add(ll x) {
+void add(ll x){
 	auto aux = *low.rbegin();
 
-	if (x > aux) {
+	if(x > aux){
 		high.insert(x);
 
-		if (high.size() > k / 2) {
+		if(high.size() > k / 2){
 			low.insert(*high.begin());
 			high.erase(high.begin());
 		}
@@ -24,41 +24,41 @@ void add(ll x) {
     else {
 		low.insert(x);
 
-		if (low.size() > (k + 1) / 2) {
+		if(low.size() > (k + 1) / 2){
 			high.insert(*low.rbegin());
 			low.erase(--low.end());
 		}
 	}
 }
 
-void remove(ll x) {
-	if (high.find(x) != high.end())
+void remove(ll x){
+	if(high.find(x) != high.end())
         high.erase(high.find(x));
 	else
         low.erase(low.find(x));
 
-	if (low.empty()) {
+	if(low.empty()){
 		low.insert(*high.begin());
 		high.erase(high.begin());
 	}
 }
 
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
 
     cin >> n >> k;
 
     vector<ll> v(n);
-    for (auto& i : v) 
+    for(auto& i : v) 
         cin >> i;
 
     low.insert(v[0]);
-    for (int i = 1; i < k; ++i) 
+    for(int i = 1; i < k; ++i) 
         add(v[i]);
     cout << *low.rbegin() << ' ';
 
-    for (ll i = k; i < n; ++i) {
-        if (k == 1) {
+    for(ll i = k; i < n; ++i){
+        if(k == 1){
             add(v[i]);
             remove(v[i-k]);
         }

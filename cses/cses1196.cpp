@@ -5,33 +5,32 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
+using ll = long long;
+using ull = unsigned long long;
 
 vector <vector<pair<int,ll>>> graph;
 
 int n, m, k;
 vector <ll> ans;
-void dijkstra(int src = 1) {
+void dijkstra(int src = 1){
     vector<priority_queue<ll>> costs(n+1);
     priority_queue<pair<ll,int>> pq;
     
     costs[1].push(0);
     pq.push({0,src});
 
-    while (!pq.empty()) {
+    while(!pq.empty()){
         auto [dist, u] = pq.top();
         pq.pop();
 
-        if (-dist > costs[u].top()) continue;
-        for (auto &[v,w] : graph[u]) {
+        if(-dist > costs[u].top()) continue;
+        for(auto &[v,w] : graph[u]){
             ll d = -dist + w;
-            if (costs[v].size() < k) {
+            if(costs[v].size() < k){
                 costs[v].push(d);
                 pq.push({-d, v});
             }
-            else if (d < costs[v].top()) {
+            else if(d < costs[v].top()){
                 costs[v].pop();
                 costs[v].push(d);
                 pq.push({-d, v});
@@ -39,24 +38,24 @@ void dijkstra(int src = 1) {
         }
     }
 
-    while (!costs[n].empty()) {
+    while(!costs[n].empty()){
         ans.push_back(costs[n].top());
         costs[n].pop();
     }
 }
 
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
 
     cin >> n >> m >> k;
     graph.resize(n+1);
-    while (m--) {
+    while(m--){
         int a, b; ll c;
         cin >> a >> b >> c;
         graph[a].push_back({b, c});
     }
     dijkstra();
-    for (int i = ans.size()-1; i >= 0; --i)
+    for(int i = ans.size()-1; i >= 0; --i)
         cout << ans[i] << ' ';
     cout << '\n';
 

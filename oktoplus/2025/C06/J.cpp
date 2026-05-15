@@ -5,9 +5,8 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
+using ll = long long;
+using ull = unsigned long long;
 
 typedef struct
 {
@@ -16,13 +15,13 @@ typedef struct
 } candidato; 
 
 bool cmp(candidato a, candidato b){
-    if (a.poder != b.poder)
+    if(a.poder != b.poder)
         return a.poder > b.poder;
 
-    if (a.kills != b.kills)
+    if(a.kills != b.kills)
         return a.kills > b.kills;
 
-    if (a.mortes != b.mortes)
+    if(a.mortes != b.mortes)
         return a.mortes < b.mortes;
 
     return a.nome < b.nome;
@@ -34,7 +33,7 @@ int main(){
 
     vector <candidato> v(n);
 
-    for (int i = 0; i < n; i++)
+    for(int i = 0; i < n; i++)
     {
         cin >> v[i].nome;   
         // printf("%s\n", v[i].first.c_str());

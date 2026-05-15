@@ -5,9 +5,8 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
+using ll = long long;
+using ull = unsigned long long;
 
 char alternar(char c){
     return c == 'X' ? 'O' : 'X';
@@ -17,16 +16,16 @@ int main(){
     ll c, tc;
     
     cin >> tc;
-    while (tc--){
+    while(tc--){
         string led, ans;
 
         cin >> led >> c;
 
         ans += c % 2 == 0 ? led[0] : alternar(led[0]);
         
-        for (int i = 1; i < led.size(); i++)
+        for(int i = 1; i < led.size(); i++)
         {
-            if (ans[i-1] == 'X' && led[i-1] == 'O')
+            if(ans[i-1] == 'X' && led[i-1] == 'O')
                 c++;
 
             c = c / 2;

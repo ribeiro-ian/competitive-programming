@@ -5,9 +5,8 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
+using ll = long long;
+using ull = unsigned long long;
 
 int main(){
 
@@ -18,14 +17,14 @@ int main(){
     while(tc--){
         getline(cin, str);
 
-        for (auto &c : str){
-            if (isalpha(c) && c != ' ')
+        for(auto &c : str){
+            if(isalpha(c) && c != ' ')
                 c += 3;
         }
 
         reverse(str.begin(), str.end());
 
-        for (int i = str.size()/2; i < str.size(); i++)
+        for(int i = str.size()/2; i < str.size(); i++)
             str[i] -= 1;
 
         cout << str << endl;

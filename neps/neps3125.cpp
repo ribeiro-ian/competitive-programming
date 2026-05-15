@@ -7,15 +7,15 @@
 using namespace std;
 using ll = long long;
 
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
 
     ll a, b, c, d;
     cin >> a >> b >> c >> d;
     
-    for (int i = 0; i*d <= c; ++i) {
+    for(int i = 0; i*d <= c; ++i){
         ll leite = c-i*d;
-        if (leite >= a && leite <= b) {
+        if(leite >= a && leite <= b){
             cout << "S\n";
             return 0;
         }

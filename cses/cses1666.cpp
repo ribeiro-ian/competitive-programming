@@ -5,21 +5,20 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
+using ll = long long;
+using ull = unsigned long long;
 
 vector <vector <int>> adj;
 vector <bool> visited;
 
 void dfs(int no){
     visited[no] = true;
-    for (auto &v : adj[no]) 
-        if (!visited[v])
+    for(auto &v : adj[no]) 
+        if(!visited[v])
             dfs(v);
 }
 
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
 
     int n, m;
@@ -28,7 +27,7 @@ int main() {
     adj.resize(n+1);
     visited.assign(n+1, false);
 
-    while (m--) {
+    while(m--){
         int a, b;
         cin >> a >> b;
         
@@ -39,8 +38,8 @@ int main() {
     int cnt = 0;
     vector <int> ans;
 
-    for (int i = 1; i <= n; i++) {
-        if (!visited[i]) {
+    for(int i = 1; i <= n; i++){
+        if(!visited[i]){
             dfs(i);
             cnt++;
             ans.push_back(i);
@@ -48,7 +47,7 @@ int main() {
     }
     cout << cnt-1 << '\n';
 
-    for (int i = 0; i < ans.size()-1; i++) 
+    for(int i = 0; i < ans.size()-1; i++) 
         cout << ans[i] << ' ' << ans[i+1] << '\n';
 
     return 0;

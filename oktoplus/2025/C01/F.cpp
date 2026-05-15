@@ -5,9 +5,8 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
+using ll = long long;
+using ull = unsigned long long;
 
 int main(){
     ios::sync_with_stdio(0);
@@ -17,11 +16,11 @@ int main(){
     string str;
     char id;
 
-    while (1)
+    while(1)
     {
         cin >> n;
 
-        if (n==0) break;
+        if(n==0) break;
 
         pont = cnt = 0;
 
@@ -31,8 +30,8 @@ int main(){
 
             int idx = id - 'A';
 
-            if (str == "correct"){
-                if (prob[idx] > 0)
+            if(str == "correct"){
+                if(prob[idx] > 0)
                     pont += tempo + 20*prob[idx];
                 else
                     pont += tempo;

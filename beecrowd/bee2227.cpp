@@ -5,18 +5,17 @@
 
 #include <bits/stdc++.h>
 using namespace std;
+using ll = long long;
+using ull = unsigned long long;
 
-typedef long long ll;
-typedef unsigned long long ull;
-
-int main() {
+int main(){
     int a, v, x, y, teste = 1;
 
-    while (scanf("%i%i", &a, &v), a && v) {
+    while(scanf("%i%i", &a, &v), a && v){
         vector <int> voos (a+1, 0);
 
         int maior = 0;
-        for (int i = 0; i < v; i++) {
+        for(int i = 0; i < v; i++){
             scanf("%i%i", &x, &y);
 
             voos[x]++;
@@ -25,8 +24,8 @@ int main() {
         }
 
         printf("Teste %i\n", teste++);
-        for (int i = 1; i <= a; i++) {
-            if (voos[i] == maior)
+        for(int i = 1; i <= a; i++){
+            if(voos[i] == maior)
                 printf("%i ", i);
         }
         printf("\n\n");

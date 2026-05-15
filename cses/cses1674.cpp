@@ -5,25 +5,24 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
+using ll = long long;
+using ull = unsigned long long;
 
 vector<vector<int>> graph;
 vector <int> emp;
 vector <bool> visited;
 
-int dfs(int no) {
+int dfs(int no){
     visited[no] = true;
 
-    for (auto &child : graph[no])
-        if (!visited[child])
+    for(auto &child : graph[no])
+        if(!visited[child])
             emp[no] += dfs(child);
     
     return emp[no] + 1;
 }
 
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
 
     int n; cin >> n;
@@ -31,14 +30,14 @@ int main() {
     emp.assign(n+1, 0);
     visited.assign(n+1, false);
 
-    for (int i = 2; i <= n; ++i) {
+    for(int i = 2; i <= n; ++i){
         int parent; cin >> parent;
         graph[parent].push_back(i);
         graph[i].push_back(parent);
     }
     
     dfs(1);
-    for (int i = 1; i <= n; ++i) 
+    for(int i = 1; i <= n; ++i) 
         cout << emp[i] << ' ';
     cout << '\n';
     

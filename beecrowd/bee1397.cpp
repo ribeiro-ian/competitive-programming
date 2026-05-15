@@ -8,24 +8,24 @@ using namespace std;
 using ll = long long;
 
 int n;
-void solve() {
+void solve(){
     int a = 0, b = 0;
-    while (n--) {
+    while(n--){
         int x, y;
         cin >> x >> y;
 
-        if (x > y)
+        if(x > y)
             a++;
-        else if (y > x)
+        else if(y > x)
             b++;
     }
     cout << a << ' ' << b << '\n';
 }
 
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
     
-    while (cin >> n, n)
+    while(cin >> n, n)
         solve();
         
     return 0;

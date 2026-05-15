@@ -5,34 +5,33 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
+using ll = long long;
+using ull = unsigned long long;
 typedef pair<int,int> pii;
 
 int main(){
     int n, k, x, y;
 
-    while (1){
+    while(1){
         scanf("%i %i", &n, &k);
         
-        if (!n) break;
+        if(!n) break;
         
         stack <pii> est;
         bool flag = true;
         
-        for (int i = 0; i < n; i++){
+        for(int i = 0; i < n; i++){
             scanf("%i %i", &x, &y);
 
-            while (!est.empty() and est.top().second <= x)
+            while(!est.empty() and est.top().second <= x)
                 est.pop();
 
-            if (est.size() >= k)
+            if(est.size() >= k)
                 flag = false;
             else{
-                if (est.empty())
+                if(est.empty())
                     est.push({x,y});
-                else if (est.top().second > y)
+                else if(est.top().second > y)
                     est.push({x,y});
                 else
                     flag = false;

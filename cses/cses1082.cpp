@@ -5,22 +5,21 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
+using ll = long long;
+using ull = unsigned long long;
 constexpr ll M = 1e9+7;
 
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
 
     ll n; cin >> n;
     ll ans = 1;
 
     vector <ll> num(sqrt(n), 1);
-    for (ll i = 2; i*i < n; ++i) {
-        if (i != num[i]) {
+    for(ll i = 2; i*i < n; ++i){
+        if(i != num[i]){
             ll j = i;
-            while (j < num.size()) {
+            while(j < num.size()){
                 num[j] *= j/i + 1;
                 j += i; 
             }

@@ -5,16 +5,15 @@
 
 #include <bits/stdc++.h>
 using namespace std;
+using ll = long long;
+using ull = unsigned long long;
 
-typedef long long ll;
-typedef unsigned long long ull;
-
-int main() {
+int main(){
     int a, b;
     scanf("%i %i", &a, &b);
     
     int cnt = 0;
-    while (a <= b){
+    while(a <= b){
         a *= 3;
         b *= 2;
         cnt++;

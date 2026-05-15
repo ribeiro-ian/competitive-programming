@@ -9,11 +9,11 @@ using namespace std;
 int n, c, f, tc;
 vector <int> p;
 
-bool isValid(int x) {
+bool isValid(int x){
     int sum = 0, cnt = 1;
-    for (auto v : p) {
+    for(auto v : p){
         sum += v;
-        if (sum > x) {
+        if(sum > x){
             cnt++;
             sum = v;
         } 
@@ -21,15 +21,15 @@ bool isValid(int x) {
     return cnt <= c;
 }
 
-int bs() {
+int bs(){
     int l = *max_element(p.begin(), p.end()),
         r = accumulate(p.begin(), p.end(), 0),
         mid, ans = -1;
 
-    while (l<=r) {
+    while(l<=r){
         mid = l+(r-l)/2;
 
-        if (isValid(mid)) {
+        if(isValid(mid)){
             ans = mid;
             r = mid - 1;
         }
@@ -41,16 +41,16 @@ int bs() {
     return ans;
 }
 
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
 
     cin >> tc;
     
-    while (tc--) {
+    while(tc--){
         cin >> n >> c >> f;
         p.assign(n, 0);
 
-        for (auto &i : p)
+        for(auto &i : p)
             cin >> i;
 
         int ans = bs();

@@ -7,18 +7,18 @@
 using namespace std;
 using ll = long long;
 
-bool isValid(ll a, ll n, ll target) {
+bool isValid(ll a, ll n, ll target){
     n--;
     return n*(2*a + n - 1)/2 < target; // 
 }
 
-ll bs(ll target, ll a, ll b) {
+ll bs(ll target, ll a, ll b){
     ll l = 1, r = b-a+1, m, ans = -1;
 
-    while (l <= r) {
+    while(l <= r){
         m = l + (r-l)/2;
 
-        if (isValid(a, m, target)) {
+        if(isValid(a, m, target)){
             l = m + 1;
             ans = m;
         }
@@ -28,11 +28,11 @@ ll bs(ll target, ll a, ll b) {
     return ans;
 }
 
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
 
     int tc; cin >> tc;
-    while (tc--) {
+    while(tc--){
         ll target, a, b;
         cin >> target >> a >> b;
 

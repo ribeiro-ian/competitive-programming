@@ -5,34 +5,33 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
+using ll = long long;
+using ull = unsigned long long;
 
 int isValid(int a, int b){
     int c = a ^ b;
 
-    if (a+b > c && a+c > b && b+c>a && c > 0)
+    if(a+b > c && a+c > b && b+c>a && c > 0)
         return 0;
     
     return c;
 }
 
 int bs(int x){
-    for (int i = x-1; i > x/2; i--){
+    for(int i = x-1; i > x/2; i--){
         int res = isValid(x,i);
 
         printf("%i ^ %i = %i\n", x, i, (x ^ i));
 
-        // if (!res)
+        // if(!res)
         //     return i;
     }
 
     int l = x/2, r = x-1, m;
-    while (l <= r){
+    while(l <= r){
         m = l + (r-l)/2;
 
-        if (!isValid(x, m)){
+        if(!isValid(x, m)){
             return m;
         }
     }
@@ -45,7 +44,7 @@ int main(){
     int tc, x;
     // scanf("%i", &tc);
     
-    // while (tc--){
+    // while(tc--){
         scanf("%i", &x);
 
         cout << bs(x) << endl;

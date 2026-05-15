@@ -5,24 +5,23 @@
 
 #include <bits/stdc++.h>
 using namespace std;
+using ll = long long;
+using ull = unsigned long long;
 
-typedef long long ll;
-typedef unsigned long long ull;
-
-int ws(int n) {
+int ws(int n){
     return 1 + (int) log10(n);
 }
 
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
     int n;
-    while (cin >> n, n) {
+    while(cin >> n, n){
         int s = ws(1 << (n+n-2));
 
-        for (int i = 0; i < n; ++i) {
-            for (int j = 0; j < n; ++j) {
+        for(int i = 0; i < n; ++i){
+            for(int j = 0; j < n; ++j){
                 cout << setw(s) << (1 << (i+j));
-                if (j == n-1) cout << '\n';
+                if(j == n-1) cout << '\n';
                 else cout << ' ';       
             }
         }

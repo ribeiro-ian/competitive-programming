@@ -20,22 +20,22 @@ using ll = long long;
 40 45 -> volta 65
 50 51 -> volta 75
 */
-void solve() {
+void solve(){
     int n, t, m, x;
     cin >> n >> t >> m;
 
     int a[n], time = 0, cnt = 0, trips = 0;
-    for (int i = 0; i < m; ++i) 
+    for(int i = 0; i < m; ++i) 
         cin >> a[i];
 
     cout << time << ' ' << trips << '\n';
 }
 
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
 
     int tc; cin >> tc;
-    while (tc--) solve();
+    while(tc--) solve();
 
     return 0;
 }

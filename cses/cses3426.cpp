@@ -8,11 +8,11 @@ using namespace std;
 using ll = long long;
 
 ll a, b, c;
-inline ll calc(ll x) {
+inline ll calc(ll x){
     return (a*x + b) % c;
 }
 
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
 
     ll n, k, x;
@@ -21,13 +21,13 @@ int main() {
 
     // include first val
     ll ans, amount = x, last = x;
-    for (int i = 1; i < k; ++i) {
+    for(int i = 1; i < k; ++i){
         x = calc(x);
         amount ^= x;
     }
     ans = amount;
     
-    for (int i = k; i < n; ++i) {
+    for(int i = k; i < n; ++i){
         amount ^= last;
         last = calc(last);
 

@@ -5,18 +5,17 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
+using ll = long long;
+using ull = unsigned long long;
 
 int main(){
     string str;
     cin >> str;
 
     int total = 0, cnt = 0;
-    for (auto c : str)
+    for(auto c : str)
     {
-        if (c == '0')
+        if(c == '0')
             total += 9;
         else cnt++;
 

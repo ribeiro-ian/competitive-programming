@@ -5,22 +5,21 @@
 
 #include <bits/stdc++.h>
 using namespace std;
+using ll = long long;
+using ull = unsigned long long;
 
-typedef long long ll;
-typedef unsigned long long ull;
-
-int main() {
+int main(){
     int n; scanf("%i", &n);
     
     int s[n];
-    for (int i = 0; i < n; i++)
+    for(int i = 0; i < n; i++)
         scanf("%i", &s[i]);
 
     sort(s,s+n);
     
     int cnt = n, l = 0, r = n/2;
-    while (l < n/2 && r < n) {
-        if (s[l] * 2 <= s[r]) {
+    while(l < n/2 && r < n){
+        if(s[l] * 2 <= s[r]){
             cnt--;
             l++;
         }

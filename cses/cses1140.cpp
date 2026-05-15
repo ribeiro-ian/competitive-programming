@@ -5,29 +5,28 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
+using ll = long long;
+using ull = unsigned long long;
 typedef struct {
     ll in, out, money;
 } project;
 
-bool cmp(project a, project b) {
-    if (a.out != b.out) return a.out < b.out;
-    if (a.in != b.in) return a.in < b.in;
+bool cmp(project a, project b){
+    if(a.out != b.out) return a.out < b.out;
+    if(a.in != b.in) return a.in < b.in;
     return a.money > b.money;
 }
 
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
 
     ll n; cin >> n;
     vector <project> v(n);
-    for (int i = 0; i < n; ++i) cin >> v[i].in >> v[i].out >> v[i].money;
+    for(int i = 0; i < n; ++i) cin >> v[i].in >> v[i].out >> v[i].money;
     sort(v.begin(), v.end(), cmp);
 
     vector <ll> dp(n);
-    for (int i = 0; i < n; ++i) {
+    for(int i = 0; i < n; ++i){
                     
     }
 

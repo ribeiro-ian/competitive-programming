@@ -5,11 +5,10 @@
 
 #include <bits/stdc++.h>
 using namespace std;
+using ll = long long;
+using ull = unsigned long long;
 
-typedef long long ll;
-typedef unsigned long long ull;
-
-int main() {
+int main(){
 #ifndef ONLINE_JUDGE
     freopen("pairup.in", "r", stdin);
     freopen("pairup.out", "w", stdout);
@@ -19,18 +18,18 @@ int main() {
     ll n, x, y;
     cin >> n;
     vector <ll> cows;
-    for (int i = 0; i < n; ++i) {
+    for(int i = 0; i < n; ++i){
         cin >> x >> y;
 
-        while (x--)
+        while(x--)
             cows.push_back(y);
     }
     sort(cows.begin(), cows.end());
-    for (auto &i : cows)
+    for(auto &i : cows)
         cerr << i << " "; cerr << "\n";
     
     ll l = 0, r = cows.size()-1, ans = 0;
-    while (l < r) {
+    while(l < r){
         ans = max(ans, cows[l] + cows[r]);
         l++;
         r--;

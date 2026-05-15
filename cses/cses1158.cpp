@@ -5,24 +5,23 @@
 
 #include <bits/stdc++.h>
 using namespace std;
+using ll = long long;
+using ull = unsigned long long;
 
-typedef long long ll;
-typedef unsigned long long ull;
-
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
 
     ll n, x;
     cin >> n >> x;
     vector <ll> prices(n), pages(n);
 
-    for (auto &i : prices) cin >> i;
-    for (auto &i : pages) cin >> i;
+    for(auto &i : prices) cin >> i;
+    for(auto &i : pages) cin >> i;
     
     vector <ll> dp(x + 1, 0);
-    for (int i = 0; i < n; i++) {
-        for (int c = x; c > 0; c--) {
-            if (prices[i] > c) continue;
+    for(int i = 0; i < n; i++){
+        for(int c = x; c > 0; c--){
+            if(prices[i] > c) continue;
             dp[c] = max(dp[c], pages[i] + dp[c - prices[i]]);
         }
     }

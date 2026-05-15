@@ -5,9 +5,8 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
+using ll = long long;
+using ull = unsigned long long;
 
 int n, q, x;
 vector <int> h(51234);
@@ -16,10 +15,10 @@ int shorter(int x){
     // tallest lady chimp that is shorter than Luchu
     int l=0, r=n-1, m, ans=-1;
     
-    while (l <= r){
+    while(l <= r){
         int m = l+(r-l)/2;
         
-        if (h[m] < x){
+        if(h[m] < x){
             ans = h[m];
             l = m+1;
         }
@@ -34,10 +33,10 @@ int taller(int x){
     // shortest lady chimp that is taller than Luchu
     int l=0, r=n-1, m, ans=-1;
     
-    while (l <= r){
+    while(l <= r){
         int m = l+(r-l)/2;
 
-        if (h[m] > x){
+        if(h[m] > x){
             ans = h[m];
             r = m-1;
         }
@@ -51,7 +50,7 @@ int taller(int x){
 int main(){
     scanf("%i", &n);
     
-    for (int i = 0; i < n; i++)
+    for(int i = 0; i < n; i++)
         scanf("%i", &h[i]);
     
     scanf("%i", &q);

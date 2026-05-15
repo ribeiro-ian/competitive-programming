@@ -5,15 +5,14 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
+using ll = long long;
+using ull = unsigned long long;
 
 ll ans = 1e18, w, total, n;
 vector <ll> v;
 
-void search(int i) {
-    if (i >= n) {
+void search(int i){
+    if(i >= n){
         ll w2 = total - w;
         ans = min(ans, abs(w - w2));
     }
@@ -26,13 +25,13 @@ void search(int i) {
     }
 }
 
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
 
     cin >> n;
     v.resize(n);
     total = 0, w = 0;
-    for (auto &i : v) {
+    for(auto &i : v){
         cin >> i;
         total += i;
     }

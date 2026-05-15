@@ -5,15 +5,14 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
+using ll = long long;
+using ull = unsigned long long;
 
 int cnt;
 int fib(int x){
     cnt++;
-    if (x == 0) return 0;
-    if (x == 1) return 1;
+    if(x == 0) return 0;
+    if(x == 1) return 1;
 
 
     return fib(x-1) + fib(x-2);
@@ -21,7 +20,7 @@ int fib(int x){
 
 int main(){
     int tc; cin >>tc;
-    while (tc--)
+    while(tc--)
     {
         int n; cin >> n;
 

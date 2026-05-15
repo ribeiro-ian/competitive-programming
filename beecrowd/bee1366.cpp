@@ -8,9 +8,9 @@ using namespace std;
 using ll = long long;
 
 int n;
-void solve() {
+void solve(){
     int lados = 0;
-    while(n--) {
+    while(n--){
         int _, x;
         cin >> _ >> x;
         lados += x/2;
@@ -18,7 +18,7 @@ void solve() {
     cout << lados/2 << '\n';
 }
 
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
 
     while(cin >> n, n)

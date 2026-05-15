@@ -5,9 +5,8 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
+using ll = long long;
+using ull = unsigned long long;
 
 int main(){
 
@@ -15,14 +14,14 @@ int main(){
     string str;
     scanf("%i", &n);
 
-    while (n--){
+    while(n--){
         cin >> str;
-        if ((str.substr(0,2) == "UR" || str.substr(0,2) == "OB") && str.size() == 3)
+        if((str.substr(0,2) == "UR" || str.substr(0,2) == "OB") && str.size() == 3)
             printf("%sI", str.substr(0, 2).c_str());
         else
             printf("%s", str.c_str());
         
-        if (n) printf(" ");
+        if(n) printf(" ");
         else printf("\n");
     }
 

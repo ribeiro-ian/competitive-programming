@@ -7,16 +7,16 @@
 using namespace std;
 using ll = long long;
 
-void solve() {
+void solve(){
     string s; cin >> s;
     
     stack<char> st;
     int cnt = 0;
-    for (auto &c : s) {
-        if (c == '<')
+    for(auto &c : s){
+        if(c == '<')
             st.push(c);
-        else if (c == '>') {
-            if (!st.empty()) {
+        else if(c == '>'){
+            if(!st.empty()){
                 cnt++;
                 st.pop();
             } 
@@ -25,11 +25,11 @@ void solve() {
     cout << cnt << '\n';
 }
 
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
 
     int tc; cin >> tc;
-    while (tc--) solve();
+    while(tc--) solve();
 
     return 0;
 }

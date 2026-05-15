@@ -5,28 +5,27 @@
 
 #include <bits/stdc++.h>
 using namespace std;
+using ll = long long;
+using ull = unsigned long long;
 
-typedef long long ll;
-typedef unsigned long long ull;
-
-int main() {
+int main(){
 
     int tc, n;
     scanf("%i", &tc);
 
-    while (tc--) {
+    while(tc--){
         scanf("%i", &n);
 
         vector <int> v(n);
 
         map <int,bool> check;
-        for (int i = 0; i < n; i++){
+        for(int i = 0; i < n; i++){
             scanf("%i", &v[i]);
         }
 
         int cnt = 0;
-        for (int i = n-1; i >= 0; i--){
-            if (check[v[i]])
+        for(int i = n-1; i >= 0; i--){
+            if(check[v[i]])
                 break;
                 
             cnt++;

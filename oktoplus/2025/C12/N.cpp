@@ -5,21 +5,20 @@
 
 #include <bits/stdc++.h>
 using namespace std;
+using ll = long long;
+using ull = unsigned long long;
 
-typedef long long ll;
-typedef unsigned long long ull;
-
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
 
     int n; cin >> n;
     int ans = 0;
     vector <int> v(n);
-    for (auto &i : v) {
+    for(auto &i : v){
         cin >> i;
     }
-    for (int i = 1; i < n; ++i) {
-        if (v[i] < v[i-1]) {
+    for(int i = 1; i < n; ++i){
+        if(v[i] < v[i-1]){
             ans = i+1;
             break;
         }

@@ -5,16 +5,15 @@
 
 #include <bits/stdc++.h>
 using namespace std;
+using ll = long long;
+using ull = unsigned long long;
 
-typedef long long ll;
-typedef unsigned long long ull;
-
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
     int tc, n;
 
     cin >> tc;
-    while (tc--) {
+    while(tc--){
         cin >> n;
         int a[n];
 
@@ -22,7 +21,7 @@ int main() {
         int greatest, lowest;
         greatest = lowest = a[0];
         
-        for (int i = 1; i < n; i++) {
+        for(int i = 1; i < n; i++){
             cin >> a[i];
             
             greatest = max(greatest, a[i]);

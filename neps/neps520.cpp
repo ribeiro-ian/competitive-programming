@@ -5,25 +5,23 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
+using ll = long long;
+using ull = unsigned long long;
 
 vector <vector <int>> adj;
 vector <bool> visited;
 
-void dfs(int no) {
+void dfs(int no){
     visited[no] = true;
     
-    for (auto &v : adj[no])
-        if (!visited[v])
+    for(auto &v : adj[no])
+        if(!visited[v])
             dfs(v);
 }
+using ll = long long;
+using ull = unsigned long long;
 
-typedef long long ll;
-typedef unsigned long long ull;
-
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
     int n, d;
     cin >> n >> d;
@@ -32,13 +30,13 @@ int main() {
     visited.assign(n, false);
 
     vector <pair <int, int>> v (n);
-    for (int i = 0; i < n; i++)
+    for(int i = 0; i < n; i++)
         cin >> v[i].first >> v[i].second;
 
-    for (int i = 0; i < n; i++) {
-        for (int j = i+1; j < n; j++) {
+    for(int i = 0; i < n; i++){
+        for(int j = i+1; j < n; j++){
             // dist entre dois pontos             
-            if (sqrt( pow(v[i].first-v[j].first,2) + pow(v[i].second-v[j].second,2) ) <= d) {
+            if(sqrt( pow(v[i].first-v[j].first,2) + pow(v[i].second-v[j].second,2) ) <= d){
                 adj[i].push_back(j);
                 adj[j].push_back(i);
             }
@@ -46,8 +44,8 @@ int main() {
     }
 
     int cnt = 0;
-    for (int i = 0; i < n; i++) {
-        if (!visited[i]) {
+    for(int i = 0; i < n; i++){
+        if(!visited[i]){
             dfs(i);
             cnt++;
         }

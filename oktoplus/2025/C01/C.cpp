@@ -5,9 +5,8 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
+using ll = long long;
+using ull = unsigned long long;
 
 bool cmp(int a){return a>=0;}
 
@@ -17,15 +16,15 @@ int main(){
 
     int n, b, d, c, v;
     
-    while (1){
+    while(1){
         cin >> b >> n;
-        if (b == 0 && n == 0) break;
+        if(b == 0 && n == 0) break;
 
         vector <int> bancos(b+1);
-        for (int i = 1; i <= b; i++)
+        for(int i = 1; i <= b; i++)
             cin >> bancos[i];
 
-        for (int i = 0; i < n; i++){
+        for(int i = 0; i < n; i++){
             cin >> d >> c >> v;
 
             bancos[d] -= v;

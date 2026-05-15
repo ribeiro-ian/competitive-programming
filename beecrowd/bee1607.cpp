@@ -14,16 +14,16 @@ int main(){
         int tam = 0;
         int auxa = 0, auxb = 0;
         
-        while (tam_aux > tam) {
-            while (a[auxa] != b[auxb]) {
+        while(tam_aux > tam){
+            while(a[auxa] != b[auxb]){
                 auxa++;
-                if (a[auxa] == 'z') {
+                if(a[auxa] == 'z'){
                     a[auxa] = 'a';
                 }
                 count++;
             }
             
-            if (a[auxa] == b[auxb]) {
+            if(a[auxa] == b[auxb]){
                 auxb++;
             }
             tam++;

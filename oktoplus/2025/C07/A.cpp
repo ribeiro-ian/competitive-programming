@@ -5,27 +5,26 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
+using ll = long long;
+using ull = unsigned long long;
 
 bool isVowel(char c){
     char vowels[] = {'A', 'O', 'Y', 'E', 'U', 'I'};
     
-    for (auto v : vowels){
-        if (tolower(v) == tolower(c))
+    for(auto v : vowels){
+        if(tolower(v) == tolower(c))
             return true;
     }
     return false;
 }
 
-int main() {
+int main(){
 
     string str, ans="";
     cin >> str;
 
-    for (auto c : str){
-        if (!isVowel(c)){
+    for(auto c : str){
+        if(!isVowel(c)){
             ans += '.';
             ans += tolower(c);
         }

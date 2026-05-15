@@ -5,17 +5,16 @@
 
 #include <bits/stdc++.h>
 using namespace std;
+using ll = long long;
+using ull = unsigned long long;
 
-typedef long long ll;
-typedef unsigned long long ull;
-
-int main() {
+int main(){
 
     int n, x;
     scanf("%i", &n);
 
     int sum = 0;
-    for (int i = 0; i < n; i++) {
+    for(int i = 0; i < n; i++){
         scanf("%i", &x);
 
         sum += abs(x);

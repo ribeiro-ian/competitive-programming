@@ -1,8 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
+using ll = long long;
+using ull = unsigned long long;
 
 int main(){
     int tc;
@@ -13,14 +12,14 @@ int main(){
         cin >> str;
         
         bool flag = false;
-        for (int i = 0; i < str.size()-1; i++){
-            if (str[i] == str[i+1]){
+        for(int i = 0; i < str.size()-1; i++){
+            if(str[i] == str[i+1]){
                 flag = true;
                 break;
             }
         }
 
-        if (flag)
+        if(flag)
             printf("1\n");
         else
             printf("%i\n", str.size());

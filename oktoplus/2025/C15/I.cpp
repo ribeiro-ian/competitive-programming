@@ -5,11 +5,10 @@
 
 #include <bits/stdc++.h>
 using namespace std;
+using ll = long long;
+using ull = unsigned long long;
 
-typedef long long ll;
-typedef unsigned long long ull;
-
-void solve() {
+void solve(){
     const ll INF = 1e18;
     
     ll n, m;
@@ -17,7 +16,7 @@ void solve() {
     vector<pair<ll,ll>> graph[n+1];
     vector<ll> dist(n+1, INF);
 
-    while (m--) {
+    while(m--){
         ll a, b, c;
         cin >> a >> b >> c;
         graph[a].push_back({b,c});
@@ -31,19 +30,19 @@ void solve() {
     dist[st] = 0;
     pq.push({0, st});
 
-    while (!pq.empty()) {
+    while(!pq.empty()){
         auto u = pq.top().second;
         pq.pop();
 
-        for (auto &[v,w] : graph[u]) {
-            if (dist[u] + w < dist[v]) {
+        for(auto &[v,w] : graph[u]){
+            if(dist[u] + w < dist[v]){
                 dist[v] = dist[u] + w;
                 pq.push({-dist[v], v});
             }
         }
     }
 
-    if (dist[end] == INF) {
+    if(dist[end] == INF){
         cout << "NO\n";
     }
     else {
@@ -51,11 +50,11 @@ void solve() {
     }
 }
 
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
 
     int tc; cin >> tc;
-    while (tc--) solve();
+    while(tc--) solve();
 
     return 0;
 }

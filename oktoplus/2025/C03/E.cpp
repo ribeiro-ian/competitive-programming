@@ -5,9 +5,8 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
+using ll = long long;
+using ull = unsigned long long;
 
 int main(){
     int a, b, c;
@@ -18,14 +17,14 @@ int main(){
         int cnt0 = count(arr, arr+3, 0);
         int cnt1 = count(arr, arr+3, 1);
 
-        if (cnt0 == 0 || cnt1 == 0){
+        if(cnt0 == 0 || cnt1 == 0){
             printf("*\n");
             continue;
         }
 
         int aux = cnt0 < cnt1 ? 0 : 1;
-        for (int i = 0; i < 3; i++){
-            if (arr[i] == aux){
+        for(int i = 0; i < 3; i++){
+            if(arr[i] == aux){
                 printf("%c\n", 'A'+ i);
                 break;
             }

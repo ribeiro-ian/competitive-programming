@@ -5,17 +5,16 @@
 
 #include <bits/stdc++.h>
 using namespace std;
+using ll = long long;
+using ull = unsigned long long;
 
-typedef long long ll;
-typedef unsigned long long ull;
-
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
 
     int n, x; cin >> n;
     deque <int> cards;
 
-    for (int i = 0; i < n; i++) {
+    for(int i = 0; i < n; i++){
         cin >> x;
         cards.push_back(x);
     }
@@ -23,19 +22,19 @@ int main() {
     int sereja = 0, dima= 0;
     bool turn = true;
 
-    while(!cards.empty()) {
+    while(!cards.empty()){
         int front = cards.front(),
             back = cards.back();
         int card = max(front, back);
 
-        if (turn) {
+        if(turn){
             sereja += card;
         }
         else {
             dima += card;
         }
 
-        if (front == card) {
+        if(front == card){
             cards.pop_front();
         }
         else {

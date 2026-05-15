@@ -1,0 +1,33 @@
+/*
+    Beecrowd 1238 - Combinador
+    https://judge.beecrowd.com/pt/problems/view/1238
+*/
+
+#include <bits/stdc++.h>
+using namespace std;
+using ll = long long;
+
+void solve(){
+    string a, b;
+    cin >> a >> b;
+
+    int i = 0, j = 0;
+    string ans;
+    while(i < a.size() && j < b.size()){
+        ans += a[i++];
+        ans += b[j++];
+    }
+    while(i < a.size()) ans += a[i++];
+    while(j < b.size()) ans += b[j++];
+
+    cout << ans << '\n';
+}
+
+int main(){
+    ios_base::sync_with_stdio(0); cin.tie(0);
+
+    int tc; cin >> tc;
+    while(tc--) solve();
+
+    return 0;
+}

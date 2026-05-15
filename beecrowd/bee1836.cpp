@@ -17,10 +17,10 @@ void solve(){
     cin >> pokemon >> L;
     cout << "Caso #" << ++caseNum << ": " << pokemon << " nivel " << L << '\n';
 
-    for (int i = 0; i < 4; ++i) {
+    for(int i = 0; i < 4; ++i){
         cin >> Bs >> IV >> EV;
         cout << atr[i] << ": ";
-        if (i == 0) {
+        if(i == 0){
             cout << (int) ((IV + Bs + sqrt(EV)/8 + 50) * L)/50 + 10 << '\n';
         }
         else
@@ -32,7 +32,7 @@ int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
 
     int tc; cin >> tc;
-    while (tc--) solve();
+    while(tc--) solve();
 
     return 0;
 }

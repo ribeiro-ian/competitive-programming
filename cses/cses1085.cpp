@@ -5,18 +5,17 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
+using ll = long long;
+using ull = unsigned long long;
 
 int n, k;
 vector <ll> a;
 
-bool isValid(ll x) {
+bool isValid(ll x){
     ll sum = 0, cnt = 1;
-    for (auto v : a) {
+    for(auto v : a){
         sum += v;
-        if (sum > x) {
+        if(sum > x){
             cnt++;
             sum = v;
         } 
@@ -25,13 +24,13 @@ bool isValid(ll x) {
     return cnt <= k;
 }
 
-ll bs() {
+ll bs(){
     ll l = *max_element(a.begin(), a.end()), r =1e18, mid, ans = -1;
 
-    while (l<=r) {
+    while(l<=r){
         mid = l+(r-l)/2;
 
-        if (isValid(mid)) {
+        if(isValid(mid)){
             ans = mid;
             r = mid - 1;
         }
@@ -43,12 +42,12 @@ ll bs() {
     return ans;
 }
 
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
 
     cin >> n >> k;
     a.resize(n);
-    for (auto &e : a)
+    for(auto &e : a)
         cin >> e;
 
     cout << bs() << "\n";

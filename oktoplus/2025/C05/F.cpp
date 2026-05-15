@@ -5,9 +5,8 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
+using ll = long long;
+using ull = unsigned long long;
 typedef pair <int, int> pii;
 
 int main(){
@@ -19,24 +18,24 @@ int main(){
     
     scanf("%i %i", &n, &m);
 
-    for (int i = 0; i < n; i++)
+    for(int i = 0; i < n; i++)
     {
         scanf("%i", &var);
         free.push(i+1);
         time[i+1] = var;
     }
     
-    for (int i = 0; i < m; i++)
+    for(int i = 0; i < m; i++)
     {
         scanf("%i", &var);
         clients.push(var);
     }
 
     int ans = 0;
-    while (!clients.empty() || !active.empty()){
+    while(!clients.empty() || !active.empty()){
         int fastest = INT_MAX;
 
-        while (!free.empty() && !clients.empty()){
+        while(!free.empty() && !clients.empty()){
             int id = free.top(),
                 qtt = clients.front();
                 
@@ -51,10 +50,10 @@ int main(){
         ans += fastest;
 
         vector <pii> new_active;
-        for (auto &w : active){
+        for(auto &w : active){
             w.second -= fastest;
             
-            if (w.second <= 0)
+            if(w.second <= 0)
                 free.push(w.first);
             else
                 new_active.push_back(w);

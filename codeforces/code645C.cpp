@@ -5,21 +5,20 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
+using ll = long long;
+using ull = unsigned long long;
 
 int n, k;
 vector <int> zeros;
 string s;
 
-int bs(int ini, int fim) {
+int bs(int ini, int fim){
     int l = ini, r = fim, mid;
 
-    while (l <= r) {
+    while(l <= r){
         mid = l+(r-l)/2;
 
-        if (zeros[mid]-zeros[ini] < zeros[fim]-zeros[mid]) {
+        if(zeros[mid]-zeros[ini] < zeros[fim]-zeros[mid]){
             l = mid + 1;
         }
         else {
@@ -32,21 +31,21 @@ int bs(int ini, int fim) {
     return min(max(zeros[mid]-zeros[ini], zeros[fim]-zeros[mid]), max(zeros[mid+1]-zeros[ini], zeros[fim]-zeros[mid+1]));
 }
 
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
 
     cin >> n >> k;
     cin >> s;
 
-    for (int i=0; i<n; ++i) {
-        if (s[i] == '0') zeros.push_back(i+1);
+    for(int i=0; i<n; ++i){
+        if(s[i] == '0') zeros.push_back(i+1);
     }
     
     int l = 0, r = k, m = 0, ans = n;
-    while(r < zeros.size()) {
+    while(r < zeros.size()){
         // Achar a posição do numero 0 no intevalo onde tem-se a menor distancia maxima para os extremos
         // int left = zeros[l], right = zeros[r], mid = zeros[m], next = zeros[m+1];
-        // while (max(mid-left, right-mid) > max(next - left, right - next)){
+        // while(max(mid-left, right-mid) > max(next - left, right - next)){
         //     m++;
         //     mid = zeros[m];
         //     next = zeros[m+1];

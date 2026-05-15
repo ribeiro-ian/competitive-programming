@@ -12,12 +12,12 @@ int main(){
     while(1){
         cin >> tam_praia >> n;
 
-        if (tam_praia == 0 && n == 0) break;
+        if(tam_praia == 0 && n == 0) break;
 
         printf("Teste %i\n", t++);
 
         vector <pair <int, int>> s (n);
-        for (int i = 0; i < n; i++)
+        for(int i = 0; i < n; i++)
             cin >> s[i].first >> s[i].second;
 
         sort(s.begin(), s.end());
@@ -25,13 +25,13 @@ int main(){
         int ini = s[0].first,
             fim = s[0].second;
 
-        for (int i = 0; i < n; i++){
-            if (s[i].first > fim){
+        for(int i = 0; i < n; i++){
+            if(s[i].first > fim){
                 printf("%i %i\n", ini, fim);
                 ini = s[i].first;
                 fim = s[i].second;
             }
-            else if (s[i].second > fim){
+            else if(s[i].second > fim){
                 fim = s[i].second;
             }
         }

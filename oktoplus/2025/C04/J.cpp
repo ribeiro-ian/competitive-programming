@@ -5,21 +5,20 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
+using ll = long long;
+using ull = unsigned long long;
 
 int main(){
     int v[3], sum = 0;
     set <int> s;
 
-    for (int i = 0; i < 3; i++){
+    for(int i = 0; i < 3; i++){
        scanf("%i", &v[i]);
         sum += v[i];
         s.insert(v[i]);
     }
 
-    if (s.size() <= 2){
+    if(s.size() <= 2){
         printf("S\n");
         return 0;
     }

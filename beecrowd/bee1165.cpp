@@ -7,16 +7,16 @@
 using namespace std;
 using ll = long long;
 
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
 
     int tc; cin >> tc;
-    while (tc--) {
+    while(tc--){
         bool flag = true;
         int n; cin >> n;
 
-        for (int i = 2 ; i < n-1; i++) {
-            if (n % i == 0) {
+        for(int i = 2 ; i < n-1; i++){
+            if(n % i == 0){
                 flag = false;
                 break;
             }

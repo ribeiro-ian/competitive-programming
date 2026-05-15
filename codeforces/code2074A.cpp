@@ -5,20 +5,19 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
+using ll = long long;
+using ull = unsigned long long;
 
 int main(){
 
     int tc, l, r, d, u;
     scanf("%i", &tc);
 
-    while (tc--){
+    while(tc--){
 
         scanf("%i%i%i%i", &l, &r, &d, &u);
         
-        if (l == r & r == d & d == u)
+        if(l == r & r == d & d == u)
             printf("YES\n");
         else
             printf("NO\n");

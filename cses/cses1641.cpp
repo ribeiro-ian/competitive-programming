@@ -5,34 +5,33 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
+using ll = long long;
+using ull = unsigned long long;
 typedef pair<ll,ll> pii;
 
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
     ll n, x;
     cin >> n >> x;
 
     pii a[n];
-    for (int i = 0; i < n; i++) {
+    for(int i = 0; i < n; i++){
        cin >> a[i].first;
        a[i].second = i + 1;
     }
     sort(a,a+n);
 
-    for (int i = 0; i < n-2; i++) {
+    for(int i = 0; i < n-2; i++){
         int l = i+1, r = n-1;
  
-        while (l < r) {
+        while(l < r){
             ll sum = a[i].first + a[l].first + a[r].first;
 
-            if (sum == x) {
+            if(sum == x){
                 cout << a[i].second << " " << a[l].second << " " << a[r].second << '\n';
                 return 0;
             }
-            else if (sum > x) {
+            else if(sum > x){
                 r--;
             }
             else {

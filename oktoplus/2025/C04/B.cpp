@@ -5,27 +5,26 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
+using ll = long long;
+using ull = unsigned long long;
 
 int main(){
 
     int tc, n;
     cin >> tc;
 
-    while (tc--){
+    while(tc--){
         cin >> n;
 
         vector <int> v(n);
 
-        for (int i = 0; i < n; i++)
+        for(int i = 0; i < n; i++)
             cin >> v[i];
         
         int cnt = 0;
-        for (int i = 0; i < n; i++){
-            for (int j = i+1; j < n; j++)
-                if (v[i] > v[j]){
+        for(int i = 0; i < n; i++){
+            for(int j = i+1; j < n; j++)
+                if(v[i] > v[j]){
                     swap(v[i], v[j]);
                     cnt++;
                 }

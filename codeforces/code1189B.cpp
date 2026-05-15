@@ -5,31 +5,30 @@
 
 #include <bits/stdc++.h>
 using namespace std;
+using ll = long long;
+using ull = unsigned long long;
 
-typedef long long ll;
-typedef unsigned long long ull;
-
-int main() {
+int main(){
     ll n;
     scanf("%lli", &n);
     ll v[n];
     
-    for (int i = 0; i < n; i++) 
+    for(int i = 0; i < n; i++) 
         cin >> v[i];
         
     sort(v,v+n);
     
-    if (v[n-1] >= v[n-2] + v[n-3]) {
+    if(v[n-1] >= v[n-2] + v[n-3]){
         cout << "NO\n";
     }
     else {
         cout << "YES\n";
 
-        for (int i = n-1; i >= 0; i-=2) {
+        for(int i = n-1; i >= 0; i-=2){
             cout << v[i] << " ";
         }
         
-        for (int i = n%2; i < n; i+=2) {
+        for(int i = n%2; i < n; i+=2){
             cout << v[i] << " ";
         }
     }

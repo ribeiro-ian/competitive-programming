@@ -7,18 +7,18 @@
 using namespace std;
 using ll = long long;
 
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
 
     int n; cin >> n;
     vector<int> a(n);
 
-    for (auto &i : a)
+    for(auto &i : a)
         cin >> i;
 
     int maxi = a.back(), ans = 0; 
-    for (int i = n-2; i >= 0; --i) {
-        if (a[i] > maxi) 
+    for(int i = n-2; i >= 0; --i){
+        if(a[i] > maxi) 
             maxi = a[i];
         else
             ans++;

@@ -5,11 +5,10 @@
 
 #include <bits/stdc++.h>
 using namespace std;
+using ll = long long;
+using ull = unsigned long long;
 
-typedef long long ll;
-typedef unsigned long long ull;
-
-int main() {
+int main(){
 
     int n; string str;
     scanf("%i", &n);
@@ -18,7 +17,7 @@ int main() {
     while(n--){
         cin >> str;
 
-        if (str[1]=='+')
+        if(str[1]=='+')
             ans++;
         else
             ans--;

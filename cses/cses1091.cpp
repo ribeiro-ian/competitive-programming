@@ -5,27 +5,26 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
+using ll = long long;
+using ull = unsigned long long;
 
 ll n, k, x;
 
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
 
     cin >> n >> k;
     multiset <ll> v;
-    for (int i = 0; i < n; ++i) {
+    for(int i = 0; i < n; ++i){
         cin >> x;
         v.insert(x);
     }
-    for (int i = 0; i < k; ++i) {
+    for(int i = 0; i < k; ++i){
         cin >> x;
 
         auto it = v.upper_bound(x);
 
-		if (it == v.begin()) {
+		if(it == v.begin()){
 			cout << -1 << "\n";
 		}
         else {

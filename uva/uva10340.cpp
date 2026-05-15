@@ -5,18 +5,17 @@
 
 #include <bits/stdc++.h>
 using namespace std;
+using ll = long long;
+using ull = unsigned long long;
 
-typedef long long ll;
-typedef unsigned long long ull;
-
-int main() {
+int main(){
     string s, t;
 
-    while (cin >> s >> t) {
+    while(cin >> s >> t){
         
         int i = 0;
-        for (auto &c : t) {
-            if (c == s[i]) {
+        for(auto &c : t){
+            if(c == s[i]){
                 i++;
             }
         }

@@ -7,25 +7,25 @@
 using namespace std;
 using ll = long long;
 
-void solve() {
+void solve(){
     int n; cin >> n;
     
     vector<int> arr(n);
-    for (auto& i : arr)
+    for(auto& i : arr)
         cin >> i;
     sort(arr.begin(), arr.end());
 
     int sum = 0;
-    for (int i = n-3; i >= 0; i -=3)
+    for(int i = n-3; i >= 0; i -=3)
         sum += arr[i];
     cout << sum << '\n';
 }
 
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
 
     int tc; cin >> tc;
-    while (tc--) solve();
+    while(tc--) solve();
 
     return 0;
 }

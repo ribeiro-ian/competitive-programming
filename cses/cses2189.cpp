@@ -10,8 +10,8 @@ using ll = long long;
 struct Point {
     ll x, y;
 
-    Point () {}
-    Point (ll x, ll y) {
+    Point (){}
+    Point (ll x, ll y){
         this->x = x;
         this->y = y;
     }
@@ -20,23 +20,23 @@ struct Point {
         return Point(x-o.x, y-o.y);
     }
 };
-ll dot(Point a, Point b) {
+ll dot(Point a, Point b){
     return a.x * b.y - a.y * b.x;
 };    
 
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
 
     int t; cin >> t;
 
-    while (t--) {
+    while(t--){
         Point p1, p2, p3;
         cin >> p1.x >> p1.y >> p2.x >> p2.y >> p3.x >> p3.y;
 
         auto ans = dot(p3 - p1, p3 - p2);
-        if (ans > 0)
+        if(ans > 0)
             cout << "LEFT";
-        else if (ans < 0)
+        else if(ans < 0)
             cout << "RIGHT";
         else
             cout << "TOUCH";

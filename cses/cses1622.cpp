@@ -5,11 +5,10 @@
 
 #include <bits/stdc++.h>
 using namespace std;
+using ll = long long;
+using ull = unsigned long long;
 
-typedef long long ll;
-typedef unsigned long long ull;
-
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
 
     string s;
@@ -23,7 +22,7 @@ int main() {
     while(next_permutation(s.begin(), s.end()));
 
     cout << (int) ans.size() << '\n';
-    for (auto &str : ans)
+    for(auto &str : ans)
         cout << str << '\n';
 
     return 0;

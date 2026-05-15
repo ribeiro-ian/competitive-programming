@@ -5,9 +5,8 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
+using ll = long long;
+using ull = unsigned long long;
 
 vector <vector <int>> adj;
 vector <int> visited;
@@ -20,16 +19,16 @@ bool bfs(int no){
     q.push(no);
     visited[no] = 0;
 
-    while (!q.empty()) {
+    while(!q.empty()){
         int curr = q.front();
         q.pop();
 
-        for (auto &v : adj[curr]){
-            if (visited[v] == -1) {
+        for(auto &v : adj[curr]){
+            if(visited[v] == -1){
                 visited[v] = visited[curr]+1;
                 q.push(v);
             }
-            else if (visited[v] == visited[curr]){
+            else if(visited[v] == visited[curr]){
                 return false;
             }
         }
@@ -40,27 +39,27 @@ bool bfs(int no){
     return true;
 }
 
-int main() {
+int main(){
 
-    while (scanf("%i", &n), n){
+    while(scanf("%i", &n), n){
         adj.assign(n, vector <int> ());
         visited.assign(n, -1);
 
         scanf("%i", &l);
-        while (l--) {
+        while(l--){
             scanf("%i %i", &a, &b);
 
             adj[a].push_back(b);
             adj[b].push_back(a);
         }
 
-        // for (int i = 0; i < n; i++) {
+        // for(int i = 0; i < n; i++){
         //     printf("%2i: %lu\n", i, adj[i].size());
         // }
         
         bool flag = true;
-        for (int i = 0; i < n && flag; i++) {
-            if (visited[i] == -1)
+        for(int i = 0; i < n && flag; i++){
+            if(visited[i] == -1)
                 flag = bfs(i);
         }
 

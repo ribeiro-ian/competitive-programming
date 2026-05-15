@@ -5,24 +5,23 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
+using ll = long long;
+using ull = unsigned long long;
 typedef pair<int,int> pii;
 
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
 
     int n; cin >> n;
     vector <pii> loc(n);
-    for (int i = 0; i < n; ++i) {
+    for(int i = 0; i < n; ++i){
         cin >> loc[i].second >> loc[i].first;
     }
     sort(loc.begin(), loc.end());
     reverse(loc.begin(), loc.end());
     
     vector <pii> ans;
-    for (int i = 0; i < n; ++i) {
+    for(int i = 0; i < n; ++i){
         int posIni = loc[i].second,
             vel = loc[i].first;
 
@@ -30,7 +29,7 @@ int main() {
     }
     
     cout << (int) ans.size() << '\n';
-    for (auto &a : ans) {
+    for(auto &a : ans){
         cout << a.first << ' ' << a.second << '\n';
     }
 

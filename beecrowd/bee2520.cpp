@@ -7,20 +7,20 @@
 using namespace std;
 using ll = long long;
 
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
 
     int n, m;
-    while(cin >> n >> m) {   
+    while(cin >> n >> m){   
         pair<int,int> eu, bixo;
 
-        for (int i = 0; i < n; ++i) {
-            for (int j = 0; j < m; ++j) {
+        for(int i = 0; i < n; ++i){
+            for(int j = 0; j < m; ++j){
                 int x; cin >> x;
 
-                if (x==1) 
+                if(x==1) 
                     eu = {i,j};
-                else if (x==2)
+                else if(x==2)
                     bixo = {i,j};
             }
         }

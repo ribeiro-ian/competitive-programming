@@ -5,9 +5,8 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
+using ll = long long;
+using ull = unsigned long long;
 
 ll w, h, n;
 
@@ -18,12 +17,12 @@ bool isValid(ll x){
 ll bs(){
     ll l = 0, r = 1, mid, ans = -1;
 
-    while (!isValid(r)) r *= 2;
+    while(!isValid(r)) r *= 2;
 
-    while (l <= r){
+    while(l <= r){
         mid = l+(r-l)/2;
 
-        if (isValid(mid)){
+        if(isValid(mid)){
             ans = mid;
             r = mid - 1;
         }

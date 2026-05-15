@@ -16,51 +16,51 @@ struct SegmentTree {
     vector<int> tree;
     int size;
     
-    SegmentTree(int n) {
+    SegmentTree(int n){
         size = 1;
-        while (size < n) size *= 2;
+        while(size < n) size *= 2;
         tree.assign(2 * size, INF);
     }
     
-    void update(int idx, int val) {
+    void update(int idx, int val){
         idx += size;
         tree[idx] = val;
 
-        for (idx /= 2; idx >= 1; idx /= 2) 
+        for(idx /= 2; idx >= 1; idx /= 2) 
             tree[idx] = min(tree[2 * idx], tree[2 * idx + 1]);
     }
     
-    int query(int l, int r) {
+    int query(int l, int r){
         int ans = INF;
-        for (l += size, r += size+1; l < r; l /= 2, r /= 2) {
-            if (l & 1) ans = min(ans, tree[l++]);
-            if (r & 1) ans = min(ans, tree[--r]);
+        for(l += size, r += size+1; l < r; l /= 2, r /= 2){
+            if(l & 1) ans = min(ans, tree[l++]);
+            if(r & 1) ans = min(ans, tree[--r]);
         }
         return ans;
     }
 };
 
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
 
     cin >> n >> q;
-    for (int i = 0; i < n; i++) 
+    for(int i = 0; i < n; i++) 
         cin >> price[i];
     
     // left_tree: stores price[i] - i
     // right_tree: stores price[i] + i
     SegmentTree left_tree(n), right_tree(n);
     
-    for (int i = 0; i < n; i++) {
+    for(int i = 0; i < n; i++){
         left_tree.update(i, price[i] - i);
         right_tree.update(i, price[i] + i);
     }
     
-    while (q--) {
+    while(q--){
         int op;
         cin >> op;
         
-        if (op == 1) {
+        if(op == 1){
             int k, x;
             cin >> k >> x;
             

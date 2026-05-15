@@ -16,17 +16,17 @@ vector<int> vis(N);
 ll threshold = 0, INF = 1e18;
 bool flag = false;
  
-ll dfs(int u, ll flow) {
-    if (u==n) {
+ll dfs(int u, ll flow){
+    if(u==n){
         flag = true;
         return flow;
     }
     vis[u] = true;
  
-    for (int v = 1; v <= n; ++v) {
+    for(int v = 1; v <= n; ++v){
         auto w = graph[u][v];
  
-        if (w >= threshold && !vis[v]) {
+        if(w >= threshold && !vis[v]){
             ll cost = dfs(v, min(flow, w));
  
             graph[u][v] -= cost;
@@ -37,7 +37,7 @@ ll dfs(int u, ll flow) {
     return 0;
 }
  
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
  
     cin >> n >> m;
@@ -45,7 +45,7 @@ int main() {
     memset(graph, 0, sizeof(graph));
     memset(back, 0, sizeof(back));
  
-    while (m--) {
+    while(m--){
         ll a, b, c;
         cin >> a >> b >> c;
  
@@ -53,14 +53,14 @@ int main() {
         threshold += c;
     }
  
-    while (threshold >= 1) {
+    while(threshold >= 1){
         flag = false;
         dfs(1, INF);
-        if (!flag) threshold /= 2;
+        if(!flag) threshold /= 2;
     }
  
     ll ans = 0;
-    for (int i = 1; i <= n; ++i) 
+    for(int i = 1; i <= n; ++i) 
         ans += back[n][i];
     
     cout << ans << '\n';

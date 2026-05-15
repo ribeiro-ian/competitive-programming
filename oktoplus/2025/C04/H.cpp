@@ -14,11 +14,11 @@ vector <ll> p(101), cam(11);
 ll func(ll m){
     ll cnt = 1, sum = 0;
 
-    for (int i = 0; i < n; i++)
+    for(int i = 0; i < n; i++)
     {
         sum += p[i];
         
-        if (sum > m){
+        if(sum > m){
             sum = p[i];
             cnt++;
         }
@@ -32,10 +32,10 @@ ll bs(){
         r = total;
     ll ans = 0;
 
-    while (l <= r){
+    while(l <= r){
         ll m = (l+r)/2;
 
-        if (func(m) <= c){
+        if(func(m) <= c){
             ans = m;
             r = m - 1;
         }
@@ -48,12 +48,12 @@ ll bs(){
 int main(){
     scanf("%lli", &tc);
     
-    while (tc--)
+    while(tc--)
     {
         scanf("%lli %lli %lli", &n, &c, &f);
 
         total = 0;
-        for (int i = 0; i < n; i++){
+        for(int i = 0; i < n; i++){
             scanf("%lli", &p[i]);
             total += p[i];
         }

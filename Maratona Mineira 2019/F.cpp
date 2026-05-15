@@ -16,12 +16,12 @@ int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
 
     int n; cin >> n;
-    for (int i = 1, j = 1; i <= n; ++i){
+    for(int i = 1, j = 1; i <= n; ++i){
         string a, b;
         cin >> a >> b;
 
-        if (!id.count(a)) id[a] = j, nome[j++] = a;
-        if (!id.count(b)) id[b] = j, nome[j++] = b;
+        if(!id.count(a)) id[a] = j, nome[j++] = a;
+        if(!id.count(b)) id[b] = j, nome[j++] = b;
         
         sorteou[id[a]].push_back(id[b]);
         foiSorteadoPor[id[b]].push_back(id[a]);
@@ -35,7 +35,7 @@ int main(){
     */
 
     set<string> mentirosos;
-    for (int i = 1; i <= (int)id.size(); ++i){
+    for(int i = 1; i <= (int)id.size(); ++i){
         s
     }
 

@@ -5,28 +5,27 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
+using ll = long long;
+using ull = unsigned long long;
 
 int main(){
     int n, m, x;
     
-    while (1){
+    while(1){
         scanf("%i %i", &n, &m);
 
-        if (!n) break;
+        if(!n) break;
 
         map <int,int> tickets;
-        for (int i = 0; i < m; i++)
+        for(int i = 0; i < m; i++)
         {
             scanf("%i", &x);
             tickets[x]++;
         }
         
         int cnt = 0;
-        for (auto t : tickets
-            if (t.second > 1) cnt++;
+        for(auto t : tickets
+            if(t.second > 1) cnt++;
         
 
         printf("%i\n", cnt);

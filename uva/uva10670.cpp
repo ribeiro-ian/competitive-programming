@@ -10,10 +10,10 @@ using ll = long long;
 #include <bits/stdc++.h>
 using namespace std;
 
-int calc(int a, int b, int n, int target) {
+int calc(int a, int b, int n, int target){
     int cnt = 0;
-    while (n > target) {
-        if (n/2 >= target) {
+    while(n > target){
+        if(n/2 >= target){
             cnt += min((n-n/2) * a, b);
             n /= 2;
         }
@@ -25,12 +25,12 @@ int calc(int a, int b, int n, int target) {
     return cnt;
 }
 
-void solve(int c) {
+void solve(int c){
     int n, m, l;
     cin >> n >> m >> l;
 
     vector<pair<int,string>> agency(l);
-    for (int i = 0; i < l; ++i) {
+    for(int i = 0; i < l; ++i){
         string in, name;
         int a, b;
         cin >> in;
@@ -43,13 +43,13 @@ void solve(int c) {
 
     sort(agency.begin(), agency.end());
     cout << "Case " << c << '\n';
-    for (auto& [cost, name] : agency)
+    for(auto& [cost, name] : agency)
         cout << name << ' ' << cost << '\n';
 }
 
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
     int tc; cin >> tc;
-    for (int i = 1; i <= tc; ++i) solve(i);
+    for(int i = 1; i <= tc; ++i) solve(i);
     return 0;
 }

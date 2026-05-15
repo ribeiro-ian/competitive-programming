@@ -5,34 +5,33 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
+using ll = long long;
+using ull = unsigned long long;
 const ll M = 1e9+7;
 
 int n, m;
 vector <int> dp;
 vector <vector<bool>> graph;
 
-void dfs(int mask, int ant) {
+void dfs(int mask, int ant){
 
 
-    for (int i = 1; i < n; ++i) {
-        if (mask & (1 << i)) continue;
+    for(int i = 1; i < n; ++i){
+        if(mask & (1 << i)) continue;
         
-        if (graph[ant][i]) {
+        if(graph[ant][i]){
             dfs(mask | (1 << i), i);
         }
     }
 }
 
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
 
     cin >> n >> m;
 
     graph.assign(n, vector<bool>(n, false));
-    while (m--) {
+    while(m--){
         int a, b;
         cin >> a >> b;
         graph[--a][--b] = true;

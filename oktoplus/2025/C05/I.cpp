@@ -5,9 +5,8 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
+using ll = long long;
+using ull = unsigned long long;
 
 int main(){
 
@@ -15,9 +14,9 @@ int main(){
     queue <int> copa;
 
     cin >> kung >> lu;
-    for (int i = 0; i < max; i++)
+    for(int i = 0; i < max; i++)
     {
-        if (i+1 == kung || i+1 == lu)
+        if(i+1 == kung || i+1 == lu)
         copa.push(1);
         else
         copa.push(0);
@@ -36,7 +35,7 @@ int main(){
     }
     string ans;
 
-    if (cnt <= 8)
+    if(cnt <= 8)
         ans = "oitavas";
     else if(cnt <= 12)
         ans = "quartas";

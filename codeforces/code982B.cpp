@@ -5,12 +5,11 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
+using ll = long long;
+using ull = unsigned long long;
 typedef pair<int,int> pii;
 
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
 
     int n; cin >> n;
@@ -18,7 +17,7 @@ int main() {
     priority_queue <pii, vector<pii>, greater<pii>> free;
     priority_queue <pii> occupied;
 
-    for (int i = 1; i <= n; ++i) {
+    for(int i = 1; i <= n; ++i){
         int x; cin >> x;
         free.push({x, i});
     }
@@ -27,9 +26,9 @@ int main() {
     cin >> str; // 1 = extrovert
 
     vector <int> ans;
-    for (auto &c : str) {
+    for(auto &c : str){
         int w, id;
-        if (c == '0') {
+        if(c == '0'){
             tie(w, id) = free.top();
             free.pop();
 
@@ -42,7 +41,7 @@ int main() {
         ans.push_back(id);
     }
 
-    for (auto &i : ans) 
+    for(auto &i : ans) 
         cout << i << " ";       
     cout << "\n";
 

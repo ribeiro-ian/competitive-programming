@@ -5,25 +5,24 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
+using ll = long long;
+using ull = unsigned long long;
 
 ll tc, n, m, k;
  
-ll f(ll x) {
+ll f(ll x){
     return n * (x * (m/(x+1)) + m % (x+1));
 }
 
-ll bs() {
+ll bs(){
     ll l = 1, r = m, mid, ans = -1;
 
-    while (l <= r) {
+    while(l <= r){
         mid = l+(r-l)/2;
 
         fprintf(stderr, "f(%lli) = %lli\n", mid, f(mid));
 
-        if (f(mid) >= k) {
+        if(f(mid) >= k){
             ans = mid;
             r = mid - 1;
         }
@@ -35,11 +34,11 @@ ll bs() {
     return ans;
 }
 
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
     cin >> tc;
 
-    while (tc--) {
+    while(tc--){
         cin >> n >> m >> k;
 
         cout << bs() << '\n';

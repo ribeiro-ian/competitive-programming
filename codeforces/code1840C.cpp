@@ -5,26 +5,25 @@
 
 #include <bits/stdc++.h>
 using namespace std;
+using ll = long long;
+using ull = unsigned long long;
 
-typedef long long ll;
-typedef unsigned long long ull;
-
-void solve() {
+void solve(){
     int n, k, q;
 
     cin >> n >> k >> q;
     
     int a[n];
-    for (auto &e : a)
+    for(auto &e : a)
         cin >> e;
 
     int cnt = 0;
-    for (int l=0, r=0; l < n-k; l++) {
-        while (r < n && a[r] <= q) {
+    for(int l=0, r=0; l < n-k; l++){
+        while(r < n && a[r] <= q){
             r++;
         }
         int len = r-l;
-        if (len >= k)
+        if(len >= k)
             cnt += (len - k + 1) * (len - k + 2) / 2;
         r = max(r,l);
     }
@@ -32,12 +31,12 @@ void solve() {
     cout << cnt << "\n";
 }
 
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
 
     int tc; cin >> tc;
 
-    while (tc--) {
+    while(tc--){
         solve();
     }
 

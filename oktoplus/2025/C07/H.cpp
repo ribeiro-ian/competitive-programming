@@ -5,25 +5,24 @@
 
 #include <bits/stdc++.h>
 using namespace std;
+using ll = long long;
+using ull = unsigned long long;
 
-typedef long long ll;
-typedef unsigned long long ull;
-
-int main() {
+int main(){
     string str1, str2;
     int n, m;
 
     scanf("%i %i", &n, &m);
     map <string, string> words;
-    for (int i = 0; i < m; i++) {
+    for(int i = 0; i < m; i++){
         cin >> str1 >> str2;
         words[str1] = str2;
     }
     
-    for (int i = 0; i < n; i++) {
+    for(int i = 0; i < n; i++){
         cin >> str1;
 
-        if (str1.size() <= words[str1].size())
+        if(str1.size() <= words[str1].size())
             cout << str1 << " ";
         else
             cout << words[str1] << " ";

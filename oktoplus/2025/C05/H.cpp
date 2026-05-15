@@ -5,13 +5,12 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
+using ll = long long;
+using ull = unsigned long long;
 typedef pair<ll,ll> pii;
 
 bool cmp(pii a, pii b){
-    if (a.second != b.second)
+    if(a.second != b.second)
         return a.second > b.second;
 
     return a.first < b.first;
@@ -26,7 +25,7 @@ int main(){
         scanf("%lli %lli", &n, &k);
         
         vector <pii> gifts(n);
-        for (int i = 0; i < n; i++)
+        for(int i = 0; i < n; i++)
         {
             scanf("%lli %lli %lli %lli", &id, &h, &w, &l);
             
@@ -36,7 +35,7 @@ int main(){
         sort(gifts.begin(), gifts.end(), cmp);
         
         vector <ll> ans (k);        
-        for (int i = 0; i < k; i++){
+        for(int i = 0; i < k; i++){
             ans[i] = gifts[i].first;
         }
         sort(ans.begin(), ans.end());

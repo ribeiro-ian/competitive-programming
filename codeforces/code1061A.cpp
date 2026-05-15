@@ -5,17 +5,16 @@
 
 #include <bits/stdc++.h>
 using namespace std;
+using ll = long long;
+using ull = unsigned long long;
 
-typedef long long ll;
-typedef unsigned long long ull;
-
-int main() {
+int main(){
 
     int n,s;
     scanf("%i %i", &n, &s);
 
     int ans = 0;
-    for (int i = n; i >= 1 && s; i--) {
+    for(int i = n; i >= 1 && s; i--){
         ans += s/i;
         s -= i * (s/i);
     }

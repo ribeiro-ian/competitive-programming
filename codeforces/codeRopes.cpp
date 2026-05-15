@@ -5,15 +5,14 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
+using ll = long long;
+using ull = unsigned long long;
 
 int n, k, v[11234];
 
 bool isValid(double x){
     int cnt = 0;
-    for (int i = 0; i < n; i++)
+    for(int i = 0; i < n; i++)
         cnt += v[i]/x;
     return cnt >= k;
 }
@@ -21,10 +20,10 @@ bool isValid(double x){
 double bs(){
     double l = 0, r = 1e7, m, ans = 0;
 
-    for(int i=0; i<100; i++) {
+    for(int i=0; i<100; i++){
         m = (r+l)/2;
 
-        if (isValid(m)){
+        if(isValid(m)){
             ans = m;
             l = m;
         }
@@ -39,7 +38,7 @@ int main(){
 
     scanf("%i%i", &n, &k);
 
-    for (int i = 0; i < n; i++)
+    for(int i = 0; i < n; i++)
         scanf("%i", &v[i]);
 
     printf("%f", bs());

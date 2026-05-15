@@ -5,21 +5,20 @@
 
 #include <bits/stdc++.h>
 using namespace std;
+using ll = long long;
+using ull = unsigned long long;
 
-typedef long long ll;
-typedef unsigned long long ull;
-
-int main() {
+int main(){
     int n, x;
     scanf("%i", &n);
 
-    while (n--) {
+    while(n--){
         scanf("%i", &x);
 
         int cnt = 0;
-        for (int i = 1; i*i <= x; i++) {
-            if (x % i == 0) {
-                if (x / i == i) cnt++;
+        for(int i = 1; i*i <= x; i++){
+            if(x % i == 0){
+                if(x / i == i) cnt++;
                 else cnt += 2;
             }
         }

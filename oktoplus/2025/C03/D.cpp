@@ -5,9 +5,8 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
+using ll = long long;
+using ull = unsigned long long;
 
 map <char, double> notas{
     {'W',1},
@@ -21,15 +20,15 @@ map <char, double> notas{
 
 int main(){
     string str;
-    while (1){
+    while(1){
         cin >> str;
-        if (str == "*") break;
+        if(str == "*") break;
 
         double sum = 0;
         int ans = 0;
-        for (auto &c : str){
-            if (c == '/'){
-                if (sum == 1.0)
+        for(auto &c : str){
+            if(c == '/'){
+                if(sum == 1.0)
                     ans++;
 
                 sum = 0;

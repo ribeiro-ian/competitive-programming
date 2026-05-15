@@ -5,20 +5,19 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
+using ll = long long;
+using ull = unsigned long long;
 
 int N = 2e5+1;
 vector<bool> done(N, false);
 vector<int> ans(N);
 int n, k;
 
-int pos(int x) {
+int pos(int x){
     return (x%n == 0 ? n : x%n);
 }
 
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
 
     cin >> n >> k;

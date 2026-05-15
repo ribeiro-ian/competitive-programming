@@ -7,7 +7,7 @@
 using namespace std;
 using ll = long long;
 
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
 
     int n; cin >> n;
@@ -16,8 +16,8 @@ int main() {
 
     int a = 0, b = 0,
         l = 0, r = n-1;
-    while (l <= r){
-        if (a <= b) a += t[l++];
+    while(l <= r){
+        if(a <= b) a += t[l++];
         else b += t[r--];
     }
     cout << l << ' ' << n-1-r << '\n';

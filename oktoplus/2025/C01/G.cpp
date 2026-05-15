@@ -5,9 +5,8 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
+using ll = long long;
+using ull = unsigned long long;
 
 const map <char, double> id = {
     {'W', 1},
@@ -26,17 +25,17 @@ int main(){
     //  a duração de um compasso deve ser sempre 1.
     string str;
 
-    while (1)
+    while(1)
     {
         cin >> str;
-        if (str == "*") break;
+        if(str == "*") break;
 
         float sum;
         int ans;
         sum = ans = 0;
-        for (auto &c : str){
-            if (c == '/'){
-                if (sum == 1.0)
+        for(auto &c : str){
+            if(c == '/'){
+                if(sum == 1.0)
                     ans++;
 
                 sum = 0;

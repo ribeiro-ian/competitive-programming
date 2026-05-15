@@ -14,9 +14,9 @@ vector <pll> graph[N];
 vector <ll> dist(N, INF), ways(N), mini(N,INF), maxi(N, 0);
 ll n, m;
 
-void self_add(ll &x, ll y = 1) { x = (x+y) % M; }
+void self_add(ll &x, ll y = 1){ x = (x+y) % M; }
 
-void dijkstra(ll no = 1) {
+void dijkstra(ll no = 1){
     vector<bool> visited(n+1, false);
 
     priority_queue <pll> q;
@@ -25,17 +25,17 @@ void dijkstra(ll no = 1) {
     dist[no] = mini[no] = maxi[no] = 0;
     ways[no] = 1;
 
-    while (!q.empty()) {
+    while(!q.empty()){
         auto u = q.top().second;
         q.pop();
 
-        if (visited[u]) continue;
+        if(visited[u]) continue;
         visited[u] = true;
 
-        for (auto &[v, w] : graph[u]) {
+        for(auto &[v, w] : graph[u]){
             ll d = dist[u] + w;
             
-            if (d < dist[v]) {
+            if(d < dist[v]){
                 mini[v] = mini[u]+1;
                 maxi[v] = maxi[u]+1;
 
@@ -45,7 +45,7 @@ void dijkstra(ll no = 1) {
                 
                 q.push({-d, v});
             }
-            else if (d == dist[v]) {
+            else if(d == dist[v]){
                 mini[v] = min(mini[v], mini[u]+1); // get min depth
                 maxi[v] = max(maxi[v], maxi[u]+1); // get max depth
                 self_add(ways[v], ways[u]);
@@ -54,11 +54,11 @@ void dijkstra(ll no = 1) {
     }
 }
 
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
 
     cin >> n >> m;
-    while (m--) {
+    while(m--){
         ll a, b, c;
         cin >> a >> b >> c;
         graph[a].push_back({b,c});

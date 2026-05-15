@@ -5,11 +5,10 @@
 
 #include <bits/stdc++.h>
 using namespace std;
+using ll = long long;
+using ull = unsigned long long;
 
-typedef long long ll;
-typedef unsigned long long ull;
-
-int main() {
+int main(){
     int n, q, col1, col2, lin1, lin2;
     string row;
     scanf("%i %i", &n, &q);
@@ -17,24 +16,24 @@ int main() {
     vector <vector <int>> grid;
     grid.assign(n+1, vector <int> (n+1, 0));
 
-    for (int i = 1, j = 1; i <= n; i++) {
+    for(int i = 1, j = 1; i <= n; i++){
         cin >> row;
         
-        for (auto &c : row) {
+        for(auto &c : row){
             grid[i][j] = grid[i][j-1];
             
-            if (c == '*')
+            if(c == '*')
                 grid[i][j] += 1;
             j++;
         }
         j = 1;
     }
 
-    while (q--) {
+    while(q--){
         scanf("%i %i %i %i", &lin1, &col1, &lin2, &col2);
 
         int ans = 0;
-        for (int i = lin1; i <= lin2; i++) 
+        for(int i = lin1; i <= lin2; i++) 
             ans += grid[i][col2] - grid[i][col1-1];
 
         printf("%i\n", ans);

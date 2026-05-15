@@ -5,28 +5,27 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
+using ll = long long;
+using ull = unsigned long long;
 
 int main(){
 
     int x[5], y[5];
 
-    for (int i = 0; i < 5; i++)
+    for(int i = 0; i < 5; i++)
     {
         scanf("%i", &x[i]);
     }
 
-    for (int i = 0; i < 5; i++)
+    for(int i = 0; i < 5; i++)
     {
         scanf("%i", &y[i]);
     }
 
     bool flag = true;
-    for (int i = 0; i < 5; i++)
+    for(int i = 0; i < 5; i++)
     {
-        if (x[i] == y[i])
+        if(x[i] == y[i])
         {
             flag = false;
             break;

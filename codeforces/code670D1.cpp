@@ -5,16 +5,15 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
+using ll = long long;
+using ull = unsigned long long;
 
 ll n, k, a[1123], have[1123];
 
 bool isValid(ll x){
     ll res = 0;
 
-    for (int i = 0; i < n; i++)
+    for(int i = 0; i < n; i++)
         res += max(a[i] * x - have[i], 0LL);
     
     return res <= k;
@@ -23,10 +22,10 @@ bool isValid(ll x){
 ll bs(){
     ll l = 0, r = *max_element(have, have+n)+k, m, ans = -1;
 
-    while (l <= r){
+    while(l <= r){
         m = l + (r-l)/2;
 
-        if (isValid(m)){
+        if(isValid(m)){
             ans = m;
             l = m + 1;
         }
@@ -43,10 +42,10 @@ int main(){
 
     cin >> n >> k;
 
-    for (int i = 0; i < n; i++)
+    for(int i = 0; i < n; i++)
         cin >> a[i];
         
-    for (int i = 0; i < n; i++)
+    for(int i = 0; i < n; i++)
         cin >> have[i];
 
     cout << bs() << endl;

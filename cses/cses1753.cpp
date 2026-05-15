@@ -7,18 +7,18 @@
 using namespace std;
 using ll = long long;
 
-vector<int> z_function(string s) {
+vector<int> z_function(string s){
     int n = s.size();
     vector<int> z(n);
     int l = 0, r = 0;
-    for(int i = 1; i < n; i++) {
-        if(i < r) {
+    for(int i = 1; i < n; i++){
+        if(i < r){
             z[i] = min(r - i, z[i - l]);
         }
-        while(i + z[i] < n && s[z[i]] == s[i + z[i]]) {
+        while(i + z[i] < n && s[z[i]] == s[i + z[i]]){
             z[i]++;
         }
-        if(i + z[i] > r) {
+        if(i + z[i] > r){
             l = i;
             r = i + z[i];
         }
@@ -26,7 +26,7 @@ vector<int> z_function(string s) {
     return z;
 }
 
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
 
     string s, p;
@@ -35,8 +35,8 @@ int main() {
     auto z = z_function(p+'$'+s);
     
     int cnt = 0;
-    for (int i = p.size() + 1; i < z.size(); ++i) 
-        if (z[i] == p.size()) cnt++;
+    for(int i = p.size() + 1; i < z.size(); ++i) 
+        if(z[i] == p.size()) cnt++;
     cout << cnt << '\n';
 
     return 0;

@@ -5,13 +5,12 @@
 
 #include <bits/stdc++.h>
 using namespace std;
+using ll = long long;
+using ull = unsigned long long;
 
-typedef long long ll;
-typedef unsigned long long ull;
-
-int main() {
+int main(){
     float n[4], p[] = {2,3,4,1}, div = 0, sum = 0;
-    for (int i = 0; i < 4; ++i) {
+    for(int i = 0; i < 4; ++i){
         cin >> n[i];
 
         sum += n[i]*p[i];
@@ -20,10 +19,10 @@ int main() {
 
     float media = sum/div;
     printf("Media: %.1f\n", media);
-    if (media >= 7) {
+    if(media >= 7){
         cout << "Aluno aprovado.\n";
     }
-    else if (media < 5) {
+    else if(media < 5){
         cout << "Aluno reprovado.\n";
     }
     else {
@@ -32,7 +31,7 @@ int main() {
         media = (media+exame)/2;
         printf("Nota do exame: %.1f\n", exame);
         
-        if (media >= 5) 
+        if(media >= 5) 
             cout << "Aluno aprovado.\n";
         else
             cout << "Aluno reprovado.\n";

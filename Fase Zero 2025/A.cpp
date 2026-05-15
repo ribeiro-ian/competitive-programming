@@ -10,7 +10,7 @@ using namespace std;
 
 typedef long long ll;
 
-int main() {
+int main(){
     int C, G; cin >> C >> G;
 
     if(C == 1){

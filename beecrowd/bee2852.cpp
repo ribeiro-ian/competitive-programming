@@ -8,34 +8,34 @@ using namespace std;
 using ll = long long;
 
 string k, s;
-inline void moveK(int& i) { i = (i+1) % k.size(); }
+inline void moveK(int& i){ i = (i+1) % k.size(); }
 
-bool isVowel(char c) {
-    if (c=='a'||c=='e'||c=='i'||c=='o'||c=='u')
+bool isVowel(char c){
+    if(c=='a'||c=='e'||c=='i'||c=='o'||c=='u')
         return true;
     else
         return false;
 } 
 
-char change(char k, char c) {
+char change(char k, char c){
     int dist = k - 'a';
     char res = (c+dist)%('z'+1);
-    if (res < 'a') res += 'a';
+    if(res < 'a') res += 'a';
 
     return res;
 }
 
-void solve() {
+void solve(){
     getline(cin, s);
 
     int ki = 0;
     char letter = s.front();
-    for (int i = 0; i < s.size(); ++i) {
+    for(int i = 0; i < s.size(); ++i){
         char c = s[i];
         
-        if (c==' ')
+        if(c==' ')
             letter = s[i+1];
-        else if (!isVowel(letter)) {
+        else if(!isVowel(letter)){
             s[i] = change(k[ki], c);
             moveK(ki);
         }
@@ -43,14 +43,14 @@ void solve() {
     cout << s << '\n';
 }
 
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
 
     cin >> k;
     int n; cin >> n;
     cin.ignore();
 
-    while (n--) solve();
+    while(n--) solve();
 
     return 0;
 }

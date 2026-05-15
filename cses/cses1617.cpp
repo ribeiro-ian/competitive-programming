@@ -5,15 +5,14 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
+using ll = long long;
+using ull = unsigned long long;
 
 ll MOD = 1e9 + 7;
-ll power(ll base, ll expo) {
+ll power(ll base, ll expo){
     ll ans = 1;
-    while(expo) {
-        if (expo % 2)
+    while(expo){
+        if(expo % 2)
             ans = (ans * base) % MOD;
         
         base = (base * base) % MOD;
@@ -22,7 +21,7 @@ ll power(ll base, ll expo) {
     return ans;
 }
 
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
     
     ll n; cin >> n;

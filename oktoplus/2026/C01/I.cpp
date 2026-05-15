@@ -4,13 +4,13 @@ using ll = long long;
 
 string k;
 
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
 
     cin >> k;
     int n; cin >> n;
     string str;
-    while (n--) {
+    while(n--){
         cin >> str;
     }
 

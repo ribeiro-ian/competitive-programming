@@ -10,16 +10,16 @@ char grid[MAX][MAX];
 pii move[] = {{1,0}, {0,-1}, {0,1}, {-1,0}};
 char dir[] = {'D', 'L', 'R', 'U'};
 
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
 
     cin >> n >> m;
     pii st, end;
-    for (int i = 0; i < n; ++i) {
-        for (int j = 0; j < m; ++j) {
+    for(int i = 0; i < n; ++i){
+        for(int j = 0; j < m; ++j){
             cin >> grid[i][j];
-            if (grid[i][j] == 'S') st = {i,j};
-            if (grid[i][j] == 'E') end = {i,j};
+            if(grid[i][j] == 'S') st = {i,j};
+            if(grid[i][j] == 'E') end = {i,j};
         }
     }
 

@@ -5,9 +5,8 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-typedef unsigned long long ull;
+using ll = long long;
+using ull = unsigned long long;
 
 const int MAXN = 1e5+1;
 int n, m;
@@ -16,15 +15,15 @@ vector<bool> visited(MAXN, false), processing(MAXN, false);
 vector<int> ans;
 bool hasCycle = false;
 
-void dfs(int i) {
+void dfs(int i){
     visited[i] = true;
     processing[i] = true;
 
-    for (int v : graph[i]) {
-        if (!visited[v]) {
+    for(int v : graph[i]){
+        if(!visited[v]){
             dfs(v);
         }
-        else if (processing[v]) {
+        else if(processing[v]){
             hasCycle = true;
             return;
         }
@@ -34,26 +33,26 @@ void dfs(int i) {
     ans.push_back(i);
 }
 
-int main() {
+int main(){
     ios_base::sync_with_stdio(0); cin.tie(0);
 
     cin >> n >> m;
 
-    while (m--) {
+    while(m--){
         int a, b;
         cin >> a >> b;
         graph[a].push_back(b);
     }
 
-    for (int i = 1; i <= n; ++i) 
-        if (!visited[i]) 
+    for(int i = 1; i <= n; ++i) 
+        if(!visited[i]) 
             dfs(i);
 
-    if (hasCycle) 
+    if(hasCycle) 
         cout << "IMPOSSIBLE\n";
     else {
         reverse(ans.begin(), ans.end());
-        for (auto &i : ans) 
+        for(auto &i : ans) 
            cout << i << ' ';
         cout << endl;
     }
