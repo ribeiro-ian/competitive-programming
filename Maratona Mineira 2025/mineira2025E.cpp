@@ -9,24 +9,22 @@ using ll = long long;
 
 #define fastio ios::sync_with_stdio(0); cin.tie(0)
 
-const ll N = 2e5+1;
-vector <ll> adj[N], visited(N);
+const ll N = 2e5 + 1;
+vector<ll> adj[N], visited(N);
 ll cnt;
 
 void dfs(ll u) {
   visited[u] = true;
   cnt++;
-  
+
   for (auto &v : adj[u])
-    if (!visited[v])
-      dfs(v);
+    if (!visited[v]) dfs(v);
 }
 
 int main() {
   fastio;
 
-  ll n, a, b;
-  cin >> n;
+  ll n, a, b; cin >> n;
   for (ll i = 0; i < n; ++i) {
     cin >> a >> b;
 

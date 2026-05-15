@@ -7,26 +7,28 @@
 using namespace std;
 using ll = long long;
 
-int main() {
-  ios_base::sync_with_stdio(0); cin.tie(0);
+#define fastio ios::sync_with_stdio(0); cin.tie(0)
 
-  const int MAX = 2e5+1;
+int main() {
+  fastio;
+
+  const int MAX = 2e5 + 1;
   int n; cin >> n;
   vector<int> v(n), dp(MAX);
-  
-  for(int i = 0; i < n; i++) cin >> v[i];
+
+  for (int i = 0; i < n; i++) cin >> v[i];
   sort(v.begin(), v.end());
 
   int ans = 0;
-  for (int i = 0; i < n; i++) { // O(N)
+  for (int i = 0; i < n; i++) { // O(N) int x = v[i];
     int x = v[i];
 
     int best = 0;
-    for(int d = 1; d*d <= x; d++) { // O(raiz de N)
+    for (int d = 1; d * d <= x; d++) { // O(raiz de N)
       if (x % d == 0) {
-        best = max(best, dp[d]+1);
-        best = max(best, dp[x/d]+1);
-        cerr << '\t' << d << ' ' << x/d << '\n';
+        best = max(best, dp[d] + 1);
+        best = max(best, dp[x / d] + 1);
+        cerr << '\t' << d << ' ' << x / d << '\n';
       }
     }
     dp[x] = best;
