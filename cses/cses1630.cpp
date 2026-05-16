@@ -1,34 +1,34 @@
 /*
-    CSES 1630 - Tasks and Deadlines
-    https://cses.fi/problemset/task/1630
+  CSES 1630 - Tasks and Deadlines
+  https://cses.fi/problemset/task/1630
 */
 
 #include <bits/stdc++.h>
 #include <print>
 using namespace std;
 using ll = long long;
-using ull = unsigned long long;
-typedef pair<ll,ll> pll;
 
-int main(){
-    ios_base::sync_with_stdio(0); cin.tie(0);
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
+typedef pair<ll, ll> pll;
 
-    ll n, time = 0;
-    cin >> n;
+int main() {
+  fastio
 
-    vector <pll> v(n);
-    for(auto &i : v) cin >> i.first >> i.second;
-    
-    sort(v.begin(), v.end());
-    
-    ll ans = 0;
-    for(auto &[t,d] : v){
-        time += t;
-        
-        ans += d - time;
-    }
+  ll n, time = 0; cin >> n;
 
-    cout << ans << '\n';
+  vector<pll> v(n);
+  for (auto &i : v) cin >> i.first >> i.second;
 
-    return 0;
+  sort(v.begin(), v.end());
+
+  ll ans = 0;
+  for (auto &[t, d] : v) {
+    time += t;
+
+    ans += d - time;
+  }
+
+  cout << ans << '\n';
+
+  return 0;
 }

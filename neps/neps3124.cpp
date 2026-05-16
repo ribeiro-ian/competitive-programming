@@ -1,26 +1,26 @@
 /*
-    OBI 2025 - Fase 1 - Festa Junina
-    https://neps.academy/br/exercise/3124
+  OBI 2025 - Fase 1 - Festa Junina
+  https://neps.academy/br/exercise/3124
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
 
-int main(){
-    ios_base::sync_with_stdio(0); cin.tie(0);
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
 
-    int e, s, l, res = -1;
-    cin >> e >> s >> l;
+int main() {
+  fastio
 
-    if(s > e && l > e ) 
-        res = 2*(max(s,l) - e);
-    else if(l < e && s < e) 
-        res = 2*(e - min(s,l));
-    else 
-        res = 2*(abs(s-e) + abs(l-e));
-    
-    cout << res << '\n';
+  int e, s, l, res = -1;
+  cin >> e >> s >> l;
 
-    return 0;
+  if (s > e && l > e) res = 2 * (max(s, l) - e);
+  else if (l < e && s < e) res = 2 * (e - min(s, l));
+  else
+    res = 2 * (abs(s - e) + abs(l - e));
+
+  cout << res << '\n';
+
+  return 0;
 }

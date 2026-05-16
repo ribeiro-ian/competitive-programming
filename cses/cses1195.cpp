@@ -1,68 +1,68 @@
 /*
-    CSES 1195 - Flight Discount
-    https://cses.fi/problemset/task/1195
+  CSES 1195 - Flight Discount
+  https://cses.fi/problemset/task/1195
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-using ull = unsigned long long;
-typedef pair<ll,ll> pll;
+
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
+typedef pair<ll, ll> pll;
 
 const ll INF = 1e18;
 ll n, m;
-vector <vector <pll>> adjA, adjB;
+vector<vector<pll>> adjA, adjB;
 
-vector<ll> dijkstra(ll no, vector <vector<pll>> &adj){
-    vector <bool> visited(n+1, false);
-    vector <ll> dist (n+1, INF);
-    priority_queue <pll> q;
-    
-    q.push({0, no});
-    dist[no] = 0;
+vector<ll> dijkstra(ll no, vector<vector<pll>> &adj) {
+  vector<bool> visited(n + 1, false);
+  vector<ll> dist(n + 1, INF);
+  priority_queue<pll> q;
 
-    while(!q.empty()){
-        ll curr = q.top().second;
-        q.pop();
+  q.push({0, no});
+  dist[no] = 0;
 
-        if(visited[curr]) continue;
-        visited[curr] = true;
+  while (!q.empty()) {
+    ll curr = q.top().second;
+    q.pop();
 
-        for(auto [v, w] : adj[curr]){
-            if(dist[curr] + w < dist[v]){
-                dist[v] = dist[curr] + w;
-                q.push({-dist[v], v});
-            }
-        }
+    if (visited[curr]) continue;
+    visited[curr] = true;
+
+    for (auto [v, w] : adj[curr]) {
+      if (dist[curr] + w < dist[v]) {
+        dist[v] = dist[curr] + w;
+        q.push({-dist[v], v});
+      }
     }
+  }
 
-    return dist;
+  return dist;
 }
 
-int main(){
-    ios_base::sync_with_stdio(0); cin.tie(0);
+int main() {
+  fastio
 
-    cin >> n >> m;
-    adjA.assign(n+1, vector<pll>());
-    adjB.assign(n+1, vector<pll>());
+  cin >> n >> m;
+  adjA.assign(n + 1, vector<pll>());
+  adjB.assign(n + 1, vector<pll>());
 
-    ll a, b, c;
-    vector <tuple <ll,ll,ll>> no;
-    while(m--){
-        cin >> a >> b >> c;
-        
-        no.push_back({a,b,c});
-        adjA[a].push_back({b,c});
-        adjB[b].push_back({a,c});
-    }
-    vector <ll> distA = dijkstra(1, adjA);
-    vector <ll> distB = dijkstra(n, adjB);
+  ll a, b, c;
+  vector<tuple<ll, ll, ll>> no;
+  while (m--) {
+    cin >> a >> b >> c;
 
-    ll ans = INF;
-    for(auto [a,b,w] : no)
-        ans = min(ans, distA[a] + distB[b] + w/2);
+    no.push_back({a, b, c});
+    adjA[a].push_back({b, c});
+    adjB[b].push_back({a, c});
+  }
+  vector<ll> distA = dijkstra(1, adjA);
+  vector<ll> distB = dijkstra(n, adjB);
 
-    cout << ans << '\n';
+  ll ans = INF;
+  for (auto [a, b, w] : no) ans = min(ans, distA[a] + distB[b] + w / 2);
 
-    return 0;
+  cout << ans << '\n';
+
+  return 0;
 }

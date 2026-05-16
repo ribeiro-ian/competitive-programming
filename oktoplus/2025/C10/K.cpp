@@ -1,41 +1,40 @@
 /*
-    Codeforces 1104B - Game with string
-    https://codeforces.com/problemset/problem/1104/B
+  Codeforces 1104B - Game with string
+  https://codeforces.com/problemset/problem/1104/B
 */
-
 
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-using ull = unsigned long long;
 
-int main(){
-    ios_base::sync_with_stdio(0); cin.tie(0);
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
 
-    string str;
-    cin >> str;
+int main() {
+  fastio
 
-    int cnt = 0;
-    while(!str.empty()){
-        bool flag = false;
-        for(int i = 0; i < str.size()-1; i++){
-            if(str[i] == str[i+1]){
-                cnt++;
-                str.erase(str.begin()+i+1);
-                str.erase(str.begin()+i);
+  string str; cin >> str;
 
-                flag = true;
-                break;
-            }
-        }
+  int cnt = 0;
+  while (!str.empty()) {
+    bool flag = false;
+    for (int i = 0; i < str.size() - 1; i++) {
+      if (str[i] == str[i + 1]) {
+        cnt++;
+        str.erase(str.begin() + i + 1);
+        str.erase(str.begin() + i);
 
-        if(flag) continue;
-
+        flag = true;
         break;
+      }
     }
 
-    cout << (cnt % 2 == 1 ? "Yes" : "No") << "\n";
-    cerr << cnt << '\n';
+    if (flag) continue;
 
-    return 0;
+    break;
+  }
+
+  cout << (cnt % 2 == 1 ? "Yes" : "No") << "\n";
+  cerr << cnt << '\n';
+
+  return 0;
 }

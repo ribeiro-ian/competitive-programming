@@ -1,33 +1,34 @@
 /*
-    Beecrowd 1410 - Ele Está Impedido!
-    https://judge.beecrowd.com/pt/problems/view/1410
+  Beecrowd 1410 - Ele Está Impedido!
+  https://judge.beecrowd.com/pt/problems/view/1410
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-using ull = unsigned long long;
 
-int main(){
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
 
-    while(1){
-        int a, d;
-        scanf("%i %i", &a, &d);
+int main() {
+  fastio
 
-        if(a+d==0) break;
 
-        int atacantes[a], defensores[d];
+  while (1) {
+    int a, d;
+    scanf("%i %i", &a, &d);
 
-        for(int i = 0; i < a; i++)
-            scanf("%i", &atacantes[i]);
+    if (a + d == 0) break;
 
-        for(int i = 0; i < d; i++)
-            scanf("%i", &defensores[i]);
-        
-        sort(defensores, defensores+d);
+    int atacantes[a], defensores[d];
 
-        printf("%s\n", *min_element(atacantes, atacantes+a) < defensores[1] ? "Y" : "N");
-    }
+    for (int i = 0; i < a; i++) scanf("%i", &atacantes[i]);
 
-    return 0;
+    for (int i = 0; i < d; i++) scanf("%i", &defensores[i]);
+
+    sort(defensores, defensores + d);
+
+    printf("%s\n", *min_element(atacantes, atacantes + a) < defensores[1] ? "Y" : "N");
+  }
+
+  return 0;
 }

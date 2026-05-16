@@ -1,29 +1,30 @@
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-using ull = unsigned long long;
 
-int main(){
-    int tc;
-    cin >> tc;
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
 
-    string str;
-    while(tc--){
-        cin >> str;
-        
-        bool flag = false;
-        for(int i = 0; i < str.size()-1; i++){
-            if(str[i] == str[i+1]){
-                flag = true;
-                break;
-            }
-        }
+int main() {
+  fastio
 
-        if(flag)
-            printf("1\n");
-        else
-            printf("%i\n", str.size());
+  int tc; cin >> tc;
+
+  string str;
+  while (tc--) {
+    cin >> str;
+
+    bool flag = false;
+    for (int i = 0; i < str.size() - 1; i++) {
+      if (str[i] == str[i + 1]) {
+        flag = true;
+        break;
+      }
     }
 
-    return 0;
+    if (flag) printf("1\n");
+    else
+      printf("%i\n", str.size());
+  }
+
+  return 0;
 }

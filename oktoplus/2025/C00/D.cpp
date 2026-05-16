@@ -1,31 +1,32 @@
 /*
-    Beecrowd 2390 - Escada Rolante
-    https://judge.beecrowd.com/pt/problems/view/2390
+  Beecrowd 2390 - Escada Rolante
+  https://judge.beecrowd.com/pt/problems/view/2390
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-using ull = unsigned long long;
 
-int main(){
-    int n, tempo = 0;
-    cin >> n;
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
 
-    vector <int> v(n);
-    cin >> v[0];
+int main() {
+  fastio
 
-    for(int i = 1; i < n; i++){
-        cin >> v[i];
+  int n, tempo = 0; cin >> n;
 
-        if(v[i] - 10 > v[i-1])
-            tempo += 10;
-        
-        else 
-            tempo += abs(v[i]-v[i-1]);
-    }
-    
-    cout << tempo + 10 << endl;
+  vector<int> v(n);
+  cin >> v[0];
 
-    return 0;
+  for (int i = 1; i < n; i++) {
+    cin >> v[i];
+
+    if (v[i] - 10 > v[i - 1]) tempo += 10;
+
+    else
+      tempo += abs(v[i] - v[i - 1]);
+  }
+
+  cout << tempo + 10 << endl;
+
+  return 0;
 }

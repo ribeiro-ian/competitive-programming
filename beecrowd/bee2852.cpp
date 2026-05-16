@@ -1,56 +1,56 @@
 /*
-    Beecrowd 2852 - Troca de Mensagens
-    https://judge.beecrowd.com/pt/problems/view/2852
-*/ 
+  Beecrowd 2852 - Troca de Mensagens
+  https://judge.beecrowd.com/pt/problems/view/2852
+*/
 
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
 
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
+
 string k, s;
-inline void moveK(int& i){ i = (i+1) % k.size(); }
+inline void moveK(int &i) { i = (i + 1) % k.size(); }
 
-bool isVowel(char c){
-    if(c=='a'||c=='e'||c=='i'||c=='o'||c=='u')
-        return true;
-    else
-        return false;
-} 
-
-char change(char k, char c){
-    int dist = k - 'a';
-    char res = (c+dist)%('z'+1);
-    if(res < 'a') res += 'a';
-
-    return res;
+bool isVowel(char c) {
+  if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') return true;
+  else
+    return false;
 }
 
-void solve(){
-    getline(cin, s);
+char change(char k, char c) {
+  int dist = k - 'a';
+  char res = (c + dist) % ('z' + 1);
+  if (res < 'a') res += 'a';
 
-    int ki = 0;
-    char letter = s.front();
-    for(int i = 0; i < s.size(); ++i){
-        char c = s[i];
-        
-        if(c==' ')
-            letter = s[i+1];
-        else if(!isVowel(letter)){
-            s[i] = change(k[ki], c);
-            moveK(ki);
-        }
+  return res;
+}
+
+void solve() {
+  getline(cin, s);
+
+  int ki = 0;
+  char letter = s.front();
+  for (int i = 0; i < s.size(); ++i) {
+    char c = s[i];
+
+    if (c == ' ') letter = s[i + 1];
+    else if (!isVowel(letter)) {
+      s[i] = change(k[ki], c);
+      moveK(ki);
     }
-    cout << s << '\n';
+  }
+  cout << s << '\n';
 }
 
-int main(){
-    ios_base::sync_with_stdio(0); cin.tie(0);
+int main() {
+  fastio
 
-    cin >> k;
-    int n; cin >> n;
-    cin.ignore();
+  cin >> k;
+  int n; cin >> n;
+  cin.ignore();
 
-    while(n--) solve();
+  while (n--) solve();
 
-    return 0;
+  return 0;
 }

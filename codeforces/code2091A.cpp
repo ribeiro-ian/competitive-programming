@@ -1,37 +1,40 @@
 /*
-    Codeforces 2091A - Olympiad Date
-    https://codeforces.com/contest/2091/problem/A
+  Codeforces 2091A - Olympiad Date
+  https://codeforces.com/contest/2091/problem/A
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-using ull = unsigned long long;
 
-int main(){
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
 
-    int tc, n, x;
-    cin >> tc;
+int main() {
+  fastio
 
-    while(tc--){
-        cin >> n;
 
-        int v[10] = {0};
+  int tc, n, x; cin >> tc;
 
-        int ans = 0; bool flag = false;
-        for(int i = 0; i < n; i++){
-            cin >> x;
+  while (tc--) {
+    cin >> n;
 
-            v[x] += 1;
+    int v[10] = {0};
 
-            if(v[1] >= 1 && v[2] >= 2 && v[0] >= 3 && v[5] >= 1 && v[3] >= 1 && !flag){
-                ans = i+1;
-                flag = true;
-            }
-        }
+    int ans = 0;
+    bool flag = false;
+    for (int i = 0; i < n; i++) {
+      cin >> x;
 
-        printf("%i\n", ans);
+      v[x] += 1;
+
+      if (v[1] >= 1 && v[2] >= 2 && v[0] >= 3 && v[5] >= 1 && v[3] >= 1 && !flag) {
+        ans = i + 1;
+        flag = true;
+      }
     }
 
-    return 0;
+    printf("%i\n", ans);
+  }
+
+  return 0;
 }

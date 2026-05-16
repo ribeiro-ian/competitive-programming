@@ -1,24 +1,23 @@
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-using ull = unsigned long long;
 
-int main(){
-    ios_base::sync_with_stdio(0); cin.tie(0);
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
 
-    int n, t, l, u;
-    cin >> n >> t;
+int main() {
+  fastio
 
-    vector <vector <int>> sensor;
-    sensor.assign(n, vector <int> (t));
+  int n, t, l, u;
+  cin >> n >> t;
 
-    for(int i = 0; i < n; ++i){
-        for(int j = 0; j < t; ++j){
-            cin >> sensor[i][j];
-        }
-    }
+  vector<vector<int>> sensor;
+  sensor.assign(n, vector<int>(t));
 
-    cin >> l >> u;
+  for (int i = 0; i < n; ++i) {
+    for (int j = 0; j < t; ++j) { cin >> sensor[i][j]; }
+  }
 
-    return 0;
+  cin >> l >> u;
+
+  return 0;
 }

@@ -1,32 +1,33 @@
 /*
-    CSES 1082 - Sum of Divisors
-    https://cses.fi/problemset/task/1082
+  CSES 1082 - Sum of Divisors
+  https://cses.fi/problemset/task/1082
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-using ull = unsigned long long;
-constexpr ll M = 1e9+7;
 
-int main(){
-    ios_base::sync_with_stdio(0); cin.tie(0);
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
+const ll M = 1e9 + 7;
 
-    ll n; cin >> n;
-    ll ans = 1;
+int main() {
+  fastio
 
-    vector <ll> num(sqrt(n), 1);
-    for(ll i = 2; i*i < n; ++i){
-        if(i != num[i]){
-            ll j = i;
-            while(j < num.size()){
-                num[j] *= j/i + 1;
-                j += i; 
-            }
-        }
+  ll n; cin >> n;
+  ll ans = 1;
+
+  vector<ll> num(sqrt(n), 1);
+  for (ll i = 2; i * i < n; ++i) {
+    if (i != num[i]) {
+      ll j = i;
+      while (j < num.size()) {
+        num[j] *= j / i + 1;
+        j += i;
+      }
     }
+  }
 
-    cout << ans << '\n';
+  cout << ans << '\n';
 
-    return 0;
+  return 0;
 }

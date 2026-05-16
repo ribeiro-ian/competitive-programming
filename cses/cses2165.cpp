@@ -1,36 +1,22 @@
 /*
-    CSES 2165 - Tower of Hanoi
-    https://cses.fi/problemset/tspiask/2165
+  CSES 2165 - Tower of Hanoi
+  https://cses.fi/problemset/task/2165
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-using ull = unsigned long long;
-typedef pair<int,int> pii;
+
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
+typedef pair<int, int> pii;
 
 int n;
-vector <pii> ans;
+vector<pii> ans;
 
-void search(){
-    if( == n){
-        return;
-    }
-    for(int i = 1; i <= 3; ++i){
-        for(int j = 1; j <= 3; ++j){
-            ans.push_back( make_pair(i,j) );
+int main() {
+  fastio
 
-            search();
+  cin >> n;
 
-            ans.pop_back();
-        }
-    }
-}
-
-int main(){
-    ios_base::sync_with_stdio(0); cin.tie(0);
-
-    cin >> n;
-
-    return 0;
+  return 0;
 }

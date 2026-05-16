@@ -1,46 +1,48 @@
 /*
-    Codeforces 706B - Interesting drink
-    https://codeforces.com/problemset/problem/706/B/
+  Codeforces 706B - Interesting drink
+  https://codeforces.com/problemset/problem/706/B/
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-using ull = unsigned long long;
+
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
 
 ll n, q, v[112345], x;
 
-ll bs(ll x){
-    ll l = 0, r = n-1, m;
+ll bs(ll x) {
+  ll l = 0, r = n - 1, m;
 
-    while(l <= r){
-        m = l + (r-l)/2;
+  while (l <= r) {
+    m = l + (r - l) / 2;
 
-        if(v[m] <= x){
-            l = m + 1;
-        }
-        else {
-            r = m - 1;
-        }
+    if (v[m] <= x) {
+      l = m + 1;
     }
+    else {
+      r = m - 1;
+    }
+  }
 
-    return l;
+  return l;
 }
 
-int main(){
+int main() {
+  fastio
 
-    scanf("%lli", &n);
-    
-    for(int i = 0; i < n; i++)
-        scanf("%lli", &v[i]);
-    sort(v, v+n);
 
-    scanf("%lli", &q);
-    while(q--){
-        scanf("%lli", &x);
+  scanf("%lli", &n);
 
-        printf("%lli\n", bs(x));
-    }
-    
-    return 0;
+  for (int i = 0; i < n; i++) scanf("%lli", &v[i]);
+  sort(v, v + n);
+
+  scanf("%lli", &q);
+  while (q--) {
+    scanf("%lli", &x);
+
+    printf("%lli\n", bs(x));
+  }
+
+  return 0;
 }

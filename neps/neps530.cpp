@@ -1,33 +1,32 @@
 #include <iostream>
 using namespace std;
 
-#define TAM 101
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
+const int TAM=101;
 
-int main(){
-    int mar[TAM][TAM];
-    for(int i = 0; i < TAM; i++)
-        for(int j = 0; j < TAM; j++)
-            mar[i][j] = 0;
+int main() {
+  fastio
 
-    int num_redes;
-    cin >> num_redes;
+  int mar[TAM][TAM];
+  for (int i = 0; i < TAM; i++)
+    for (int j = 0; j < TAM; j++) mar[i][j] = 0;
 
-    while(num_redes--){
-        int xi, xf, yi, yf;
-        cin >> xi >> xf >> yi >> yf;
+  int num_redes; cin >> num_redes;
 
-        for(int i = xi; i < xf; ++i)
-            for(int j = yi; j < yf; ++j)
-                mar[i][j] = 1;
-    }        
-    
-    int area = 0;
-    for(int i = 0; i < TAM; i++)
-        for(int j = 0; j < TAM; j++)
-            if(mar[i][j] == 1)
-                area++;
+  while (num_redes--) {
+    int xi, xf, yi, yf;
+    cin >> xi >> xf >> yi >> yf;
 
-    cout << area << endl;
+    for (int i = xi; i < xf; ++i)
+      for (int j = yi; j < yf; ++j) mar[i][j] = 1;
+  }
 
-    return 0;
+  int area = 0;
+  for (int i = 0; i < TAM; i++)
+    for (int j = 0; j < TAM; j++)
+      if (mar[i][j] == 1) area++;
+
+  cout << area << endl;
+
+  return 0;
 }

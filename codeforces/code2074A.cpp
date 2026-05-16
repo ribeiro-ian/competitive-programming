@@ -1,27 +1,29 @@
 /*
-    Codeforces 2074A - Draw a Square
-    https://codeforces.com/contest/2074/problem/A
+  Codeforces 2074A - Draw a Square
+  https://codeforces.com/contest/2074/problem/A
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-using ull = unsigned long long;
 
-int main(){
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
 
-    int tc, l, r, d, u;
-    scanf("%i", &tc);
+int main() {
+  fastio
 
-    while(tc--){
 
-        scanf("%i%i%i%i", &l, &r, &d, &u);
-        
-        if(l == r & r == d & d == u)
-            printf("YES\n");
-        else
-            printf("NO\n");
-    }
+  int tc, l, r, d, u;
+  scanf("%i", &tc);
 
-    return 0;
+  while (tc--) {
+
+    scanf("%i%i%i%i", &l, &r, &d, &u);
+
+    if (l == r & r == d & d == u) printf("YES\n");
+    else
+      printf("NO\n");
+  }
+
+  return 0;
 }

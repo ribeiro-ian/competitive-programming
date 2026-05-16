@@ -1,29 +1,29 @@
 /*
-    Codeforces 1703B - ICPC Balloons
-    https://codeforces.com/problemset/problem/1703/B
+  Codeforces 1703B - ICPC Balloons
+  https://codeforces.com/problemset/problem/1703/B
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-using ull = unsigned long long;
 
-int main(){
-    int tc, n;
-    string str;
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
 
-    scanf("%i", &tc);
-    while(tc--){
-        scanf("%i", &n);
-        cin >> str;
+int main() {
+  fastio
 
-        set <int> s;
-        for(auto c : str){
-            s.insert(c);
-        }
+  int tc, n;
+  string str;
 
-        printf("%i\n", s.size()*2 + str.size()-s.size());
-    }
+  scanf("%i", &tc);
+  while (tc--) {
+    scanf("%i", &n); cin >> str;
 
-    return 0;
+    set<int> s;
+    for (auto c : str) { s.insert(c); }
+
+    printf("%i\n", s.size() * 2 + str.size() - s.size());
+  }
+
+  return 0;
 }

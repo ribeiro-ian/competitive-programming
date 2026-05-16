@@ -1,36 +1,37 @@
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-using ull = unsigned long long;
 
-int main(){
-    ios::sync_with_stdio(0);
-    cin.tie(0);
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
 
-    int tc, n, m;
-    cin >> tc;
-    while(tc--){
-        cin >> n;
-        vector <int> r(n), prefR (n+1, 0);
+int main() {
+  fastio
 
-        for(int i = 0; i < n; i++){
-            cin >> r[i];
+  ios::sync_with_stdio(0);
+  cin.tie(0);
 
-            prefR[i+1] = prefR[i] + r[i];
-        }
-        
-        cin >> m;
-        vector <int> b(m), prefB (m+1,0);
+  int tc, n, m; cin >> tc;
+  while (tc--) {
+    cin >> n;
+    vector<int> r(n), prefR(n + 1, 0);
 
-        for(int i = 0; i < m; i++){
-            cin >> b[i];
+    for (int i = 0; i < n; i++) {
+      cin >> r[i];
 
-            prefB[i+1] = prefB[i] + b[i];
-        }
-
-        cout << *max_element(prefR.begin(), prefR.end())
-        + *max_element(prefB.begin(), prefB.end()) << endl;
+      prefR[i + 1] = prefR[i] + r[i];
     }
 
-    return 0;
+    cin >> m;
+    vector<int> b(m), prefB(m + 1, 0);
+
+    for (int i = 0; i < m; i++) {
+      cin >> b[i];
+
+      prefB[i + 1] = prefB[i] + b[i];
+    }
+
+    cout << *max_element(prefR.begin(), prefR.end()) + *max_element(prefB.begin(), prefB.end()) << endl;
+  }
+
+  return 0;
 }

@@ -1,44 +1,39 @@
 /*
-    Codeforces 1840C - Ski Resort
-    https://codeforces.com/problemset/problem/1840/C
+  Codeforces 1840C - Ski Resort
+  https://codeforces.com/problemset/problem/1840/C
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-using ull = unsigned long long;
 
-void solve(){
-    int n, k, q;
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
 
-    cin >> n >> k >> q;
-    
-    int a[n];
-    for(auto &e : a)
-        cin >> e;
+void solve() {
+  int n, k, q;
 
-    int cnt = 0;
-    for(int l=0, r=0; l < n-k; l++){
-        while(r < n && a[r] <= q){
-            r++;
-        }
-        int len = r-l;
-        if(len >= k)
-            cnt += (len - k + 1) * (len - k + 2) / 2;
-        r = max(r,l);
-    }
+  cin >> n >> k >> q;
 
-    cout << cnt << "\n";
+  int a[n];
+  for (auto &e : a) cin >> e;
+
+  int cnt = 0;
+  for (int l = 0, r = 0; l < n - k; l++) {
+    while (r < n && a[r] <= q) { r++; }
+    int len = r - l;
+    if (len >= k) cnt += (len - k + 1) * (len - k + 2) / 2;
+    r = max(r, l);
+  }
+
+  cout << cnt << "\n";
 }
 
-int main(){
-    ios_base::sync_with_stdio(0); cin.tie(0);
+int main() {
+  fastio
 
-    int tc; cin >> tc;
+  int tc; cin >> tc;
 
-    while(tc--){
-        solve();
-    }
+  while (tc--) { solve(); }
 
-    return 0;
+  return 0;
 }

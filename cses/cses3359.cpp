@@ -1,49 +1,50 @@
 /*
-    CSES 3359 - Minimal Grid Path
-    https://cses.fi/problemset/task/3359
+  CSES 3359 - Minimal Grid Path
+  https://cses.fi/problemset/task/3359
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-using ull = unsigned long long;
 
-int main(){
-    // ios_base::sync_with_stdio(0); cin.tie(0);
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
 
-    int n; cin >> n;
-    char grid[n+1][n+1];
+int main() {
+  fastio
 
-    for(int i = 1; i <= n; ++i)
-        for(int j = 1; j <= n; ++j)
-            cin >> grid[i][j];
-        
-    int sz[n+1][n+1];
+  // fastio
 
-    string dp[n+1][n+1];
-    for(int i = 0; i <= n; ++i) 
-        for(int j = 0; j <= n; ++j){
-            dp[i][j].push_back('Z'+1);
-            sz[i][j] = 'Z'+1;
-        }
+  int n; cin >> n;
+  char grid[n + 1][n + 1];
 
-    sz[1][1] = grid[1][1];
-    dp[1][1] = grid[1][1]; 
-    for(int i = 1; i <= n; ++i){
-        for(int j = 1; j <= n; ++j){
-            if(i==1 && j == 1) continue;
+  for (int i = 1; i <= n; ++i)
+    for (int j = 1; j <= n; ++j) cin >> grid[i][j];
 
-            if(sz[i-1][j] < sz[i][j]) 
-                dp[i][j] = dp[i-1][j];
-            else
-                dp[i][j] = dp[i][j-1];
+  int sz[n + 1][n + 1];
 
-            sz[i][j] += min(grid[i-1][j], grid[i][j-1]);
-            dp[i][j] += grid[i][j];
-        }
+  string dp[n + 1][n + 1];
+  for (int i = 0; i <= n; ++i)
+    for (int j = 0; j <= n; ++j) {
+      dp[i][j].push_back('Z' + 1);
+      sz[i][j] = 'Z' + 1;
     }
-    
-    cout << dp[n][n] << "\n";
 
-    return 0;
+  sz[1][1] = grid[1][1];
+  dp[1][1] = grid[1][1];
+  for (int i = 1; i <= n; ++i) {
+    for (int j = 1; j <= n; ++j) {
+      if (i == 1 && j == 1) continue;
+
+      if (sz[i - 1][j] < sz[i][j]) dp[i][j] = dp[i - 1][j];
+      else
+        dp[i][j] = dp[i][j - 1];
+
+      sz[i][j] += min(grid[i - 1][j], grid[i][j - 1]);
+      dp[i][j] += grid[i][j];
+    }
+  }
+
+  cout << dp[n][n] << "\n";
+
+  return 0;
 }

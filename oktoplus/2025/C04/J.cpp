@@ -1,30 +1,33 @@
 /*
-    Bee 2235 - Andando no Tempo
-    https://judge.beecrowd.com/pt/problems/view/2235
+  Bee 2235 - Andando no Tempo
+  https://judge.beecrowd.com/pt/problems/view/2235
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-using ull = unsigned long long;
 
-int main(){
-    int v[3], sum = 0;
-    set <int> s;
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
 
-    for(int i = 0; i < 3; i++){
-       scanf("%i", &v[i]);
-        sum += v[i];
-        s.insert(v[i]);
-    }
+int main() {
+  fastio
 
-    if(s.size() <= 2){
-        printf("S\n");
-        return 0;
-    }
+  int v[3], sum = 0;
+  set<int> s;
 
-    int maior = *max_element(v,v+3);
-    printf("%s\n", sum - maior == maior ? "S" : "N");
+  for (int i = 0; i < 3; i++) {
+    scanf("%i", &v[i]);
+    sum += v[i];
+    s.insert(v[i]);
+  }
 
+  if (s.size() <= 2) {
+    printf("S\n");
     return 0;
+  }
+
+  int maior = *max_element(v, v + 3);
+  printf("%s\n", sum - maior == maior ? "S" : "N");
+
+  return 0;
 }

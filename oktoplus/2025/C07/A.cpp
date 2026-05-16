@@ -1,36 +1,37 @@
 /*
-    Codeforces 118A - String Task
-    https://codeforces.com/problemset/problem/118/A
+  Codeforces 118A - String Task
+  https://codeforces.com/problemset/problem/118/A
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-using ull = unsigned long long;
 
-bool isVowel(char c){
-    char vowels[] = {'A', 'O', 'Y', 'E', 'U', 'I'};
-    
-    for(auto v : vowels){
-        if(tolower(v) == tolower(c))
-            return true;
-    }
-    return false;
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
+
+bool isVowel(char c) {
+  char vowels[] = {'A', 'O', 'Y', 'E', 'U', 'I'};
+
+  for (auto v : vowels) {
+    if (tolower(v) == tolower(c)) return true;
+  }
+  return false;
 }
 
-int main(){
+int main() {
+  fastio
 
-    string str, ans="";
-    cin >> str;
 
-    for(auto c : str){
-        if(!isVowel(c)){
-            ans += '.';
-            ans += tolower(c);
-        }
+  string str, ans = ""; cin >> str;
+
+  for (auto c : str) {
+    if (!isVowel(c)) {
+      ans += '.';
+      ans += tolower(c);
     }
+  }
 
-    cout << ans << endl;
+  cout << ans << endl;
 
-    return 0;
+  return 0;
 }

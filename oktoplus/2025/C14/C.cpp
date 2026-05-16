@@ -1,35 +1,36 @@
 /*
-    CSES 1095 - Exponentiation
-    https://cses.fi/problemset/task/1095
+  CSES 1095 - Exponentiation
+  https://cses.fi/problemset/task/1095
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-using ull = unsigned long long;
-const ll M = 1e9+7;
 
-ll exp(ll x, ll e){
-    x %= M;
-    ll ans = 1;
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
+const ll M = 1e9 + 7;
 
-    while(e >= 1){
-        if(e % 2 == 1) ans = (ans * x) % M;
-        x = (x*x) % M;
-        e /= 2;
-    }
+ll exp(ll x, ll e) {
+  x %= M;
+  ll ans = 1;
 
-    return ans;
+  while (e >= 1) {
+    if (e % 2 == 1) ans = (ans * x) % M;
+    x = (x * x) % M;
+    e /= 2;
+  }
+
+  return ans;
 }
 
-int main(){
-    ios_base::sync_with_stdio(0); cin.tie(0);
+int main() {
+  fastio
 
-    ll n, a, b; cin >> n;
-    while(n--)  {
-        cin >> a >> b;
-        cout << exp(a, b) << '\n';
-    }
+  ll n, a, b; cin >> n;
+  while (n--) {
+    cin >> a >> b;
+    cout << exp(a, b) << '\n';
+  }
 
-    return 0;
+  return 0;
 }

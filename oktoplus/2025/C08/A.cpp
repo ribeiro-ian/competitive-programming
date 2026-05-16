@@ -1,46 +1,44 @@
 /*
-    CSES 1652 - Forest Queries
-    https://cses.fi/problemsetls/task/1652
+  CSES 1652 - Forest Queries
+  https://cses.fi/problemsetls/task/1652
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-using ull = unsigned long long;
 
-int main(){
-    int n, q, col1, col2, lin1, lin2;
-    string row;
-    scanf("%i %i", &n, &q);
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
 
-    vector <vector <int>> grid;
-    grid.assign(n+1, vector <int> (n+1, 0));
+int main() {
+  fastio
 
+  int n, q, col1, col2, lin1, lin2;
+  string row;
+  scanf("%i %i", &n, &q);
 
-    for(int i = 1, j = 1; i <= n; i++){
-        cin >> row;
-        
-        for(auto &c : row){
-            grid[i][j] = grid[i][j-1];
-            
-            if(c == '*')
-            grid[i][j] = grid[i][j] + 1;
-            j++;
-        }
-        j = 1;
+  vector<vector<int>> grid;
+  grid.assign(n + 1, vector<int>(n + 1, 0));
+
+  for (int i = 1, j = 1; i <= n; i++) {
+    cin >> row;
+
+    for (auto &c : row) {
+      grid[i][j] = grid[i][j - 1];
+
+      if (c == '*') grid[i][j] = grid[i][j] + 1;
+      j++;
     }
+    j = 1;
+  }
 
-    while(q--){
-        scanf("%i %i %i %i", &lin1, &col1, &lin2, &col2);
+  while (q--) {
+    scanf("%i %i %i %i", &lin1, &col1, &lin2, &col2);
 
-        int ans = 0;
-        for(int i = lin1; i <= lin2; i++){
-            ans += grid[i][col2] - grid[i][col1-1];
-        }
+    int ans = 0;
+    for (int i = lin1; i <= lin2; i++) { ans += grid[i][col2] - grid[i][col1 - 1]; }
 
-        printf("%i\n", ans);
-    }
-    
+    printf("%i\n", ans);
+  }
 
-    return 0;
+  return 0;
 }

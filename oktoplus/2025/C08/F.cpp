@@ -1,71 +1,71 @@
 /*
-    UVA 10004
-    https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=945
+  UVA 10004
+  https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=945
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-using ull = unsigned long long;
 
-vector <vector <int>> adj;
-vector <int> visited;
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
+
+vector<vector<int>> adj;
+vector<int> visited;
 int n, l, a, b;
 
-bool bfs(int no){
-    queue <int> q;
-    int cnt = 0;
-    
-    q.push(no);
-    visited[no] = 0;
+bool bfs(int no) {
+  queue<int> q;
+  int cnt = 0;
 
-    while(!q.empty()){
-        int curr = q.front();
-        q.pop();
+  q.push(no);
+  visited[no] = 0;
 
-        for(auto &v : adj[curr]){
-            if(visited[v] == -1){
-                visited[v] = visited[curr]+1;
-                q.push(v);
-            }
-            else if(visited[v] == visited[curr]){
-                return false;
-            }
-        }
+  while (!q.empty()) {
+    int curr = q.front();
+    q.pop();
 
-        cnt++;
+    for (auto &v : adj[curr]) {
+      if (visited[v] == -1) {
+        visited[v] = visited[curr] + 1;
+        q.push(v);
+      } else if (visited[v] == visited[curr]) {
+        return false;
+      }
     }
 
-    return true;
+    cnt++;
+  }
+
+  return true;
 }
 
-int main(){
+int main() {
+  fastio
 
-    while(scanf("%i", &n), n){
-        adj.assign(n, vector <int> ());
-        visited.assign(n, -1);
 
-        scanf("%i", &l);
-        while(l--){
-            scanf("%i %i", &a, &b);
+  while (scanf("%i", &n), n) {
+    adj.assign(n, vector<int>());
+    visited.assign(n, -1);
 
-            adj[a].push_back(b);
-            adj[b].push_back(a);
-        }
+    scanf("%i", &l);
+    while (l--) {
+      scanf("%i %i", &a, &b);
 
-        // for(int i = 0; i < n; i++){
-        //     printf("%2i: %lu\n", i, adj[i].size());
-        // }
-        
-        bool flag = true;
-        for(int i = 0; i < n && flag; i++){
-            if(visited[i] == -1)
-                flag = bfs(i);
-        }
-
-        printf("%s.\n", flag ? "BICOLORABLE" : "NOT BICOLORABLE");
-
+      adj[a].push_back(b);
+      adj[b].push_back(a);
     }
 
-    return 0;
+    // for(int i = 0; i < n; i++){
+    //     printf("%2i: %lu\n", i, adj[i].size());
+    // }
+
+    bool flag = true;
+    for (int i = 0; i < n && flag; i++) {
+      if (visited[i] == -1) flag = bfs(i);
+    }
+
+    printf("%s.\n", flag ? "BICOLORABLE" : "NOT BICOLORABLE");
+  }
+
+  return 0;
 }

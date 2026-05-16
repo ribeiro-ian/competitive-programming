@@ -1,26 +1,27 @@
 /*
-    Codeforces 520A - Pangram
-    https://codeforces.com/problemset/problem/520/A
+  Codeforces 520A - Pangram
+  https://codeforces.com/problemset/problem/520/A
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-using ull = unsigned long long;
 
-int main(){
-    ios_base::sync_with_stdio(0); cin.tie(0);
-    int n; char c;
-    cin >> n;
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
 
-    set <char> s;
+int main() {
+  fastio
+  int n;
+  char c; cin >> n;
 
-    while(n--){
-        cin >> c;
-        s.insert(tolower(c));
-    }
+  set<char> s;
 
-    cout << (s.size() == 26 ? "YES" : "NO") << '\n';
+  while (n--) {
+    cin >> c;
+    s.insert(tolower(c));
+  }
 
-    return 0;
+  cout << (s.size() == 26 ? "YES" : "NO") << '\n';
+
+  return 0;
 }

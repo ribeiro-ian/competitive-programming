@@ -1,42 +1,41 @@
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-using ull = unsigned long long;
 
-vector <vector <int>> grid;
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
+
+vector<vector<int>> grid;
 ll n;
-void rec(int i, int j, int v){
-    if(i < 0 || i >= n || j < 0 || j >= n || grid[i][j] < v) return;
+void rec(int i, int j, int v) {
+  if (i < 0 || i >= n || j < 0 || j >= n || grid[i][j] < v) return;
 
-    grid[i][j] = v;
+  grid[i][j] = v;
 
-    v++;
-    rec(i+2, j+1, v);
-    rec(i+2, j-1, v);
-    rec(i-2, j+1, v);
-    rec(i-2, j-1, v);
+  v++;
+  rec(i + 2, j + 1, v);
+  rec(i + 2, j - 1, v);
+  rec(i - 2, j + 1, v);
+  rec(i - 2, j - 1, v);
 
-    rec(i+1, j+2, v);
-    rec(i-1, j+2, v);
-    rec(i+1, j-2, v);
-    rec(i-1, j-2, v);
+  rec(i + 1, j + 2, v);
+  rec(i - 1, j + 2, v);
+  rec(i + 1, j - 2, v);
+  rec(i - 1, j - 2, v);
 }
 
-int main(){
-    ios_base::sync_with_stdio(0); cin.tie(0);
+int main() {
+  fastio
 
-    cin >> n;
-    grid.assign(n, vector<int>(n,n*n));
+  cin >> n;
+  grid.assign(n, vector<int>(n, n * n));
 
-    grid[0][0] = 0;
-    rec(0,0,0);
+  grid[0][0] = 0;
+  rec(0, 0, 0);
 
-    for(int i = 0; i < n; ++i){
-        for(int j = 0; j < n; ++j){
-            cout << grid[i][j] << ' ';
-        }
-        cout << '\n';
-    }
+  for (int i = 0; i < n; ++i) {
+    for (int j = 0; j < n; ++j) { cout << grid[i][j] << ' '; }
+    cout << '\n';
+  }
 
-    return 0;
+  return 0;
 }

@@ -1,26 +1,28 @@
 /*
-    OBI 2025 - Fase 1 - Dieta
-    https://neps.academy/br/exercise/3121
+  OBI 2025 - Fase 1 - Dieta
+  https://neps.academy/br/exercise/3121
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
 
-int main(){
-    ios_base::sync_with_stdio(0); cin.tie(0);
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
 
-    int n, m;
-    cin >> n >> m;
+int main() {
+  fastio
 
-    ll sum = 0;
-    for(int i = 0; i < n; ++i){
-        int p, g, c;
-        cin >> p >> g >> c;        
+  int n, m;
+  cin >> n >> m;
 
-        sum += 4*p + 9*g + 4*c;
-    }
-    cout << m - sum << '\n';
+  ll sum = 0;
+  for (int i = 0; i < n; ++i) {
+    int p, g, c;
+    cin >> p >> g >> c;
 
-    return 0;
+    sum += 4 * p + 9 * g + 4 * c;
+  }
+  cout << m - sum << '\n';
+
+  return 0;
 }

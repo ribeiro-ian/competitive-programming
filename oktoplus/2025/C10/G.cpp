@@ -1,35 +1,35 @@
 /*
-    SPOJ - Hotels Along the Croatian Coast
-    https://www.spoj.com/problems/HOTELS/en/
+  SPOJ - Hotels Along the Croatian Coast
+  https://www.spoj.com/problems/HOTELS/en/
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-using ull = unsigned long long;
 
-int main(){
-    ios_base::sync_with_stdio(0); cin.tie(0);
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
 
-    int n, m;
-    cin >> n >> m;
-    int a[n];
+int main() {
+  fastio
 
-    for(auto &e : a)
-        cin >> e;
+  int n, m;
+  cin >> n >> m;
+  int a[n];
 
-    int ans = 0;
-    for(int l=0, r=0, sum=0; l < n; l++){
-        while(r < n && sum + a[r] <= m){
-            sum += a[r];
-            r++;
-        }
+  for (auto &e : a) cin >> e;
 
-        ans = max(ans, sum);
-        sum -= a[l];
+  int ans = 0;
+  for (int l = 0, r = 0, sum = 0; l < n; l++) {
+    while (r < n && sum + a[r] <= m) {
+      sum += a[r];
+      r++;
     }
 
-    cout << ans << "\n";
+    ans = max(ans, sum);
+    sum -= a[l];
+  }
 
-    return 0;
+  cout << ans << "\n";
+
+  return 0;
 }

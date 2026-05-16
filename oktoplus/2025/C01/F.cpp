@@ -1,51 +1,51 @@
 /*
-    Beecrowd 1367 - Ajude!
-    https://judge.beecrowd.com/pt/problems/view/1367
+  Beecrowd 1367 - Ajude!
+  https://judge.beecrowd.com/pt/problems/view/1367
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-using ull = unsigned long long;
 
-int main(){
-    ios::sync_with_stdio(0);
-    cin.tie(0);
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
 
-    int n, pont, cnt, tempo;
-    string str;
-    char id;
+int main() {
+  fastio
 
-    while(1)
-    {
-        cin >> n;
+  ios::sync_with_stdio(0);
+  cin.tie(0);
 
-        if(n==0) break;
+  int n, pont, cnt, tempo;
+  string str;
+  char id;
 
-        pont = cnt = 0;
+  while (1) {
+    cin >> n;
 
-        vector <int> prob(26, 0);
-        for(int i=0; i < n;i++){
-            cin >> id >> tempo >> str;
+    if (n == 0) break;
 
-            int idx = id - 'A';
+    pont = cnt = 0;
 
-            if(str == "correct"){
-                if(prob[idx] > 0)
-                    pont += tempo + 20*prob[idx];
-                else
-                    pont += tempo;
+    vector<int> prob(26, 0);
+    for (int i = 0; i < n; i++) {
+      cin >> id >> tempo >> str;
 
-                cnt++;
-            }
-            else{
-                prob[idx]++;
-            }
-        }
+      int idx = id - 'A';
 
-        printf("%i %i\n", cnt, pont);
+      if (str == "correct") {
+        if (prob[idx] > 0) pont += tempo + 20 * prob[idx];
+        else
+          pont += tempo;
+
+        cnt++;
+      }
+      else {
+        prob[idx]++;
+      }
     }
-    
 
-    return 0;
+    printf("%i %i\n", cnt, pont);
+  }
+
+  return 0;
 }

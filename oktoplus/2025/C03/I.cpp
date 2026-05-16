@@ -1,34 +1,34 @@
 /*
-    Beecrowd 2815 - Digitador Gago
-    https://judge.beecrowd.com/pt/problems/view/2815
+  Beecrowd 2815 - Digitador Gago
+  https://judge.beecrowd.com/pt/problems/view/2815
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-using ull = unsigned long long;
 
-int main(){
-    string str;
-    vector <string> palavras;
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
 
-    while(cin >> str){
-        palavras.push_back(str);
-    }
+int main() {
+  fastio
 
-    for(int i=0; i < palavras.size(); i++){
-        string p = palavras[i];
+  string str;
+  vector<string> palavras;
 
-        if(p.size() < 4)
-            printf("%s", p.c_str());
-        else if(p.substr(0, 2) == p.substr(2,2))
-            printf("%s", p.substr(2).c_str());
-        else
-            printf("%s", p.c_str());
+  while (cin >> str) { palavras.push_back(str); }
 
-        if(i != palavras.size()-1) printf(" ");
-        else printf("\n");
-    }
+  for (int i = 0; i < palavras.size(); i++) {
+    string p = palavras[i];
 
-    return 0;
+    if (p.size() < 4) printf("%s", p.c_str());
+    else if (p.substr(0, 2) == p.substr(2, 2)) printf("%s", p.substr(2).c_str());
+    else
+      printf("%s", p.c_str());
+
+    if (i != palavras.size() - 1) printf(" ");
+    else
+      printf("\n");
+  }
+
+  return 0;
 }

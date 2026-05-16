@@ -1,23 +1,25 @@
 /*
-    Codeforces 2179A - Blackslex and Password
-    https://codeforces.com/contest/2179/problem/A
+  Codeforces 2179A - Blackslex and Password
+  https://codeforces.com/contest/2179/problem/A
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 
-void solve(){
-    int k, x;
-    cin >> k >> x;
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
 
-    cout << k*x + 1 << endl;
+void solve() {
+  int k, x;
+  cin >> k >> x;
+
+  cout << k * x + 1 << endl;
 }
 
-int main(){
-    ios_base::sync_with_stdio(0); cin.tie(0);
+int main() {
+  fastio
 
-    int tc; cin >> tc;
-    while(tc--) solve();
+  int tc; cin >> tc;
+  while (tc--) solve();
 
-    return 0;
+  return 0;
 }

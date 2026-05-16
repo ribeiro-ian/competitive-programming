@@ -1,40 +1,38 @@
 /*
-    CSES 1732 - Finding Borders
-    https://cses.fi/problemset/task/1732
+  CSES 1732 - Finding Borders
+  https://cses.fi/problemset/task/1732
 */
- 
+
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
- 
-vector<int> z_function(string s){
-    int n = s.size();
-    vector<int> z(n);
-    int l = 0, r = 0;
-    for(int i = 1; i < n; i++){
-        if(i < r){
-            z[i] = min(r - i, z[i - l]);
-        }
-        while(i + z[i] < n && s[z[i]] == s[i + z[i]]){
-            z[i]++;
-        }
-        if(i + z[i] > r){
-            l = i;
-            r = i + z[i];
-        }
+
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
+
+vector<int> z_function(string s) {
+  int n = s.size();
+  vector<int> z(n);
+  int l = 0, r = 0;
+  for (int i = 1; i < n; i++) {
+    if (i < r) { z[i] = min(r - i, z[i - l]); }
+    while (i + z[i] < n && s[z[i]] == s[i + z[i]]) { z[i]++; }
+    if (i + z[i] > r) {
+      l = i;
+      r = i + z[i];
     }
-    return z;
+  }
+  return z;
 }
- 
-int main(){
-	ios_base::sync_with_stdio(0); cin.tie(0);
- 
-    string s; cin >> s;
-    auto z = z_function(s);
- 
-    for(int i = z.size()-1; i >= 0; --i)
-        if(z[i] == z.size()-i) cout << z[i] << ' ';
-    cout << endl;
- 
-	return 0;
+
+int main() {
+  fastio
+
+  string s; cin >> s;
+  auto z = z_function(s);
+
+  for (int i = z.size() - 1; i >= 0; --i)
+    if (z[i] == z.size() - i) cout << z[i] << ' ';
+  cout << endl;
+
+  return 0;
 }

@@ -1,51 +1,46 @@
 /*
-    Beecrowd 1025 - Onde está o Mármore?
-    https://judge.beecrowd.com/pt/problems/view/1025
+  Beecrowd 1025 - Onde está o Mármore?
+  https://judge.beecrowd.com/pt/problems/view/1025
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-using ull = unsigned long long;
 
-int achar(vector <int> v, int x){
-    for(int i = 0; i < v.size(); i++)
-    {
-        if(x == v[i]) return i+1;
-    }
-    return 0;
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
+
+int achar(vector<int> v, int x) {
+  for (int i = 0; i < v.size(); i++) {
+    if (x == v[i]) return i + 1;
+  }
+  return 0;
 }
 
-int main(){
-    ios::sync_with_stdio(0);
-    cin.tie(0);
+int main() {
+  fastio
 
-    int caso = 1, n, q, x;
+  ios::sync_with_stdio(0);
+  cin.tie(0);
 
-    while(1)
-    {
-        cin >> n >> q;
-        if(n == 0 && q == 0)break;
-        printf("CASE# %i:\n", caso++);
+  int caso = 1, n, q, x;
 
-        vector <int> v(n);
-        for(int i = 0; i < n; i++)
-        {
-            cin >> v[i];
-        }
-        sort(v.begin(), v.end());
-        for(int i = 0; i < q; i++){
-            cin >> x;
+  while (1) {
+    cin >> n >> q;
+    if (n == 0 && q == 0) break;
+    printf("CASE# %i:\n", caso++);
 
-            int pos = achar(v, x);
-            if(pos)
-                printf("%i found at %i\n", x, pos);
-            else
-                printf("%i not found\n", x);
-        }
-                
+    vector<int> v(n);
+    for (int i = 0; i < n; i++) { cin >> v[i]; }
+    sort(v.begin(), v.end());
+    for (int i = 0; i < q; i++) {
+      cin >> x;
+
+      int pos = achar(v, x);
+      if (pos) printf("%i found at %i\n", x, pos);
+      else
+        printf("%i not found\n", x);
     }
-    
+  }
 
-    return 0;
+  return 0;
 }

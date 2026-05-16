@@ -1,36 +1,37 @@
 /*
-    Maratona Mineira 2022F - Caindo de Paraquedas
-    https://codeforces.com/group/YgJmumGtHD/contest/103794/problem/F
+  Maratona Mineira 2022F - Caindo de Paraquedas
+  https://codeforces.com/group/YgJmumGtHD/contest/103794/problem/F
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-using ull = unsigned long long;
 
-int main(){
-    ios_base::sync_with_stdio(0); cin.tie(0);
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
 
-    ll g; cin >> g;
-    string str; cin >> str;
+int main() {
+  fastio
 
-    ll sum = 0, e = 0, d = 0; 
-    for(auto &c : str){
-        if(c == 'D'){
-            sum += g;
-        }
-        else sum -= g;
+  ll g; cin >> g;
+  string str; cin >> str;
 
-        e = min(e, sum);
-        d = max(d, sum);
+  ll sum = 0, e = 0, d = 0;
+  for (auto &c : str) {
+    if (c == 'D') {
+      sum += g;
+    } else
+      sum -= g;
 
-        if(d + abs(e) >= 360 || sum >= 360){
-            cout << "S\n";
-            return 0;
-        }
-    }  
+    e = min(e, sum);
+    d = max(d, sum);
 
-    cout << "N\n";
+    if (d + abs(e) >= 360 || sum >= 360) {
+      cout << "S\n";
+      return 0;
+    }
+  }
 
-    return 0;
+  cout << "N\n";
+
+  return 0;
 }

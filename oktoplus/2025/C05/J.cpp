@@ -1,34 +1,34 @@
 /*
-    Beecrowd 2835 - Elevador
-    https://judge.beecrowd.com/pt/problems/view/2835
+  Beecrowd 2835 - Elevador
+  https://judge.beecrowd.com/pt/problems/view/2835
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-using ull = unsigned long long;
 
-int main(){
-    int n;
-    cin >> n;
-    
-    vector <int> v(n+1, 0);
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
 
-    for(int i = 1; i <= n; i++)
-        cin >> v[i];
-    
-    sort(v.begin(), v.end());
+int main() {
+  fastio
 
-    char ans = 'S';
-    for(int i = 0; i < n; i++)
-    {
-        if(v[i+1]-v[i] > 8){
-            ans = 'N';
-            break;
-        }
+  int n; cin >> n;
+
+  vector<int> v(n + 1, 0);
+
+  for (int i = 1; i <= n; i++) cin >> v[i];
+
+  sort(v.begin(), v.end());
+
+  char ans = 'S';
+  for (int i = 0; i < n; i++) {
+    if (v[i + 1] - v[i] > 8) {
+      ans = 'N';
+      break;
     }
-    
-    printf("%c\n", ans);
+  }
 
-    return 0;
+  printf("%c\n", ans);
+
+  return 0;
 }

@@ -1,32 +1,34 @@
 /*
-    Beecrowd 1557 - Matriz Quadrada III
-    https://judge.beecrowd.com/pt/problems/view/1557
+  Beecrowd 1557 - Matriz Quadrada III
+  https://judge.beecrowd.com/pt/problems/view/1557
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-using ull = unsigned long long;
 
-int ws(int n){
-    return 1 + (int) log10(n);
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
+
+int ws(int n) {
+  return 1 + (int)log10(n);
 }
 
-int main(){
-    ios_base::sync_with_stdio(0); cin.tie(0);
-    int n;
-    while(cin >> n, n){
-        int s = ws(1 << (n+n-2));
+int main() {
+  fastio
+  int n;
+  while (cin >> n, n) {
+    int s = ws(1 << (n + n - 2));
 
-        for(int i = 0; i < n; ++i){
-            for(int j = 0; j < n; ++j){
-                cout << setw(s) << (1 << (i+j));
-                if(j == n-1) cout << '\n';
-                else cout << ' ';       
-            }
-        }
-        cout << '\n';
+    for (int i = 0; i < n; ++i) {
+      for (int j = 0; j < n; ++j) {
+        cout << setw(s) << (1 << (i + j));
+        if (j == n - 1) cout << '\n';
+        else
+          cout << ' ';
+      }
     }
+    cout << '\n';
+  }
 
-    return 0;
+  return 0;
 }

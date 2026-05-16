@@ -1,61 +1,61 @@
 /*
-    Codeforces 101845C - Cryptography
-    https://codeforces.com/gym/101845/problem/C
+  Codeforces 101845C - Cryptography
+  https://codeforces.com/gym/101845/problem/C
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-using ull = unsigned long long;
-const ll N = 126-33+1, INF = 1e18;
-vector <vector <ll>> dist(N,vector<ll>(N,INF)), peso(N,vector<ll>(N,INF));
 
-void floyd_warshall(){
-    for(ll i = 0; i < N; ++i){
-        for(ll j = 0; j < N; ++j){
-            dist[i][j] = peso[i][j];
-            if(i==j) dist[i][j] = 0;
-        }
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
+const ll N = 126 - 33 + 1, INF = 1e18;
+vector<vector<ll>> dist(N, vector<ll>(N, INF)), peso(N, vector<ll>(N, INF));
+
+void floyd_warshall() {
+  for (ll i = 0; i < N; ++i) {
+    for (ll j = 0; j < N; ++j) {
+      dist[i][j] = peso[i][j];
+      if (i == j) dist[i][j] = 0;
     }
+  }
 
-    for(ll k = 0; k < N; ++k)
-        for(ll i = 0; i < N; ++i)
-            for(ll j = 0; j < N; ++j)
-                dist[i][j] = min(dist[i][j], dist[i][k] + dist[k][j]);
+  for (ll k = 0; k < N; ++k)
+    for (ll i = 0; i < N; ++i)
+      for (ll j = 0; j < N; ++j) dist[i][j] = min(dist[i][j], dist[i][k] + dist[k][j]);
 }
 
-int main(){
-    ios_base::sync_with_stdio(0); cin.tie(0);
-    
-    string s, t;
-    cin >> s >> t;
+int main() {
+  fastio
 
-    int m; cin >> m;
+  string s, t;
+  cin >> s >> t;
 
-    while(m--){
-        char a, b; ll c;
-        cin >> a >> b >> c;
-        peso[a-33][b-33] = min(peso[a-33][b-33],c);
-    }
+  int m; cin >> m;
 
-    floyd_warshall();
-    ll ans = 0;
-    bool flag = true;
-    cerr << dist['o'-33]['d'-33] << "\n";
+  while (m--) {
+    char a, b;
+    ll c;
+    cin >> a >> b >> c;
+    peso[a - 33][b - 33] = min(peso[a - 33][b - 33], c);
+  }
 
-    for(int i = 0; i < s.size(); ++i){
-        ll d = dist[ s[i] - 33 ][ t[i] - 33 ];
+  floyd_warshall();
+  ll ans = 0;
+  bool flag = true;
+  cerr << dist['o' - 33]['d' - 33] << "\n";
 
-        if(d == INF){
-            flag = false;
-            break;
-        }
-        else
-            ans += d;
-    }
+  for (int i = 0; i < s.size(); ++i) {
+    ll d = dist[s[i] - 33][t[i] - 33];
 
-    cout << (flag ? ans : -1) << "\n";
-    cerr << "ans = " <<  ans << endl;
+    if (d == INF) {
+      flag = false;
+      break;
+    } else
+      ans += d;
+  }
 
-    return 0;
+  cout << (flag ? ans : -1) << "\n";
+  cerr << "ans = " << ans << endl;
+
+  return 0;
 }

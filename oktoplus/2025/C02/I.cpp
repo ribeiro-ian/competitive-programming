@@ -1,42 +1,45 @@
 /*
-    Beecrowd 2292 - Painel LED
-    https://judge.beecrowd.com/pt/problems/view/2292
+  Beecrowd 2292 - Painel LED
+  https://judge.beecrowd.com/pt/problems/view/2292
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
+
 typedef unsigned long long ull;
 
-char alternar(char c){
-    return c == 'X' ? 'O' : 'X';
+char alternar(char c) {
+  return c == 'X' ? 'O' : 'X';
 }
 
-int main(){
+int main() {
+  fastio
 
-    int tc;
-    cin >> tc;
-    
-    ull c;
-    string p;
 
-    while(tc--){
-        cin >> p >> c;
-        string ans;
+  int tc; cin >> tc;
 
-        ans += c % 2 == 1 ? alternar(p[0]) : p[0];
+  ull c;
+  string p;
 
-        for(int i = 1; i < p.size(); i++){
-            if(ans[i-1] == 'X')
-                c++; // se o valor anterior trocou para X, vai ocorrer uma troca a mais
+  while (tc--) {
+    cin >> p >> c;
+    string ans;
 
-            c /= 2; // c = trocas
+    ans += c % 2 == 1 ? alternar(p[0]) : p[0];
 
-            ans += c % 2 == 1 ? alternar(p[i]) : p[i];
-        }
+    for (int i = 1; i < p.size(); i++) {
+      if (ans[i - 1] == 'X')
+        c++; // se o valor anterior trocou para X, vai ocorrer uma troca a mais
 
-        printf("%s\n", ans.c_str());
+      c /= 2; // c = trocas
+
+      ans += c % 2 == 1 ? alternar(p[i]) : p[i];
     }
 
-    return 0;
+    printf("%s\n", ans.c_str());
+  }
+
+  return 0;
 }

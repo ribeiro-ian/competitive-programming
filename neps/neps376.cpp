@@ -7,20 +7,22 @@
 using namespace std;
 using ll = long long;
 
-#define fastio ios::sync_with_stdio(0); cin.tie(0)
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
 
-vector <vector<pair<ll,ll>>> adj;
-vector <bool> visited;
-vector <ll> max_dist, min_dist, max_nivel, min_nivel;
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
+
+vector<vector<pair<ll, ll>>> adj;
+vector<bool> visited;
+vector<ll> max_dist, min_dist, max_nivel, min_nivel;
 ll n, m;
 const ll INF = 1e18;
 
 void menor_caminho(ll s) {
-  visited.assign(n+1, false);
-  min_dist.assign(n+1, INF);
-  min_nivel.assign(n+1, INF);
+  visited.assign(n + 1, false);
+  min_dist.assign(n + 1, INF);
+  min_nivel.assign(n + 1, INF);
 
-  priority_queue <pair<ll,ll>> q;
+  priority_queue<pair<ll, ll>> q;
   q.push({0, s});
   min_dist[s] = min_nivel[s] = 0;
 
@@ -32,9 +34,9 @@ void menor_caminho(ll s) {
     visited[u] = true;
 
     for (auto [v, w] : adj[u]) {
-      
+
       if (min_dist[u] + w < min_dist[v]) {
-        min_nivel[v] = min(min_nivel[v], min_nivel[u]+1);
+        min_nivel[v] = min(min_nivel[v], min_nivel[u] + 1);
         min_dist[v] = min_dist[u] + w;
         q.push({-min_dist[v], v});
       }
@@ -43,11 +45,11 @@ void menor_caminho(ll s) {
 }
 
 void caminho_direto(ll s) {
-  visited.assign(n+1, false);
-  max_dist.assign(n+1, 0);
-  max_nivel.assign(n+1, -1);
+  visited.assign(n + 1, false);
+  max_dist.assign(n + 1, 0);
+  max_nivel.assign(n + 1, -1);
 
-  queue <ll> q;
+  queue<ll> q;
   q.push(s);
   max_dist[s] = max_nivel[s] = 0;
 
@@ -59,7 +61,7 @@ void caminho_direto(ll s) {
 
     for (auto [v, w] : adj[u]) {
       if (!visited[v]) {
-        max_nivel[v] = max_nivel[u]+1;
+        max_nivel[v] = max_nivel[u] + 1;
         max_dist[v] = max_dist[u] + w;
         q.push(v);
       }
@@ -68,17 +70,17 @@ void caminho_direto(ll s) {
 }
 
 int main() {
-  ios_base::sync_with_stdio(0); cin.tie(0);
+  fastio
 
   cin >> n >> m;
-  adj.assign(n+1, vector<pair<ll,ll>>());
+  adj.assign(n + 1, vector<pair<ll, ll>>());
 
   while (m--) {
     ll a, b, c;
     cin >> a >> b >> c;
 
-    adj[a].push_back({b,c});
-    adj[b].push_back({a,c});
+    adj[a].push_back({b, c});
+    adj[b].push_back({a, c});
   }
 
   menor_caminho(1);
@@ -86,9 +88,9 @@ int main() {
 
   for (int i = 1; i <= n; ++i) {
     cerr << "No " << i << ":\n";
-    cerr << "Max: dist = " << max_dist[i] << " nivel = " << max_nivel[i] << "\n"; 
-    cerr << "Min: dist = " << min_dist[i] << " nivel = " << min_nivel[i] << "\n\n"; 
+    cerr << "Max: dist = " << max_dist[i] << " nivel = " << max_nivel[i] << "\n";
+    cerr << "Min: dist = " << min_dist[i] << " nivel = " << min_nivel[i] << "\n\n";
   }
-  
+
   return 0;
 }

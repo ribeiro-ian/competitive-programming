@@ -1,43 +1,40 @@
 /*
-    UVA 514 - Rails
-    https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=455
+  UVA 514 - Rails
+  https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=455
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-using ull = unsigned long long;
 
-int main(){
-    ios_base::sync_with_stdio(0); cin.tie(0);
-    int n, x;
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
 
-    while(cin >> n, n){
-        
-        while(1){
-            stack <int> in;
-            queue <int> out;
+int main() {
+  fastio
+  int n, x;
 
-            for(int i = 1; i <= n; i++){
-                cin >> x;
-                if(!x) break;
-                
-                out.push(x);                
-                in.push(i);
+  while (cin >> n, n) {
 
-                while(!in.empty() && in.top() == out.front()){
-                    in.pop(), out.pop();
-                }
+    while (1) {
+      stack<int> in;
+      queue<int> out;
 
-            }
-            
-            if(!x) break;
-            
-            
-            cout << (in.empty() ? "Yes" : "No") << '\n';
-        }
-        cout << '\n';
+      for (int i = 1; i <= n; i++) {
+        cin >> x;
+        if (!x) break;
+
+        out.push(x);
+        in.push(i);
+
+        while (!in.empty() && in.top() == out.front()) { in.pop(), out.pop(); }
+      }
+
+      if (!x) break;
+
+      cout << (in.empty() ? "Yes" : "No") << '\n';
     }
+    cout << '\n';
+  }
 
-    return 0;
+  return 0;
 }

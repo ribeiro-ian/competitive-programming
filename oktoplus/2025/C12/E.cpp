@@ -1,42 +1,36 @@
 /*
-    Beecrowd 1179 - Preenchimento de Vetor IV
-    https://judge.beecrowd.com/pt/problems/view/1179
+  Beecrowd 1179 - Preenchimento de Vetor IV
+  https://judge.beecrowd.com/pt/problems/view/1179
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-using ull = unsigned long long;
 
-int main(){
-    ios_base::sync_with_stdio(0); cin.tie(0);
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
 
-    int n;
-    vector <int> par, impar;
-    while(cin >> n){
-        if(n%2) impar.push_back(n);
-        else par.push_back(n);
+int main() {
+  fastio
 
-        if(par.size() == 5){
-            for(int i = 0; i < 5; ++i){
-                printf("par[%i] = %i\n", i, par[i]);
-            }
-            par.clear();
-        }
-        if(impar.size() == 5){
-            for(int i = 0; i < 5; ++i){
-                printf("impar[%i] = %i\n", i, impar[i]);
-            }
-            impar.clear();
-        }
+  int n;
+  vector<int> par, impar;
+  while (cin >> n) {
+    if (n % 2) impar.push_back(n);
+    else
+      par.push_back(n);
+
+    if (par.size() == 5) {
+      for (int i = 0; i < 5; ++i) { printf("par[%i] = %i\n", i, par[i]); }
+      par.clear();
     }
-
-    for(int i = 0; i < impar.size(); ++i){
-        printf("impar[%i] = %i\n", i, impar[i]);
+    if (impar.size() == 5) {
+      for (int i = 0; i < 5; ++i) { printf("impar[%i] = %i\n", i, impar[i]); }
+      impar.clear();
     }
-    for(int i = 0; i < par.size(); ++i){
-        printf("par[%i] = %i\n", i, par[i]);
-    }
+  }
 
-    return 0;
+  for (int i = 0; i < impar.size(); ++i) { printf("impar[%i] = %i\n", i, impar[i]); }
+  for (int i = 0; i < par.size(); ++i) { printf("par[%i] = %i\n", i, par[i]); }
+
+  return 0;
 }

@@ -1,31 +1,28 @@
 /*
-    CSES 1081 - Common Divisors
-    https://cses.fi/problemset/task/1081
+  CSES 1081 - Common Divisors
+  https://cses.fi/problemset/task/1081
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-using ull = unsigned long long;
-map <int, int> cnt;
 
-int mdc(int a, int b){
-   if(b == 0) return a;
-   return mdc(b, a%b);
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
+map<int, int> cnt;
+
+int mdc(int a, int b) {
+  if (b == 0) return a;
+  return mdc(b, a % b);
 }
 
+int main() {
+  fastio
 
-int main(){
-    ios_base::sync_with_stdio(0); cin.tie(0);
+  int n; cin >> n;
+  vector<ll> v(n);
+  for (auto &i : v) { cin >> i; }
 
-    int n; cin >> n;
-    vector <ll> v(n);
-    for(auto &i : v){
-        cin >> i;
-    }
-    
-    
-    cout << ans << '\n';
+  // cout << ans << '\n';
 
-    return 0;
+  return 0;
 }

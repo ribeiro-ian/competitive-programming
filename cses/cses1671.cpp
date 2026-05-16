@@ -1,61 +1,61 @@
 /*
-    CSES 1671 - Shortest Routes I
-    https://cses.fi/problemset/task/1671
+  CSES 1671 - Shortest Routes I
+  https://cses.fi/problemset/task/1671
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-using ull = unsigned long long;
-typedef pair<ll,ll> pll;
+
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
+typedef pair<ll, ll> pll;
 const ll INF = 1e18;
 
-vector <vector <pll>> adj;
-vector <ll> dist;
+vector<vector<pll>> adj;
+vector<ll> dist;
 ll n, m;
 
-void dijsktra(ll s){
-    vector <bool> visited(n+1, false);
-    dist.assign(n+1, INF);
+void dijsktra(ll s) {
+  vector<bool> visited(n + 1, false);
+  dist.assign(n + 1, INF);
 
-    priority_queue <pll> q;
-    dist[s] = 0;
-    q.push({0, s});
+  priority_queue<pll> q;
+  dist[s] = 0;
+  q.push({0, s});
 
-    while(!q.empty()){
-        ll u = q.top().second;
-        q.pop();
+  while (!q.empty()) {
+    ll u = q.top().second;
+    q.pop();
 
-        if(visited[u]) continue;
-        visited[u] = true;
+    if (visited[u]) continue;
+    visited[u] = true;
 
-        for(auto [v,w] : adj[u]){
-            if(dist[u] + w < dist[v]){
-                dist[v] = dist[u] + w;
-                q.push({-dist[v], v});
-            }
-        }
+    for (auto [v, w] : adj[u]) {
+      if (dist[u] + w < dist[v]) {
+        dist[v] = dist[u] + w;
+        q.push({-dist[v], v});
+      }
     }
+  }
 }
 
-int main(){
-    ios_base::sync_with_stdio(0); cin.tie(0);
+int main() {
+  fastio
 
-    cin >> n >> m;
-    adj.assign(n+1, vector <pll>());
+  cin >> n >> m;
+  adj.assign(n + 1, vector<pll>());
 
-    while(m--){
-        ll a, b, c;
-        cin >> a >> b >> c;
+  while (m--) {
+    ll a, b, c;
+    cin >> a >> b >> c;
 
-        adj[a].push_back({b, c});
-    }
+    adj[a].push_back({b, c});
+  }
 
-    dijsktra(1);
+  dijsktra(1);
 
-    for(int i = 1; i <= n; ++i) 
-        cout << dist[i] << ' ';
-    cout << '\n';
+  for (int i = 1; i <= n; ++i) cout << dist[i] << ' ';
+  cout << '\n';
 
-    return 0;
+  return 0;
 }

@@ -7,16 +7,17 @@
 using namespace std;
 using ll = long long;
 
-#define fastio ios::sync_with_stdio(0); cin.tie(0)
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
+
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
 
 int main() {
-  fastio;
+  fastio
 
   int a, b, c;
   cin >> a >> b >> c;
 
-  if (a * b == c) 
-    cout << "S\n";
+  if (a * b == c) cout << "S\n";
   else
     cout << "N\n";
 

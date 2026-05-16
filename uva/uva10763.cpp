@@ -1,35 +1,35 @@
 /*
-    UVA 10763 - Foreign Exchange
-    https://vjudge.net/problem/UVA-10763
+  UVA 10763 - Foreign Exchange
+  https://vjudge.net/problem/UVA-10763
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
 
-void solve(int n){
-    multiset<pair<int,int>> freq;
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
 
-    while(n--){
-        int from, to;
-        cin >> from >> to;
-        auto it = freq.find({to, from});
-        
-        if(it != freq.end())
-            freq.erase(it);
-        else
-            freq.insert({from, to});
-    }
+void solve(int n) {
+  multiset<pair<int, int>> freq;
 
-    cout << (freq.empty() ? "YES" : "NO") << '\n';
+  while (n--) {
+    int from, to;
+    cin >> from >> to;
+    auto it = freq.find({to, from});
+
+    if (it != freq.end()) freq.erase(it);
+    else
+      freq.insert({from, to});
+  }
+
+  cout << (freq.empty() ? "YES" : "NO") << '\n';
 }
 
-int main(){
-    ios_base::sync_with_stdio(0); cin.tie(0);
+int main() {
+  fastio
 
-    int n;
-    while(cin >> n, n)
-        solve(n);
+  int n;
+  while (cin >> n, n) solve(n);
 
-    return 0;
+  return 0;
 }

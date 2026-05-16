@@ -1,21 +1,22 @@
 /*
-    Codeforces 1514 - Product 1 Modulo N
-    https://codeforces.com/problemset/problem/1514/C
+  Codeforces 1514 - Product 1 Modulo N
+  https://codeforces.com/problemset/problem/1514/C
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-using ull = unsigned long long;
 
-int main(){
-    ios_base::sync_with_stdio(0); cin.tie(0);
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
 
-    /*
-    1 * 3  = 3 % 8 = 3
-    3 * 5 = 15 % 8 = 7
-    7 * 7 = 49 % 8 = 1
-    */    
+int main() {
+  fastio
 
-    return 0;
+  /*
+  1 * 3  = 3 % 8 = 3
+  3 * 5 = 15 % 8 = 7
+  7 * 7 = 49 % 8 = 1
+  */
+
+  return 0;
 }

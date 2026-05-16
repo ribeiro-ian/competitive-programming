@@ -1,29 +1,28 @@
 /*
-    Codeforces 1315A - Dead Pixel
-    https://codeforces.com/problemset/problem/1315/A
+  Codeforces 1315A - Dead Pixel
+  https://codeforces.com/problemset/problem/1315/A
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-using ull = unsigned long long;
 
-void solve(){
-    int a,b,x,y;
-    cin >> a >> b >> x >> y;
-    
-    x++, y++;
-    cout << max(y, b-y) * a << " ";
-    cout << max(x, a-x) * b << "\n";
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
+
+void solve() {
+  int a, b, x, y;
+  cin >> a >> b >> x >> y;
+
+  x++, y++;
+  cout << max(y, b - y) * a << " ";
+  cout << max(x, a - x) * b << "\n";
 }
 
-int main(){
-    ios_base::sync_with_stdio(0); cin.tie(0);
+int main() {
+  fastio
 
-    int tc; cin >> tc;
-    while(tc--){
-        solve();
-    }
+  int tc; cin >> tc;
+  while (tc--) { solve(); }
 
-    return 0;
+  return 0;
 }

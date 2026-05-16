@@ -1,31 +1,33 @@
 /*
-    Beecrowd 2520 - O Último Analógimôn
-    https://judge.beecrowd.com/pt/problems/view/2520
+  Beecrowd 2520 - O Último Analógimôn
+  https://judge.beecrowd.com/pt/problems/view/2520
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
 
-int main(){
-    ios_base::sync_with_stdio(0); cin.tie(0);
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
 
-    int n, m;
-    while(cin >> n >> m){   
-        pair<int,int> eu, bixo;
+int main() {
+  fastio
 
-        for(int i = 0; i < n; ++i){
-            for(int j = 0; j < m; ++j){
-                int x; cin >> x;
+  int n, m;
+  while (cin >> n >> m) {
+    pair<int, int> eu, bixo;
 
-                if(x==1) 
-                    eu = {i,j};
-                else if(x==2)
-                    bixo = {i,j};
-            }
-        }
-        cout << abs(eu.first-bixo.first)+abs(eu.second-bixo.second) << '\n';
+    for (int i = 0; i < n; ++i) {
+      for (int j = 0; j < m; ++j) {
+        int x; cin >> x;
+
+        if (x == 1)
+          eu = {i, j};
+        else if (x == 2)
+          bixo = {i, j};
+      }
     }
+    cout << abs(eu.first - bixo.first) + abs(eu.second - bixo.second) << '\n';
+  }
 
-    return 0;
+  return 0;
 }

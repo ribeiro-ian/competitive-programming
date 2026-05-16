@@ -7,7 +7,9 @@
 using namespace std;
 using ll = long long;
 
-#define fastio ios::sync_with_stdio(0); cin.tie(0)
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
+
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
 const int J = 4, C = 3;
 
 int jog[J][C];
@@ -49,7 +51,8 @@ void rodada(int idx) {
           idx = i;
 
           if (j % 2 == 0) maior1 = max(maior1, arr[i]);
-          else maior2 = max(maior2, arr[i]);
+          else
+            maior2 = max(maior2, arr[i]);
         }
       }
     }
@@ -60,7 +63,8 @@ void rodada(int idx) {
           idx = i;
 
           if (j % 2 == 0) maior1 = max(maior1, arr[i]);
-          else maior2 = max(maior2, arr[i]);
+          else
+            maior2 = max(maior2, arr[i]);
           break;
         }
       }
@@ -74,16 +78,14 @@ void rodada(int idx) {
     arr[idx] = 0;
   }
 
-  if (maior1 == maior2) 
-    cout << "0 ";
-  else if (maiorIdx % 2 == 0) 
-    cout << "1 ";
-  else 
+  if (maior1 == maior2) cout << "0 ";
+  else if (maiorIdx % 2 == 0) cout << "1 ";
+  else
     cout << "2 ";
 }
 
 int main() {
-  fastio;
+  fastio
 
   definirPontos();
 
@@ -96,7 +98,8 @@ int main() {
         string aux;
         aux += s[0];
         jog[i][j] = pontos[aux];
-      } else {
+      }
+      else {
         jog[i][j] = pontos[s];
       }
     }

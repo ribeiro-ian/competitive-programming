@@ -1,48 +1,47 @@
 /*
-    Beecrowd 2654 - Godofor
-    https://judge.beecrowd.com/pt/problems/view/2654
+  Beecrowd 2654 - Godofor
+  https://judge.beecrowd.com/pt/problems/view/2654
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-using ull = unsigned long long;
+
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
 
 typedef struct
 {
-    string nome;
-    int poder, kills, mortes;
-} candidato; 
+  string nome;
+  int poder, kills, mortes;
+} candidato;
 
-bool cmp(candidato a, candidato b){
-    if(a.poder != b.poder)
-        return a.poder > b.poder;
+bool cmp(candidato a, candidato b) {
+  if (a.poder != b.poder) return a.poder > b.poder;
 
-    if(a.kills != b.kills)
-        return a.kills > b.kills;
+  if (a.kills != b.kills) return a.kills > b.kills;
 
-    if(a.mortes != b.mortes)
-        return a.mortes < b.mortes;
+  if (a.mortes != b.mortes) return a.mortes < b.mortes;
 
-    return a.nome < b.nome;
+  return a.nome < b.nome;
 }
 
-int main(){
+int main() {
+  fastio
 
-    int n; cin >> n;
 
-    vector <candidato> v(n);
+  int n; cin >> n;
 
-    for(int i = 0; i < n; i++)
-    {
-        cin >> v[i].nome;   
-        // printf("%s\n", v[i].first.c_str());
-        cin >> v[i].poder >> v[i].kills >> v[i].mortes;
-    }
+  vector<candidato> v(n);
 
-    sort(v.begin(), v.end(), cmp);
+  for (int i = 0; i < n; i++) {
+    cin >> v[i].nome;
+    // printf("%s\n", v[i].first.c_str());
+    cin >> v[i].poder >> v[i].kills >> v[i].mortes;
+  }
 
-    printf("%s\n", v[0].nome.c_str());
+  sort(v.begin(), v.end(), cmp);
 
-    return 0;
+  printf("%s\n", v[0].nome.c_str());
+
+  return 0;
 }

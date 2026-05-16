@@ -1,26 +1,26 @@
 /*
-    CSES 1621 - Distinct Numbers
-    https://cses.fi/problemset/task/1621
+  CSES 1621 - Distinct Numbers
+  https://cses.fi/problemset/task/1621
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-using ull = unsigned long long;
 
-int main(){
-    ios_base::sync_with_stdio(0); cin.tie(0);
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
 
-    int n, x;
-    cin >> n;
+int main() {
+  fastio
 
-    set <int> s;
-    for(int i = 0; i < n; i++){
-        cin >> x;
-        s.insert(x);
-    }
+  int n, x; cin >> n;
 
-    cout << s.size() << '\n';
+  set<int> s;
+  for (int i = 0; i < n; i++) {
+    cin >> x;
+    s.insert(x);
+  }
 
-    return 0;
+  cout << s.size() << '\n';
+
+  return 0;
 }

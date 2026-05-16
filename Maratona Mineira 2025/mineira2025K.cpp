@@ -6,12 +6,14 @@
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
+
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
 using pii = pair<int, int>;
 
-#define fastio ios::sync_with_stdio(0); cin.tie(0)
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
 
 int main() {
-  fastio;
+  fastio
 
   int n; cin >> n;
   vector<pii> loc(n);

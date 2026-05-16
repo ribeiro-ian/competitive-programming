@@ -1,35 +1,37 @@
 /*
-    Beecrowd 2227 - Aeroporto
-    https://judge.beecrowd.com/pt/problems/view/2227
+  Beecrowd 2227 - Aeroporto
+  https://judge.beecrowd.com/pt/problems/view/2227
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-using ull = unsigned long long;
 
-int main(){
-    int a, v, x, y, teste = 1;
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
 
-    while(scanf("%i%i", &a, &v), a && v){
-        vector <int> voos (a+1, 0);
+int main() {
+  fastio
 
-        int maior = 0;
-        for(int i = 0; i < v; i++){
-            scanf("%i%i", &x, &y);
+  int a, v, x, y, teste = 1;
 
-            voos[x]++;
-            voos[y]++;
-            maior = max(maior, max(voos[x], voos[y]));
-        }
+  while (scanf("%i%i", &a, &v), a && v) {
+    vector<int> voos(a + 1, 0);
 
-        printf("Teste %i\n", teste++);
-        for(int i = 1; i <= a; i++){
-            if(voos[i] == maior)
-                printf("%i ", i);
-        }
-        printf("\n\n");
+    int maior = 0;
+    for (int i = 0; i < v; i++) {
+      scanf("%i%i", &x, &y);
+
+      voos[x]++;
+      voos[y]++;
+      maior = max(maior, max(voos[x], voos[y]));
     }
 
-    return 0;
+    printf("Teste %i\n", teste++);
+    for (int i = 1; i <= a; i++) {
+      if (voos[i] == maior) printf("%i ", i);
+    }
+    printf("\n\n");
+  }
+
+  return 0;
 }

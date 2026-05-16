@@ -1,42 +1,42 @@
 /*
-    CSES 1640 - Sum of Two Values
-    https://cses.fi/problemset/task/1640
+  CSES 1640 - Sum of Two Values
+  https://cses.fi/problemset/task/1640
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-using ull = unsigned long long;
-typedef pair<int,int> pii;
 
-int main(){
-    ios_base::sync_with_stdio(0); cin.tie(0);
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
+typedef pair<int, int> pii;
 
-    ll n, x;
-    cin >> n >> x;
+int main() {
+  fastio
 
-    pii a[n];
-    for(int i = 0; i < n; i++){
-       cin >> a[i].first;
-       a[i].second = i+1;
+  ll n, x;
+  cin >> n >> x;
+
+  pii a[n];
+  for (int i = 0; i < n; i++) {
+    cin >> a[i].first;
+    a[i].second = i + 1;
+  }
+
+  sort(a, a + n);
+  int l = 0, r = n - 1;
+  while (l < r) {
+    int sum = a[l].first + a[r].first;
+    if (sum == x) {
+      cout << a[l].second << ' ' << a[r].second << '\n';
+      return 0;
+    } else if (sum > x) {
+      r--;
     }
-
-    sort(a,a+n);
-    int l = 0, r = n -1;
-    while(l < r){
-        int sum = a[l].first + a[r].first;
-        if(sum == x){
-            cout << a[l].second << ' ' << a[r].second << '\n';
-            return 0;
-        }
-        else if(sum > x){
-            r--;
-        }
-        else {
-            l++;
-        }
+    else {
+      l++;
     }
-    cout << "IMPOSSIBLE\n";
+  }
+  cout << "IMPOSSIBLE\n";
 
-    return 0;
+  return 0;
 }

@@ -1,34 +1,35 @@
 /*
-    CSES 2428 - Distinct Values Subarrays II
-    https://cses.fi/problemset/task/2428
+  CSES 2428 - Distinct Values Subarrays II
+  https://cses.fi/problemset/task/2428
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-using ull = unsigned long long;
 
-int main(){
-    ios_base::sync_with_stdio(0); cin.tie(0);
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
 
-    ll n, k;
-    cin >> n >> k;
-    vector <ll> v(n);
-    for(auto &i : v) cin >> i;
+int main() {
+  fastio
 
-    unordered_map<ll,ll> freq;
-    ll cnt = 0;
-    for(ll l = 0, r = 0; r < n; ++r){
-        freq[v[r]]++;
-        while(freq.size() > k){
-            freq[v[l]]--;
-            if(!freq[v[l]]) freq.erase(v[l]);
-            l++;
-        }
-        cnt += r-l+1;
+  ll n, k;
+  cin >> n >> k;
+  vector<ll> v(n);
+  for (auto &i : v) cin >> i;
+
+  unordered_map<ll, ll> freq;
+  ll cnt = 0;
+  for (ll l = 0, r = 0; r < n; ++r) {
+    freq[v[r]]++;
+    while (freq.size() > k) {
+      freq[v[l]]--;
+      if (!freq[v[l]]) freq.erase(v[l]);
+      l++;
     }
+    cnt += r - l + 1;
+  }
 
-    cout << cnt << '\n';
-    
-    return 0;
+  cout << cnt << '\n';
+
+  return 0;
 }

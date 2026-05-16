@@ -1,29 +1,31 @@
 /*
-    Beecrowd 1235 - De Dentro para Fora
-    https://judge.beecrowd.com/pt/problems/view/1235
+  Beecrowd 1235 - De Dentro para Fora
+  https://judge.beecrowd.com/pt/problems/view/1235
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 
-int main(){
-    int tc;
-    string str;
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
 
-    cin >> tc;
-    cin.ignore();
+int main() {
+  fastio
 
-    while(tc--){
-        getline(cin, str);
+  int tc;
+  string str;
 
-        for(int i = str.size()/2-1; i >= 0; i--)
-            printf("%c", stri);
-        
-        for(int i = str.size()-1; i >= str.size()/2; i--)
-            printf("%c", str[i]);
-        
-        printf("\n");
-    }
+  cin >> tc;
+  cin.ignore();
 
-    return 0;
+  while (tc--) {
+    getline(cin, str);
+
+    for (int i = str.size() / 2 - 1; i >= 0; i--) printf("%c", str);
+
+    for (int i = str.size() - 1; i >= str.size() / 2; i--) printf("%c", str[i]);
+
+    printf("\n");
+  }
+
+  return 0;
 }

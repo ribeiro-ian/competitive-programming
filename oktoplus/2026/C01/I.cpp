@@ -2,17 +2,17 @@
 using namespace std;
 using ll = long long;
 
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
+
 string k;
 
-int main(){
-    ios_base::sync_with_stdio(0); cin.tie(0);
+int main() {
+  fastio
 
-    cin >> k;
-    int n; cin >> n;
-    string str;
-    while(n--){
-        cin >> str;
-    }
+  cin >> k;
+  int n; cin >> n;
+  string str;
+  while (n--) { cin >> str; }
 
-    return 0;
+  return 0;
 }

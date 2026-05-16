@@ -1,44 +1,47 @@
 /*
-    UVA 410 - Station Balance
-    https://vjudge.net/problem/UVA-410
+  UVA 410 - Station Balance
+  https://vjudge.net/problem/UVA-410
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-using ull = unsigned long long;
 
-int main(){
-    int c, s, set = 1, x;
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
 
-    while(cin >> c >> s){
-        int n = 2*c;
-        int v[n] = {0};
-        double avg = 0, imbalance = 0;
+int main() {
+  fastio
 
-        for(int i = 0; i < s; i++){
-            cin >> v[i];
-            avg += v[i];
-        }
-        avg /= c;
+  int c, s, set = 1, x;
 
-        sort(v,v+n);
+  while (cin >> c >> s) {
+    int n = 2 * c;
+    int v[n] = {0};
+    double avg = 0, imbalance = 0;
 
-        printf("Set #%i\n", set++);
+    for (int i = 0; i < s; i++) {
+      cin >> v[i];
+      avg += v[i];
+    }
+    avg /= c;
 
-        for(int i = 0; i < c; i++){
-            int chamber = v[i] + v[n-1-i];
-            
-            cout << " " << i << ":";
-            if(v[i]) cout << " " << v[i];
-            if(v[n-1-i]) cout << " " << v[n-1-i];
-            cout << "\n";
+    sort(v, v + n);
 
-            imbalance += abs(chamber-avg);
-        }
+    printf("Set #%i\n", set++);
 
-        printf("IMBALANCE = %.5f\n\n", imbalance);
+    for (int i = 0; i < c; i++) {
+      int chamber = v[i] + v[n - 1 - i];
+
+      cout << " " << i << ":";
+      if (v[i]) cout << " " << v[i];
+      if (v[n - 1 - i]) cout << " " << v[n - 1 - i];
+      cout << "\n";
+
+      imbalance += abs(chamber - avg);
     }
 
-    return 0;
+    printf("IMBALANCE = %.5f\n\n", imbalance);
+  }
+
+  return 0;
 }

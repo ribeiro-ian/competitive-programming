@@ -1,26 +1,29 @@
 /*
-    Codeforces 946A - Partition
-    https://codeforces.com/contest/946/problem/A
+  Codeforces 946A - Partition
+  https://codeforces.com/contest/946/problem/A
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-using ull = unsigned long long;
 
-int main(){
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
 
-    int n, x;
-    scanf("%i", &n);
+int main() {
+  fastio
 
-    int sum = 0;
-    for(int i = 0; i < n; i++){
-        scanf("%i", &x);
 
-        sum += abs(x);
-    }
+  int n, x;
+  scanf("%i", &n);
 
-    printf("%i\n", sum);
+  int sum = 0;
+  for (int i = 0; i < n; i++) {
+    scanf("%i", &x);
 
-    return 0;
+    sum += abs(x);
+  }
+
+  printf("%i\n", sum);
+
+  return 0;
 }

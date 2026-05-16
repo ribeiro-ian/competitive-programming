@@ -7,10 +7,12 @@
 using namespace std;
 using ll = long long;
 
-#define fastio ios::sync_with_stdio(0); cin.tie(0)
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
+
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
 
 int main() {
-  fastio;
+  fastio
 
   ll n; cin >> n;
   vector<pair<ll, ll>> v(n);

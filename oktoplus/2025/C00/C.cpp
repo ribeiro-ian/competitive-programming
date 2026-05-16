@@ -1,68 +1,69 @@
 /*
-    Beecrowd 2327 - Quadrados
-    https://judge.beecrowd.com/pt/problems/view/2327
+  Beecrowd 2327 - Quadrados
+  https://judge.beecrowd.com/pt/problems/view/2327
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 
-void ehQuad(int soma, int somaQuad){
-    if(soma != somaQuad){
-        printf("-1\n");
-        exit(0);
-    }
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
+
+void ehQuad(int soma, int somaQuad) {
+  if (soma != somaQuad) {
+    printf("-1\n");
+    exit(0);
+  }
 }
 
-int main(){
-    int n; cin >> n;
+int main() {
+  fastio
 
-    int matriz[n][n], soma, somaQuad = 0;
+  int n; cin >> n;
 
-    for(int i = 0; i < n; i++)
-        for(int j = 0; j < n; j++)
-            cin >> matriz[i][j];
+  int matriz[n][n], soma, somaQuad = 0;
 
-    // Soma do Quadrado Magico
-    for(int i = 0; i < n; i++)
-        somaQuad += matriz[0][i]; // linha 1
+  for (int i = 0; i < n; i++)
+    for (int j = 0; j < n; j++) cin >> matriz[i][j];
 
-    // Soma linhas
-    for(int i = 0; i < n; i++){
-        soma = 0;
+  // Soma do Quadrado Magico
+  for (int i = 0; i < n; i++)
+    somaQuad += matriz[0][i]; // linha 1
 
-        for(int j = 0; j < n; j++)
-            soma += matriz[i][j];
-        
-        ehQuad(soma, somaQuad);
-    }
-    
-    // Soma colunas
-    for(int i = 0; i < n; i++){
-        soma = 0;
-
-        for(int j = 0; j < n; j++)
-            soma += matriz[j][i];
-        
-        ehQuad(soma, somaQuad);
-    }
-
-    // Soma coluna principal
+  // Soma linhas
+  for (int i = 0; i < n; i++) {
     soma = 0;
-    for(int i = 0; i < n; i++)
-        for(int j = 0; j < n; j++)
-            if(i == j) soma += matriz[i][j];
-        
+
+    for (int j = 0; j < n; j++) soma += matriz[i][j];
+
     ehQuad(soma, somaQuad);
-        
-    // Soma coluna secundaria
+  }
+
+  // Soma colunas
+  for (int i = 0; i < n; i++) {
     soma = 0;
-    for(int i = 0; i < n; i++)
-        for(int j = 0; j < n; j++)
-            if(i + j == n-1) soma += matriz[i][j];
-        
+
+    for (int j = 0; j < n; j++) soma += matriz[j][i];
+
     ehQuad(soma, somaQuad);
+  }
 
-    printf("%i\n", somaQuad);
+  // Soma coluna principal
+  soma = 0;
+  for (int i = 0; i < n; i++)
+    for (int j = 0; j < n; j++)
+      if (i == j) soma += matriz[i][j];
 
-    return 0;
+  ehQuad(soma, somaQuad);
+
+  // Soma coluna secundaria
+  soma = 0;
+  for (int i = 0; i < n; i++)
+    for (int j = 0; j < n; j++)
+      if (i + j == n - 1) soma += matriz[i][j];
+
+  ehQuad(soma, somaQuad);
+
+  printf("%i\n", somaQuad);
+
+  return 0;
 }

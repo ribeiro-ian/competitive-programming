@@ -1,57 +1,50 @@
 /*
-    CSES 1755 - Palindrome Reorder
-    https://cses.fi/problemset/task/1755
+  CSES 1755 - Palindrome Reorder
+  https://cses.fi/problemset/task/1755
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-using ull = unsigned long long;
 
-string solve(){
-    map <char, int> mp;
-    char c;
-    while(cin >> c){
-        mp[c]++;
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
+
+string solve() {
+  map<char, int> mp;
+  char c;
+  while (cin >> c) { mp[c]++; }
+
+  int impar = 0;
+  char meio = ' ';
+  string ans = "";
+
+  for (auto &m : mp) {
+    if (m.second % 2 == 1) {
+      if (impar) return "NO SOLUTION";
+
+      impar++;
+      meio = m.first;
     }
-
-    int impar = 0;
-    char meio = ' ';
-    string ans = "";
-
-    for(auto &m : mp){
-        if(m.second % 2 == 1){
-            if(impar)
-                return "NO SOLUTION";
-
-            impar++;
-            meio = m.first;
-        }
-        else {
-            for(int i = 0; i < m.second/2; ++i){
-                ans += m.first;
-            }
-        }
+    else {
+      for (int i = 0; i < m.second / 2; ++i) { ans += m.first; }
     }
+  }
 
-    string ans2 = ans;
-    reverse(ans2.begin(), ans2.end());
-    
-    string mid = "";
-    if(meio != ' '){
-        for(int i = 0; i < mp[meio]; ++i){
-            mid += meio;
-        }
-    }
+  string ans2 = ans;
+  reverse(ans2.begin(), ans2.end());
 
-    return ans + mid + ans2;
+  string mid = "";
+  if (meio != ' ') {
+    for (int i = 0; i < mp[meio]; ++i) { mid += meio; }
+  }
 
+  return ans + mid + ans2;
 }
 
-int main(){
-    ios_base::sync_with_stdio(0); cin.tie(0);
-    
-    cout << solve() << '\n';
+int main() {
+  fastio
 
-    return 0;
+  cout << solve() << '\n';
+
+  return 0;
 }

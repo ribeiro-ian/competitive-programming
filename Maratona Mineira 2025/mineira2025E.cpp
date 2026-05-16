@@ -7,7 +7,9 @@
 using namespace std;
 using ll = long long;
 
-#define fastio ios::sync_with_stdio(0); cin.tie(0)
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
+
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
 
 const ll N = 2e5 + 1;
 vector<ll> adj[N], visited(N);
@@ -22,7 +24,7 @@ void dfs(ll u) {
 }
 
 int main() {
-  fastio;
+  fastio
 
   ll n, a, b; cin >> n;
   for (ll i = 0; i < n; ++i) {

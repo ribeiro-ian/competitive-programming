@@ -1,35 +1,36 @@
 /*
-    Codeforces 1430B - Barrels
-    https://codeforces.com/contest/1430/problem/B
+  Codeforces 1430B - Barrels
+  https://codeforces.com/contest/1430/problem/B
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-using ull = unsigned long long;
 
-int main(){
-    ll tc, n, k;
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
 
-    scanf("%lli", &tc);
-    while(tc--){
-        scanf("%lli%lli", &n, &k);
-        ll b[n];
+int main() {
+  fastio
 
-        for(int i = 0; i < n; i++){
-            scanf("%lli", &b[i]);
-        }
-        
-        sort(b,b+n);
+  ll tc, n, k;
 
-        ll sum = b[n-1];
-        while(k){
-            sum += b[n-1 - k];
-            k--;
-        }
+  scanf("%lli", &tc);
+  while (tc--) {
+    scanf("%lli%lli", &n, &k);
+    ll b[n];
 
-        printf("%lli\n", sum);
+    for (int i = 0; i < n; i++) { scanf("%lli", &b[i]); }
+
+    sort(b, b + n);
+
+    ll sum = b[n - 1];
+    while (k) {
+      sum += b[n - 1 - k];
+      k--;
     }
 
-    return 0;
+    printf("%lli\n", sum);
+  }
+
+  return 0;
 }

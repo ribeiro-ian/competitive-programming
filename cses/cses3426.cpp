@@ -1,42 +1,44 @@
 /*
-    CSES 3426 - Sliding Window Xor
-    https://cses.fi/problemset/task/3426
+  CSES 3426 - Sliding Window Xor
+  https://cses.fi/problemset/task/3426
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
 
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
+
 ll a, b, c;
-inline ll calc(ll x){
-    return (a*x + b) % c;
+inline ll calc(ll x) {
+  return (a * x + b) % c;
 }
 
-int main(){
-    ios_base::sync_with_stdio(0); cin.tie(0);
+int main() {
+  fastio
 
-    ll n, k, x;
-    cin >> n >> k;
-    cin >> x >> a >> b >> c;
+  ll n, k, x;
+  cin >> n >> k;
+  cin >> x >> a >> b >> c;
 
-    // include first val
-    ll ans, amount = x, last = x;
-    for(int i = 1; i < k; ++i){
-        x = calc(x);
-        amount ^= x;
-    }
-    ans = amount;
-    
-    for(int i = k; i < n; ++i){
-        amount ^= last;
-        last = calc(last);
+  // include first val
+  ll ans, amount = x, last = x;
+  for (int i = 1; i < k; ++i) {
+    x = calc(x);
+    amount ^= x;
+  }
+  ans = amount;
 
-        x = calc(x);
-        amount ^= x;
+  for (int i = k; i < n; ++i) {
+    amount ^= last;
+    last = calc(last);
 
-        ans ^= amount;
-    }
-    cout << ans << '\n';
+    x = calc(x);
+    amount ^= x;
 
-    return 0;
+    ans ^= amount;
+  }
+  cout << ans << '\n';
+
+  return 0;
 }

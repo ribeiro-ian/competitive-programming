@@ -1,40 +1,37 @@
 /*
-    Codeforces 101853J - Smallest Difference
-    https://codeforces.com/gym/101853/problem/J
+  Codeforces 101853J - Smallest Difference
+  https://codeforces.com/gym/101853/problem/J
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-using ull = unsigned long long;
 
-int main(){
-    ios_base::sync_with_stdio(0); cin.tie(0);
-    int tc, n;
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
 
-    cin >> tc;
-    while(tc--){
-        cin >> n;
+int main() {
+  fastio
+  int tc, n;
 
-        int a[n];
-        for(int i = 0; i < n; i++){
-            cin >> a[i];
-        }
+  cin >> tc;
+  while (tc--) {
+    cin >> n;
 
-        int ans = 0;
-        for(int l = 0; l < n-1; l++){
-            int next = l+1;
-            if(abs(a[next] - a[l]) > 1) continue;
+    int a[n];
+    for (int i = 0; i < n; i++) { cin >> a[i]; }
 
-            int r = next;
-            while(abs(a[r] - a[l]) <= 1 && abs(a[r]-a[r-1]) <= 1){
-                r++;
-            }
-            ans = max(ans, r-l);
-        }
+    int ans = 0;
+    for (int l = 0; l < n - 1; l++) {
+      int next = l + 1;
+      if (abs(a[next] - a[l]) > 1) continue;
 
-        cout << max(ans, 1) << '\n';
+      int r = next;
+      while (abs(a[r] - a[l]) <= 1 && abs(a[r] - a[r - 1]) <= 1) { r++; }
+      ans = max(ans, r - l);
     }
 
-    return 0;
+    cout << max(ans, 1) << '\n';
+  }
+
+  return 0;
 }

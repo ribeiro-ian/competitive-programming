@@ -1,17 +1,19 @@
 /*
-    CSES 1146 - Counting Bits
-    https://cses.fi/problemset/task/1146
+  CSES 1146 - Counting Bits
+  https://cses.fi/problemset/task/1146
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 
-int main(){
-    ios_base::sync_with_stdio(0); cin.tie(0);
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
 
-    //code
+int main() {
+  fastio
 
-    return 0;
+  // code
+
+  return 0;
 }
 /*
 1

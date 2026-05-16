@@ -1,32 +1,34 @@
 /*
-    Beecrowd 1393 - Lajotas Hexagonais
-    https://judge.beecrowd.com/pt/problems/view/13930
+  Beecrowd 1393 - Lajotas Hexagonais
+  https://judge.beecrowd.com/pt/problems/view/13930
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 
-int main(){
-    int n;
-    const int MAX = 40+1;
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
 
-    vector <int> pref(MAX);
-    
-    pref[0] = 0;
-    pref[1] = 1;
-    pref[2] = 2;
+int main() {
+  fastio
 
-    for(int i = 3; i < MAX; i++){
-        pref[i] = pref[i-1] + pref[i-2];
-    }
-    
-    while(1){
-        cin >> n;
-        
-        if(!n) break;
+  int n;
+  const int MAX = 40+1;
 
-        printf("%i\n", pref[n]);
-    }
+  vector<int> fib(MAX);
 
-    return 0;
+  fib[0] = 0;
+  fib[1] = 1;
+  fib[2] = 2;
+
+  for (int i = 3; i < MAX; i++) { fib[i] = fib[i - 1] + fib[i - 2]; }
+
+  while (1) {
+    cin >> n;
+
+    if (!n) break;
+
+    printf("%i\n", fib[n]);
+  }
+
+  return 0;
 }

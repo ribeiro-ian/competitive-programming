@@ -1,43 +1,44 @@
 /*
-    Beecrowd 1244 - Ordenação por Tamanho
-    https://judge.beecrowd.com/pt/problems/view/1244
+  Beecrowd 1244 - Ordenação por Tamanho
+  https://judge.beecrowd.com/pt/problems/view/1244
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-using ull = unsigned long long;
 
-bool cmp(string a, string b){
-    return a.length() > b.length();
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
+
+bool cmp(string a, string b) {
+  return a.length() > b.length();
 }
 
-int main(){
-    // ios_base::sync_with_stdio(0); cin.tie(0);
+int main() {
+  fastio
 
-    int tc; cin >> tc;
-    cin.ignore();
+  // fastio
 
-    while(tc--){    
-        string frase, palavra;
-        vector <string> palavras;
-        getline(cin, frase);
+  int tc; cin >> tc;
+  cin.ignore();
 
-        for(int i = 0; i < frase.size(); ++i){
-            if(frase[i] != ' ')
-                palavra += frase[i];
-            else {
-                palavras.push_back(palavra);
-                palavra.clear();
-            }
-        }
+  while (tc--) {
+    string frase, palavra;
+    vector<string> palavras;
+    getline(cin, frase);
+
+    for (int i = 0; i < frase.size(); ++i) {
+      if (frase[i] != ' ') palavra += frase[i];
+      else {
         palavras.push_back(palavra);
-        stable_sort(palavras.begin(), palavras.end(), cmp);
-        
-        for(int i = 0; i < palavras.size()-1; ++i)
-            cout << palavras[i] << " ";
-        cout << palavras.back() << endl;
+        palavra.clear();
+      }
     }
+    palavras.push_back(palavra);
+    stable_sort(palavras.begin(), palavras.end(), cmp);
 
-    return 0;    
+    for (int i = 0; i < palavras.size() - 1; ++i) cout << palavras[i] << " ";
+    cout << palavras.back() << endl;
+  }
+
+  return 0;
 }

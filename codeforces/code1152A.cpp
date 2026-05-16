@@ -1,39 +1,40 @@
 /*
-    Codeforces 1152A - Neko Finds Grapes
-    https://codeforces.com/contest/1152/problem/A
+  Codeforces 1152A - Neko Finds Grapes
+  https://codeforces.com/contest/1152/problem/A
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-using ull = unsigned long long;
 
-int main(){
-    int n, m, x; 
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
 
-    scanf("%i%i",&n, &m);
+int main() {
+  fastio
 
-    int odd_chests, even_chests, odd_keys, even_keys;
-    odd_chests = even_chests = odd_keys = even_keys = 0;
-    for(int i = 0; i < n; i++){
-        scanf("%i", &x);
+  int n, m, x;
 
-        if(x % 2)
-            odd_chests++;
-        else
-            even_chests++;
-    }
+  scanf("%i%i", &n, &m);
 
-    for(int i = 0; i < m; i++){
-        scanf("%i", &x);
+  int odd_chests, even_chests, odd_keys, even_keys;
+  odd_chests = even_chests = odd_keys = even_keys = 0;
+  for (int i = 0; i < n; i++) {
+    scanf("%i", &x);
 
-        if(x % 2)
-            odd_keys++;
-        else
-            even_keys++;
-    }
-    
-    printf("%i\n", min(odd_chests, even_keys) + min(even_chests, odd_keys));
+    if (x % 2) odd_chests++;
+    else
+      even_chests++;
+  }
 
-    return 0;
+  for (int i = 0; i < m; i++) {
+    scanf("%i", &x);
+
+    if (x % 2) odd_keys++;
+    else
+      even_keys++;
+  }
+
+  printf("%i\n", min(odd_chests, even_keys) + min(even_chests, odd_keys));
+
+  return 0;
 }

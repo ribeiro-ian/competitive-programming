@@ -1,44 +1,42 @@
 /*
-    CSES 1084 - Apartments
-    https://cses.fi/problemset/task/1084
+  CSES 1084 - Apartments
+  https://cses.fi/problemset/task/1084
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-using ull = unsigned long long;
 
-int main(){
-    ios_base::sync_with_stdio(0); cin.tie(0);
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
 
-    ll n, m, k;
-    cin >> n >> m >> k;
+int main() {
+  fastio
 
-    vector <ll> a(n), b(m);
+  ll n, m, k;
+  cin >> n >> m >> k;
 
-    for(auto  &i : a)
-        cin >> i;
-    for(auto  &i : b)
-        cin >> i;
+  vector<ll> a(n), b(m);
 
-    sort( a.begin(), a.end() );
-    sort( b.begin(), b.end() );
+  for (auto &i : a) cin >> i;
+  for (auto &i : b) cin >> i;
 
-    ll cnt = 0;
-    for(int i = 0, j = 0; i < n && j < m;){
-        if(b[j] < a[i] - k){
-            j++;
-        }
-        else if(b[j] > a[i] + k){
-            i++;
-        }
-        else {
-            cnt++;
-            i++, j++;
-        }
+  sort(a.begin(), a.end());
+  sort(b.begin(), b.end());
+
+  ll cnt = 0;
+  for (int i = 0, j = 0; i < n && j < m;) {
+    if (b[j] < a[i] - k) {
+      j++;
+    } else if (b[j] > a[i] + k) {
+      i++;
     }
+    else {
+      cnt++;
+      i++, j++;
+    }
+  }
 
-    cout << cnt << '\n';
+  cout << cnt << '\n';
 
-    return 0;
+  return 0;
 }

@@ -1,36 +1,38 @@
 /*
-    Beecrowd 1318 - Bilhetes Falsos
-    https://judge.beecrowd.com/pt/problems/view/1318
+  Beecrowd 1318 - Bilhetes Falsos
+  https://judge.beecrowd.com/pt/problems/view/1318
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-using ull = unsigned long long;
 
-int main(){
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
 
-    int n, m, x;
+int main() {
+  fastio
 
-    while(1){
-        scanf("%i %i", &n, &m);
 
-        if(n+m == 0) break;
-        
-        vector <int> v(n+1,0);
-        for(int i = 0; i < m; i++){
-            scanf("%i", &x);
-            v[x]++;
-        }
-        
-        int cnt = 0;
-        for(int i = 1; i <= n; i++){
-            if(v[i] > 1)
-                cnt++;
-        }
-        
-        printf("%i\n", cnt);
+  int n, m, x;
+
+  while (1) {
+    scanf("%i %i", &n, &m);
+
+    if (n + m == 0) break;
+
+    vector<int> v(n + 1, 0);
+    for (int i = 0; i < m; i++) {
+      scanf("%i", &x);
+      v[x]++;
     }
-        
-    return 0;
+
+    int cnt = 0;
+    for (int i = 1; i <= n; i++) {
+      if (v[i] > 1) cnt++;
+    }
+
+    printf("%i\n", cnt);
+  }
+
+  return 0;
 }

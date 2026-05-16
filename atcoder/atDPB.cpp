@@ -1,32 +1,35 @@
 /*
-    AtCoder DP Contest - Frog 2
-    https://atcoder.jp/contests/dp/tasks/dp_b
+  AtCoder DP Contest - Frog 2
+  https://atcoder.jp/contests/dp/tasks/dp_b
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
 
-int main(){
-    ios_base::sync_with_stdio(0); cin.tie(0);
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
 
-    int n, k; cin >> n >> k;
-    vector <int> vec(n);
-    for(auto &i : vec) cin >> i;
+int main() {
+  fastio
 
-    vector <int> dp(n,INT_MAX);
-    dp[0] = 0;
+  int n, k;
+  cin >> n >> k;
+  vector<int> vec(n);
+  for (auto &i : vec) cin >> i;
 
-    for(int i = 1, j; i < n; i++){
-        j = i - 1;
+  vector<int> dp(n, INT_MAX);
+  dp[0] = 0;
 
-        while(j >= 0 && i-j <= k){
-            dp[i] = min(dp[i], dp[j] + abs(vec[i] - vec[j]));
-            j--;
-        }
+  for (int i = 1, j; i < n; i++) {
+    j = i - 1;
+
+    while (j >= 0 && i - j <= k) {
+      dp[i] = min(dp[i], dp[j] + abs(vec[i] - vec[j]));
+      j--;
     }
+  }
 
-    cout << dp[n-1] << "\n";
+  cout << dp[n - 1] << "\n";
 
-    return 0;
+  return 0;
 }

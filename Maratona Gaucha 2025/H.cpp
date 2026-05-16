@@ -1,22 +1,22 @@
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-using ull = unsigned long long;
 
-int main(){
-    ios_base::sync_with_stdio(0); cin.tie(0);
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
 
-    string str;
-    cin >> str;
+int main() {
+  fastio
 
-    ll sum = 0;
-    for(auto &c : str){
-        int v = c - 'a';
+  string str; cin >> str;
 
-        sum += ('z' - v) - 'a' + 1;
-    }
+  ll sum = 0;
+  for (auto &c : str) {
+    int v = c - 'a';
 
-    cout << sum << '\n';
+    sum += ('z' - v) - 'a' + 1;
+  }
 
-    return 0;
+  cout << sum << '\n';
+
+  return 0;
 }

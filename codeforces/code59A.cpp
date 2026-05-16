@@ -1,34 +1,35 @@
 /*
-    Codeforces 59A - Words
-    https://codeforces.com/problemset/problem/59/A
+  Codeforces 59A - Words
+  https://codeforces.com/problemset/problem/59/A
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-using ull = unsigned long long;
 
-int main(){
-    string str;
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
 
-    cin >> str;
-    int cnt_upper = 0, cnt_lower = 0;
-    for(auto &c : str){
-        if(c == toupper(c)){
-            cnt_upper++;
-        }
-        else
-        cnt_lower++;
-    }
-    
-    for(auto &c : str){
-        if(cnt_lower >= cnt_upper) 
-            c = tolower(c);
-        else
-            c = toupper(c);
-    }
+int main() {
+  fastio
 
-    printf("%s\n", str.c_str());
+  string str;
 
-    return 0;
+  cin >> str;
+  int cnt_upper = 0, cnt_lower = 0;
+  for (auto &c : str) {
+    if (c == toupper(c)) {
+      cnt_upper++;
+    } else
+      cnt_lower++;
+  }
+
+  for (auto &c : str) {
+    if (cnt_lower >= cnt_upper) c = tolower(c);
+    else
+      c = toupper(c);
+  }
+
+  printf("%s\n", str.c_str());
+
+  return 0;
 }

@@ -1,32 +1,33 @@
 /*
-    Bee 1566 - Altura
-    https://judge.beecrowd.com/pt/problems/view/1566
+  Bee 1566 - Altura
+  https://judge.beecrowd.com/pt/problems/view/1566
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-using ull = unsigned long long;
 
-int main(){
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
 
-    int tc, n;
-    scanf("%i", &tc);
+int main() {
+  fastio
 
-    while(tc--){
-        scanf("%i", &n);
-        vector <int> v(n);
 
-        for(int i = 0; i < n; i++)
-            scanf("%i", &v[i]);
-            
-        sort(v.begin(), v.end());
-            
-        for(int i = 0; i < n-1; i++)
-            printf("%i ", v[i]);
+  int tc, n;
+  scanf("%i", &tc);
 
-        printf("%i\n", v[n-1]);
-    }
+  while (tc--) {
+    scanf("%i", &n);
+    vector<int> v(n);
 
-    return 0;
+    for (int i = 0; i < n; i++) scanf("%i", &v[i]);
+
+    sort(v.begin(), v.end());
+
+    for (int i = 0; i < n - 1; i++) printf("%i ", v[i]);
+
+    printf("%i\n", v[n - 1]);
+  }
+
+  return 0;
 }

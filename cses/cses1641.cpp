@@ -1,45 +1,45 @@
 /*
-    CSES 1641 - Sum of Three Values
-    https://cses.fi/problemset/task/1641
+  CSES 1641 - Sum of Three Values
+  https://cses.fi/problemset/task/1641
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-using ull = unsigned long long;
-typedef pair<ll,ll> pii;
 
-int main(){
-    ios_base::sync_with_stdio(0); cin.tie(0);
-    ll n, x;
-    cin >> n >> x;
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
+typedef pair<ll, ll> pii;
 
-    pii a[n];
-    for(int i = 0; i < n; i++){
-       cin >> a[i].first;
-       a[i].second = i + 1;
+int main() {
+  fastio
+  ll n, x;
+  cin >> n >> x;
+
+  pii a[n];
+  for (int i = 0; i < n; i++) {
+    cin >> a[i].first;
+    a[i].second = i + 1;
+  }
+  sort(a, a + n);
+
+  for (int i = 0; i < n - 2; i++) {
+    int l = i + 1, r = n - 1;
+
+    while (l < r) {
+      ll sum = a[i].first + a[l].first + a[r].first;
+
+      if (sum == x) {
+        cout << a[i].second << " " << a[l].second << " " << a[r].second << '\n';
+        return 0;
+      } else if (sum > x) {
+        r--;
+      }
+      else {
+        l++;
+      }
     }
-    sort(a,a+n);
+  }
+  cout << "IMPOSSIBLE\n";
 
-    for(int i = 0; i < n-2; i++){
-        int l = i+1, r = n-1;
- 
-        while(l < r){
-            ll sum = a[i].first + a[l].first + a[r].first;
-
-            if(sum == x){
-                cout << a[i].second << " " << a[l].second << " " << a[r].second << '\n';
-                return 0;
-            }
-            else if(sum > x){
-                r--;
-            }
-            else {
-                l++;
-            }
-        }
-    }
-    cout << "IMPOSSIBLE\n";
-
-    return 0;
+  return 0;
 }

@@ -1,35 +1,36 @@
 /*
-    Coderforces 2092A - Kamilka and the Sheep
-    https://codeforces.com/contest/2092/problem/A
+  Coderforces 2092A - Kamilka and the Sheep
+  https://codeforces.com/contest/2092/problem/A
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-using ull = unsigned long long;
 
-int main(){
-    ios_base::sync_with_stdio(0); cin.tie(0);
-    int tc, n;
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
 
-    cin >> tc;
-    while(tc--){
-        cin >> n;
-        int a[n];
+int main() {
+  fastio
+  int tc, n;
 
-        cin >> a[0];
-        int greatest, lowest;
-        greatest = lowest = a[0];
-        
-        for(int i = 1; i < n; i++){
-            cin >> a[i];
-            
-            greatest = max(greatest, a[i]);
-            lowest = min(lowest, a[i]);
-        }
+  cin >> tc;
+  while (tc--) {
+    cin >> n;
+    int a[n];
 
-        cout << greatest - lowest << endl;
+    cin >> a[0];
+    int greatest, lowest;
+    greatest = lowest = a[0];
+
+    for (int i = 1; i < n; i++) {
+      cin >> a[i];
+
+      greatest = max(greatest, a[i]);
+      lowest = min(lowest, a[i]);
     }
 
-    return 0;
+    cout << greatest - lowest << endl;
+  }
+
+  return 0;
 }

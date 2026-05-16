@@ -1,29 +1,32 @@
 /*
-    Beecrowd 2062 - OBI URI
-    https://judge.beecrowd.com/pt/problems/view/2062
+  Beecrowd 2062 - OBI URI
+  https://judge.beecrowd.com/pt/problems/view/2062
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-using ull = unsigned long long;
 
-int main(){
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
 
-    int n;
-    string str;
-    scanf("%i", &n);
+int main() {
+  fastio
 
-    while(n--){
-        cin >> str;
-        if((str.substr(0,2) == "UR" || str.substr(0,2) == "OB") && str.size() == 3)
-            printf("%sI", str.substr(0, 2).c_str());
-        else
-            printf("%s", str.c_str());
-        
-        if(n) printf(" ");
-        else printf("\n");
-    }
 
-    return 0;
+  int n;
+  string str;
+  scanf("%i", &n);
+
+  while (n--) {
+    cin >> str;
+    if ((str.substr(0, 2) == "UR" || str.substr(0, 2) == "OB") && str.size() == 3) printf("%sI", str.substr(0, 2).c_str());
+    else
+      printf("%s", str.c_str());
+
+    if (n) printf(" ");
+    else
+      printf("\n");
+  }
+
+  return 0;
 }

@@ -1,56 +1,56 @@
 /*
-    CSES 1085 - Array Division
-    https://cses.fi/problemset/task/1085
+  CSES 1085 - Array Division
+  https://cses.fi/problemset/task/1085
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-using ull = unsigned long long;
+
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
 
 int n, k;
-vector <ll> a;
+vector<ll> a;
 
-bool isValid(ll x){
-    ll sum = 0, cnt = 1;
-    for(auto v : a){
-        sum += v;
-        if(sum > x){
-            cnt++;
-            sum = v;
-        } 
+bool isValid(ll x) {
+  ll sum = 0, cnt = 1;
+  for (auto v : a) {
+    sum += v;
+    if (sum > x) {
+      cnt++;
+      sum = v;
     }
-    cerr << "x=" << x << " cnt=" << cnt << " sum=" << sum << endl;
-    return cnt <= k;
+  }
+  cerr << "x=" << x << " cnt=" << cnt << " sum=" << sum << endl;
+  return cnt <= k;
 }
 
-ll bs(){
-    ll l = *max_element(a.begin(), a.end()), r =1e18, mid, ans = -1;
+ll bs() {
+  ll l = *max_element(a.begin(), a.end()), r = 1e18, mid, ans = -1;
 
-    while(l<=r){
-        mid = l+(r-l)/2;
+  while (l <= r) {
+    mid = l + (r - l) / 2;
 
-        if(isValid(mid)){
-            ans = mid;
-            r = mid - 1;
-        }
-        else {
-            l = mid + 1;
-        }
+    if (isValid(mid)) {
+      ans = mid;
+      r = mid - 1;
     }
+    else {
+      l = mid + 1;
+    }
+  }
 
-    return ans;
+  return ans;
 }
 
-int main(){
-    ios_base::sync_with_stdio(0); cin.tie(0);
+int main() {
+  fastio
 
-    cin >> n >> k;
-    a.resize(n);
-    for(auto &e : a)
-        cin >> e;
+  cin >> n >> k;
+  a.resize(n);
+  for (auto &e : a) cin >> e;
 
-    cout << bs() << "\n";
+  cout << bs() << "\n";
 
-    return 0;
+  return 0;
 }

@@ -1,35 +1,35 @@
 /*
-    Beecrowd 1548 - Fila do Recreio
-    https://judge.beecrowd.com/pt/problems/view/1548
+  Beecrowd 1548 - Fila do Recreio
+  https://judge.beecrowd.com/pt/problems/view/1548
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-using ull = unsigned long long;
 
-int main(){
-    int tc;
-    cin >> tc;
-    while(tc--){
-        int n;
-        cin >> n;
-        vector <int> v(n), v_ord(n);
-        
-        for(int i = 0; i < n; i++){
-            cin >> v[i];
-            v_ord[i] = v[i];
-        }
-        sort(v_ord.begin(), v_ord.end());
-        reverse(v_ord.begin(), v_ord.end());
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
 
-        int cnt = 0;
-        for(int i = 0; i < n; i++){
-            if(v[i] == v_ord[i])
-                cnt++;
-        }
-        printf("%i\n", cnt);
+int main() {
+  fastio
+
+  int tc; cin >> tc;
+  while (tc--) {
+    int n; cin >> n;
+    vector<int> v(n), v_ord(n);
+
+    for (int i = 0; i < n; i++) {
+      cin >> v[i];
+      v_ord[i] = v[i];
     }
+    sort(v_ord.begin(), v_ord.end());
+    reverse(v_ord.begin(), v_ord.end());
 
-    return 0;
+    int cnt = 0;
+    for (int i = 0; i < n; i++) {
+      if (v[i] == v_ord[i]) cnt++;
+    }
+    printf("%i\n", cnt);
+  }
+
+  return 0;
 }

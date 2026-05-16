@@ -1,30 +1,31 @@
 /*
-    Beecrowd 2410 - Frequencia na Aula
-    https://judge.beecrowd.com/pt/problems/view/2410
+  Beecrowd 2410 - Frequencia na Aula
+  https://judge.beecrowd.com/pt/problems/view/2410
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-using ull = unsigned long long;
 
-int main(){
-    ios::sync_with_stdio(0);
-    cin.tie(0);
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
 
-    int n,x ;
-    cin >> n;
+int main() {
+  fastio
 
-    set <int> s;
+  ios::sync_with_stdio(0);
+  cin.tie(0);
 
-    for(int i = 0; i < n; i++)
-    {
-        cin >> x;
+  int n, x; cin >> n;
 
-        s.insert(x);
-    }
-    
-    printf("%i\n", s.size());
+  set<int> s;
 
-    return 0;
+  for (int i = 0; i < n; i++) {
+    cin >> x;
+
+    s.insert(x);
+  }
+
+  printf("%i\n", s.size());
+
+  return 0;
 }

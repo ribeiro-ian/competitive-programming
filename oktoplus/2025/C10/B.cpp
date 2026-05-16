@@ -1,29 +1,30 @@
 /*
-    Codeforces 200B - Drinks
-    https://codeforces.com/problemset/problem/200/B
+  Codeforces 200B - Drinks
+  https://codeforces.com/problemset/problem/200/B
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-using ull = unsigned long long;
+
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
 
 int n;
-vector <int> p;
+vector<int> p;
 
-int main(){
-    ios_base::sync_with_stdio(0); cin.tie(0);
+int main() {
+  fastio
 
-    cin >> n;
+  cin >> n;
 
-    p.assign(n,0);
-    double sum = 0;
-    for(auto &i : p){
-        cin >> i;
-        sum += i;
-    }
+  p.assign(n, 0);
+  double sum = 0;
+  for (auto &i : p) {
+    cin >> i;
+    sum += i;
+  }
 
-    printf("%.12f\n", sum/n);
+  printf("%.12f\n", sum / n);
 
-    return 0;
+  return 0;
 }

@@ -2,7 +2,9 @@
 using namespace std;
 using ll = long long;
 
-#define fastio ios::sync_with_stdio(0); cin.tie(0)
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
+
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
 
 bool buscar(vector<string> &ht, int t, string pl) {
   for (int i = ht.size() - t; i < ht.size(); ++i) {
@@ -12,7 +14,7 @@ bool buscar(vector<string> &ht, int t, string pl) {
 }
 
 int main() {
-  fastio;
+  fastio
 
   int n, p;
   cin >> n >> p;

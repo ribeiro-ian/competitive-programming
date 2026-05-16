@@ -1,36 +1,33 @@
 /*
-    Beecrowd 1259 - Pares e Ímpares
-    https://judge.beecrowd.com/pt/problems/view/1259
+  Beecrowd 1259 - Pares e Ímpares
+  https://judge.beecrowd.com/pt/problems/view/1259
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-using ull = unsigned long long;
 
-int main(){
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
 
-    int tc, n;
-    cin >> tc;
+int main() {
+  fastio
 
-    vector <int> pares, impares;
-    while(tc--){
-        cin >> n;
 
-        if(n % 2 == 0)
-            pares.push_back(n);
-        else
-            impares.push_back(n);
+  int tc, n; cin >> tc;
 
-    }
-    sort(pares.begin(), pares.end());
-    sort(impares.begin(), impares.end());
-    for(auto &i : pares)
-        printf("%i\n", i);
-    
-    for(int i = impares.size()-1; i >= 0; i--){
-        printf("%i\n", impares[i]);
-    }
+  vector<int> pares, impares;
+  while (tc--) {
+    cin >> n;
 
-    return 0;
+    if (n % 2 == 0) pares.push_back(n);
+    else
+      impares.push_back(n);
+  }
+  sort(pares.begin(), pares.end());
+  sort(impares.begin(), impares.end());
+  for (auto &i : pares) printf("%i\n", i);
+
+  for (int i = impares.size() - 1; i >= 0; i--) { printf("%i\n", impares[i]); }
+
+  return 0;
 }

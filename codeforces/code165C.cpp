@@ -1,18 +1,19 @@
 /*
-    Codeforces 165C - Another Problem on Strings
-    https://codeforces.com/problemset/problem/165/C
+  Codeforces 165C - Another Problem on Strings
+  https://codeforces.com/problemset/problem/165/C
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-using ull = unsigned long long;
 
-int main(){
-    ios_base::sync_with_stdio(0); cin.tie(0);
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
 
-    int k; cin >> k;
-    string s; cin >> s;
+int main() {
+  fastio
 
-    return 0;
+  int k; cin >> k;
+  string s; cin >> s;
+
+  return 0;
 }

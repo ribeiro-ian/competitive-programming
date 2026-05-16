@@ -1,36 +1,34 @@
 /*
-    CSES 1140 - Projects
-    https://cses.fi/problemset/task/1140
+  CSES 1140 - Projects
+  https://cses.fi/problemset/task/1140
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-using ull = unsigned long long;
+
+#define fastio ios::sync_with_stdio(0); cin.tie(0);
 typedef struct {
-    ll in, out, money;
+  ll in, out, money;
 } project;
 
-bool cmp(project a, project b){
-    if(a.out != b.out) return a.out < b.out;
-    if(a.in != b.in) return a.in < b.in;
-    return a.money > b.money;
+bool cmp(project a, project b) {
+  if (a.out != b.out) return a.out < b.out;
+  if (a.in != b.in) return a.in < b.in;
+  return a.money > b.money;
 }
 
-int main(){
-    ios_base::sync_with_stdio(0); cin.tie(0);
+int main() {
+  fastio
 
-    ll n; cin >> n;
-    vector <project> v(n);
-    for(int i = 0; i < n; ++i) cin >> v[i].in >> v[i].out >> v[i].money;
-    sort(v.begin(), v.end(), cmp);
+  ll n; cin >> n;
+  vector<project> v(n);
+  for (int i = 0; i < n; ++i) cin >> v[i].in >> v[i].out >> v[i].money;
+  sort(v.begin(), v.end(), cmp);
 
-    vector <ll> dp(n);
-    for(int i = 0; i < n; ++i){
-                    
-    }
+  vector<ll> dp(n);
+  for (int i = 0; i < n; ++i) {
+  }
 
-
-
-    return 0;
+  return 0;
 }
