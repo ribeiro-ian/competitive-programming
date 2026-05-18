@@ -9,8 +9,6 @@ using ll = long long;
 
 #define fastio ios::sync_with_stdio(0); cin.tie(0);
 
-#define fastio ios::sync_with_stdio(0); cin.tie(0);
-
 const ll N = 2e5 + 1;
 vector<ll> adj[N], visited(N);
 ll cnt;

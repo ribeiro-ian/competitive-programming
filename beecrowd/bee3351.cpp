@@ -9,8 +9,6 @@ using ll = long long;
 
 #define fastio ios::sync_with_stdio(0); cin.tie(0);
 
-#define fastio ios::sync_with_stdio(0); cin.tie(0);
-
 vector<pair<ll, ll>> v; // {primero momento, tempo até voltar a assistir dnv}
 ll n, k;
 

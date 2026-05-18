@@ -4,8 +4,6 @@ using ll = long long;
 
 #define fastio ios::sync_with_stdio(0); cin.tie(0);
 
-#define fastio ios::sync_with_stdio(0); cin.tie(0);
-
 bool buscar(vector<string> &ht, int t, string pl) {
   for (int i = ht.size() - t; i < ht.size(); ++i) {
     if (ht[i] == pl) return true;

@@ -8,8 +8,6 @@ using namespace std;
 using ll = long long;
 
 #define fastio ios::sync_with_stdio(0); cin.tie(0);
-
-#define fastio ios::sync_with_stdio(0); cin.tie(0);
 const int J = 4, C = 3;
 
 int jog[J][C];

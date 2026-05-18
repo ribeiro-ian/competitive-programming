@@ -9,8 +9,6 @@ using ll = long long;
 
 #define fastio ios::sync_with_stdio(0); cin.tie(0);
 
-#define fastio ios::sync_with_stdio(0); cin.tie(0);
-
 int n, c, p;
 const ll N = 5e5 + 1, INF = 1e18;
 vector<pair<ll, ll>> pe[N], carro[N];

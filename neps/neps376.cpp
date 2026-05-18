@@ -9,8 +9,6 @@ using ll = long long;
 
 #define fastio ios::sync_with_stdio(0); cin.tie(0);
 
-#define fastio ios::sync_with_stdio(0); cin.tie(0);
-
 vector<vector<pair<ll, ll>>> adj;
 vector<bool> visited;
 vector<ll> max_dist, min_dist, max_nivel, min_nivel;
