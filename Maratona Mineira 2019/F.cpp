@@ -1,7 +1,8 @@
 /*
-  Maratona Mineira 2019 - F - Quem é o mentiroso?
-  https://codeforces.com/group/YgJmumGtHD/contest/102223/problem/F
-*/
+ * Contest : Maratona Mineira 2019
+ * Problem : F - Quem é o mentiroso?
+ * Link    : https://codeforces.com/group/YgJmumGtHD/contest/102223/problem/F
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

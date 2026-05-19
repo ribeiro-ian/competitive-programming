@@ -25,14 +25,16 @@ int main() {
 
       if (ms.size() == 0 || ms.size() == 3) {
         for (auto &i : p) i++;
-      } else if (ms.size() == 2) {
+      }
+      else if (ms.size() == 2) {
         int aux;
         if (!z) aux = 0;
         if (!y) aux = 1;
         if (!x) aux = 2;
 
         p[aux]++;
-      } else if (ms.size() == 1) {
+      }
+      else if (ms.size() == 1) {
         if (x) p[0]++, p[1]++;
         if (y) p[0]++, p[2]++;
         if (z) p[1]++, p[2]++;

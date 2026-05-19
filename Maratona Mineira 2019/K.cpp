@@ -1,7 +1,8 @@
 /*
-  Maratona Mineira 2019 - K - Cobra de Dominós
-  https://codeforces.com/group/YgJmumGtHD/contest/102223/problem/K
-*/
+ * Contest : Maratona Mineira 2019
+ * Problem : K - Cobra de Dominós
+ * Link    : https://codeforces.com/group/YgJmumGtHD/contest/102223/problem/K
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

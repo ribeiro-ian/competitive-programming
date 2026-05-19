@@ -55,11 +55,14 @@ int main() {
       if (u >= c && v >= c) {
         adj[u].push_back({v, p});
         adj[v].push_back({u, p});
-      } else if (u >= c && v < c) {
+      }
+      else if (u >= c && v < c) {
         adj[u].push_back({v, p});
-      } else if (v >= c && u < c) {
+      }
+      else if (v >= c && u < c) {
         adj[v].push_back({u, p});
-      } else if (abs(u - v) == 1) {
+      }
+      else if (abs(u - v) == 1) {
         adj[min(u, v)].push_back({max(u, v), p});
       }
     }

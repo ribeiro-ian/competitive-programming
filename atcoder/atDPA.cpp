@@ -1,7 +1,9 @@
 /*
-  AtCoder DP Contest - Frog 1
-  https://atcoder.jp/contests/dp/tasks/dp_a
-*/
+ * Contest : AtCoder Educational DP Contest
+ * Problem : A - Frog 1
+ * Link    : https://atcoder.jp/contests/dp/tasks/dp_a
+ */
+
 
 #include <bits/stdc++.h>
 using namespace std;

@@ -1,7 +1,8 @@
 /*
-  AtCoder DP Contest - Knapsack 2
-  https://atcoder.jp/contests/dp/tasks/dp_e
-*/
+ * Contest : AtCoder Educational DP Contest
+ * Problem : E - Knapsack 2
+ * Link    : https://atcoder.jp/contests/dp/tasks/dp_e
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

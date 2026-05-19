@@ -31,7 +31,8 @@ int main() {
       cnt++;
       i++;
       j++;
-    } else if (b[i] < g[j])
+    }
+    else if (b[i] < g[j])
       i++;
     else
       j++;

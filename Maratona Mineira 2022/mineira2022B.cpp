@@ -1,7 +1,8 @@
 /*
-  Maratona Mineira 2022B - Festa Laser
-  https://codeforces.com/group/YgJmumGtHD/contest/103794/problem/B
-*/
+ * Contest : Maratona Mineira 2022
+ * Problem : B - Festa Laser
+ * Link    : https://codeforces.com/group/YgJmumGtHD/contest/103794/problem/B
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

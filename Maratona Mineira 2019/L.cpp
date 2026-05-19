@@ -1,7 +1,8 @@
 /*
-  Maratona Mineira 2019 - L - História de Pescador
-  https://codeforces.com/group/YgJmumGtHD/contest/102223/problem/L
-*/
+ * Contest : Maratona Mineira 2019
+ * Problem : L - História de Pescador
+ * Link    : https://codeforces.com/group/YgJmumGtHD/contest/102223/problem/L
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

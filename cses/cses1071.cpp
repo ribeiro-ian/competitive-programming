@@ -23,7 +23,8 @@ int main() {
       if (row % 2 == 0) ans = row * row - col + 1;
       else
         ans = (row - 1) * (row - 1) + col;
-    } else if (col > row) {
+    }
+    else if (col > row) {
       if (col % 2 == 1) ans = col * col - row + 1;
       else
         ans = (col - 1) * (col - 1) + row;

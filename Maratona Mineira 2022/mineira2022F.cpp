@@ -1,7 +1,8 @@
 /*
-  Maratona Mineira 2022F - Caindo de Paraquedas
-  https://codeforces.com/group/YgJmumGtHD/contest/103794/problem/F
-*/
+ * Contest : Maratona Mineira 2022
+ * Problem : F - Caindo de Paraquedas
+ * Link    : https://codeforces.com/group/YgJmumGtHD/contest/103794/problem/F
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

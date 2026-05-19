@@ -28,7 +28,8 @@ void dfs2(int i, int p) {
       maxd2[v] = maxd1[v];
       maxd1[v] = dist;
       to[v] = i;
-    } else if (dist > maxd2[v])
+    }
+    else if (dist > maxd2[v])
       maxd2[v] = dist;
 
     dfs2(v, i);
@@ -44,7 +45,8 @@ void dfs1(int i, int p) {
       maxd2[i] = maxd1[i];
       maxd1[i] = maxd1[v] + 1;
       to[i] = v;
-    } else if (maxd1[v] + 1 > maxd2[i]) {
+    }
+    else if (maxd1[v] + 1 > maxd2[i]) {
       maxd2[i] = maxd1[v] + 1;
     }
   }

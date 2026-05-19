@@ -1,7 +1,9 @@
 /*
-  CS Academy - Cities Robbery
-  https://vjudge.net/problem/CSAcademy-cities-robbery
-*/
+ * Contest : CS Academy
+ * Problem : Cities Robbery
+ * Link    : https://vjudge.net/problem/CSAcademy-cities-robbery
+ */
+
 
 #include <bits/stdc++.h>
 using namespace std;

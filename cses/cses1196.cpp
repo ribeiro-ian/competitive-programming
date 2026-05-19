@@ -31,7 +31,8 @@ void dijkstra(int src = 1) {
       if (costs[v].size() < k) {
         costs[v].push(d);
         pq.push({-d, v});
-      } else if (d < costs[v].top()) {
+      }
+      else if (d < costs[v].top()) {
         costs[v].pop();
         costs[v].push(d);
         pq.push({-d, v});

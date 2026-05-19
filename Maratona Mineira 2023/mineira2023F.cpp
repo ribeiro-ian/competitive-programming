@@ -1,7 +1,9 @@
 /*
-  Maratona Mineira 2023 - F - 14-bis 
-  https://codeforces.com/group/YgJmumGtHD/contest/446227/problem/F
-*/
+ * Contest : Maratona Mineira 2023
+ * Problem : F - 14-bis
+ * Link    : https://codeforces.com/group/YgJmumGtHD/contest/446227/problem/F
+ * Time    : O(N * M)
+ */
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -29,19 +31,19 @@ int main() {
       }
       else {
         if (abs(x-ant) <= 1)
-         cntLin++;
+          cntLin++;
         else
           cntLin = 1;
         maiorLin = max(maiorLin, cntLin);
       }
       ant = x;
       
-      // ver Coluna
+      // ver coluna
       if (i != 0){
         if (abs(x-antCol[j]) <= 1)
-                cntCol[j]++;
+          cntCol[j]++;
         else
-              cntCol[j] = 1;
+          cntCol[j] = 1;
         maiorCol = max(maiorCol, cntCol[j]);
       }
       antCol[j] = x;

@@ -18,7 +18,8 @@ int main() {
 
   if (ini == fim) {
     ans = 24;
-  } else if (ini > fim) {
+  }
+  else if (ini > fim) {
     ans = fim + 24 - ini;
   }
   else {

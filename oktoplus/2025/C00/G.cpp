@@ -33,7 +33,8 @@ int main() {
         printf("%i %i\n", ini, fim);
         ini = s[i].first;
         fim = s[i].second;
-      } else if (s[i].second > fim) {
+      }
+      else if (s[i].second > fim) {
         fim = s[i].second;
       }
     }

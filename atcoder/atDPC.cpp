@@ -1,7 +1,8 @@
 /*
-  AtCoder DP Contest - Vacation
-  https://atcoder.jp/contests/dp/tasks/dp_c
-*/
+ * Contest : AtCoder Educational DP Contest
+ * Problem : C - Vacation
+ * Link    : https://atcoder.jp/contests/dp/tasks/dp_c
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

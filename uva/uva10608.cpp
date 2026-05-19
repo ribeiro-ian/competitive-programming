@@ -25,7 +25,8 @@ void join(int x, int y) {
   if (len[y] > len[x]) {
     len[y] += len[x];
     parent[x] = y;
-  } else if (len[y] < len[x]) {
+  }
+  else if (len[y] < len[x]) {
     len[x] += len[y];
     parent[y] = x;
   }

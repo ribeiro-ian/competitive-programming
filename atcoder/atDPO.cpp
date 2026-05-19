@@ -1,7 +1,8 @@
 /*
-  AtCoder DP Contest - Matching
-  https://atcoder.jp/contests/dp/tasks/dp_o
-*/
+ * Contest : AtCoder Educational DP Contest
+ * Problem : O - Matching
+ * Link    : https://atcoder.jp/contests/dp/tasks/dp_o
+ */
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -11,24 +12,26 @@ using ll = long long;
 
 int main() {
   fastio
-
-  int n, mod = 1e9 + 7; cin >> n;
+  
+  int n, mod = 1e9+7;
+  cin >> n;
   bool grid[n][n];
-  vector<int> dp(1 << n);
-
-  for (int i = 0; i < n; ++i)
-    for (int j = 0; j < n; ++j) cin >> grid[i][j];
-
+  vector <int> dp(1 << n);
+  
+  for (int i = 0; i < n; ++i) 
+    for (int j = 0; j < n; ++j) 
+      cin >> grid[i][j];
+    
   dp[0] = 1;
   for (int mask = 0; mask < (1 << n); ++mask) {
-    auto row = __popcount(mask);
+    int row = __popcount((unsigned int)mask);
     for (int i = 0; i < n; ++i) {
       if (mask & (1 << i) || !grid[row][i]) continue;
-
+      
       dp[mask | (1 << i)] = (dp[mask | (1 << i)] + dp[mask]) % mod;
     }
   }
   cout << dp[(1 << n) - 1] << '\n';
-
+  
   return 0;
 }

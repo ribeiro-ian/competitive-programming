@@ -1,7 +1,9 @@
 /*
-  Maratona Mineira 2023 - A - Elemento X
-  https://codeforces.com/group/YgJmumGtHD/contest/446227/problem/A
-*/
+ * Contest : Maratona Mineira 2023
+ * Problem : A - Elemento X
+ * Link    : https://codeforces.com/group/YgJmumGtHD/contest/446227/problem/A
+ * Time    : O(1)
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

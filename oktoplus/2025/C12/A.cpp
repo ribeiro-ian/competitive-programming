@@ -24,7 +24,8 @@ int main() {
   printf("Media: %.1f\n", media);
   if (media >= 7) {
     cout << "Aluno aprovado.\n";
-  } else if (media < 5) {
+  }
+  else if (media < 5) {
     cout << "Aluno reprovado.\n";
   }
   else {

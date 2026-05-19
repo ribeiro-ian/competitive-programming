@@ -1,7 +1,8 @@
 /*
-  AtCoder DP Contest - Coins
-  https://atcoder.jp/contests/dp/tasks/dp_h
-*/
+ * Contest : AtCoder Educational DP Contest
+ * Problem : I - Coins
+ * Link    : https://atcoder.jp/contests/dp/tasks/dp_i
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

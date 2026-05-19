@@ -1,7 +1,8 @@
 /*
-  Maratona Mineira 2019 - D - Prêmios da mineira
-  https://codeforces.com/group/YgJmumGtHD/contest/102223/problem/D
-*/
+ * Contest : Maratona Mineira 2019
+ * Problem : D - Prêmios da mineira
+ * Link    : https://codeforces.com/group/YgJmumGtHD/contest/102223/problem/D
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

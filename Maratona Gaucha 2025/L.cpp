@@ -19,7 +19,8 @@ int main() {
   if (mp[v[n - 1]] == 1) {
     cout << v[n - 1] << '\n';
     return 0;
-  } else if (mp[v[n - 1]] == n) {
+  }
+  else if (mp[v[n - 1]] == n) {
     cout << v[n - 1] * 2 << '\n';
     return 0;
   }
@@ -34,7 +35,8 @@ int main() {
     if (sum > v[n - 1]) {
       r--;
       ans = min(ans, sum);
-    } else if (sum < v[n - 1]) {
+    }
+    else if (sum < v[n - 1]) {
       l++;
     }
     else {

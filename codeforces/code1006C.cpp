@@ -28,7 +28,8 @@ int main() {
       sum1 += d[l];
       r--;
       sum3 += d[r];
-    } else if (sum1 < sum3) {
+    }
+    else if (sum1 < sum3) {
       l++;
       sum1 += d[l];
     }

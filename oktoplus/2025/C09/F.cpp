@@ -26,7 +26,8 @@ bool bfs(int no) {
       if (prof[v] == -1) {
         prof[v] = prof[curr] + 1;
         q.push(v);
-      } else if (prof[curr] == prof[v]) {
+      }
+      else if (prof[curr] == prof[v]) {
         return false;
       }
     }

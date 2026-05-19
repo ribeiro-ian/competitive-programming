@@ -1,7 +1,8 @@
 /*
-  Maratona Mineira 2022H - Bagunça da Madalena
-  https://codeforces.com/group/YgJmumGtHD/contest/103794/problem/H
-*/
+ * Contest : Maratona Mineira 2022
+ * Problem : H - Bagunça da Madalena
+ * Link    : https://codeforces.com/group/YgJmumGtHD/contest/103794/problem/H
+ */
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -34,7 +35,8 @@ int main() {
 
     if ((a == 0 || a == l - 1) && (b == 0 || b == c - 1)) {
       qtde = 3;
-    } else if (a == 0 || a == l - 1 || b == 0 || b == c - 1) {
+    }
+    else if (a == 0 || a == l - 1 || b == 0 || b == c - 1) {
       qtde = 5;
     }
 

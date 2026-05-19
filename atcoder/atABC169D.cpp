@@ -1,7 +1,9 @@
 /*
-  AtCoder Beginner Contest 169 - Div Game
-  https://atcoder.jp/contests/abc169/tasks/abc169_d
-*/
+ * Contest : AtCoder Beginner Contest 169
+ * Problem : D - Div Game
+ * Link    : https://atcoder.jp/contests/abc169/tasks/abc169_d
+ */
+
 
 #include <bits/stdc++.h>
 using namespace std;

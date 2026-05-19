@@ -28,7 +28,8 @@ int main() {
   for (int i = 0, j = 0; i < n && j < m;) {
     if (b[j] < a[i] - k) {
       j++;
-    } else if (b[j] > a[i] + k) {
+    }
+    else if (b[j] > a[i] + k) {
       i++;
     }
     else {

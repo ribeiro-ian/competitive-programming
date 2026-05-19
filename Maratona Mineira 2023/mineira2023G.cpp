@@ -1,7 +1,9 @@
 /*
-  Maratona Mineira 2023 - G - Jogo dos Copos
-  https://codeforces.com/group/YgJmumGtHD/contest/446227/problem/G
-*/
+ * Contest : Maratona Mineira 2023
+ * Problem : G - Jogo dos Copos
+ * Link    : https://codeforces.com/group/YgJmumGtHD/contest/446227/problem/G
+ * Time    : O(N)
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

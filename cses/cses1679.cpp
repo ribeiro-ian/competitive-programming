@@ -24,7 +24,8 @@ void dfs(int i) {
   for (int v : graph[i]) {
     if (!visited[v]) {
       dfs(v);
-    } else if (processing[v]) {
+    }
+    else if (processing[v]) {
       hasCycle = true;
       return;
     }

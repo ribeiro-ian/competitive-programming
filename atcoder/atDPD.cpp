@@ -1,7 +1,8 @@
 /*
-  AtCoder DP Contest - Knapsack 1
-  https://atcoder.jp/contests/dp/tasks/dp_d
-*/
+ * Contest : AtCoder Educational DP Contest
+ * Problem : D - Knapsack 1
+ * Link    : https://atcoder.jp/contests/dp/tasks/dp_d
+ */
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -20,9 +21,9 @@ int main() {
 
   vector<ll> dp(W + 1);
 
-  for (int i = 0; i < n; ++i) {
-    for (int j = W; j >= w[i]; --j) { dp[j] = max(dp[j], dp[j - w[i]] + v[i]); }
-  }
+  for (int i = 0; i < n; ++i) 
+    for (int j = W; j >= w[i]; --j)
+      dp[j] = max(dp[j], dp[j - w[i]] + v[i]); 
 
   cout << dp[W] << '\n';
 

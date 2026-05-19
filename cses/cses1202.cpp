@@ -47,7 +47,8 @@ void dijkstra(ll no = 1) {
         dist[v] = d; // update distance
 
         q.push({-d, v});
-      } else if (d == dist[v]) {
+      }
+      else if (d == dist[v]) {
         mini[v] = min(mini[v], mini[u] + 1); // get min depth
         maxi[v] = max(maxi[v], maxi[u] + 1); // get max depth
         self_add(ways[v], ways[u]);

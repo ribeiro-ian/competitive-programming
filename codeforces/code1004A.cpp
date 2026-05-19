@@ -25,7 +25,8 @@ int main() {
 
     if (curr + d < next - d) {
       ans += 2;
-    } else if (curr + d == next - d) {
+    }
+    else if (curr + d == next - d) {
       ans++;
     }
   }

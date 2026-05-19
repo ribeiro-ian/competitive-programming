@@ -30,7 +30,8 @@ bool bfs(int no) {
       if (visited[v] == -1) {
         visited[v] = visited[curr] + 1;
         q.push(v);
-      } else if (visited[v] == visited[curr]) {
+      }
+      else if (visited[v] == visited[curr]) {
         return false;
       }
     }

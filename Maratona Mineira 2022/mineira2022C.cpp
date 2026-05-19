@@ -1,7 +1,8 @@
 /*
-  Maratona Mineira 2022C - Caindo na estrada
-  https://codeforces.com/group/YgJmumGtHD/contest/103794/problem/C
-*/
+ * Contest : Maratona Mineira 2022
+ * Problem : C - Caindo na estrada
+ * Link    : https://codeforces.com/group/YgJmumGtHD/contest/103794/problem/C
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

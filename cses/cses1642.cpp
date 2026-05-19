@@ -34,7 +34,8 @@ int main() {
           cout << a[i].second << ' ' << a[j].second
                << ' ' << a[l].second << ' ' << a[r].second << '\n';
           return 0;
-        } else if (sum > x) {
+        }
+        else if (sum > x) {
           r--;
         }
         else {

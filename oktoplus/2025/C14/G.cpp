@@ -29,7 +29,8 @@ void solve() {
   if (n * n - 1 == k) {
     cout << "NO\n";
     return;
-  } else if (n * n == k) {
+  }
+  else if (n * n == k) {
     cout << "YES\n";
     for (int i = 0; i < n; ++i) {
       for (int j = 0; j < n; ++j) { cout << "U"; }
@@ -53,7 +54,8 @@ void solve() {
             cout << c;
             escape[i][j] = true;
             cnt++;
-          } else if (validPos(x, y) && escape[x][y]) {
+          }
+          else if (validPos(x, y) && escape[x][y]) {
             cout << c;
             escape[i][j] = true;
             cnt++;

@@ -42,7 +42,8 @@ int main() {
     if (a[i - 1] == b[j - 1]) {
       ans.push_back(a[i - 1]);
       i--, j--;
-    } else if (dp[i - 1][j] > dp[i][j - 1])
+    }
+    else if (dp[i - 1][j] > dp[i][j - 1])
       i--;
     else
       j--;

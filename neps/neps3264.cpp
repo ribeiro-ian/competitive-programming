@@ -44,7 +44,8 @@ int main() {
       if (p1 <= p2) add(t1, ans);
       else
         add(t2, ans);
-    } else if (x == 1)
+    }
+    else if (x == 1)
       add(t1, ans);
     else if (x == 2) add(t2, ans);
   }

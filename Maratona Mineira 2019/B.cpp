@@ -1,7 +1,8 @@
 /*
-  Maratona Mineira 2019 - B - Podando Galhos
-  https://codeforces.com/group/YgJmumGtHD/contest/102223/problem/B
-*/
+ * Contest : Maratona Mineira 2019
+ * Problem : B - Podando Galhos
+ * Link    : https://codeforces.com/group/YgJmumGtHD/contest/102223/problem/B
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

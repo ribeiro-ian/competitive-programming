@@ -2,6 +2,7 @@
  * Contest : Maratona Mineira 2023
  * Problem : D - Adedanha
  * Link    : https://codeforces.com/group/YgJmumGtHD/contest/446227/problem/D
+ * Time    : O(N)
  */
 
 #include <bits/stdc++.h>

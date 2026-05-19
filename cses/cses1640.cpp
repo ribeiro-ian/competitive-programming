@@ -30,7 +30,8 @@ int main() {
     if (sum == x) {
       cout << a[l].second << ' ' << a[r].second << '\n';
       return 0;
-    } else if (sum > x) {
+    }
+    else if (sum > x) {
       r--;
     }
     else {

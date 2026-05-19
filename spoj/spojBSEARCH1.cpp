@@ -18,7 +18,8 @@ int bs(int arr[], int n, int x) {
     if (arr[m] == x) {
       ans = m;
       r = m - 1;
-    } else if (arr[m] > x)
+    }
+    else if (arr[m] > x)
       r = m - 1;
     else
       l = m + 1;
