@@ -1,7 +1,8 @@
 /*
-  CSES 1091 - Concert Tickets
-  https://cses.fi/problemset/task/1091
-*/
+ * Contest : CSES
+ * Problem : 1091 - Concert Tickets
+ * Link    : https://cses.fi/problemset/task/1091
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

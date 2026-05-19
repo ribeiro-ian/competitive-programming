@@ -1,7 +1,8 @@
 /*
-  Codeforces 2149C - MEX rose
-  https://codeforces.com/problemset/problem/2149/C
-*/
+ * Contest : Codeforces
+ * Problem : 2149C - MEX rose
+ * Link    : https://codeforces.com/problemset/problem/2149/C
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

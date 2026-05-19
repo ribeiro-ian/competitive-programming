@@ -1,7 +1,8 @@
 /*
-  CSES 1688 - Company Queries II
-  https://cses.fi/problemset/task/1688
-*/
+ * Contest : CSES
+ * Problem : 1688 - Company Queries II
+ * Link    : https://cses.fi/problemset/task/1688
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

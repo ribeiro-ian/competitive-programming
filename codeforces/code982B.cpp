@@ -1,7 +1,8 @@
 /*
-  Codeforces 982B - Bus of Characters
-  https://codeforces.com/contest/982/problem/B
-*/
+ * Contest : Codeforces
+ * Problem : 982B - Bus of Characters
+ * Link    : https://codeforces.com/contest/982/problem/B
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

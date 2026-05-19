@@ -1,7 +1,8 @@
 /*
-  Beecrowd 1244 - Ordenação por Tamanho
-  https://judge.beecrowd.com/pt/problems/view/1244
-*/
+ * Contest : Beecrowd
+ * Problem : 1244 - Ordenação por Tamanho
+ * Link    : https://judge.beecrowd.com/pt/problems/view/1244
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

@@ -1,7 +1,8 @@
 /*
-  CSES 3403 - Longest Common Subsequence
-  https://cses.fi/problemset/task/3403
-*/
+ * Contest : CSES
+ * Problem : 3403 - Longest Common Subsequence
+ * Link    : https://cses.fi/problemset/task/3403
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

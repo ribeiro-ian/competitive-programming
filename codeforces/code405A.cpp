@@ -1,7 +1,8 @@
 /*
-  Codeforces 405A - Gravity Flip
-  https://codeforces.com/problemset/problem/405/A
-*/
+ * Contest : Codeforces
+ * Problem : 405A - Gravity Flip
+ * Link    : https://codeforces.com/problemset/problem/405/A
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

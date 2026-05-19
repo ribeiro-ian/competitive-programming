@@ -1,7 +1,8 @@
 /*
-  Codeforces 1133C - Balanced Team
-  https://codeforces.com/problemset/problem/1133/C
-*/
+ * Contest : Codeforces
+ * Problem : 1133C - Balanced Team
+ * Link    : https://codeforces.com/problemset/problem/1133/C
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

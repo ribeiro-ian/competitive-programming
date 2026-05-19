@@ -1,7 +1,8 @@
 /*
-  CSES 1732 - Finding Borders
-  https://cses.fi/problemset/task/1732
-*/
+ * Contest : CSES
+ * Problem : 1732 - Finding Borders
+ * Link    : https://cses.fi/problemset/task/1732
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

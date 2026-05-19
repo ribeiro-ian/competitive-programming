@@ -1,7 +1,8 @@
 /*
-  CSES 1753 - String Matching
-  https://cses.fi/problemset/task/1753
-*/
+ * Contest : CSES
+ * Problem : 1753 - String Matching
+ * Link    : https://cses.fi/problemset/task/1753
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

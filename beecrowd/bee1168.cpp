@@ -1,7 +1,8 @@
 /*
-  Beecrowd 1168 - LED
-  https://judge.beecrowd.com/pt/problems/view/1168
-*/
+ * Contest : Beecrowd
+ * Problem : 1168 - LED
+ * Link    : https://judge.beecrowd.com/pt/problems/view/1168
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

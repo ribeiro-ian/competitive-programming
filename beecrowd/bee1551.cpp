@@ -1,7 +1,8 @@
 /*
-  Beecrowd 1551 - Frase Completa
-  https://judge.beecrowd.com/pt/problems/view/1551
-*/
+ * Contest : Beecrowd
+ * Problem : 1551 - Frase Completa
+ * Link    : https://judge.beecrowd.com/pt/problems/view/1551
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

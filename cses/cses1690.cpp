@@ -1,7 +1,8 @@
 /*
-  CSES 1690 - Hamiltonian Flights
-  https://cses.fi/problemset/task/1690
-*/
+ * Contest : CSES
+ * Problem : 1690 - Hamiltonian Flights
+ * Link    : https://cses.fi/problemset/task/1690
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

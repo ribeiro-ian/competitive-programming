@@ -1,7 +1,8 @@
 /*
-  Coderforces 2092A - Kamilka and the Sheep
-  https://codeforces.com/contest/2092/problem/A
-*/
+ * Contest : Codeforces
+ * Problem : 2092A - Kamilka and the Sheep
+ * Link    : https://codeforces.com/contest/2092/problem/A
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

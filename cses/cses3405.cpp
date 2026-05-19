@@ -1,7 +1,8 @@
 /*
-  CSES 3405 - Sliding Window Or
-  https://cses.fi/problemset/task/3405
-*/
+ * Contest : CSES
+ * Problem : 3405 - Sliding Window Or
+ * Link    : https://cses.fi/problemset/task/3405
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

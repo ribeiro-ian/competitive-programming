@@ -1,7 +1,8 @@
 /*
-  OBI 2025 - Fase 1 - Festa Junina
-  https://neps.academy/br/exercise/3124
-*/
+ * Contest : OBI 2025 - Fase 1
+ * Problem : Festa Junina
+ * Link    : https://neps.academy/br/exercise/3124
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

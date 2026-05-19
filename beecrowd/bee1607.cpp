@@ -1,37 +1,27 @@
-#include <bits/stdc++.h>
-using namespace std;
-using ll = long long;
+/*
+ * Contest : Beecrowd
+ * Problem : 1607 - Avance as Letras
+ * Link    : https://judge.beecrowd.com/pt/problems/view/1607
+ */
 
-#define fastio ios::sync_with_stdio(0); cin.tie(0);
+#include <stdio.h>
 
-int main() {
-  fastio
-
-  int t;
-  char a[10001], b[10001];
-  scanf("%d", &t);
-
-  for (int i = 0; i < t; i++) {
-    scanf("%s", &a);
-    scanf("%s", &b);
-    int count = 0;
-    int tam_aux = strlen(a);
-    int tam = 0;
-    int auxa = 0, auxb = 0;
-
-    while (tam_aux > tam) {
-      while (a[auxa] != b[auxb]) {
-        auxa++;
-        if (a[auxa] == 'z')
-          a[auxa] = 'a'; 
-        count++;
-      }
-
-      if (a[auxa] == b[auxb]) { auxb++; }
-      tam++;
+int main(){
+  int n;
+  scanf("%i", &n);
+  
+  for (int i = 0; i < n; i++){
+    char str1[10001], str2[10001];
+    scanf("%s %s", str1, str2);
+    
+    int contador = 0;
+    for (int i = 0; str1[i] != '\0'; i++){
+      if (str1[i] <= str2[i])
+      contador += str2[i] - str1[i];
+      else
+      contador += 'z' - str1[i] + str2[i] - 'a' + 1;
     }
-
-    printf("%d", count);
+    
+    printf("%i\n", contador);
   }
-  return 0;
 }

@@ -1,7 +1,8 @@
 /*
-  CSES 1661 - Subarray Sums II
-  https://cses.fi/problemset/task/1661
-*/
+ * Contest : CSES
+ * Problem : 1661 - Subarray Sums II
+ * Link    : https://cses.fi/problemset/task/1661
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

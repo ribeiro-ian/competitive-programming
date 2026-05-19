@@ -1,7 +1,8 @@
 /*
-  CSES 1070 - Permutations
-  https://cses.fi/problemset/task/1070
-*/
+ * Contest : CSES
+ * Problem : 1070 - Permutations
+ * Link    : https://cses.fi/problemset/task/1070
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

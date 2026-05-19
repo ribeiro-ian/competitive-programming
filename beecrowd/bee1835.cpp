@@ -1,7 +1,8 @@
 /*
-  Beecrowd 1835 - Promessa de Campanha
-  https://judge.beecrowd.com/pt/problems/view/1835
-*/
+ * Contest : Beecrowd
+ * Problem : 1835 - Promessa de Campanha
+ * Link    : https://judge.beecrowd.com/pt/problems/view/1835
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

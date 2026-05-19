@@ -1,7 +1,8 @@
 /*
-  Codeforces 617A - Elephant
-  https://codeforces.com/problemset/problem/617/A
-*/
+ * Contest : Codeforces
+ * Problem : 617A - Elephant
+ * Link    : https://codeforces.com/problemset/problem/617/A
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

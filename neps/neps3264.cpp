@@ -1,7 +1,8 @@
 /*
-  OBI 2025 - Fase 2 - Feirinha de Artesanato
-  https://neps.academy/br/exercise/3264
-*/
+ * Contest : OBI 2025 - Fase 2
+ * Problem : Feirinha de Artesanato
+ * Link    : https://neps.academy/br/exercise/3264
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

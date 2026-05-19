@@ -1,7 +1,8 @@
 /*
-  Codeforces 1430B - Barrels
-  https://codeforces.com/contest/1430/problem/B
-*/
+ * Contest : Codeforces
+ * Problem : 1430B - Barrels
+ * Link    : https://codeforces.com/contest/1430/problem/B
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

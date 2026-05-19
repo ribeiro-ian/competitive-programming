@@ -1,7 +1,8 @@
 /*
-  Codeforces 1315A - Dead Pixel
-  https://codeforces.com/problemset/problem/1315/A
-*/
+ * Contest : Codeforces
+ * Problem : 1315A - Dead Pixel
+ * Link    : https://codeforces.com/problemset/problem/1315/A
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

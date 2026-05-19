@@ -1,7 +1,8 @@
 /*
-  Beecrowd 1434 - Patrulheiros Romanos
-  https://judge.beecrowd.com/pt/problems/view/1434
-*/
+ * Contest : Beecrowd
+ * Problem : 1434 - Patrulheiros Romanos
+ * Link    : https://judge.beecrowd.com/pt/problems/view/1434
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

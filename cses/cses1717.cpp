@@ -1,7 +1,8 @@
 /*
-  CSES 1717 - Christmas Party
-  https://cses.fi/problemset/task/1717
-*/
+ * Contest : CSES
+ * Problem : 1717 - Christmas Party
+ * Link    : https://cses.fi/problemset/task/1717
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

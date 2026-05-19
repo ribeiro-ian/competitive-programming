@@ -1,7 +1,8 @@
 /*
-  OBI 2025 - Fase 1 - Café com Leite
-  https://neps.academy/br/exercise/3120
-*/
+ * Contest : OBI 2025 - Fase 1
+ * Problem : Café com Leite
+ * Link    : https://neps.academy/br/exercise/3120
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

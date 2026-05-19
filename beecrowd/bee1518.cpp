@@ -1,7 +1,8 @@
 /*
-  Beecrowd 1518 - Tartarugas
-  https://iudge.beecrowd.com/pt/problems/view/1518
-*/
+ * Contest : Beecrowd
+ * Problem : 1518 - Tartarugas
+ * Link    : https://iudge.beecrowd.com/pt/problems/view/1518
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

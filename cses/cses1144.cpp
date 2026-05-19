@@ -1,7 +1,8 @@
 /*
-  CSES 1144 - Salary Queries
-  https://cses.fi/problemset/task/1144
-*/
+ * Contest : CSES
+ * Problem : 1144 - Salary Queries
+ * Link    : https://cses.fi/problemset/task/1144
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

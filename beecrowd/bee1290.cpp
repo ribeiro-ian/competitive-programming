@@ -1,7 +1,8 @@
 /*
-  Beecrowd 1290 - Caixas Muito Especiais
-  https://judge.beecrowd.com/pt/problems/view/1290
-*/
+ * Contest : Beecrowd
+ * Problem : 1290 - Caixas Muito Especiais
+ * Link    : https://judge.beecrowd.com/pt/problems/view/1290
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

@@ -1,7 +1,8 @@
 /*
-  Codeforces 1006C - Three Parts of the Array
-  https://codeforces.com/problemset/problem/1006/C
-*/
+ * Contest : Codeforces
+ * Problem : 1006C - Three Parts of the Array
+ * Link    : https://codeforces.com/problemset/problem/1006/C
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

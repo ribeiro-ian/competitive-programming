@@ -1,7 +1,8 @@
 /*
-  Beecrowd 1557 - Matriz Quadrada III
-  https://judge.beecrowd.com/pt/problems/view/1557
-*/
+ * Contest : Beecrowd
+ * Problem : 1557 - Matriz Quadrada III
+ * Link    : https://judge.beecrowd.com/pt/problems/view/1557
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

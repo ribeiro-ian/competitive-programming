@@ -1,7 +1,8 @@
 /*
-  Codeforces 2091A - Olympiad Date
-  https://codeforces.com/contest/2091/problem/A
-*/
+ * Contest : Codeforces
+ * Problem : 2091A - Olympiad Date
+ * Link    : https://codeforces.com/contest/2091/problem/A
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

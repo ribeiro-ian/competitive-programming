@@ -1,7 +1,8 @@
 /*
-  CSES 1745 - Money Sums
-  https://cses.fi/problemset/task/1745
-*/
+ * Contest : CSES
+ * Problem : 1745 - Money Sums
+ * Link    : https://cses.fi/problemset/task/1745
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

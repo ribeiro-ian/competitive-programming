@@ -1,7 +1,8 @@
 /*
-  Codeforces 676C - Vasya and String
-  https://codeforces.com/problemset/problem/676/C
-*/
+ * Contest : Codeforces
+ * Problem : 676C - Vasya and String
+ * Link    : https://codeforces.com/problemset/problem/676/C
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

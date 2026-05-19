@@ -1,7 +1,8 @@
 /*
-  Beecrowd 1329 - Cara ou Coroa
-  https://judge.beecrowd.com/pt/problems/view/1329
-*/
+ * Contest : Beecrowd
+ * Problem : 1329 - Cara ou Coroa
+ * Link    : https://judge.beecrowd.com/pt/problems/view/1329
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

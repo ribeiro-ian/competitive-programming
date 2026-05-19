@@ -1,7 +1,8 @@
 /*
-  Beecrowd 2567 - Virus
-  https://judge.beecrowd.com/pt/problems/view/2567
-*/
+ * Contest : Beecrowd
+ * Problem : 2567 - Virus
+ * Link    : https://judge.beecrowd.com/pt/problems/view/2567
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

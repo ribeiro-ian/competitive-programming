@@ -1,7 +1,8 @@
 /*
-  Beecrowd 1800 - Onde Estão Minhas Chaves
-  https://judge.beecrowd.com/pt/problems/view/1800
-*/
+ * Contest : Beecrowd
+ * Problem : 1800 - Onde Estão Minhas Chaves
+ * Link    : https://judge.beecrowd.com/pt/problems/view/1800
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

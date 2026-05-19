@@ -1,7 +1,8 @@
 /*
-  OBI 2025 - Fase 2 - Arara!
-  https://neps.academy/br/exercise/3262
-*/
+ * Contest : OBI 2025 - Fase 2
+ * Problem : Arara!
+ * Link    : https://neps.academy/br/exercise/3262
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

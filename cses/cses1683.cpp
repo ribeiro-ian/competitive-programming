@@ -1,7 +1,8 @@
 /*
-  CSES 1683 - Planets and Kingdoms
-  https://cses.fi/problemset/task/1683
-*/
+ * Contest : CSES
+ * Problem : 1683 - Planets and Kingdoms
+ * Link    : https://cses.fi/problemset/task/1683
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

@@ -1,7 +1,8 @@
 /*
-  Beecrowd 1366 - Jogo de Varetas
-  https://judge.beecrowd.com/pt/problems/view/1366
-*/
+ * Contest : Beecrowd
+ * Problem : 1366 - Jogo de Varetas
+ * Link    : https://judge.beecrowd.com/pt/problems/view/1366
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

@@ -1,7 +1,8 @@
 /*
-  Beecrowd 2242 - Huaauhahhuahau
-  https://judge.beecrowd.com/pt/problems/view/2242
-*/
+ * Contest : Beecrowd
+ * Problem : 2242 - Huaauhahhuahau
+ * Link    : https://judge.beecrowd.com/pt/problems/view/2242
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

@@ -1,7 +1,8 @@
 /*
-  Codeforces 2179A - Blackslex and Password
-  https://codeforces.com/contest/2179/problem/A
-*/
+ * Contest : Codeforces
+ * Problem : 2179A - Blackslex and Password
+ * Link    : https://codeforces.com/contest/2179/problem/A
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

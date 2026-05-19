@@ -1,7 +1,8 @@
 /*
-  CSES 1642 - Sum of Four Values
-  https://cses.fi/problemset/task/1642
-*/
+ * Contest : CSES
+ * Problem : 1642 - Sum of Four Values
+ * Link    : https://cses.fi/problemset/task/1642
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

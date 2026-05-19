@@ -1,7 +1,8 @@
 /*
-  CSES 1673 - High Score
-  https://cses.fi/problemset/task/1673
-*/
+ * Contest : CSES
+ * Problem : 1673 - High Score
+ * Link    : https://cses.fi/problemset/task/1673
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

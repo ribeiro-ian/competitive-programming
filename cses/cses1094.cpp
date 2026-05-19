@@ -1,7 +1,8 @@
 /*
-  CSES 1094 - Increasing Array
-  https://cses.fi/problemset/task/1094
-*/
+ * Contest : CSES
+ * Problem : 1094 - Increasing Array
+ * Link    : https://cses.fi/problemset/task/1094
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

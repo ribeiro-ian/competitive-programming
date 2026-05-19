@@ -1,7 +1,8 @@
 /*
-  Neps 60 - Sanduíche
-  https://neps.academy/br/exercise/60
-*/
+ * Contest : Neps
+ * Problem : 60 - Sanduíche
+ * Link    : https://neps.academy/br/exercise/60
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

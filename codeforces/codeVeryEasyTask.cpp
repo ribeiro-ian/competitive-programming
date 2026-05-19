@@ -1,7 +1,8 @@
 /*
-  Codeforces - Very Easy Task
-  https://codeforces.com/edu/course/2/lesson/6/2/practice/contest/283932/problem/C
-*/
+ * Contest : ITMO Academy Pilot Course
+ * Problem : Very Easy Task
+ * Link    : https://codeforces.com/edu/course/2/lesson/6/2/practice/contest/283932/problem/C
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

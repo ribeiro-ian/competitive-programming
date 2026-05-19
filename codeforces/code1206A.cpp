@@ -1,7 +1,8 @@
 /*
-  Codeforces 1206A - Choose Two Numbers
-  https://codeforces.com/problemset/problem/1206/A
-*/
+ * Contest : Codeforces
+ * Problem : 1206A - Choose Two Numbers
+ * Link    : https://codeforces.com/problemset/problem/1206/A
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

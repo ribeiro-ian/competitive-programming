@@ -1,7 +1,8 @@
 /*
-  CSES 1645 - Nearest Smaller Values
-  https://cses.fi/problemset/task/1645
-*/
+ * Contest : CSES
+ * Problem : 1645 - Nearest Smaller Values
+ * Link    : https://cses.fi/problemset/task/1645
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

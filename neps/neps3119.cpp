@@ -1,7 +1,8 @@
 /*
-  OBI 2025 - Fase 1 - Pizzaria
-  https://neps.academy/br/exercise/3119
-*/
+ * Contest : OBI 2025 - Fase 1
+ * Problem : Pizzaria
+ * Link    : https://neps.academy/br/exercise/3119
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

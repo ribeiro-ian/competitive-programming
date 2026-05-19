@@ -1,7 +1,8 @@
 /*
-  CSES 1145 - Increasing Subsequence
-  https://cses.fi/problemset/task/1145
-*/
+ * Contest : CSES
+ * Problem : 1145 - Increasing Subsequence
+ * Link    : https://cses.fi/problemset/task/1145
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

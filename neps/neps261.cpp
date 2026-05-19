@@ -1,7 +1,8 @@
 /*
-  NEPS 261 - Ogros
-  https://neps.academy/br/exercise/261
-*/
+ * Contest : NEPS
+ * Problem : 261 - Ogros
+ * Link    : https://neps.academy/br/exercise/261
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

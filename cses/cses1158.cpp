@@ -1,7 +1,8 @@
 /*
-  CSES 1158 - Book Shop
-  https://cses.fi/problemset/task/1158
-*/
+ * Contest : CSES
+ * Problem : 1158 - Book Shop
+ * Link    : https://cses.fi/problemset/task/1158
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

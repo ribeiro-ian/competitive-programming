@@ -1,7 +1,8 @@
 /*
-  CSES 2216 - Collecting Numbers
-  https://cses.fi/problemset/task/2216
-*/
+ * Contest : CSES
+ * Problem : 2216 - Collecting Numbers
+ * Link    : https://cses.fi/problemset/task/2216
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

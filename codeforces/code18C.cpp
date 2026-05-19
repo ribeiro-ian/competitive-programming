@@ -1,7 +1,8 @@
 /*
-  Codeforces 18C - Stripe
-  https://codeforces.com/problemset/problem/18/C
-*/
+ * Contest : Codeforces
+ * Problem : 18C - Stripe
+ * Link    : https://codeforces.com/problemset/problem/18/C
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

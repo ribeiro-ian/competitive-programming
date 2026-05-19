@@ -1,7 +1,8 @@
 /*
-  CSES 2102 - Finding Patterns
-  https://cses.fi/problemset/task/2102
-*/
+ * Contest : CSES
+ * Problem : 2102 - Finding Patterns
+ * Link    : https://cses.fi/problemset/task/2102
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

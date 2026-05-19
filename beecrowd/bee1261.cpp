@@ -1,7 +1,8 @@
 /*
-  Beecrowd 1261 - Pontos de Feno
-  https://judge.beecrowd.com/pt/problems/view/1261
-*/
+ * Contest : Beecrowd
+ * Problem : 1261 - Pontos de Feno
+ * Link    : https://judge.beecrowd.com/pt/problems/view/1261
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

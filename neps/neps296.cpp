@@ -1,7 +1,8 @@
 /*
-  Neps 296 - Desvio de Rota
-  https://neps.academy/br/exercise/296
-*/
+ * Contest : Neps
+ * Problem : 296 - Desvio de Rota
+ * Link    : https://neps.academy/br/exercise/296
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

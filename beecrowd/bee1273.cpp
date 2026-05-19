@@ -1,7 +1,8 @@
 /*
-  Beecrowd 1273 - Justificador
-  https://judge.beecrowd.com/pt/problems/view/1273
-*/
+ * Contest : Beecrowd
+ * Problem : 1273 - Justificador
+ * Link    : https://judge.beecrowd.com/pt/problems/view/1273
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

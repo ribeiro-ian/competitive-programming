@@ -1,7 +1,8 @@
 /*
-  CSES 3359 - Minimal Grid Path
-  https://cses.fi/problemset/task/3359
-*/
+ * Contest : CSES
+ * Problem : 3359 - Minimal Grid Path
+ * Link    : https://cses.fi/problemset/task/3359
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

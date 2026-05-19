@@ -1,7 +1,8 @@
 /*
-  CSES 1646 - Static Range Sum Queries
-  https://cses.fi/problemset/task/1646
-*/
+ * Contest : CSES
+ * Problem : 1646 - Static Range Sum Queries
+ * Link    : https://cses.fi/problemset/task/1646
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

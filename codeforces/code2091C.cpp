@@ -1,7 +1,8 @@
 /*
-  Codeforces 2091C - Combination Lock
-  https://codeforces.com/contest/2091/problem/C
-*/
+ * Contest : Codeforces
+ * Problem : 2091C - Combination Lock
+ * Link    : https://codeforces.com/contest/2091/problem/C
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

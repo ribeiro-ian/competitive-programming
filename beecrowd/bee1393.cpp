@@ -1,7 +1,8 @@
 /*
-  Beecrowd 1393 - Lajotas Hexagonais
-  https://judge.beecrowd.com/pt/problems/view/13930
-*/
+ * Contest : Beecrowd
+ * Problem : 1393 - Lajotas Hexagonais
+ * Link    : https://judge.beecrowd.com/pt/problems/view/13930
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

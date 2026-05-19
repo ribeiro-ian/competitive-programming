@@ -1,7 +1,8 @@
 /*
-  CSES 3399 - Raab Game I
-  https://cses.fi/problemset/task/3399
-*/
+ * Contest : CSES
+ * Problem : 3399 - Raab Game I
+ * Link    : https://cses.fi/problemset/task/3399
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

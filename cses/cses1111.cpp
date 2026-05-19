@@ -1,7 +1,8 @@
 /*
-  CSES 1111 - Longest Palindrome
-  https://cses.fi/problemset/task/1111
-*/
+ * Contest : CSES
+ * Problem : 1111 - Longest Palindrome
+ * Link    : https://cses.fi/problemset/task/1111
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

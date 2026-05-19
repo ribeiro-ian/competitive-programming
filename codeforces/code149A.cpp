@@ -1,7 +1,8 @@
 /*
-  Codeforces 149A - Business trip
-  https://codeforces.com/problemset/problem/149/A
-*/
+ * Contest : Codeforces
+ * Problem : 149A - Business trip
+ * Link    : https://codeforces.com/problemset/problem/149/A
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

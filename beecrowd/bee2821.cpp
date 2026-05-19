@@ -1,7 +1,8 @@
 /*
-  Bee 2821 - Distribuição de Cartas
-  https://judge.beecrowd.com/pt/problems/view/2821
-*/
+ * Contest : Beecrowd
+ * Problem : 2821 - Distribuição de Cartas
+ * Link    : https://judge.beecrowd.com/pt/problems/view/2821
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

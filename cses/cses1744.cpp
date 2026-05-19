@@ -1,7 +1,8 @@
 /*
-  CSES 1744 - Rectangle Cutting
-  https://cses.fi/problemset/task/1744
-*/
+ * Contest : CSES
+ * Problem : 1744 - Rectangle Cutting
+ * Link    : https://cses.fi/problemset/task/1744
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

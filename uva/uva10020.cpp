@@ -1,7 +1,8 @@
 /*
-  UVA 10020 - Minimal Coverage
-  https://vjudge.net/problem/UVA-10020
-*/
+ * Contest : UVA
+ * Problem : 10020 - Minimal Coverage
+ * Link    : https://vjudge.net/problem/UVA-10020
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

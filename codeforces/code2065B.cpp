@@ -1,3 +1,9 @@
+/*
+ * Contest : Codeforces
+ * Problem : 2065B - Skibidus and Ohio
+ * Link    : https://codeforces.com/contest/2065/problem/B
+ */
+
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;

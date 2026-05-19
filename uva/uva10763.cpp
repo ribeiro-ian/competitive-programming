@@ -1,7 +1,8 @@
 /*
-  UVA 10763 - Foreign Exchange
-  https://vjudge.net/problem/UVA-10763
-*/
+ * Contest : UVA
+ * Problem : 10763 - Foreign Exchange
+ * Link    : https://vjudge.net/problem/UVA-10763
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

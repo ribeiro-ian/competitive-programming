@@ -1,7 +1,8 @@
 /*
-  Beecrowd 1802 - Catálogo de Livros
-  https://judge.beecrowd.com/pt/problems/view/1802
-*/
+ * Contest : Beecrowd
+ * Problem : 1802 - Catálogo de Livros
+ * Link    : https://judge.beecrowd.com/pt/problems/view/1802
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

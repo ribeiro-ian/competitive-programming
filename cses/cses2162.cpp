@@ -1,7 +1,8 @@
 /*
-  CSES 2162 - Josephus Problem I
-  https://cses.fi/problemset/task/2162
-*/
+ * Contest : CSES
+ * Problem : 2162 - Josephus Problem I
+ * Link    : https://cses.fi/problemset/task/2162
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

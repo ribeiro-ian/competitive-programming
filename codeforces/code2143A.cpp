@@ -1,7 +1,8 @@
 /*
-  Codeforces 2143A - All Lengths Subtraction
-  https://codeforces.com/contest/2143/problem/A
-*/
+ * Contest : Codeforces
+ * Problem : 2143A - All Lengths Subtraction
+ * Link    : https://codeforces.com/contest/2143/problem/A
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

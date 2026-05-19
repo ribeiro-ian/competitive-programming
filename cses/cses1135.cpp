@@ -1,7 +1,8 @@
 /*
-  CSES 1135 - Distance Queries
-  https://cses.fi/problemset/task/1135
-*/
+ * Contest : CSES
+ * Problem : 1135 - Distance Queries
+ * Link    : https://cses.fi/problemset/task/1135
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

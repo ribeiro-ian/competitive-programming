@@ -1,7 +1,8 @@
 /*
-  Codeforces 1316E - Team Building
-  https://codeforces.com/contest/1316/problem/E
-*/
+ * Contest : Codeforces
+ * Problem : 1316E - Team Building
+ * Link    : https://codeforces.com/contest/1316/problem/E
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

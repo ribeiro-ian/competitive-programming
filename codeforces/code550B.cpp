@@ -1,7 +1,8 @@
 /*
-  Codeforces 550B - Preparing Olympiad
-  https://codeforces.com/problemset/problem/550/B
-*/
+ * Contest : Codeforces
+ * Problem : 550B - Preparing Olympiad
+ * Link    : https://codeforces.com/problemset/problem/550/B
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

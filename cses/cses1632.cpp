@@ -1,7 +1,8 @@
 /*
-  CSES 1632 - Movie Festival II
-  https://cses.fi/problemset/task/1632
-*/
+ * Contest : CSES
+ * Problem : 1632 - Movie Festival II
+ * Link    : https://cses.fi/problemset/task/1632
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

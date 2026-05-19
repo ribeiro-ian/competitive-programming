@@ -1,7 +1,8 @@
 /*
-  CSES 2183 - Missing Coin Sum
-  https://cses.fi/problemset/task/2183
-*/
+ * Contest : CSES
+ * Problem : 2183 - Missing Coin Sum
+ * Link    : https://cses.fi/problemset/task/2183
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

@@ -1,7 +1,8 @@
 /*
-  CSES 1085 - Array Division
-  https://cses.fi/problemset/task/1085
-*/
+ * Contest : CSES
+ * Problem : 1085 - Array Division
+ * Link    : https://cses.fi/problemset/task/1085
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

@@ -1,7 +1,8 @@
 /*
-  CSES 2163 - Josephus Problem II
-  https://cses.fi/problemset/task/2163
-*/
+ * Contest : CSES
+ * Problem : 2163 - Josephus Problem II
+ * Link    : https://cses.fi/problemset/task/2163
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

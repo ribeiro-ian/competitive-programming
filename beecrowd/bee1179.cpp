@@ -1,7 +1,8 @@
 /*
-  Beecrowd 1179 - Preenchimento de Vetor IV
-  https://judge.beecrowd.com/pt/problems/view/1179
-*/
+ * Contest : Beecrowd
+ * Problem : 1179 - Preenchimento de Vetor IV
+ * Link    : https://judge.beecrowd.com/pt/problems/view/1179
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

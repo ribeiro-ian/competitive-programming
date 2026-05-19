@@ -1,7 +1,8 @@
 /*
-  CSES 3223 - Sliding Window Inversions
-  https://cses.fi/problemset/task/3223
-*/
+ * Contest : CSES
+ * Problem : 3223 - Sliding Window Inversions
+ * Link    : https://cses.fi/problemset/task/3223
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

@@ -1,7 +1,8 @@
 /*
-  Codeforces 282A - Bit++
-  https://codeforces.com/problemset/problem/282/A
-*/
+ * Contest : Codeforces
+ * Problem : 282A - Bit++
+ * Link    : https://codeforces.com/problemset/problem/282/A
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

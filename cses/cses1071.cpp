@@ -1,7 +1,8 @@
 /*
-  CSES 1071 - Number Spiral
-  https://cses.fi/problemset/task/1071
-*/
+ * Contest : CSES
+ * Problem : 1071 - Number Spiral
+ * Link    : https://cses.fi/problemset/task/1071
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

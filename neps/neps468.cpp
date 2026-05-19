@@ -1,7 +1,8 @@
 /*
-  OBI 2019 - Fase 1 - Soma
-  https://neps.academy/br/exercise/468
-*/
+ * Contest : OBI 2019 - Fase 1
+ * Problem : Soma
+ * Link    : https://neps.academy/br/exercise/468
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

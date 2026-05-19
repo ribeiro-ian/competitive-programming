@@ -1,7 +1,8 @@
 /*
-  Codeforces 2072A - New World, New Me, New Array
-  https://codeforces.com/contest/2072/problem/A
-*/
+ * Contest : Codeforces
+ * Problem : 2072A - New World, New Me, New Array
+ * Link    : https://codeforces.com/contest/2072/problem/A
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

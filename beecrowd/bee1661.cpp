@@ -1,7 +1,8 @@
 /*
-  Beecrowd 1661 - Comércio de Vinhos na Gergóvia
-  https://judge.beecrowd.com/pt/problems/view/1661
-*/
+ * Contest : Beecrowd
+ * Problem : 1661 - Comércio de Vinhos na Gergóvia
+ * Link    : https://judge.beecrowd.com/pt/problems/view/1661
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

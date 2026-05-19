@@ -1,7 +1,8 @@
 /*
-  Codeforces 2091B - Team Training
-  https://codeforces.com/contest/2091/problem/B
-*/
+ * Contest : Codeforces
+ * Problem : 2091B - Team Training
+ * Link    : https://codeforces.com/contest/2091/problem/B
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

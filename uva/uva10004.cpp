@@ -1,7 +1,9 @@
 /*
-  UVA 10004
-  https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=945
-*/
+ * Contest : UVA
+ * Problem : 10004 - Bicoloring
+ * Link    : https://vjudge.net/problem/UVA-10004
+ */
+
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -41,7 +43,6 @@ bool bfs(int no) {
 
 int main() {
   fastio
-
 
   while (scanf("%i", &n), n) {
     adj.assign(n, vector<int>());

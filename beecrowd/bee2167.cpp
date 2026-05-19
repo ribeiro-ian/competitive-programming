@@ -1,7 +1,8 @@
 /*
-  Beecrowd 2167 - Falha do Motor
-  https://judge.beecrowd.com/pt/problems/view/2167
-*/
+ * Contest : Beecrowd
+ * Problem : 2167 - Falha do Motor
+ * Link    : https://judge.beecrowd.com/pt/problems/view/2167
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

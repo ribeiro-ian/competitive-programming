@@ -1,7 +1,8 @@
 /*
-  CSES 1676 - Road Construction
-  https://cses.fi/problemset/task/1676
-*/
+ * Contest : CSES
+ * Problem : 1676 - Road Construction
+ * Link    : https://cses.fi/problemset/task/1676
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

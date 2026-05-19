@@ -1,7 +1,8 @@
 /*
-  Codeforces 946A - Partition
-  https://codeforces.com/contest/946/problem/A
-*/
+ * Contest : Codeforces
+ * Problem : 946A - Partition
+ * Link    : https://codeforces.com/contest/946/problem/A
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

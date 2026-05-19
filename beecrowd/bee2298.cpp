@@ -1,7 +1,8 @@
 /*
-  Beecrowd 2298 - Mini-Poker
-  https://judge.beecrowd.com/pt/problems/view/2298
-*/
+ * Contest : Beecrowd
+ * Problem : 2298 - Mini-Poker
+ * Link    : https://judge.beecrowd.com/pt/problems/view/2298
+ */
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -65,7 +66,7 @@ int sol() {
     if (qtd == 2)
       return num;
 
-  return -1;   
+  return -1;
 }
 
 int main() {

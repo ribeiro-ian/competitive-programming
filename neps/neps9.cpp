@@ -1,7 +1,8 @@
 /*
-  OBI 2016 - Fase 2  - Jardim de Infância
-  https://neps.academy/br/exercise/9
-*/
+ * Contest : OBI 2017 - Fase 3
+ * Problem : Arranha-céu
+ * Link    : https://neps.academy/br/exercise/43
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

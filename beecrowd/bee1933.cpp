@@ -1,7 +1,8 @@
 /*
-  Beecrowd 1933 - Tri-du
-  https://judge.beecrowd.com/pt/problems/view/1933
-*/
+ * Contest : Beecrowd
+ * Problem : 1933 - Tri-du
+ * Link    : https://judge.beecrowd.com/pt/problems/view/1933
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

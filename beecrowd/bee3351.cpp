@@ -1,7 +1,8 @@
 /*
-  Beecrowd 3351 - Clickbait
-  https://judge.beecrowd.com/pt/problems/view/3351
-*/
+ * Contest : Beecrowd
+ * Problem : 3351 - Clickbait
+ * Link    : https://judge.beecrowd.com/pt/problems/view/3351
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

@@ -1,7 +1,8 @@
 /*
-  Neps 198 - Quadrado Mágico 3x3
-  https://neps.academy/br/exercise/198
-*/
+ * Contest : Neps
+ * Problem : 198 - Quadrado Mágico 3x3
+ * Link    : https://neps.academy/br/exercise/198
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

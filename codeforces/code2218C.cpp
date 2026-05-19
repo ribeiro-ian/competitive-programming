@@ -1,7 +1,8 @@
 /*
-  Codeforces 2218C - The 67th Permutation Problem
-  https://codeforces.com/contest/2218/problem/C
-*/
+ * Contest : Codeforces
+ * Problem : 2218C - The 67th Permutation Problem
+ * Link    : https://codeforces.com/contest/2218/problem/C
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

@@ -1,7 +1,8 @@
 /*
-  CSES 1638 - Grid Paths I
-  https://cses.fi/problemset/task/1638
-*/
+ * Contest : CSES
+ * Problem : 1638 - Grid Paths I
+ * Link    : https://cses.fi/problemset/task/1638
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

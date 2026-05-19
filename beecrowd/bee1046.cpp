@@ -1,7 +1,8 @@
 /*
-  Beecrowd 1046 - Tempo de Jogo
-  https://judge.beecrowd.com/pt/problems/view/1046
-*/
+ * Contest : Beecrowd
+ * Problem : 1046 - Tempo de Jogo
+ * Link    : https://judge.beecrowd.com/pt/problems/view/1046
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

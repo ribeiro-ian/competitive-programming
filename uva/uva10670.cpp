@@ -1,7 +1,8 @@
 /*
-  UVA 10670 - Work Reduction
-  https://vjudge.net/problem/UVA-10670
-*/
+ * Contest : UVA
+ * Problem : 10670 - Work Reduction
+ * Link    : https://vjudge.net/problem/UVA-10670
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

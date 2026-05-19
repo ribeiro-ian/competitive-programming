@@ -1,7 +1,8 @@
 /*
-  CSES 1131 - Tree Diameter
-  https://cses.fi/problemset/task/1131
-*/
+ * Contest : CSES
+ * Problem : 1131 - Tree Diameter
+ * Link    : https://cses.fi/problemset/task/1131
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

@@ -1,7 +1,8 @@
 /*
-  CSES 1625 - Grid Path Description
-  https://cses.fi/problemset/task/1625
-*/
+ * Contest : CSES
+ * Problem : 1625 - Grid Path Description
+ * Link    : https://cses.fi/problemset/task/1625
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

@@ -1,7 +1,8 @@
 /*
-  Beecrowd 1437 - Esquerda, Volver!
-  https://judge.beecrowd.com/pt/problems/view/1437
-*/
+ * Contest : Beecrowd
+ * Problem : 1437 - Esquerda, Volver!
+ * Link    : https://judge.beecrowd.com/pt/problems/view/1437
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

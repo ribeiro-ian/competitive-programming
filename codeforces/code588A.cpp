@@ -1,7 +1,8 @@
 /*
-  Codeforces 588A - Duff and Meat
-  https://codeforces.com/problemset/problem/588/A
-*/
+ * Contest : Codeforces
+ * Problem : 588A - Duff and Meat
+ * Link    : https://codeforces.com/problemset/problem/588/A
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

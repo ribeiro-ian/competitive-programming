@@ -1,7 +1,8 @@
 /*
-  CSES 1090 - Ferris Wheel
-  https://cses.fi/problemset/task/1090
-*/
+ * Contest : CSES
+ * Problem : 1090 - Ferris Wheel
+ * Link    : https://cses.fi/problemset/task/1090
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

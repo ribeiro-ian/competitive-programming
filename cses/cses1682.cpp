@@ -1,7 +1,8 @@
 /*
-  CSES 1682 - Flight Routes Check
-  https://cses.fi/problemset/task/1682
-*/
+ * Contest : CSES
+ * Problem : 1682 - Flight Routes Check
+ * Link    : https://cses.fi/problemset/task/1682
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

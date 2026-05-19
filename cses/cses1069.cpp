@@ -1,7 +1,8 @@
 /*
-  CSES 1069 - Repetitions
-  https://cses.fi/problemset/task/1069
-*/
+ * Contest : CSES
+ * Problem : 1069 - Repetitions
+ * Link    : https://cses.fi/problemset/task/1069
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

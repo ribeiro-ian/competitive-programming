@@ -1,7 +1,8 @@
 /*
-  Codeforces 706B - Interesting drink
-  https://codeforces.com/problemset/problem/706/B/
-*/
+ * Contest : Codeforces
+ * Problem : 706B - Interesting drink
+ * Link    : https://codeforces.com/problemset/problem/706/B/
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

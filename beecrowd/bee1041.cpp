@@ -1,7 +1,8 @@
 /*
-  Beecrowd 1041 - Coordenadas de um Ponto
-  https://judge.beecrowd.com/pt/problems/view/1041
-*/
+ * Contest : Beecrowd
+ * Problem : 1041 - Coordenadas de um Ponto
+ * Link    : https://judge.beecrowd.com/pt/problems/view/1041
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

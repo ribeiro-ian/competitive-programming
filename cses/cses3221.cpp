@@ -1,7 +1,8 @@
 /*
-  CSES 3221 - Sliding Window Minimum
-  https://cses.fi/problemset/task/3221
-*/
+ * Contest : CSES
+ * Problem : 3221 - Sliding Window Minimum
+ * Link    : https://cses.fi/problemset/task/3221
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

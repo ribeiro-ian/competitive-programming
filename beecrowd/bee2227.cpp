@@ -1,7 +1,8 @@
 /*
-  Beecrowd 2227 - Aeroporto
-  https://judge.beecrowd.com/pt/problems/view/2227
-*/
+ * Contest : Beecrowd
+ * Problem : 2227 - Aeroporto
+ * Link    : https://judge.beecrowd.com/pt/problems/view/2227
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

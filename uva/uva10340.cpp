@@ -1,7 +1,8 @@
 /*
-  UVA 10340 - All in All
-  https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1281
-*/
+ * Contest : UVA
+ * Problem : 10340 - All in All
+ * Link    : https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1281
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

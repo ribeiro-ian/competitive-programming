@@ -1,7 +1,8 @@
 /*
-  Codeforces 2092B - Lady Bug
-  https://codeforces.com/contest/2092/problem/B
-*/
+ * Contest : Codeforces
+ * Problem : 2092B - Lady Bug
+ * Link    : https://codeforces.com/contest/2092/problem/B
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

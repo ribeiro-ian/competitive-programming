@@ -1,7 +1,8 @@
 /*
-  CSES 1079 - Binomial Coefficients
-  https://cses.fi/problemset/task/1079
-*/
+ * Contest : CSES
+ * Problem : 1079 - Binomial Coefficients
+ * Link    : https://cses.fi/problemset/task/1079
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

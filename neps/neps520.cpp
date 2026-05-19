@@ -1,7 +1,8 @@
 /*
-  Neps 520 - Tarzan
-  https://neps.academy/br/exercise/520
-*/
+ * Contest : Neps
+ * Problem : 520 - Tarzan
+ * Link    : https://neps.academy/br/exercise/520
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

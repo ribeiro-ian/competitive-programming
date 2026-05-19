@@ -1,7 +1,8 @@
 /*
-  CSES 1097 - Removal Game
-  https://cses.fi/problemset/task/1097
-*/
+ * Contest : CSES
+ * Problem : 1097 - Removal Game
+ * Link    : https://cses.fi/problemset/task/1097
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

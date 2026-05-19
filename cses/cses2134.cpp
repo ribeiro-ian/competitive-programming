@@ -1,7 +1,8 @@
 /*
-  CSES 2134 - Path Queries II
-  https://cses.fi/problemset/task/2134
-*/
+ * Contest : CSES
+ * Problem : 2134 - Path Queries II
+ * Link    : https://cses.fi/problemset/task/2134
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

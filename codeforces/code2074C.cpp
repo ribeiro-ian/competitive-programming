@@ -1,7 +1,8 @@
 /*
-  Codeforces 2074C - XOR and Triangle
-  https://codeforces.com/contest/2074/problem/C
-*/
+ * Contest : Codeforces
+ * Problem : 2074C - XOR and Triangle
+ * Link    : https://codeforces.com/contest/2074/problem/C
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

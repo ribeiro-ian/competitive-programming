@@ -1,7 +1,8 @@
 /*
-  OBI 2025 - Fase 2 - Feira de Artesanato
-  https://neps.academy/br/exercise/3266
-*/
+ * Contest : OBI 2025 - Fase 2
+ * Problem : Feira de Artesanato
+ * Link    : https://neps.academy/br/exercise/3266
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

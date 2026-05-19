@@ -1,7 +1,8 @@
 /*
-  Codeforces 1152A - Neko Finds Grapes
-  https://codeforces.com/contest/1152/problem/A
-*/
+ * Contest : Codeforces
+ * Problem : 1152A - Neko Finds Grapes
+ * Link    : https://codeforces.com/contest/1152/problem/A
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

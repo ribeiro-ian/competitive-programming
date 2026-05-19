@@ -1,7 +1,8 @@
 /*
-  Codeforces 2094D - Tung Tung Sahur
-  https://codeforces.com/contest/2094/problem/D
-*/
+ * Contest : Codeforces
+ * Problem : 2094D - Tung Tung Sahur
+ * Link    : https://codeforces.com/contest/2094/problem/D
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

@@ -1,7 +1,8 @@
 /*
-  CSES 2079 - Finding a Centroid
-  https://cses.fi/problemset/task/2079
-*/
+ * Contest : CSES
+ * Problem : 2079 - Finding a Centroid
+ * Link    : https://cses.fi/problemset/task/2079
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

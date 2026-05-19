@@ -1,7 +1,8 @@
 /*
-  Neps 309 - Gincana (OBI 2011)
-  https://neps.academy/br/exercise/309
-*/
+ * Contest : Neps
+ * Problem : 309 - Gincana (OBI 2011)
+ * Link    : https://neps.academy/br/exercise/309
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

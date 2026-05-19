@@ -1,7 +1,8 @@
 /*
-  CSES 3420 - Distinct Values Subarrays
-  https://cses.fi/problemset/task/3420
-*/
+ * Contest : CSES
+ * Problem : 3420 - Distinct Values Subarrays
+ * Link    : https://cses.fi/problemset/task/3420
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

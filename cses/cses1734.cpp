@@ -1,7 +1,8 @@
 /*
-  CSES 1734 - Distinct Values Queries
-  https://cses.fi/problemset/task/1734
-*/
+ * Contest : CSES
+ * Problem : 1734 - Distinct Values Queries
+ * Link    : https://cses.fi/problemset/task/1734
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

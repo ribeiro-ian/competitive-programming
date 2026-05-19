@@ -1,7 +1,8 @@
 /*
-  Codeforces 20C - Dijkstra?
-  https://codeforces.com/problemset/problem/20/C
-*/
+ * Contest : Codeforces
+ * Problem : 20C - Dijkstra?
+ * Link    : https://codeforces.com/problemset/problem/20/C
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

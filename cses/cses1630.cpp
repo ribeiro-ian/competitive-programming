@@ -1,7 +1,8 @@
 /*
-  CSES 1630 - Tasks and Deadlines
-  https://cses.fi/problemset/task/1630
-*/
+ * Contest : CSES
+ * Problem : 1630 - Tasks and Deadlines
+ * Link    : https://cses.fi/problemset/task/1630
+ */
 
 #include <bits/stdc++.h>
 #include <print>

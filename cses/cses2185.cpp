@@ -1,7 +1,8 @@
 /*
-  CSES 2185 - Prime Multiples
-  https://cses.fi/problemset/task/2185
-*/
+ * Contest : CSES
+ * Problem : 2185 - Prime Multiples
+ * Link    : https://cses.fi/problemset/task/2185
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

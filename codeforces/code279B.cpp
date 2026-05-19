@@ -1,7 +1,8 @@
 /*
-  Codeforces 279B - Books
-  https://codeforces.com/problemset/problem/279/B
-*/
+ * Contest : Codeforces
+ * Problem : 279B - Books
+ * Link    : https://codeforces.com/problemset/problem/279/B
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

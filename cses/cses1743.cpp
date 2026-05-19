@@ -1,7 +1,8 @@
 /*
-  CSES 1743 - String Reorder
-  https://cses.fi/problemset/task/1743
-*/
+ * Contest : CSES
+ * Problem : 1743 - String Reorder
+ * Link    : https://cses.fi/problemset/task/1743
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

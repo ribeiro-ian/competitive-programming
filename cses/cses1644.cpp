@@ -1,7 +1,8 @@
 /*
-  CSES 1644 - Maximum Subarray Sum II
-  https://cses.fi/problemset/task/1644
-*/
+ * Contest : CSES
+ * Problem : 1644 - Maximum Subarray Sum II
+ * Link    : https://cses.fi/problemset/task/1644
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

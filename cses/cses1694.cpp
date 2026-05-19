@@ -1,7 +1,8 @@
 /*
-  CSES 1694 - Download Speed
-  https://cses.fi/problemset/task/1694
-*/
+ * Contest : CSES
+ * Problem : 1694 - Download Speed
+ * Link    : https://cses.fi/problemset/task/1694
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

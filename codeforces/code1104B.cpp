@@ -1,7 +1,8 @@
 /*
-  Codeforces 1104B - Game with string
-  https://codeforces.com/problemset/problem/1104/B
-*/
+ * Contest : Codeforces
+ * Problem : 1104B - Game with string
+ * Link    : https://codeforces.com/problemset/problem/1104/B
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

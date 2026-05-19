@@ -1,7 +1,8 @@
 /*
-  CSES 1633 - Dice Combinations
-  https://cses.fi/problemset/task/1633
-*/
+ * Contest : CSES
+ * Problem : 1633 - Dice Combinations
+ * Link    : https://cses.fi/problemset/task/1633
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

@@ -1,7 +1,8 @@
 /*
-  UVA 657 - The die is cast
-  https://vjudge.net/problem/UVA-657
-*/
+ * Contest : UVA
+ * Problem : 657 - The die is cast
+ * Link    : https://vjudge.net/problem/UVA-657
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

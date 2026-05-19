@@ -1,7 +1,8 @@
 /*
-  Codeforces 902A - Visiting a Friend
-  https://codeforces.com/contest/902/problem/A
-*/
+ * Contest : Codeforces
+ * Problem : 902A - Visiting a Friend
+ * Link    : https://codeforces.com/contest/902/problem/A
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

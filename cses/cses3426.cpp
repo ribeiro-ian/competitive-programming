@@ -1,7 +1,8 @@
 /*
-  CSES 3426 - Sliding Window Xor
-  https://cses.fi/problemset/task/3426
-*/
+ * Contest : CSES
+ * Problem : 3426 - Sliding Window Xor
+ * Link    : https://cses.fi/problemset/task/3426
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

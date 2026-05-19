@@ -1,7 +1,8 @@
 /*
-  OBI 2025 - Fase 2 - Um Desafio Muito Distinto
-  https://neps.academy/br/exercise/3268
-*/
+ * Contest : OBI 2025 - Fase 2
+ * Problem : Um Desafio Muito Distinto
+ * Link    : https://neps.academy/br/exercise/3268
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

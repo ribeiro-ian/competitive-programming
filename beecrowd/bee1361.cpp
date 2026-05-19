@@ -1,7 +1,8 @@
 /*
-  Beecrowd 1361 - Desenhando o Edifício
-  https://judge.beecrowd.com/pt/problems/view/1361
-*/
+ * Contest : Beecrowd
+ * Problem : 1361 - Desenhando o Edifício
+ * Link    : https://judge.beecrowd.com/pt/problems/view/1361
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

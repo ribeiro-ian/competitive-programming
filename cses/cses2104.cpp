@@ -1,7 +1,8 @@
 /*
-  CSES 2104 - Pattern Positions
-  https://cses.fi/problemset/task/2104
-*/
+ * Contest : CSES
+ * Problem : 2104 - Pattern Positions
+ * Link    : https://cses.fi/problemset/task/2104
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

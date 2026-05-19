@@ -1,7 +1,8 @@
 /*
-  Codeforces 1036A - Function Height
-  https://codeforces.com/problemset/problem/1036/A
-*/
+ * Contest : Codeforces
+ * Problem : 1036A - Function Height
+ * Link    : https://codeforces.com/problemset/problem/1036/A
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

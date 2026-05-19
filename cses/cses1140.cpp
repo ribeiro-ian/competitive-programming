@@ -1,7 +1,8 @@
 /*
-  CSES 1140 - Projects
-  https://cses.fi/problemset/task/1140
-*/
+ * Contest : CSES
+ * Problem : 1140 - Projects
+ * Link    : https://cses.fi/problemset/task/1140
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

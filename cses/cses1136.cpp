@@ -1,7 +1,8 @@
 /*
-  CSES 1136 - Counting Paths
-  https://cses.fi/problemset/task/1136
-*/
+ * Contest : CSES
+ * Problem : 1136 - Counting Paths
+ * Link    : https://cses.fi/problemset/task/1136
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

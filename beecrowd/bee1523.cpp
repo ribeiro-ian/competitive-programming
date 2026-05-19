@@ -1,7 +1,8 @@
 /*
-  Beecrowd 1523 - Estacionamento Linear
-  https://judge.beecrowd.com/pt/problems/view/1523
-*/
+ * Contest : Beecrowd
+ * Problem : 1523 - Estacionamento Linear
+ * Link    : https://judge.beecrowd.com/pt/problems/view/1523
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

@@ -1,7 +1,8 @@
 /*
-  OBI 2025 - Fase 1 - Cafeteria
-  https://neps.academy/br/exercise/3125
-*/
+ * Contest : OBI 2025 - Fase 1
+ * Problem : Cafeteria
+ * Link    : https://neps.academy/br/exercise/3125
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

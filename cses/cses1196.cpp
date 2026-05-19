@@ -1,7 +1,8 @@
 /*
-  CSES 1196 - Flight Routes
-  https://cses.fi/problemset/task/1196
-*/
+ * Contest : CSES
+ * Problem : 1196 - Flight Routes
+ * Link    : https://cses.fi/problemset/task/1196
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

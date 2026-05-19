@@ -1,7 +1,8 @@
 /*
-  Codeforces 628A - Tennis Tournament
-  https://codeforces.com/problemset/problem/628/A
-*/
+ * Contest : Codeforces
+ * Problem : 628A - Tennis Tournament
+ * Link    : https://codeforces.com/problemset/problem/628/A
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

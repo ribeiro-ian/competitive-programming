@@ -1,7 +1,8 @@
 /*
-  CSES 1165 - Número Primo
-  https://judge.beecrowd.com/pt/problems/view/1165
-*/
+ * Contest : Beecrowd
+ * Problem : 1165 - Número Primo
+ * Link    : https://judge.beecrowd.com/pt/problems/view/1165
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

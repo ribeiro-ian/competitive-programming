@@ -1,7 +1,8 @@
 /*
-  CSES 1637 - Removing Digits
-  https://cses.fi/problemset/task/1637
-*/
+ * Contest : CSES
+ * Problem : 1637 - Removing Digits
+ * Link    : https://cses.fi/problemset/task/1637
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

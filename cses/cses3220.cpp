@@ -1,7 +1,8 @@
 /*
-  CSES 3220 - Sliding Window Sum
-  https://cses.fi/problemset/task/3220
-*/
+ * Contest : CSES
+ * Problem : 3220 - Sliding Window Sum
+ * Link    : https://cses.fi/problemset/task/3220
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

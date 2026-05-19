@@ -1,7 +1,8 @@
 /*
-  CSES 1652 - Forest Queries
-  https://cses.fi/problemset/task/1652
-*/
+ * Contest : CSES
+ * Problem : 1652 - Forest Queries
+ * Link    : https://cses.fi/problemset/task/1652
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

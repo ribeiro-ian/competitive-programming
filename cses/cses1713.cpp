@@ -1,7 +1,8 @@
 /*
-  CSES 1713 - Counting Divisors
-  https://cses.fi/problemset/task/1713
-*/
+ * Contest : CSES
+ * Problem : 1713 - Counting Divisors
+ * Link    : https://cses.fi/problemset/task/1713
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

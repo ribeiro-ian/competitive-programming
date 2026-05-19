@@ -1,7 +1,8 @@
 /*
-  CSES 1077 - Sliding Window Cost
-  https://cses.fi/problemset/task/1077
-*/
+ * Contest : CSES
+ * Problem : 1077 - Sliding Window Cost
+ * Link    : https://cses.fi/problemset/task/1077
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

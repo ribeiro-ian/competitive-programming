@@ -1,7 +1,8 @@
 /*
-  Codeforces - Packing Rectangles
-  https://codeforces.com/edu/course/2/lesson/6/2/practice/contest/283932/problem/A
-*/
+ * Contest : ITMO Academy Pilot Course
+ * Problem : Packing Rectangles
+ * Link    : https://codeforces.com/edu/course/2/lesson/6/2/practice/contest/283932/problem/A
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

@@ -1,7 +1,8 @@
 /*
-  CSES 1680 - Longest Flight Route
-  https://cses.fi/problemset/task/1680
-*/
+ * Contest : CSES
+ * Problem : 1680 - Longest Flight Route
+ * Link    : https://cses.fi/problemset/task/1680
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

@@ -1,7 +1,8 @@
 /*
-  Beecrowd 2852 - Troca de Mensagens
-  https://judge.beecrowd.com/pt/problems/view/2852
-*/
+ * Contest : Beecrowd
+ * Problem : 2852 - Troca de Mensagens
+ * Link    : https://judge.beecrowd.com/pt/problems/view/2852
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

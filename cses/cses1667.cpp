@@ -1,7 +1,8 @@
 /*
-  CSES 1667 - Message Route
-  https://cses.fi/problemset/task/1667
-*/
+ * Contest : CSES
+ * Problem : 1667 - Message Route
+ * Link    : https://cses.fi/problemset/task/1667
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

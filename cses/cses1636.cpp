@@ -1,7 +1,8 @@
 /*
-  CSES 1636 - Coin Combinations II
-  https://cses.fi/problemset/task/1636
-*/
+ * Contest : CSES
+ * Problem : 1636 - Coin Combinations II
+ * Link    : https://cses.fi/problemset/task/1636
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

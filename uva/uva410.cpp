@@ -1,7 +1,8 @@
 /*
-  UVA 410 - Station Balance
-  https://vjudge.net/problem/UVA-410
-*/
+ * Contest : UVA
+ * Problem : 410 - Station Balance
+ * Link    : https://vjudge.net/problem/UVA-410
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

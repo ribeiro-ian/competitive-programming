@@ -1,7 +1,8 @@
 /*
-  CSES 1163 - Traffic Lights
-  https://cses.fi/problemset/task/1163
-*/
+ * Contest : CSES
+ * Problem : 1163 - Traffic Lights
+ * Link    : https://cses.fi/problemset/task/1163
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

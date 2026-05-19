@@ -1,7 +1,8 @@
 /*
-  CSES 1081 - Common Divisors
-  https://cses.fi/problemset/task/1081
-*/
+ * Contest : CSES
+ * Problem : 1081 - Common Divisors
+ * Link    : https://cses.fi/problemset/task/1081
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

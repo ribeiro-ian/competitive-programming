@@ -1,7 +1,8 @@
 /*
-  CSES 1624 - https://cses.fi/problemset/task/1624
-  https://cses.fi/problemset/task/1624
-*/
+ * Contest : CSES
+ * Problem : 1624 - https://cses.fi/problemset/task/1624
+ * Link    : https://cses.fi/problemset/task/1624
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

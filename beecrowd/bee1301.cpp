@@ -1,7 +1,8 @@
 /*
-  Beecrowd 1301 - Produto do Intervalo
-  https://judge.beecrowd.com/pt/problems/view/1301
-*/
+ * Contest : Beecrowd
+ * Problem : 1301 - Produto do Intervalo
+ * Link    : https://judge.beecrowd.com/pt/problems/view/1301
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

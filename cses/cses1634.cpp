@@ -1,7 +1,8 @@
 /*
-  CSES 1634 - Minimizing Coins
-  https://cses.fi/problemset/task/1634
-*/
+ * Contest : CSES
+ * Problem : 1634 - Minimizing Coins
+ * Link    : https://cses.fi/problemset/task/1634
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

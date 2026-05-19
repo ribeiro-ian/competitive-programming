@@ -1,7 +1,8 @@
 /*
-  Beecrowd 1861 - O Hall dos Assassinos
-  https://judge.beecrowd.com/pt/problems/view/1861
-*/
+ * Contest : Beecrowd
+ * Problem : 1861 - O Hall dos Assassinos
+ * Link    : https://judge.beecrowd.com/pt/problems/view/1861
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

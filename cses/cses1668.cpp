@@ -1,7 +1,8 @@
 /*
-  CSES 1668 - Building Teams
-  https://cses.fi/problemset/task/1668
-*/
+ * Contest : CSES
+ * Problem : 1668 - Building Teams
+ * Link    : https://cses.fi/problemset/task/1668
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

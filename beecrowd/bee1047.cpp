@@ -1,7 +1,8 @@
 /*
-  CSES 1047 - Tempo de Jogo com Minutos
-  https://judge.beecrowd.com/pt/problems/view/1047
-*/
+ * Contest : Beecrowd
+ * Problem : 1047 - Tempo de Jogo com Minutos
+ * Link    : https://judge.beecrowd.com/pt/problems/view/1047
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

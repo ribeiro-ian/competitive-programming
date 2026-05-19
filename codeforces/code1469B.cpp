@@ -1,3 +1,9 @@
+/*
+ * Contest : Codeforces
+ * Problem : 1469B - Red and Blue
+ * Link    : https://codeforces.com/contest/1469/problem/B
+ */
+
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;

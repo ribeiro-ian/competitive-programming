@@ -1,7 +1,8 @@
 /*
-  Neps 535 - Colorindo
-  https://neps.academy/br/exercise/535
-*/
+ * Contest : Neps
+ * Problem : 535 - Colorindo
+ * Link    : https://neps.academy/br/exercise/535
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

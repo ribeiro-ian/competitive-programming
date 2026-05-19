@@ -1,7 +1,8 @@
 /*
-  Beecrowd 1183 - Acima da Diagonal Principal
-  https://judge.beecrowd.com/pt/problems/view/1183
-*/
+ * Contest : Beecrowd
+ * Problem : 1183 - Acima da Diagonal Principal
+ * Link    : https://judge.beecrowd.com/pt/problems/view/1183
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

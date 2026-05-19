@@ -1,7 +1,8 @@
 /*
-  Beecrowd 1045 - Tipos de Triângulos
-  https://judge.beecrowd.com/pt/problems/view/1045
-*/
+ * Contest : Beecrowd
+ * Problem : 1045 - Tipos de Triângulos
+ * Link    : https://judge.beecrowd.com/pt/problems/view/1045
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

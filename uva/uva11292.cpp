@@ -1,7 +1,8 @@
 /*
-  UVA 11292 - Dragon of Loowater
-  https://vjudge.net/problem/UVA-11292
-*/
+ * Contest : UVA
+ * Problem : 11292 - Dragon of Loowater
+ * Link    : https://vjudge.net/problem/UVA-11292
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

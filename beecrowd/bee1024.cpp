@@ -1,7 +1,8 @@
 /*
-  Beecrowd 1024 - Criptografia
-  https://judge.beecrowd.com/pt/problems/view/1024
-*/
+ * Contest : Beecrowd
+ * Problem : 1024 - Criptografia
+ * Link    : https://judge.beecrowd.com/pt/problems/view/1024
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

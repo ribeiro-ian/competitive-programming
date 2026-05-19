@@ -1,7 +1,8 @@
 /*
-  CSES 1074 - Stick Lengths
-  https://cses.fi/problemset/task/1074
-*/
+ * Contest : CSES
+ * Problem : 1074 - Stick Lengths
+ * Link    : https://cses.fi/problemset/task/1074
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

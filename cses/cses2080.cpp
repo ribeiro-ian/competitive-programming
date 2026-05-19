@@ -1,7 +1,8 @@
 /*
-  CSES 2080 - Fixed-Length Paths I
-  https://cses.fi/problemset/task/2080
-*/
+ * Contest : CSES
+ * Problem : 2080 - Fixed-Length Paths I
+ * Link    : https://cses.fi/problemset/task/2080
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

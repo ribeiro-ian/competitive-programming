@@ -1,7 +1,8 @@
 /*
-  Codeforces 1220A - Cards
-  https://codeforces.com/problemset/problem/1220/A
-*/
+ * Contest : Codeforces
+ * Problem : 1220A - Cards
+ * Link    : https://codeforces.com/problemset/problem/1220/A
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

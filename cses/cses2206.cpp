@@ -1,7 +1,8 @@
 /*
-  CSES 2206 - Pizzeria Queries
-  https://cses.fi/problemset/task/2206
-*/
+ * Contest : CSES
+ * Problem : 2206 - Pizzeria Queries
+ * Link    : https://cses.fi/problemset/task/2206
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

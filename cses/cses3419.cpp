@@ -1,7 +1,8 @@
 /*
-  CSES 3149 - Mex Grid Construction
-  https://cses.fi/problemset/task/3419
-*/
+ * Contest : CSES
+ * Problem : 3149 - Mex Grid Construction
+ * Link    : https://cses.fi/problemset/task/3419
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

@@ -1,7 +1,8 @@
 /*
-  CSES 1643 - Maximum Subarray Sum
-  https://cses.fi/problemset/task/1643
-*/
+ * Contest : CSES
+ * Problem : 1643 - Maximum Subarray Sum
+ * Link    : https://cses.fi/problemset/task/1643
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

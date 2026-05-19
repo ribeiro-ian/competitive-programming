@@ -1,7 +1,8 @@
 /*
-  Codeforces 2179B - Blackslex and Showering
-  https://codeforces.com/contest/2179/problem/B
-*/
+ * Contest : Codeforces
+ * Problem : 2179B - Blackslex and Showering
+ * Link    : https://codeforces.com/contest/2179/problem/B
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

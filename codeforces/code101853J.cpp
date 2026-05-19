@@ -1,7 +1,8 @@
 /*
-  Codeforces 101853J - Smallest Difference
-  https://codeforces.com/gym/101853/problem/J
-*/
+ * Contest : Codeforces
+ * Problem : 101853J - Smallest Difference
+ * Link    : https://codeforces.com/gym/101853/problem/J
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

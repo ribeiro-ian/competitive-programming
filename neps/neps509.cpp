@@ -1,7 +1,8 @@
 /*
-  OBI 2013 - Fase 2 - Troco
-  https://neps.academy/br/exercise/509
-*/
+ * Contest : OBI 2013 - Fase 2
+ * Problem : Troco
+ * Link    : https://neps.academy/br/exercise/509
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

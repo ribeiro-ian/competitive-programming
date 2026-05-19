@@ -1,7 +1,8 @@
 /*
-  Codeforces 990B - Micro-World
-  https://codeforces.com/contest/990/problem/B
-*/
+ * Contest : Codeforces
+ * Problem : 990B - Micro-World
+ * Link    : https://codeforces.com/contest/990/problem/B
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

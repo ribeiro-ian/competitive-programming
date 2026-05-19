@@ -1,7 +1,8 @@
 /*
-  CSES 1139 - Distinct Colors
-  https://cses.fi/problemset/task/1139
-*/
+ * Contest : CSES
+ * Problem : 1139 - Distinct Colors
+ * Link    : https://cses.fi/problemset/task/1139
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

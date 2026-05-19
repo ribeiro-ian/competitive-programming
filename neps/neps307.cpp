@@ -1,7 +1,8 @@
 /*
-  OBI 2008 - Fase 1 - Lanche na Empresa
-  https://neps.academy/br/exercise/307
-*/
+ * Contest : OBI 2008 - Fase 1
+ * Problem : Lanche na Empresa
+ * Link    : https://neps.academy/br/exercise/307
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

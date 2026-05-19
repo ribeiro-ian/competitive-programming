@@ -1,7 +1,8 @@
 /*
-  Beecrowd 2329 - Pão a Metro
-  https://judge.beecrowd.com/pt/problems/view/2329
-*/
+ * Contest : Beecrowd
+ * Problem : 2329 - Pão a Metro
+ * Link    : https://judge.beecrowd.com/pt/problems/view/2329
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

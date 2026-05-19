@@ -1,7 +1,8 @@
 /*
-  Codeforces 1031A - Three Strings
-  https://codeforces.com/problemset/problem/1301/A
-*/
+ * Contest : Codeforces
+ * Problem : 1031A - Three Strings
+ * Link    : https://codeforces.com/problemset/problem/1301/A
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

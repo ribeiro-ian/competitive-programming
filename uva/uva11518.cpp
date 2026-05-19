@@ -1,7 +1,8 @@
 /*
-  UVA 11518 - Dominos 2
-  https://vjudge.net/problem/UVA-11518
-*/
+ * Contest : UVA
+ * Problem : 11518 - Dominos 2
+ * Link    : https://vjudge.net/problem/UVA-11518
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

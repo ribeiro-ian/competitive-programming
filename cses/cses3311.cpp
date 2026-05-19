@@ -1,7 +1,8 @@
 /*
-  CSES 3311 - Grid Coloring I
-  https://cses.fi/problemset/task/3311
-*/
+ * Contest : CSES
+ * Problem : 3311 - Grid Coloring I
+ * Link    : https://cses.fi/problemset/task/3311
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

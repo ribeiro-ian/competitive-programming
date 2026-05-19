@@ -1,7 +1,8 @@
 /*
-  Beecrowd 1222 - Concurso de Contos
-  https://judge.beecrowd.com/pt/problems/view/1222
-*/
+ * Contest : Beecrowd
+ * Problem : 1222 - Concurso de Contos
+ * Link    : https://judge.beecrowd.com/pt/problems/view/1222
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

@@ -1,7 +1,8 @@
 /*
-  Codeforces 489B - BerSU Ball
-  https://codeforces.com/problemset/problem/489/B
-*/
+ * Contest : Codeforces
+ * Problem : 489B - BerSU Ball
+ * Link    : https://codeforces.com/problemset/problem/489/B
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

@@ -1,7 +1,8 @@
 /*
-  CSES 1082 - Sum of Divisors
-  https://cses.fi/problemset/task/1082
-*/
+ * Contest : CSES
+ * Problem : 1082 - Sum of Divisors
+ * Link    : https://cses.fi/problemset/task/1082
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

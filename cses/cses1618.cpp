@@ -1,7 +1,8 @@
 /*
-  CSES 1618 - Trailing Zeros
-  https://cses.fi/problemset/task/1618
-*/
+ * Contest : CSES
+ * Problem : 1618 - Trailing Zeros
+ * Link    : https://cses.fi/problemset/task/1618
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

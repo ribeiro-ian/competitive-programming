@@ -1,7 +1,8 @@
 /*
-  Codeforce 1061A - Coins
-  https://codeforces.com/contest/1061/problem/A
-*/
+ * Contest : Codeforces
+ * Problem : 1061A - Coins
+ * Link    : https://codeforces.com/contest/1061/problem/A
+ */
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -11,7 +12,6 @@ using ll = long long;
 
 int main() {
   fastio
-
 
   int n, s;
   scanf("%i %i", &n, &s);

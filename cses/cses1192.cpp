@@ -1,7 +1,8 @@
 /*
-  CSES 1192 - Counting Rooms
-  https://cses.fi/problemset/task/1192
-*/
+ * Contest : CSES
+ * Problem : 1192 - Counting Rooms
+ * Link    : https://cses.fi/problemset/task/1192
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

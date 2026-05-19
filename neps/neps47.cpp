@@ -1,7 +1,8 @@
 /*
-  OBI 2015 - Fase 2 - Código
-  https://neps.academy/br/exercise/47
-*/
+ * Contest : OBI 2015 - Fase 2
+ * Problem : Código
+ * Link    : https://neps.academy/br/exercise/47
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

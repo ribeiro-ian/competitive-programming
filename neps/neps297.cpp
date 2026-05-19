@@ -1,7 +1,8 @@
 /*
-  Neps 297 - Caminho das Pontes
-  https://neps.academy/br/exercise/297
-*/
+ * Contest : Neps
+ * Problem : 297 - Caminho das Pontes
+ * Link    : https://neps.academy/br/exercise/297
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

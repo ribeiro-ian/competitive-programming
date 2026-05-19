@@ -1,7 +1,8 @@
 /*
-  Codeforces 2094B - Bobritto Bandito
-  https://codeforces.com/contest/2094/problem/B
-*/
+ * Contest : Codeforces
+ * Problem : 2094B - Bobritto Bandito
+ * Link    : https://codeforces.com/contest/2094/problem/B
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

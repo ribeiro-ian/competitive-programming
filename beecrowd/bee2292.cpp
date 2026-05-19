@@ -1,7 +1,8 @@
 /*
-  Bee 2292 - Painel LED
-  https://judge.beecrowd.com/pt/problems/view/2292
-*/
+ * Contest : Beecrowd
+ * Problem : 2292 - Painel LED
+ * Link    : https://judge.beecrowd.com/pt/problems/view/2292
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

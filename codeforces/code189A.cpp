@@ -1,7 +1,8 @@
 /*
-  Codeforces 189A - Cut Ribbon
-  https://codeforces.com/problemset/problem/189/A
-*/
+ * Contest : Codeforces
+ * Problem : 189A - Cut Ribbon
+ * Link    : https://codeforces.com/problemset/problem/189/A
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

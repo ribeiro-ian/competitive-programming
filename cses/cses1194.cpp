@@ -1,7 +1,8 @@
 /*
-  CSES 1194 - Monsters
-  https://cses.fi/problemset/task/1194
-*/
+ * Contest : CSES
+ * Problem : 1194 - Monsters
+ * Link    : https://cses.fi/problemset/task/1194
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

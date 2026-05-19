@@ -1,7 +1,8 @@
 /*
-  CSES 1083 - Missing Number
-  https://cses.fi/problemset/task/1083/
-*/
+ * Contest : CSES
+ * Problem : 1083 - Missing Number
+ * Link    : https://cses.fi/problemset/task/1083/
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

@@ -1,7 +1,8 @@
 /*
-  CSES 1622 - Creating Strings
-  https://cses.fi/problemset/task/1622
-*/
+ * Contest : CSES
+ * Problem : 1622 - Creating Strings
+ * Link    : https://cses.fi/problemset/task/1622
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

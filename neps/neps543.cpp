@@ -1,7 +1,8 @@
 /*
-  Neps 543 - Batalha Naval
-  https://neps.academy/br/exercise/543
-*/
+ * Contest : Neps
+ * Problem : 543 - Batalha Naval
+ * Link    : https://neps.academy/br/exercise/543
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

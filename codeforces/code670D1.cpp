@@ -1,7 +1,8 @@
 /*
-  Codeforces 670D1 - Magic Powder
-  https://codeforces.com/problemset/problem/670/D1
-*/
+ * Contest : Codeforces
+ * Problem : 670D1 - Magic Powder
+ * Link    : https://codeforces.com/problemset/problem/670/D1
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

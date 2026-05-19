@@ -1,7 +1,8 @@
 /*
-  CSES 1679 - Course Schedule
-  https://cses.fi/problemset/task/1679
-*/
+ * Contest : CSES
+ * Problem : 1679 - Course Schedule
+ * Link    : https://cses.fi/problemset/task/1679
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

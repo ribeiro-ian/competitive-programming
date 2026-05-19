@@ -1,7 +1,8 @@
 /*
-  Beecrowd 2845 - Festa no Polo Norte
-  https://judge.beecrowd.com/pt/problems/view/2845
-*/
+ * Contest : Beecrowd
+ * Problem : 2845 - Festa no Polo Norte
+ * Link    : https://judge.beecrowd.com/pt/problems/view/2845
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

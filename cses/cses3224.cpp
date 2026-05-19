@@ -1,7 +1,8 @@
 /*
-  CSES 3224 - Sliding Window Mode
-  https://cses.fi/problemset/task/3224
-*/
+ * Contest : CSES
+ * Problem : 3224 - Sliding Window Mode
+ * Link    : https://cses.fi/problemset/task/3224
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

@@ -1,7 +1,8 @@
 /*
-  CSES 1754 - Coin Piles
-  https://cses.fi/problemset/task/1754
-*/
+ * Contest : CSES
+ * Problem : 1754 - Coin Piles
+ * Link    : https://cses.fi/problemset/task/1754
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

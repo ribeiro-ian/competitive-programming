@@ -1,7 +1,8 @@
 /*
-  UVA 10611 - The Playboy Chimp
-  https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1552
-*/
+ * Contest : UVA
+ * Problem : 10611 - The Playboy Chimp
+ * Link    : https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1552
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

@@ -1,7 +1,8 @@
 /*
-  OBI 2017 - Fase 1 - Segredo do Cofre
-  https://neps.academy/br/exercise/16
-*/
+ * Contest : OBI 2017 - Fase 1
+ * Problem : Segredo do Cofre
+ * Link    : https://neps.academy/br/exercise/16
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

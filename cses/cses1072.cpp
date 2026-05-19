@@ -1,7 +1,8 @@
 /*
-  CSES 1072 - Two Knights
-  https://cses.fi/problemset/task/1072
-*/
+ * Contest : CSES
+ * Problem : 1072 - Two Knights
+ * Link    : https://cses.fi/problemset/task/1072
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

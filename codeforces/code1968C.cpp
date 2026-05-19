@@ -1,7 +1,8 @@
 /*
-  Codeforces 1968C - Assembly via Remainders
-  https://codeforces.com/problemset/problem/1968/C
-*/
+ * Contest : Codeforces
+ * Problem : 1968C - Assembly via Remainders
+ * Link    : https://codeforces.com/problemset/problem/1968/C
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

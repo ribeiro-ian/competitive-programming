@@ -1,7 +1,8 @@
 /*
-  Beecrowd 1397 - Jogo do Maior
-  https://judge.beecrowd.com/pt/problems/view/1397
-*/
+ * Contest : Beecrowd
+ * Problem : 1397 - Jogo do Maior
+ * Link    : https://judge.beecrowd.com/pt/problems/view/1397
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

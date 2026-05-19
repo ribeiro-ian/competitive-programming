@@ -1,7 +1,8 @@
 /*
-  CSES 1750 - Planets Queries I
-  https://cses.fi/problemset/task/1750
-*/
+ * Contest : CSES
+ * Problem : 1750 - Planets Queries I
+ * Link    : https://cses.fi/problemset/task/1750
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

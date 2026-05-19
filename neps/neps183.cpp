@@ -1,7 +1,8 @@
 /*
-  OBI 2018 - Fase 1 - Ilhas
-  https://neps.academy/br/exercise/183
-*/
+ * Contest : OBI 2018 - Fase 1
+ * Problem : Ilhas
+ * Link    : https://neps.academy/br/exercise/183
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

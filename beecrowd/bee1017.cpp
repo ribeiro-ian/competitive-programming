@@ -1,7 +1,8 @@
 /*
-  Beecrowd 1017 - Gasto de Combustível
-  https://judge.beecrowd.com/pt/problems/view/1017
-*/
+ * Contest : Beecrowd
+ * Problem : 1017 - Gasto de Combustível
+ * Link    : https://judge.beecrowd.com/pt/problems/view/1017
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

@@ -1,7 +1,8 @@
 /*
-  Codeforces 2218A - The 67th Integer Problem
-  https://codeforces.com/contest/2218/problem/A
-*/
+ * Contest : Codeforces
+ * Problem : 2218A - The 67th Integer Problem
+ * Link    : https://codeforces.com/contest/2218/problem/A
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

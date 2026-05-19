@@ -1,7 +1,8 @@
 /*
-  OBI 2011 - Fase 2 - Balé
-  https://neps.academy/br/exercise/536
-*/
+ * Contest : OBI 2011 - Fase 2
+ * Problem : Balé
+ * Link    : https://neps.academy/br/exercise/536
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

@@ -1,7 +1,8 @@
 /*
-  CSES 1068 - Weird Algorithm
-  https://cses.fi/problemset/task/1068
-*/
+ * Contest : CSES
+ * Problem : 1068 - Weird Algorithm
+ * Link    : https://cses.fi/problemset/task/1068
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

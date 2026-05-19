@@ -1,7 +1,8 @@
 /*
-  CSES 2205 - Gray Code
-  https://cses.fi/problemset/task/2205
-*/
+ * Contest : CSES
+ * Problem : 2205 - Gray Code
+ * Link    : https://cses.fi/problemset/task/2205
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

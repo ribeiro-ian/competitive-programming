@@ -1,7 +1,8 @@
 /*
-  Codeforces 165C - Another Problem on Strings
-  https://codeforces.com/problemset/problem/165/C
-*/
+ * Contest : Codeforces
+ * Problem : 165C - Another Problem on Strings
+ * Link    : https://codeforces.com/problemset/problem/165/C
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

@@ -1,7 +1,8 @@
 /*
-  Beecrowd 2520 - O Último Analógimôn
-  https://judge.beecrowd.com/pt/problems/view/2520
-*/
+ * Contest : Beecrowd
+ * Problem : 2520 - O Último Analógimôn
+ * Link    : https://judge.beecrowd.com/pt/problems/view/2520
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

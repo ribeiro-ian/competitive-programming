@@ -1,7 +1,8 @@
 /*
-  Beecrowd 1403 - Meu Avô é Famoso
-  https://judge.beecrowd.com/pt/problems/view/1403
-*/
+ * Contest : Beecrowd
+ * Problem : 1403 - Meu Avô é Famoso
+ * Link    : https://judge.beecrowd.com/pt/problems/view/1403
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

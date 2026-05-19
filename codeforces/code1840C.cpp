@@ -1,7 +1,8 @@
 /*
-  Codeforces 1840C - Ski Resort
-  https://codeforces.com/problemset/problem/1840/C
-*/
+ * Contest : Codeforces
+ * Problem : 1840C - Ski Resort
+ * Link    : https://codeforces.com/problemset/problem/1840/C
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

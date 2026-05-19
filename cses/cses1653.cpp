@@ -1,7 +1,8 @@
 /*
-  CSES 1653 - Elevator Rides
-  https://cses.fi/problemset/task/1653/
-*/
+ * Contest : CSES
+ * Problem : 1653 - Elevator Rides
+ * Link    : https://cses.fi/problemset/task/1653/
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

@@ -1,7 +1,8 @@
 /*
-  CSES 2182 - Divisor Analysis
-  https://cses.fi/problemset/task/2182
-*/
+ * Contest : CSES
+ * Problem : 2182 - Divisor Analysis
+ * Link    : https://cses.fi/problemset/task/2182
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

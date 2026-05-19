@@ -1,7 +1,8 @@
 /*
-  Codeforces 2074B - The Third Side
-  https://codeforces.com/contest/2074/problem/B
-*/
+ * Contest : Codeforces
+ * Problem : 2074B - The Third Side
+ * Link    : https://codeforces.com/contest/2074/problem/B
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

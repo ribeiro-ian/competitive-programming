@@ -1,7 +1,8 @@
 /*
-  UVA 572 - Oil Deposits
-  https://vjudge.net/problem/UVA-572
-*/
+ * Contest : UVA
+ * Problem : 572 - Oil Deposits
+ * Link    : https://vjudge.net/problem/UVA-572
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

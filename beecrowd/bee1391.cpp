@@ -1,7 +1,8 @@
 /*
-  Beecrowd 1391 - Quase menor caminho
-  https://judge.beecrowd.com/pt/problems/view/1391
-*/
+ * Contest : Beecrowd
+ * Problem : 1391 - Quase menor caminho
+ * Link    : https://judge.beecrowd.com/pt/problems/view/1391
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

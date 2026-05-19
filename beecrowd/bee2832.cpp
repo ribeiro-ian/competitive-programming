@@ -1,7 +1,8 @@
 /*
-  Beecrowd 2832 - Cápsulas
-  https://judge.beecrowd.com/pt/problems/view/2832
-*/
+ * Contest : Beecrowd
+ * Problem : 2832 - Cápsulas
+ * Link    : https://judge.beecrowd.com/pt/problems/view/2832
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

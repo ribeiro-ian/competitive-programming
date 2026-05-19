@@ -1,7 +1,8 @@
 /*
-  CSES 1672 - Shortest Routes II
-  https://cses.fi/problemset/task/1672
-*/
+ * Contest : CSES
+ * Problem : 1672 - Shortest Routes II
+ * Link    : https://cses.fi/problemset/task/1672
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

@@ -1,7 +1,8 @@
 /*
-  Codeforces 2162B - Beautiful String
-  https://codeforces.com/contest/2162/problem/B
-*/
+ * Contest : Codeforces
+ * Problem : 2162B - Beautiful String
+ * Link    : https://codeforces.com/contest/2162/problem/B
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

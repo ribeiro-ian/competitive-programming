@@ -1,7 +1,8 @@
 /*
-  CSES 1143 - Hotel Queries
-  https://cses.fi/problemset/task/1143
-*/
+ * Contest : CSES
+ * Problem : 1143 - Hotel Queries
+ * Link    : https://cses.fi/problemset/task/1143
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

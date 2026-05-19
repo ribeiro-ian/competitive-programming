@@ -1,7 +1,8 @@
 /*
-  Beecrowd 3053 - Jogo Dos Copos
-  https://judge.beecrowd.com/pt/problems/view/3053
-*/
+ * Contest : Beecrowd
+ * Problem : 3053 - Jogo Dos Copos
+ * Link    : https://judge.beecrowd.com/pt/problems/view/3053
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

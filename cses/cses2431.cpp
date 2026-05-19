@@ -1,7 +1,8 @@
 /*
-  CSES 2431 - Digit Queries
-  https://cses.fi/problemset/task/2431
-*/
+ * Contest : CSES
+ * Problem : 2431 - Digit Queries
+ * Link    : https://cses.fi/problemset/task/2431
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

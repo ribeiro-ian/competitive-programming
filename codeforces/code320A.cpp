@@ -1,7 +1,8 @@
 /*
-  Codeforces 320A - Magic Numbers
-  https://codeforces.com/contest/320/problem/A
-*/
+ * Contest : Codeforces
+ * Problem : 320A - Magic Numbers
+ * Link    : https://codeforces.com/contest/320/problem/A
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

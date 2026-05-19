@@ -1,7 +1,8 @@
 /*
-  CSES 1648 - Dynamic Range Sum Queries
-  https://cses.fi/problemset/task/1648
-*/
+ * Contest : CSES
+ * Problem : 1648 - Dynamic Range Sum Queries
+ * Link    : https://cses.fi/problemset/task/1648
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

@@ -1,7 +1,8 @@
 /*
-  Codeforces 1004A - Sonya and Hotels
-  https://codeforces.com/problemset/problem/1004/A
-*/
+ * Contest : Codeforces
+ * Problem : 1004A - Sonya and Hotels
+ * Link    : https://codeforces.com/problemset/problem/1004/A
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

@@ -1,7 +1,8 @@
 /*
-  Codeforces 2218B - The 67th 6-7 Integer Problem
-  https://codeforces.com/contest/2218/problem/B
-*/
+ * Contest : Codeforces
+ * Problem : 2218B - The 67th 6-7 Integer Problem
+ * Link    : https://codeforces.com/contest/2218/problem/B
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

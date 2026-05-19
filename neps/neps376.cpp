@@ -1,7 +1,8 @@
 /*
-  NEPS 376 - Caminhos Mínimos
-  https://neps.academy/br/exercise/376
-*/
+ * Contest : NEPS
+ * Problem : 376 - Caminhos Mínimos
+ * Link    : https://neps.academy/br/exercise/376
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

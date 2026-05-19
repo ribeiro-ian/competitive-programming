@@ -1,7 +1,8 @@
 /*
-  Codeforces 1189B - Number Circle
-  https://codeforces.com/contest/1189/problem/B
-*/
+ * Contest : Codeforces
+ * Problem : 1189B - Number Circle
+ * Link    : https://codeforces.com/contest/1189/problem/B
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

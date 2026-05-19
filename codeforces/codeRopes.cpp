@@ -1,7 +1,8 @@
 /*
-  Codeforces - Ropes
-  https://codeforces.com/edu/course/2/lesson/6/2/practice/contest/283932/problem/B
-*/
+ * Contest : ITMO Academy Pilot Course
+ * Problem : Ropes
+ * Link    : https://codeforces.com/edu/course/2/lesson/6/2/practice/contest/283932/problem/B
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

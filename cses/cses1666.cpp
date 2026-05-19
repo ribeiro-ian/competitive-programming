@@ -1,7 +1,8 @@
 /*
-  CSES 1666 - Building Roads
-  https://cses.fi/problemset/task/1666
-*/
+ * Contest : CSES
+ * Problem : 1666 - Building Roads
+ * Link    : https://cses.fi/problemset/task/1666
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

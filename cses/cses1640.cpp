@@ -1,7 +1,8 @@
 /*
-  CSES 1640 - Sum of Two Values
-  https://cses.fi/problemset/task/1640
-*/
+ * Contest : CSES
+ * Problem : 1640 - Sum of Two Values
+ * Link    : https://cses.fi/problemset/task/1640
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

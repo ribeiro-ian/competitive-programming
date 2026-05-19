@@ -1,7 +1,8 @@
 /*
-  CSES 1755 - Palindrome Reorder
-  https://cses.fi/problemset/task/1755
-*/
+ * Contest : CSES
+ * Problem : 1755 - Palindrome Reorder
+ * Link    : https://cses.fi/problemset/task/1755
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

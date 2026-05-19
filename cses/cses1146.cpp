@@ -1,7 +1,8 @@
 /*
-  CSES 1146 - Counting Bits
-  https://cses.fi/problemset/task/1146
-*/
+ * Contest : CSES
+ * Problem : 1146 - Counting Bits
+ * Link    : https://cses.fi/problemset/task/1146
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

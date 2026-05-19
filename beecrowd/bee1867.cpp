@@ -1,7 +1,8 @@
 /*
-  Beecrowd 1867 - Maior Número de Um Algarismo
-  https://judge.beecrowd.com/pt/problems/view/1867
-*/
+ * Contest : Beecrowd
+ * Problem : 1867 - Maior Número de Um Algarismo
+ * Link    : https://judge.beecrowd.com/pt/problems/view/1867
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

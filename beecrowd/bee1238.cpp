@@ -1,7 +1,8 @@
 /*
-  Beecrowd 1238 - Combinador
-  https://judge.beecrowd.com/pt/problems/view/1238
-*/
+ * Contest : Beecrowd
+ * Problem : 1238 - Combinador
+ * Link    : https://judge.beecrowd.com/pt/problems/view/1238
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

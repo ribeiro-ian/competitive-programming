@@ -1,7 +1,8 @@
 /*
-  Codeforces 839C - Journey
-  https://codeforces.com/contest/839/problem/C
-*/
+ * Contest : Codeforces
+ * Problem : 839C - Journey
+ * Link    : https://codeforces.com/contest/839/problem/C
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

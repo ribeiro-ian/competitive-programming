@@ -1,7 +1,8 @@
 /*
-  CSES 3222 - Sliding Window Distinct Values
-  https://cses.fi/problemset/task/3222
-*/
+ * Contest : CSES
+ * Problem : 3222 - Sliding Window Distinct Values
+ * Link    : https://cses.fi/problemset/task/3222
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

@@ -1,7 +1,8 @@
 /*
-  Beecrowd 1836 - Pokémon!
-  https://judge.beecrowd.com/pt/problems/view/1836
-*/
+ * Contest : Beecrowd
+ * Problem : 1836 - Pokémon!
+ * Link    : https://judge.beecrowd.com/pt/problems/view/1836
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

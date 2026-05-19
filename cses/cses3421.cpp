@@ -1,7 +1,8 @@
 /*
-  CSES 3421 - Distinct Values Subsequences
-  https://cses.fi/problemset/task/3421
-*/
+ * Contest : CSES
+ * Problem : 3421 - Distinct Values Subsequences
+ * Link    : https://cses.fi/problemset/task/3421
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

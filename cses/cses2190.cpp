@@ -1,7 +1,8 @@
 /*
-  CSES 2190 - Line Segment Intersection
-  https://cses.fi/problemset/task/2190
-*/
+ * Contest : CSES
+ * Problem : 2190 - Line Segment Intersection
+ * Link    : https://cses.fi/problemset/task/2190
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

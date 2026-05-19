@@ -1,7 +1,8 @@
 /*
-  Codeforces 2072B - Having Been a Treasurer in the Past, I Help Goblins Deceive-
-  https://codeforces.com/contest/2072/problem/B
-*/
+ * Contest : Codeforces
+ * Problem : 2072B - Having Been a Treasurer in the Past, I Help Goblins Deceive-
+ * Link    : https://codeforces.com/contest/2072/problem/B
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

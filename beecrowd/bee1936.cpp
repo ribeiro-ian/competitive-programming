@@ -1,7 +1,8 @@
 /*
-  Beecrowd 1936 - Fatorial
-  https://judge.beecrowd.com/pt/problems/view/1936
-*/
+ * Contest : Beecrowd
+ * Problem : 1936 - Fatorial
+ * Link    : https://judge.beecrowd.com/pt/problems/view/1936
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

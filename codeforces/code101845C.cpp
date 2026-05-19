@@ -1,7 +1,8 @@
 /*
-  Codeforces 101845C - Cryptography
-  https://codeforces.com/gym/101845/problem/C
-*/
+ * Contest : Codeforces
+ * Problem : 101845C - Cryptography
+ * Link    : https://codeforces.com/gym/101845/problem/C
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

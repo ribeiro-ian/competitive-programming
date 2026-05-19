@@ -1,7 +1,8 @@
 /*
-  UVA 10440 - Ferry Loading II
-  https://vjudge.net/problem/UVA-10440
-*/
+ * Contest : UVA
+ * Problem : 10440 - Ferry Loading II
+ * Link    : https://vjudge.net/problem/UVA-10440
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

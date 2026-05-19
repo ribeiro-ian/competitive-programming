@@ -1,7 +1,8 @@
 /*
-  Beecrowd 2626 - Turma do JB6
-  https://judge.beecrowd.com/pt/problems/view/2626
-*/
+ * Contest : Beecrowd
+ * Problem : 2626 - Turma do JB6
+ * Link    : https://judge.beecrowd.com/pt/problems/view/2626
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

@@ -1,7 +1,8 @@
 /*
-  Beecrowd 2088 - Combate à Dengue
-  https://judge.beecrowd.com/pt/problems/view/2088
-*/
+ * Contest : Beecrowd
+ * Problem : 2088 - Combate à Dengue
+ * Link    : https://judge.beecrowd.com/pt/problems/view/2088
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

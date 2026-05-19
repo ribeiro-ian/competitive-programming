@@ -1,7 +1,8 @@
 /*
-  CSES 1195 - Flight Discount
-  https://cses.fi/problemset/task/1195
-*/
+ * Contest : CSES
+ * Problem : 1195 - Flight Discount
+ * Link    : https://cses.fi/problemset/task/1195
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

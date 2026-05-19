@@ -1,7 +1,8 @@
 /*
-  Codeforces 2162A - Beautiful Average
-  https://codeforces.com/contest/2162/problem/A
-*/
+ * Contest : Codeforces
+ * Problem : 2162A - Beautiful Average
+ * Link    : https://codeforces.com/contest/2162/problem/A
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

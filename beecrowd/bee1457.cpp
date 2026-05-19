@@ -1,7 +1,8 @@
 /*
-  Beecrowd 1457 - Oráculo de Alexandria
-  https://judge.beecrowd.com/pt/problems/view/1457
-*/
+ * Contest : Beecrowd
+ * Problem : 1457 - Oráculo de Alexandria
+ * Link    : https://judge.beecrowd.com/pt/problems/view/1457
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

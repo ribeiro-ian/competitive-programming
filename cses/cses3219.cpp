@@ -1,7 +1,8 @@
 /*
-  CSES 3219 - Sliding Window Mex
-  https://cses.fi/problemset/task/3219
-*/
+ * Contest : CSES
+ * Problem : 3219 - Sliding Window Mex
+ * Link    : https://cses.fi/problemset/task/3219
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

@@ -1,7 +1,8 @@
 /*
-  Beecrowd 2871 - Colheita de Café
-  https://judge.beecrowd.com/pt/problems/view/2871
-*/
+ * Contest : Beecrowd
+ * Problem : 2871 - Colheita de Café
+ * Link    : https://judge.beecrowd.com/pt/problems/view/2871
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

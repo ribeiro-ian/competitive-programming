@@ -1,7 +1,8 @@
 /*
-  OBI 2025 - Fase 2 - Placar do Jogo
-  https://neps.academy/br/exercise/3263
-*/
+ * Contest : OBI 2025 - Fase 2
+ * Problem : Placar do Jogo
+ * Link    : https://neps.academy/br/exercise/3263
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

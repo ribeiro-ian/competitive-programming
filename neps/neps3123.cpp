@@ -1,7 +1,8 @@
 /*
-  OBI 2025 - Fase 1 - Fila
-  https://neps.academy/br/exercise/3123
-*/
+ * Contest : OBI 2025 - Fase 1
+ * Problem : Fila
+ * Link    : https://neps.academy/br/exercise/3123
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

@@ -1,7 +1,8 @@
 /*
-  CSES 1202 - Investigation
-  https://cses.fi/problemset/task/1202
-*/
+ * Contest : CSES
+ * Problem : 1202 - Investigation
+ * Link    : https://cses.fi/problemset/task/1202
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

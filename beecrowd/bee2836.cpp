@@ -1,7 +1,8 @@
 /*
-  Beecrowd 2836 - Wifi
-  https://judge.beecrowd.com/pt/problems/view/2836
-*/
+ * Contest : Beecrowd
+ * Problem : 2836 - Wifi
+ * Link    : https://judge.beecrowd.com/pt/problems/view/2836
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

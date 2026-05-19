@@ -1,7 +1,8 @@
 /*
-  Codeforces 50A - Domino piling
-  https://codeforces.com/problemset/problem/50/A
-*/
+ * Contest : Codeforces
+ * Problem : 50A - Domino piling
+ * Link    : https://codeforces.com/problemset/problem/50/A
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

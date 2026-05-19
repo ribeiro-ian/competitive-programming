@@ -1,7 +1,8 @@
 /*
-  Codeforces 1042B - Vitamins
-  https://codeforces.com/contest/1042/problem/B
-*/
+ * Contest : Codeforces
+ * Problem : 1042B - Vitamins
+ * Link    : https://codeforces.com/contest/1042/problem/B
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

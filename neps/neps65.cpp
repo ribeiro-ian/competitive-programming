@@ -1,7 +1,8 @@
 /*
-  OBI 2015 - Fase 2 - Mina
-  https://neps.academy/br/exercise/65
-*/
+ * Contest : OBI 2015 - Fase 2
+ * Problem : Mina
+ * Link    : https://neps.academy/br/exercise/65
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

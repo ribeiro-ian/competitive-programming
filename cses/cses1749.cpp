@@ -1,7 +1,8 @@
 /*
-  CSES 1749 - List Removals
-  https://cses.fi/problemset/task/1749
-*/
+ * Contest : CSES
+ * Problem : 1749 - List Removals
+ * Link    : https://cses.fi/problemset/task/1749
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

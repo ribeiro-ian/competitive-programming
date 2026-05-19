@@ -1,7 +1,8 @@
 /*
-  CSES 1674 - Subordinates
-  https://cses.fi/problemset/task/1674
-*/
+ * Contest : CSES
+ * Problem : 1674 - Subordinates
+ * Link    : https://cses.fi/problemset/task/1674
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

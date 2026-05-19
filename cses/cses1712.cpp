@@ -1,7 +1,8 @@
 /*
-  CSES 1712 - Exponentiation II
-  https://cses.fi/problemset/task/1712
-*/
+ * Contest : CSES
+ * Problem : 1712 - Exponentiation II
+ * Link    : https://cses.fi/problemset/task/1712
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

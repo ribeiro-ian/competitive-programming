@@ -1,7 +1,8 @@
 /*
-  Codeforces 853B - Jury Meeting
-  https://codeforces.com/problemset/problem/853/B
-*/
+ * Contest : Codeforces
+ * Problem : 853B - Jury Meeting
+ * Link    : https://codeforces.com/problemset/problem/853/B
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

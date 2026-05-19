@@ -1,7 +1,8 @@
 /*
-  Codeforces 327A -  Counting Kangaroos is Fun
-  https://codeforces.com/problemset/problem/372/A
-*/
+ * Contest : Codeforces
+ * Problem : 327A - Counting Kangaroos is Fun
+ * Link    : https://codeforces.com/problemset/problem/372/A
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

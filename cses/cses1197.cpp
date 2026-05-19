@@ -1,7 +1,8 @@
 /*
-  CSES 1197 - Cycle Finding
-  https://cses.fi/problemset/task/1197
-*/
+ * Contest : CSES
+ * Problem : 1197 - Cycle Finding
+ * Link    : https://cses.fi/problemset/task/1197
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

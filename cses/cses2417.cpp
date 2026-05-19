@@ -1,7 +1,8 @@
 /*
-  CSES 2417 - Counting Coprime Pairs
-  https://cses.fi/problemset/task/2417
-*/
+ * Contest : CSES
+ * Problem : 2417 - Counting Coprime Pairs
+ * Link    : https://cses.fi/problemset/task/2417
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

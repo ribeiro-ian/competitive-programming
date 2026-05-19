@@ -1,7 +1,8 @@
 /*
-  CSES 1651 - Range Update Queries
-  https://cses.fi/problemset/task/1651
-*/
+ * Contest : CSES
+ * Problem : 1651 - Range Update Queries
+ * Link    : https://cses.fi/problemset/task/1651
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

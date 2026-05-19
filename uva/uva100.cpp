@@ -1,7 +1,8 @@
 /*
-  UVA 100 - The 3n + 1 problem
-  https://vjudge.net/problem/UVA-100
-*/
+ * Contest : UVA
+ * Problem : 100 - The 3n + 1 problem
+ * Link    : https://vjudge.net/problem/UVA-100
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

@@ -1,7 +1,8 @@
 /*
-  OBI 2025 - Fase 2 - Mania de Ímpar
-  https://neps.academy/br/exercise/3267
-*/
+ * Contest : OBI 2025 - Fase 2
+ * Problem : Mania de Ímpar
+ * Link    : https://neps.academy/br/exercise/3267
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

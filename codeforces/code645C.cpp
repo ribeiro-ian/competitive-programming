@@ -1,7 +1,8 @@
 /*
-  Codeforces 645C - Enduring Exodus
-  https://codeforces.com/problemset/problem/645/C
-*/
+ * Contest : Codeforces
+ * Problem : 645C - Enduring Exodus
+ * Link    : https://codeforces.com/problemset/problem/645/C
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

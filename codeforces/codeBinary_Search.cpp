@@ -1,7 +1,8 @@
 /*
-  Codeforces Practice A - Binary Search
-  https://codeforces.com/edu/course/2/lesson/6/1/practice/contest/283911/problem/A
-*/
+ * Contest : ITMO Academy Pilot Course
+ * Problem : Binary Search
+ * Link    : https://codeforces.com/edu/course/2/lesson/6/1/practice/contest/283911/problem/A
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

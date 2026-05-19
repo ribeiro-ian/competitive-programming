@@ -1,3 +1,9 @@
+/*
+ * Contest : CSES
+ * Problem : 2420 - Palindrome Queries
+ * Link    : https://cses.fi/problemset/task/2420
+ */
+
 #include <bits/stdc++.h>
 using namespace std;
 

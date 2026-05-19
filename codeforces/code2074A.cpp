@@ -1,7 +1,8 @@
 /*
-  Codeforces 2074A - Draw a Square
-  https://codeforces.com/contest/2074/problem/A
-*/
+ * Contest : Codeforces
+ * Problem : 2074A - Draw a Square
+ * Link    : https://codeforces.com/contest/2074/problem/A
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

@@ -1,7 +1,8 @@
 /*
-  CSES 2428 - Distinct Values Subarrays II
-  https://cses.fi/problemset/task/2428
-*/
+ * Contest : CSES
+ * Problem : 2428 - Distinct Values Subarrays II
+ * Link    : https://cses.fi/problemset/task/2428
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

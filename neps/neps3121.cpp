@@ -1,7 +1,8 @@
 /*
-  OBI 2025 - Fase 1 - Dieta
-  https://neps.academy/br/exercise/3121
-*/
+ * Contest : OBI 2025 - Fase 1
+ * Problem : Dieta
+ * Link    : https://neps.academy/br/exercise/3121
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

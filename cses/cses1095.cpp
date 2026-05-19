@@ -1,7 +1,8 @@
 /*
-  CSES 1095 - Exponentiation
-  https://cses.fi/problemset/task/1095
-*/
+ * Contest : CSES
+ * Problem : 1095 - Exponentiation
+ * Link    : https://cses.fi/problemset/task/1095
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

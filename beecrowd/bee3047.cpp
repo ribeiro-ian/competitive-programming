@@ -1,7 +1,8 @@
 /*
-  Beecrowd 3047 - A idade de Dona Mônica
-  https://judge.beecrowd.com/pt/problems/view/3047
-*/
+ * Contest : Beecrowd
+ * Problem : 3047 - A idade de Dona Mônica
+ * Link    : https://judge.beecrowd.com/pt/problems/view/3047
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

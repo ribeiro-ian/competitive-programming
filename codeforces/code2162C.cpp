@@ -1,7 +1,8 @@
 /*
-  Codeforces 2162C - Beautiful XOR
-  https://codeforces.com/contest/2162/problem/C
-*/
+ * Contest : Codeforces
+ * Problem : 2162C - Beautiful XOR
+ * Link    : https://codeforces.com/contest/2162/problem/C
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

@@ -1,7 +1,8 @@
 /*
-  CSES 1716 - Distributing Apples
-  https://cses.fi/problemset/task/1716
-*/
+ * Contest : CSES
+ * Problem : 1716 - Distributing Apples
+ * Link    : https://cses.fi/problemset/task/1716
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

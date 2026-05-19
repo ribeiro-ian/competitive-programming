@@ -1,7 +1,8 @@
 /*
-  UVA 11369 - Shopaholic
-  https://vjudge.net/problem/UVA-11369
-*/
+ * Contest : UVA
+ * Problem : 11369 - Shopaholic
+ * Link    : https://vjudge.net/problem/UVA-11369
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

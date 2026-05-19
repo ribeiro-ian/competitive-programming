@@ -1,7 +1,8 @@
 /*
-  UVA 657 - You want what filled?
-  https://vjudge.net/problem/UVA-10946
-*/
+ * Contest : UVA
+ * Problem : 657 - You want what filled?
+ * Link    : https://vjudge.net/problem/UVA-10946
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

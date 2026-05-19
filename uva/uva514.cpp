@@ -1,7 +1,8 @@
 /*
-  UVA 514 - Rails
-  https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=455
-*/
+ * Contest : UVA
+ * Problem : 514 - Rails
+ * Link    : https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=455
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

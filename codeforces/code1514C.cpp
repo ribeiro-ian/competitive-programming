@@ -1,7 +1,8 @@
 /*
-  Codeforces 1514 - Product 1 Modulo N
-  https://codeforces.com/problemset/problem/1514/C
-*/
+ * Contest : Codeforces
+ * Problem : 1514 - Product 1 Modulo N
+ * Link    : https://codeforces.com/problemset/problem/1514/C
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

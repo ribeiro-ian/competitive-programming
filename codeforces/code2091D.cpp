@@ -1,7 +1,8 @@
 /*
-  Codeforces 2091D - Place of the Olympiad
-  https://codeforces.com/contest/2091/problem/D
-*/
+ * Contest : Codeforces
+ * Problem : 2091D - Place of the Olympiad
+ * Link    : https://codeforces.com/contest/2091/problem/D
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

@@ -1,7 +1,8 @@
 /*
-  Codeforces 1690D - Black and White Stripe
-  https://codeforces.com/problemset/problem/1690/D
-*/
+ * Contest : Codeforces
+ * Problem : 1690D - Black and White Stripe
+ * Link    : https://codeforces.com/problemset/problem/1690/D
+ */
 
 #include <bits/stdc++.h>
 using namespace std;

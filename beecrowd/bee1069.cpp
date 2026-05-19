@@ -1,7 +1,8 @@
 /*
-  Beecrowd 1069 - Diamantes e Areia
-  https://judge.beecrowd.com/pt/problems/view/1069
-*/
+ * Contest : Beecrowd
+ * Problem : 1069 - Diamantes e Areia
+ * Link    : https://judge.beecrowd.com/pt/problems/view/1069
+ */
 
 #include <bits/stdc++.h>
 using namespace std;
