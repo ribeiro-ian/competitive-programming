@@ -1,4 +1,4 @@
-/*
+/**
  * Contest : CSES Problem Set
  * Problem : 1637 - Removing Digits
  * Link    : https://cses.fi/problemset/task/1637

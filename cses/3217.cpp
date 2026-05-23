@@ -1,4 +1,4 @@
-/*
+/**
  * Contest : CSES Problem Set
  * Problem : 3217 - Knight Moves Grid
  * Link    : https://cses.fi/problemset/task/3217

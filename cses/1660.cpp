@@ -1,4 +1,4 @@
-/*
+/**
  * Contest : CSES Problem Set
  * Problem : 1660 - Subarray Sums I
  * Link    : https://cses.fi/problemset/task/1660

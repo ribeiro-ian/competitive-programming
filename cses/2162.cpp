@@ -1,4 +1,4 @@
-/*
+/**
  * Contest : CSES Problem Set
  * Problem : 2162 - Josephus Problem I
  * Link    : https://cses.fi/problemset/task/2162

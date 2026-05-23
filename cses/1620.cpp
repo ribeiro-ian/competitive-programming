@@ -1,4 +1,4 @@
-/*
+/**
  * Contest : CSES Problem Set
  * Problem : 1620 - Factory Machines
  * Link    : https://cses.fi/problemset/task/1620

@@ -1,4 +1,4 @@
-/*
+/**
  * Contest : CSES Problem Set
  * Problem : 1164 - Room Allocation
  * Link    : https://cses.fi/problemset/task/1164

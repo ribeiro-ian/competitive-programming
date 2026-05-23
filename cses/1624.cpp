@@ -1,4 +1,4 @@
-/*
+/**
  * Contest : CSES Problem Set
  * Problem : 1624 - Chessboard and Queens
  * Link    : https://cses.fi/problemset/task/1624

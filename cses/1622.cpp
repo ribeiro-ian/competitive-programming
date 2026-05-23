@@ -1,4 +1,4 @@
-/*
+/**
  * Contest : CSES Problem Set
  * Problem : 1622 - Creating Strings
  * Link    : https://cses.fi/problemset/task/1622

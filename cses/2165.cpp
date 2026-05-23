@@ -1,4 +1,4 @@
-/*
+/**
  * Contest : CSES Problem Set
  * Problem : 2165 - Tower of Hanoi
  * Link    : https://cses.fi/problemset/task/2165

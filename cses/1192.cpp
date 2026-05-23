@@ -1,4 +1,4 @@
-/*
+/**
  * Contest : CSES Problem Set
  * Problem : 1192 - Counting Rooms
  * Link    : https://cses.fi/problemset/task/1192

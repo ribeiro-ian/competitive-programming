@@ -1,4 +1,4 @@
-/*
+/**
  * Contest : CSES Problem Set
  * Problem : 1733 - Finding Periods
  * Link    : https://cses.fi/problemset/task/1733

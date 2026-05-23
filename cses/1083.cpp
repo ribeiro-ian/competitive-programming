@@ -1,4 +1,4 @@
-/*
+/**
  * Contest : CSES Problem Set
  * Problem : 1083 - Missing Number
  * Link    : https://cses.fi/problemset/task/1083

@@ -1,4 +1,4 @@
-/*
+/**
  * Contest : CSES Problem Set
  * Problem : 1141 - Playlist
  * Link    : https://cses.fi/problemset/task/1141

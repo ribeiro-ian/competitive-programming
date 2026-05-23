@@ -1,4 +1,4 @@
-/*
+/**
  * Contest : CSES Problem Set
  * Problem : 1195 - Flight Discount
  * Link    : https://cses.fi/problemset/task/1195

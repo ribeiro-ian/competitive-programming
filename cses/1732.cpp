@@ -1,4 +1,4 @@
-/*
+/**
  * Contest : CSES Problem Set
  * Problem : 1732 - Finding Borders
  * Link    : https://cses.fi/problemset/task/1732

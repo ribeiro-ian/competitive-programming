@@ -1,4 +1,4 @@
-/*
+/**
  * Contest : CSES Problem Set
  * Problem : 1617 - Bit Strings
  * Link    : https://cses.fi/problemset/task/1617

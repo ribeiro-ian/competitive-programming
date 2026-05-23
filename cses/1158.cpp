@@ -1,4 +1,4 @@
-/*
+/**
  * Contest : CSES Problem Set
  * Problem : 1158 - Book Shop
  * Link    : https://cses.fi/problemset/task/1158

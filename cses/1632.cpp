@@ -1,4 +1,4 @@
-/*
+/**
  * Contest : CSES Problem Set
  * Problem : 1632 - Movie Festival II
  * Link    : https://cses.fi/problemset/task/1632

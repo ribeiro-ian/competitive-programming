@@ -1,4 +1,4 @@
-/*
+/**
  * Contest : CSES Problem Set
  * Problem : 1679 - Course Schedule
  * Link    : https://cses.fi/problemset/task/1679
@@ -16,7 +16,7 @@ vector<vector<int>> graph;
 vector<int> visited, processing, order;
 bool hasCycle = false;
 
-void dfs(int u) {
+void topo(int u) {
   visited[u] = true;
   processing[u] = true;
 
@@ -26,7 +26,7 @@ void dfs(int u) {
       return;
     }
     if (!visited[v]) 
-      dfs(v);
+      topo(v);
   }
 
   processing[u] = false;
@@ -48,7 +48,7 @@ int main() {
   }
   
   for (int i = 1; i <= n; ++i)
-    if (!visited[i]) dfs(i);
+    if (!visited[i]) topo(i);
   
   if (!hasCycle) {
     reverse(order.begin(), order.end());

@@ -1,4 +1,4 @@
-/*
+/**
  * Contest : CSES Problem Set
  * Problem : 1095 - Exponentiation
  * Link    : https://cses.fi/problemset/task/1095

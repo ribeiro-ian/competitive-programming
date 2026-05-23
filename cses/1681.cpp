@@ -1,4 +1,4 @@
-/*
+/**
  * Contest : CSES Problem Set
  * Problem : 1681 - Game Routes
  * Link    : https://cses.fi/problemset/task/1681

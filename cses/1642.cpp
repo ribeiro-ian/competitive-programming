@@ -1,4 +1,4 @@
-/*
+/**
  * Contest : CSES Problem Set
  * Problem : 1642 - Sum of Four Values
  * Link    : https://cses.fi/problemset/task/1642

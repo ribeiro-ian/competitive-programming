@@ -1,4 +1,4 @@
-/*
+/**
  * Contest : CSES Problem Set
  * Problem : 1666 - Building Roads
  * Link    : https://cses.fi/problemset/task/1666

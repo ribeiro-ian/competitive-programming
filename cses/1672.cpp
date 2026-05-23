@@ -1,4 +1,4 @@
-/*
+/**
  * Contest : CSES Problem Set
  * Problem : 1672 - Shortest Routes II
  * Link    : https://cses.fi/problemset/task/1672

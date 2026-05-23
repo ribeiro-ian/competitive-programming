@@ -1,4 +1,4 @@
-/*
+/**
  * Contest : CSES Problem Set
  * Problem : 3311 - Grid Coloring I
  * Link    : https://cses.fi/problemset/task/3311

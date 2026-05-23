@@ -1,4 +1,4 @@
-/*
+/**
  * Contest : CSES Problem Set
  * Problem : 1619 - Restaurant Customers
  * Link    : https://cses.fi/problemset/task/1619

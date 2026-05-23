@@ -1,4 +1,4 @@
-/*
+/**
  * Contest : CSES Problem Set
  * Problem : 1085 - Array Division
  * Link    : https://cses.fi/problemset/task/1085

@@ -1,4 +1,4 @@
-/*
+/**
  * Contest : CSES
  * Problem : 1750 - Planets Queries I
  * Link    : https://cses.fi/problemset/task/1750

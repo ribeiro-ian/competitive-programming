@@ -1,4 +1,4 @@
-/*
+/**
  * Contest : CSES Problem Set
  * Problem : 1194 - Monsters
  * Link    : https://cses.fi/problemset/task/1194

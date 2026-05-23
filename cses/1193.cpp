@@ -1,4 +1,4 @@
-/*
+/**
  * Contest : CSES Problem Set
  * Problem : 1193 - Labyrinth
  * Link    : https://cses.fi/problemset/task/1193

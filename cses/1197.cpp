@@ -1,4 +1,4 @@
-/*
+/**
  * Contest : CSES Problem Set
  * Problem : 1197 - Cycle Finding
  * Link    : https://cses.fi/problemset/task/1197

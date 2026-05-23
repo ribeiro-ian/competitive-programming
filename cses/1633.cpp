@@ -1,4 +1,4 @@
-/*
+/**
  * Contest : CSES Problem Set
  * Problem : 1633 - Dice Combinations
  * Link    : https://cses.fi/problemset/task/1633

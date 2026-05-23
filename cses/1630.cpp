@@ -1,4 +1,4 @@
-/*
+/**
  * Contest : CSES Problem Set
  * Problem : 1630 - Tasks and Deadlines
  * Link    : https://cses.fi/problemset/task/1630

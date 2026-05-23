@@ -1,4 +1,4 @@
-/*
+/**
  * Contest : CSES Problem Set
  * Problem : 1678 - Round Trip II
  * Link    : https://cses.fi/problemset/task/1678
@@ -16,7 +16,7 @@ int n, m;
 vector<vector<int>> graph;
 vector<int> visited, processing, cycle;
 
-bool dfs(int u) {
+bool topo(int u) {
   if (processing[u] && cycle.empty()) {
     cycle.push_back(u);
     return cycle.size() == 1;
@@ -27,7 +27,7 @@ bool dfs(int u) {
   processing[u] = true;
 
   for (auto& v : graph[u]) {
-    if (dfs(v)) {
+    if (topo(v)) {
       cycle.push_back(u);
       return cycle.back() != cycle.front();
     }
@@ -53,7 +53,7 @@ int main() {
   }
 
   for (int i = 1; i <= n; ++i)
-    if (dfs(i)) break;
+    if (topo(i)) break;
   
   if (cycle.size()) {
     cout << cycle.size() << '\n';

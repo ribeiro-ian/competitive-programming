@@ -1,4 +1,4 @@
-/*
+/**
  * Contest : CSES Problem Set
  * Problem : 1673 - High Score
  * Link    : https://cses.fi/problemset/task/1673

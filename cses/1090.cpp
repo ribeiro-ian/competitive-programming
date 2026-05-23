@@ -1,4 +1,4 @@
-/*
+/**
  * Contest : CSES Problem Set
  * Problem : 1090 - Ferris Wheel
  * Link    : https://cses.fi/problemset/task/1090

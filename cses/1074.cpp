@@ -1,4 +1,4 @@
-/*
+/**
  * Contest : CSES Problem Set
  * Problem : 1074 - Stick Lengths
  * Link    : https://cses.fi/problemset/task/1074

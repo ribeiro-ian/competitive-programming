@@ -1,4 +1,4 @@
-/*
+/**
  * Contest : CSES Problem Set
  * Problem : 1091 - Concert Tickets
  * Link    : https://cses.fi/problemset/task/1091

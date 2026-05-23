@@ -1,4 +1,4 @@
-/*
+/**
  * Contest : CSES Problem Set
  * Problem : 1202 - Investigation
  * Link    : https://cses.fi/problemset/task/1202

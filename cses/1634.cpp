@@ -1,4 +1,4 @@
-/*
+/**
  * Contest : CSES Problem Set
  * Problem : 1634 - Minimizing Coins
  * Link    : https://cses.fi/problemset/task/1634

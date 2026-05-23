@@ -1,4 +1,4 @@
-/*
+/**
  * Contest : CSES Problem Set
  * Problem : 3420 - Distinct Values Subarrays
  * Link    : https://cses.fi/problemset/task/3420
