@@ -2,6 +2,7 @@
  * Contest : CSES Problem Set
  * Problem : 1639 - Edit Distance
  * Link    : https://cses.fi/problemset/task/1639
+ * Time    : O(N * M)
  */
 
 #include <bits/stdc++.h>
@@ -24,8 +25,8 @@ int main() {
     for (int j = 0; j <= m; ++j) {
       if (i > 0) dp[i][j] = min(dp[i][j], dp[i - 1][j] + 1);
       if (j > 0) dp[i][j] = min(dp[i][j], dp[i][j - 1] + 1);
-      if (i > 0 && j > 0) dp[i][j] = min(dp[i][j], dp[i - 1][j - 1] + (s[i - 1] != t[j - 1]));
-      cerr << dp[i][j] << " \n"[j == m];
+      if (i > 0 && j > 0)
+        dp[i][j] = min(dp[i][j], dp[i - 1][j - 1] + (s[i - 1] != t[j - 1]));
     }
   }
   cout << dp[n][m] << '\n';
