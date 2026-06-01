@@ -10,7 +10,7 @@ using ll = long long;
 
 #define fastio ios::sync_with_stdio(0); cin.tie(0);
 
-int main({
+int main() {
   fastio
 
   ll n; cin >> n;
@@ -18,21 +18,22 @@ int main({
   for (auto &i : v) cin >> i;
 
   // modular operation thar works properly for any signed value
-    auto mod = [=](ll v{
+  auto mod = [&](ll v) {
     return (v % n + n) % n;
-    };
+  };
 
-    map<ll,ll> freq;
-    freq[0] = 1;
+  map<ll,ll> freq;
+  freq[0] = 1;
 
-    ll sum = 0, cnt = 0;
-    for(auto& i : v{
+  ll sum = 0, cnt = 0;
+  for(auto& i : v) {
     sum += mod(i);
     auto rest = mod(sum);
     cnt += freq[rest];
     freq[rest] += 1;
-    }
-    cout << cnt << '\n';
+  }
+
+  cout << cnt << '\n';
 
 	return 0;
 }
